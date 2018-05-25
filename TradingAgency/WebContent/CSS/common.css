@@ -1,0 +1,23 @@
+
+body{
+  font-family: 'Nanum Gothic', sans-serif;
+  background-size:cover;
+}  
+h2{
+    color:red;
+}
+*{
+        margin:0;
+        padding:0;
+ }
+@media(max-width:400px){
+    #main .entireBG {
+        display: block;
+    }
+    #main .entireBG div{
+        width:100%;
+    }
+    #main .entireBG a h3{
+        font-size: 8vw;
+    }
+}
