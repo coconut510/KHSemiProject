@@ -1,7 +1,27 @@
+#wrapper{
+    width:960px;
+    height:auto;
+    background-color: aqua;
+}
+#header{
+    width:100%;
+    height:140px;
+    background-color: green;
+}
+#nivigation{
+    width:100%;
+    height:50px;
+    background-color:darkorange;
+}
+#content{
+     width:100%;
+    height:900px;
+    background-color:white;
+}
 
 body{
-  font-family: 'Nanum Gothic', sans-serif;
-  background-size:cover;
+    font-family: 'Nanum Gothic', sans-serif;
+    background-size:cover;
 }  
 h2{
     color:red;
