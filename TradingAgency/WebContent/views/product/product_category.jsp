@@ -1,9 +1,11 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-    <link rel="stylesheet" href="../../CSS/common.css" type="text/css"/>
+   <link rel="stylesheet" href="../../CSS/common.css" type="text/css"/>
     <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
      
     <script src="http://code.jquery.com/jquery-3.3.1.js"
@@ -19,9 +21,10 @@
     
     <link rel="stylesheet" href="../../CSS/category.css" type="text/css"/>
     <script src="../../JS/common.js"></script>    
+
 </head>
 <body>
-    <div id="wrapper">
+	 <div id="wrapper">
         <div id="header">
             헤더
         </div>
@@ -30,17 +33,7 @@
         </div>
         <div id="content">
             <div id="categoryTitle" class="dropdown">              
-                  <a id="categoryTitle" data-toggle="dropdown">여성의류
-                    <!--  <a href="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkGE1oYG8JBKlceOymr_QHMYvZA6_O65mJg0HyXAnmDdovyIqdOQ"></a>
-                    -->
-                          <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">HTML</a></li>
-                      <li><a href="#">CSS</a></li>
-                      <li><a href="#">JavaScript</a></li>
-                    </ul>
-                   <!-- <a href="">▽</a>-->
-                <div id="headerLine"></div>
+                 
             </div>
             <div id="categoryImageSlide">
                 하위카테고리<br>
@@ -55,7 +48,7 @@
             <div id="categoryItemList">
                 
             </div>
-             <%@ include file="footer.html" %>
+             <%@ include file="category_title.html" %>
             
         </div>
     </div>
