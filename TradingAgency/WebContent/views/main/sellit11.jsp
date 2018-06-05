@@ -1,7 +1,10 @@
-<!doctype html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="ko">
 
 <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
     <title> 다혜 헤더네비풋터 </title>
 
@@ -10,21 +13,21 @@
 <body>
     <style>
         #wrapper {
-            height: 1500px;
+            height: auto;
             width: 100%;
             border: 1px solid black;
             box-sizing: border-box;
         }
 
         #header {
-            height: 20%;
+            height: auto;
             width: 100%;
             border: 1px solid black;
             box-sizing: border-box;
         }
 
         #topleft {
-            height: 20%;
+            height: auto;
             width: 20%;
             border: 1px solid black;
             box-sizing: border-box;
@@ -46,7 +49,7 @@
         }
 
         #topmiddle {
-            height: 20%;
+            height: auto;
             width: 55%;
             border: 1px solid black;
             box-sizing: border-box;
