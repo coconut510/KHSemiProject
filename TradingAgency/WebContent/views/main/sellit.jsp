@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
-    <title> ´ÙÇý Çì´õ³×ºñÇ²ÅÍ </title>
+    <title> ë‹¤í˜œ í—¤ë”ë„¤ë¹„í’‹í„° </title>
 
 </head>
 
@@ -328,15 +328,15 @@
         <div id="header">
             <div id="topleft">
                 <img src="img/phone.PNG" id="phone" height="25px" width="15px" align="top" />
-                <p id="appdown">¼¿ÀÕ ¾Û ´Ù¿î·Îµå</p>
+                <p id="appdown">ì…€ìž‡ ì•± ë‹¤ìš´ë¡œë“œ</p>
             </div>
             <div id="topmiddle"></div>
             <div id="topright">
                 <ul class="minibar">
-                    <li class="li1"><a href="#">·Î±×ÀÎ</a></li>
-                    <li class="li1"><a href="#">È¸¿ø°¡ÀÔ</a></li>
-                    <li class="li1"><a href="#">°í°´¼¾ÅÍ</a></li>
-                    <li class="li1"><a href="#">Àå¹Ù±¸´Ï</a></li>
+                    <li class="li1"><a href="#">ë¡œê·¸ì¸</a></li>
+                    <li class="li1"><a href="#">íšŒì›ê°€ìž…</a></li>
+                    <li class="li1"><a href="#">ê³ ê°ì„¼í„°</a></li>
+                    <li class="li1"><a href="#">ìž¥ë°”êµ¬ë‹ˆ</a></li>
                 </ul>
                 <span id="join"></span>
                 <span id="clientservice"></span>
@@ -347,33 +347,33 @@
             </div>
             <div id="searchbox">
                 <form action="#" method="get">
-                    <input type="text" id="search" name="searchquery" placeholder="»óÇ°¸íÀ¸·Î °Ë»öÇØº¸¼¼¿ä">
-                    <input type="submit" value="°Ë»ö">
+                    <input type="text" id="search" name="searchquery" placeholder="ìƒí’ˆëª…ìœ¼ë¡œ ê²€ìƒ‰í•´ë³´ì„¸ìš”">
+                    <input type="submit" value="ê²€ìƒ‰">
                 </form>
             </div>
         </div>
         <div id="navi">
             <ul class="navimenu">
-                <li class="li2"><a href="#">ÀüÃ¼ Ä«Å×°í¸®</a>
-                    <ul class="category1 one"><span class="categoryname">ÀüÀÚÁ¦Ç°</span>
-                        <li class="detailcategory"><a href="#">½º¸¶Æ®Æù</a></li>
-                        <li class="detailcategory"><a href="#">ÅÂºí¸´PC</a></li>
-                        <li class="detailcategory"><a href="#">³ëÆ®ºÏ/PC</a></li>
-                        <li class="detailcategory"><a href="#">³ëÆ®ºÏ/PC ÁÖº¯±â±â</a></li>
-                        <li class="detailcategory"><a href="#">Ä«¸Þ¶ó</a></li>
-                        <li class="detailcategory"><a href="#">À½Çâ°¡Àü/ÇÐ½À±â±â</a></li>
-                        <li class="detailcategory"><a href="#">°ÔÀÓ/Å¸ÀÌÆ²</a></li>
-                        <li class="detailcategory"><a href="#">¿þ¾î·¯ºí</a></li>
-                        <li class="detailcategory"><a href="#">¿µ»ó°¡Àü</a></li>
-                        <li class="detailcategory"><a href="#">»ýÈ°/ÁÖ¹æ/¹Ì¿ë°¡Àü</a></li>
-                        <li class="detailcategory"><a href="#">ÀÚµ¿Â÷±â±â</a></li>
-                        <li class="detailcategory"><a href="#">±âÅ¸ ÁÖº¯±â±â</a></li>
+                <li class="li2"><a href="#">ì „ì²´ ì¹´í…Œê³ ë¦¬</a>
+                    <ul class="category1 one"><span class="categoryname">ì „ìžì œí’ˆ</span>
+                        <li class="detailcategory"><a href="#">ìŠ¤ë§ˆíŠ¸í°</a></li>
+                        <li class="detailcategory"><a href="#">íƒœë¸”ë¦¿PC</a></li>
+                        <li class="detailcategory"><a href="#">ë…¸íŠ¸ë¶/PC</a></li>
+                        <li class="detailcategory"><a href="#">ë…¸íŠ¸ë¶/PC ì£¼ë³€ê¸°ê¸°</a></li>
+                        <li class="detailcategory"><a href="#">ì¹´ë©”ë¼</a></li>
+                        <li class="detailcategory"><a href="#">ìŒí–¥ê°€ì „/í•™ìŠµê¸°ê¸°</a></li>
+                        <li class="detailcategory"><a href="#">ê²Œìž„/íƒ€ì´í‹€</a></li>
+                        <li class="detailcategory"><a href="#">ì›¨ì–´ëŸ¬ë¸”</a></li>
+                        <li class="detailcategory"><a href="#">ì˜ìƒê°€ì „</a></li>
+                        <li class="detailcategory"><a href="#">ìƒí™œ/ì£¼ë°©/ë¯¸ìš©ê°€ì „</a></li>
+                        <li class="detailcategory"><a href="#">ìžë™ì°¨ê¸°ê¸°</a></li>
+                        <li class="detailcategory"><a href="#">ê¸°íƒ€ ì£¼ë³€ê¸°ê¸°</a></li>
 
                     </ul>
-                    <ul class="category1 two"><span class="categoryname">ÆÐ¼ÇÀÇ·ù</span>
-                        <li class="detailcategory"><a href="#">³²¼ºÀÇ·ù</a></li>
-                        <li class="detailcategory"><a href="#">¿©¼ºÀÇ·ù</a></li>
-                        <li class="detailcategory"><a href="#">¾ð´õ¿þ¾î</a></li>
+                    <ul class="category1 two"><span class="categoryname">íŒ¨ì…˜ì˜ë¥˜</span>
+                        <li class="detailcategory"><a href="#">ë‚¨ì„±ì˜ë¥˜</a></li>
+                        <li class="detailcategory"><a href="#">ì—¬ì„±ì˜ë¥˜</a></li>
+                        <li class="detailcategory"><a href="#">ì–¸ë”ì›¨ì–´</a></li>
                         <li></li>
                         <li></li>
                         <li></li>
@@ -385,70 +385,70 @@
                         <li></li>
                         
                     </ul>
-                    <ul class="category1 three"><span class="categoryname">ÆÐ¼ÇÀâÈ­</span>
-                        <li class="detailcategory"><a href="#">½Å¹ß</a></li>
-                        <li class="detailcategory"><a href="#">¿©¼º°¡¹æ</a></li>
-                        <li class="detailcategory"><a href="#">³²¼º°¡¹æ</a></li>
-                        <li class="detailcategory"><a href="#">Áö°©</a></li>
-                        <li class="detailcategory"><a href="#">½Ã°è</a></li>
-                        <li class="detailcategory"><a href="#">ÁÖ¾ó¸®</a></li>
-                        <li class="detailcategory"><a href="#">¸ðÀÚ</a></li>
-                        <li class="detailcategory"><a href="#">¿©Çà¿ë °¡¹æ/¼ÒÇ°</a></li>
-                        <li class="detailcategory"><a href="#">±âÅ¸ÀâÈ­</a></li>
+                    <ul class="category1 three"><span class="categoryname">íŒ¨ì…˜ìž¡í™”</span>
+                        <li class="detailcategory"><a href="#">ì‹ ë°œ</a></li>
+                        <li class="detailcategory"><a href="#">ì—¬ì„±ê°€ë°©</a></li>
+                        <li class="detailcategory"><a href="#">ë‚¨ì„±ê°€ë°©</a></li>
+                        <li class="detailcategory"><a href="#">ì§€ê°‘</a></li>
+                        <li class="detailcategory"><a href="#">ì‹œê³„</a></li>
+                        <li class="detailcategory"><a href="#">ì£¼ì–¼ë¦¬</a></li>
+                        <li class="detailcategory"><a href="#">ëª¨ìž</a></li>
+                        <li class="detailcategory"><a href="#">ì—¬í–‰ìš© ê°€ë°©/ì†Œí’ˆ</a></li>
+                        <li class="detailcategory"><a href="#">ê¸°íƒ€ìž¡í™”</a></li>
                          
                         <li></li>
                         <li></li>
                         <li></li>
                     </ul>
-                    <ul class="category1 four"><span class="categoryname">È­ÀåÇ°/¹Ì¿ë</span>
-                        <li class="detailcategory"><a href="#">½ºÅ²ÄÉ¾î</a></li>
-                        <li class="detailcategory"><a href="#">¼±ÄÉ¾î</a></li>
-                        <li class="detailcategory"><a href="#">º£ÀÌ½º¸ÞÀÌÅ©¾÷</a></li>
-                        <li class="detailcategory"><a href="#">»öÁ¶¸ÞÀÌÅ©¾÷</a></li>
-                        <li class="detailcategory"><a href="#">Å¬·»Â¡</a></li>
-                        <li class="detailcategory"><a href="#">¸¶½ºÅ©/ÆÑ</a></li>
-                        <li class="detailcategory"><a href="#">Çì¾îÄÉ¾î</a></li>
-                        <li class="detailcategory"><a href="#">Çì¾î½ºÅ¸ÀÏ¸µ</a></li>
-                        <li class="detailcategory"><a href="#">¹ÙµðÄÉ¾î</a></li>
-                        <li class="detailcategory"><a href="#">³×ÀÏÄÉ¾î</a></li>
-                        <li class="detailcategory"><a href="#">Çì¾î½ºÅ¸ÀÏ¸µ</a></li>
-                        <li class="detailcategory"><a href="#">¹ÙµðÄÉ¾î</a></li>
+                    <ul class="category1 four"><span class="categoryname">í™”ìž¥í’ˆ/ë¯¸ìš©</span>
+                        <li class="detailcategory"><a href="#">ìŠ¤í‚¨ì¼€ì–´</a></li>
+                        <li class="detailcategory"><a href="#">ì„ ì¼€ì–´</a></li>
+                        <li class="detailcategory"><a href="#">ë² ì´ìŠ¤ë©”ì´í¬ì—…</a></li>
+                        <li class="detailcategory"><a href="#">ìƒ‰ì¡°ë©”ì´í¬ì—…</a></li>
+                        <li class="detailcategory"><a href="#">í´ë Œì§•</a></li>
+                        <li class="detailcategory"><a href="#">ë§ˆìŠ¤í¬/íŒ©</a></li>
+                        <li class="detailcategory"><a href="#">í—¤ì–´ì¼€ì–´</a></li>
+                        <li class="detailcategory"><a href="#">í—¤ì–´ìŠ¤íƒ€ì¼ë§</a></li>
+                        <li class="detailcategory"><a href="#">ë°”ë””ì¼€ì–´</a></li>
+                        <li class="detailcategory"><a href="#">ë„¤ì¼ì¼€ì–´</a></li>
+                        <li class="detailcategory"><a href="#">í—¤ì–´ìŠ¤íƒ€ì¼ë§</a></li>
+                        <li class="detailcategory"><a href="#">ë°”ë””ì¼€ì–´</a></li>
                         
                     </ul>
-                    <ul class="category1 five"><span class="categoryname">½ºÆ÷Ã÷/·¹Àú</span>
-                        <li class="detailcategory"><a href="#">Ä·ÇÎ</a></li>
-                        <li class="detailcategory"><a href="#">µî»ê</a></li>
-                        <li class="detailcategory"><a href="#">°ñÇÁ</a></li>
-                        <li class="detailcategory"><a href="#">ÀÚÀü°Å/¿ÀÅä¹ÙÀÌ/½ºÄíÅÍ</a></li>
-                        <li class="detailcategory"><a href="#">½ºÅ°/º¸µå</a></li>
-                        <li class="detailcategory"><a href="#">³¬½Ã</a></li>
-                        <li class="detailcategory"><a href="#">¼ö¿µ/Çï½º/¿ä°¡</a></li>
-                        <li class="detailcategory"><a href="#">½ºÄÉÀÌÆ®/º¸µå/·Ñ·¯</a></li>
-                        <li class="detailcategory"><a href="#">Ãà±¸/¾ß±¸/³ó±¸</a></li>
-                        <li class="detailcategory"><a href="#">±âÅ¸ ½ºÆ÷Ã÷ ¿ëÇ°</a></li>
+                    <ul class="category1 five"><span class="categoryname">ìŠ¤í¬ì¸ /ë ˆì €</span>
+                        <li class="detailcategory"><a href="#">ìº í•‘</a></li>
+                        <li class="detailcategory"><a href="#">ë“±ì‚°</a></li>
+                        <li class="detailcategory"><a href="#">ê³¨í”„</a></li>
+                        <li class="detailcategory"><a href="#">ìžì „ê±°/ì˜¤í† ë°”ì´/ìŠ¤ì¿ í„°</a></li>
+                        <li class="detailcategory"><a href="#">ìŠ¤í‚¤/ë³´ë“œ</a></li>
+                        <li class="detailcategory"><a href="#">ë‚šì‹œ</a></li>
+                        <li class="detailcategory"><a href="#">ìˆ˜ì˜/í—¬ìŠ¤/ìš”ê°€</a></li>
+                        <li class="detailcategory"><a href="#">ìŠ¤ì¼€ì´íŠ¸/ë³´ë“œ/ë¡¤ëŸ¬</a></li>
+                        <li class="detailcategory"><a href="#">ì¶•êµ¬/ì•¼êµ¬/ë†êµ¬</a></li>
+                        <li class="detailcategory"><a href="#">ê¸°íƒ€ ìŠ¤í¬ì¸  ìš©í’ˆ</a></li>
                          <li></li>
                      
                         <li></li>    
                     </ul>
-                    <ul class="category1 six"><span class="categoryname">À¯¾Æµ¿/Ãâ»ê</span>
-                        <li class="detailcategory"><a href="#">¿Ï±¸/±³À°/±³±¸</a></li>
-                        <li class="detailcategory"><a href="#">¼öÀ¯/ÀÌÀ¯¿ëÇ°</a></li>
-                        <li class="detailcategory"><a href="#">¿ÜÃâ¿ëÇ°</a></li>
-                        <li class="detailcategory"><a href="#">À¯¾Æ°¡±¸</a></li>
-                        <li class="detailcategory"><a href="#">¸ñ¿å/½ºÅ²ÄÉ¾î</a></li>
-                        <li class="detailcategory"><a href="#">À§»ý/°Ç°­/¼¼Á¦</a></li>
-                        <li class="detailcategory"><a href="#">ÀÓºÎº¹</a></li>
-                        <li class="detailcategory"><a href="#">À¯¾Æµ¿ ÀÇ·ù/ÀâÈ­</a></li>
-                        <li class="detailcategory"><a href="#">¾ÈÀü¿ëÇ°</a></li>
-                        <li class="detailcategory"><a href="#">±âÀú±Í/¹°Æ¼½´</a></li>
-                        <li class="detailcategory"><a href="#">ºÐÀ¯/ÀÌÀ¯½Ä/°£½Ä</a></li>
+                    <ul class="category1 six"><span class="categoryname">ìœ ì•„ë™/ì¶œì‚°</span>
+                        <li class="detailcategory"><a href="#">ì™„êµ¬/êµìœ¡/êµêµ¬</a></li>
+                        <li class="detailcategory"><a href="#">ìˆ˜ìœ /ì´ìœ ìš©í’ˆ</a></li>
+                        <li class="detailcategory"><a href="#">ì™¸ì¶œìš©í’ˆ</a></li>
+                        <li class="detailcategory"><a href="#">ìœ ì•„ê°€êµ¬</a></li>
+                        <li class="detailcategory"><a href="#">ëª©ìš•/ìŠ¤í‚¨ì¼€ì–´</a></li>
+                        <li class="detailcategory"><a href="#">ìœ„ìƒ/ê±´ê°•/ì„¸ì œ</a></li>
+                        <li class="detailcategory"><a href="#">ìž„ë¶€ë³µ</a></li>
+                        <li class="detailcategory"><a href="#">ìœ ì•„ë™ ì˜ë¥˜/ìž¡í™”</a></li>
+                        <li class="detailcategory"><a href="#">ì•ˆì „ìš©í’ˆ</a></li>
+                        <li class="detailcategory"><a href="#">ê¸°ì €ê·€/ë¬¼í‹°ìŠˆ</a></li>
+                        <li class="detailcategory"><a href="#">ë¶„ìœ /ì´ìœ ì‹/ê°„ì‹</a></li>
                         <li></li>   
                     </ul>
-                     <ul class="category1 seven"><span class="categoryname">¿Ï±¸/¹®±¸/Ãë¹Ì</span>
-                        <li class="detailcategory"><a href="#">¹®±¸/»ç¹«¿ëÇ°</a></li>
-                        <li class="detailcategory"><a href="#">È­¹æ¿ëÇ°</a></li>
-                        <li class="detailcategory"><a href="#">¾Ç±â</a></li>
-                        <li class="detailcategory"><a href="#">ÇÇ±Ô¾î</a></li>
+                     <ul class="category1 seven"><span class="categoryname">ì™„êµ¬/ë¬¸êµ¬/ì·¨ë¯¸</span>
+                        <li class="detailcategory"><a href="#">ë¬¸êµ¬/ì‚¬ë¬´ìš©í’ˆ</a></li>
+                        <li class="detailcategory"><a href="#">í™”ë°©ìš©í’ˆ</a></li>
+                        <li class="detailcategory"><a href="#">ì•…ê¸°</a></li>
+                        <li class="detailcategory"><a href="#">í”¼ê·œì–´</a></li>
                         <li></li>
                         <li></li>
                         <li></li>
@@ -459,16 +459,16 @@
                         <li></li>
                         <li></li>
                     </ul>
-                     <ul class="category1 eight"><span class="categoryname">ÇØ¿Ü ¸íÇ°</span>
-                        <li class="detailcategory"><a href="#">¸íÇ°°¡¹æ</a></li>
-                        <li class="detailcategory"><a href="#">¸íÇ°Áö°©</a></li>
-                        <li class="detailcategory"><a href="#">¸íÇ°½Ã°è</a></li>
-                        <li class="detailcategory"><a href="#">¸íÇ°½Å¹ß</a></li>
-                        <li class="detailcategory"><a href="#">¸íÇ°¾×¼¼¼­¸®</a></li>
+                     <ul class="category1 eight"><span class="categoryname">í•´ì™¸ ëª…í’ˆ</span>
+                        <li class="detailcategory"><a href="#">ëª…í’ˆê°€ë°©</a></li>
+                        <li class="detailcategory"><a href="#">ëª…í’ˆì§€ê°‘</a></li>
+                        <li class="detailcategory"><a href="#">ëª…í’ˆì‹œê³„</a></li>
+                        <li class="detailcategory"><a href="#">ëª…í’ˆì‹ ë°œ</a></li>
+                        <li class="detailcategory"><a href="#">ëª…í’ˆì•¡ì„¸ì„œë¦¬</a></li>
                         
                     </ul>
-                     <ul class="category1 nine"><span class="categoryname">ÀÚµ¿Â÷</span>
-                        <li class="detailcategory"><a href="#">ÀÚµ¿Â÷</a></li>
+                     <ul class="category1 nine"><span class="categoryname">ìžë™ì°¨</span>
+                        <li class="detailcategory"><a href="#">ìžë™ì°¨</a></li>
                         <li></li>
                         <li></li>
                         <li></li>
@@ -477,9 +477,9 @@
                         <li></li>
 
                     </ul>
-                     <ul class="category1 ten"><span class="categoryname">µµ¼­/À½¹Ý/DVD</span>
-                        <li class="detailcategory"><a href="#">µµ¼­</a></li>
-                        <li class="detailcategory"><a href="#">DVD/À½¹Ý</a></li>
+                     <ul class="category1 ten"><span class="categoryname">ë„ì„œ/ìŒë°˜/DVD</span>
+                        <li class="detailcategory"><a href="#">ë„ì„œ</a></li>
+                        <li class="detailcategory"><a href="#">DVD/ìŒë°˜</a></li>
                         <li></li>
                         <li></li>
                         <li></li>
@@ -492,27 +492,27 @@
                         <li></li>
                         <li></li>
                     </ul>
-                     <ul class="category1 eleven"><span class="categoryname">°¡±¸/ÀÎÅ×¸®¾î</span>
-                        <li class="detailcategory"><a href="#">Ä§½Ç°¡±¸</a></li>
-                        <li class="detailcategory"><a href="#">°Å½Ç/ÁÖ¹æ°¡±¸</a></li>
-                        <li class="detailcategory"><a href="#">¼ö³³°¡±¸</a></li>
-                        <li class="detailcategory"><a href="#">Ä§±¸´ÜÇ°</a></li>
-                        <li class="detailcategory"><a href="#">Ä¿Æ°</a></li>
-                        <li class="detailcategory"><a href="#">¼­Àç/»ç¹«¿ë°¡±¸</a></li>
-                        <li class="detailcategory"><a href="#">DIYÀÚÀç/¿ëÇ°</a></li>
-                        <li class="detailcategory"><a href="#">Ä§±¸¼¼Æ®</a></li>
-                        <li class="detailcategory"><a href="#">¾Æµ¿/ÁÖ´Ï¾î°¡±¸</a></li>
-                        <li class="detailcategory"><a href="#">ÀÎÅ×¸®¾î¼ÒÇ°</a></li>
-                        <li class="detailcategory"><a href="#">º£°³/¼Ø·ù</a></li>
-                        <li class="detailcategory"><a href="#">¼ö¿¹</a></li>
-                        <li class="detailcategory"><a href="#">Ä«ÆäÆ®/·¯±×</a></li>
+                     <ul class="category1 eleven"><span class="categoryname">ê°€êµ¬/ì¸í…Œë¦¬ì–´</span>
+                        <li class="detailcategory"><a href="#">ì¹¨ì‹¤ê°€êµ¬</a></li>
+                        <li class="detailcategory"><a href="#">ê±°ì‹¤/ì£¼ë°©ê°€êµ¬</a></li>
+                        <li class="detailcategory"><a href="#">ìˆ˜ë‚©ê°€êµ¬</a></li>
+                        <li class="detailcategory"><a href="#">ì¹¨êµ¬ë‹¨í’ˆ</a></li>
+                        <li class="detailcategory"><a href="#">ì»¤íŠ¼</a></li>
+                        <li class="detailcategory"><a href="#">ì„œìž¬/ì‚¬ë¬´ìš©ê°€êµ¬</a></li>
+                        <li class="detailcategory"><a href="#">DIYìžìž¬/ìš©í’ˆ</a></li>
+                        <li class="detailcategory"><a href="#">ì¹¨êµ¬ì„¸íŠ¸</a></li>
+                        <li class="detailcategory"><a href="#">ì•„ë™/ì£¼ë‹ˆì–´ê°€êµ¬</a></li>
+                        <li class="detailcategory"><a href="#">ì¸í…Œë¦¬ì–´ì†Œí’ˆ</a></li>
+                        <li class="detailcategory"><a href="#">ë² ê°œ/ì†œë¥˜</a></li>
+                        <li class="detailcategory"><a href="#">ìˆ˜ì˜ˆ</a></li>
+                        <li class="detailcategory"><a href="#">ì¹´íŽ˜íŠ¸/ëŸ¬ê·¸</a></li>
                     </ul>
-                   <ul class="category1 twelve"><span class="categoryname">¿©Çà/¹®È­</span>
-                        <li class="detailcategory"><a href="#">Áö·ù/Ä«µå»óÇ°±Ç</a></li>
-                        <li class="detailcategory"><a href="#">°ø¿¬/Æ¼ÄÏ</a></li>
-                        <li class="detailcategory"><a href="#">¸ð¹ÙÀÏÄíÆù/»óÇ°±Ç</a></li>
-                        <li class="detailcategory"><a href="#">¿©Çà/Ç×°ø±Ç</a></li>
-                        <li class="detailcategory"><a href="#">·¹ÀúÀÌ¿ë±Ç</a></li>
+                   <ul class="category1 twelve"><span class="categoryname">ì—¬í–‰/ë¬¸í™”</span>
+                        <li class="detailcategory"><a href="#">ì§€ë¥˜/ì¹´ë“œìƒí’ˆê¶Œ</a></li>
+                        <li class="detailcategory"><a href="#">ê³µì—°/í‹°ì¼“</a></li>
+                        <li class="detailcategory"><a href="#">ëª¨ë°”ì¼ì¿ í°/ìƒí’ˆê¶Œ</a></li>
+                        <li class="detailcategory"><a href="#">ì—¬í–‰/í•­ê³µê¶Œ</a></li>
+                        <li class="detailcategory"><a href="#">ë ˆì €ì´ìš©ê¶Œ</a></li>
                          <li></li>
                         <li></li>
                         <li></li>
@@ -522,15 +522,15 @@
                         <li></li>
                         <li></li>
                     </ul>
-                        <ul class="category1 thirteen"><span class="categoryname">»ýÈ°/°Ç°­</span>
-                        <li class="detailcategory"><a href="#">ÀÚµ¿Â÷¿ëÇ°</a></li>
-                        <li class="detailcategory"><a href="#">ÁÖ¹æ¿ëÇ°</a></li>
-                        <li class="detailcategory"><a href="#">¼¼Å¹¿ëÇ°</a></li>
-                        <li class="detailcategory"><a href="#">¼ö³³/Á¤¸®¿ëÇ°</a></li>
-                        <li class="detailcategory"><a href="#">»ýÈ°¿ëÇ°</a></li>
-                        <li class="detailcategory"><a href="#">°ø±¸</a></li>
-                        <li class="detailcategory"><a href="#">¾Ö¿Ï</a></li>
-                        <li  class="detailcategory"><a href="#">½ÄÇ°</a></li>
+                        <ul class="category1 thirteen"><span class="categoryname">ìƒí™œ/ê±´ê°•</span>
+                        <li class="detailcategory"><a href="#">ìžë™ì°¨ìš©í’ˆ</a></li>
+                        <li class="detailcategory"><a href="#">ì£¼ë°©ìš©í’ˆ</a></li>
+                        <li class="detailcategory"><a href="#">ì„¸íƒìš©í’ˆ</a></li>
+                        <li class="detailcategory"><a href="#">ìˆ˜ë‚©/ì •ë¦¬ìš©í’ˆ</a></li>
+                        <li class="detailcategory"><a href="#">ìƒí™œìš©í’ˆ</a></li>
+                        <li class="detailcategory"><a href="#">ê³µêµ¬</a></li>
+                        <li class="detailcategory"><a href="#">ì• ì™„</a></li>
+                        <li  class="detailcategory"><a href="#">ì‹í’ˆ</a></li>
                         <li></li>
                         <li></li>
                         <li></li>
@@ -541,13 +541,13 @@
                 </li>
 
             
-                <li class="li2"><a href="#">¼¿ÀÕ ÇÃ·¯½º</a></li>
-                <li class="li2"><a href="#">°ü½É»óÇ°</a></li>
-                <li class="li2"><a href="#">ÃßÃµ»óÇ°</a></li>
-                <li class="li2"><a href="#">Ãß°¡ÇÒÀÎ</a></li>
-                <li class="li2"><a href="#">»õ·Î µî·ÏµÈ »óÇ°</a></li>
-                <li class="li2"><a href="#">ÆÇ¸Å ¿¹Á¤ »óÇ°</a></li>
-                <li class="li2"><a href="#">¾È¾²´Â ¹°°Ç ÆÇ¸ÅÇÏ±â</a></li>
+                <li class="li2"><a href="#">ì…€ìž‡ í”ŒëŸ¬ìŠ¤</a></li>
+                <li class="li2"><a href="#">ê´€ì‹¬ìƒí’ˆ</a></li>
+                <li class="li2"><a href="#">ì¶”ì²œìƒí’ˆ</a></li>
+                <li class="li2"><a href="#">ì¶”ê°€í• ì¸</a></li>
+                <li class="li2"><a href="#">ìƒˆë¡œ ë“±ë¡ëœ ìƒí’ˆ</a></li>
+                <li class="li2"><a href="#">íŒë§¤ ì˜ˆì • ìƒí’ˆ</a></li>
+                <li class="li2"><a href="#">ì•ˆì“°ëŠ” ë¬¼ê±´ íŒë§¤í•˜ê¸°</a></li>
             </ul>
         </div>
         <div id="contents">
@@ -556,13 +556,13 @@
         </div>
             <div id="footertop">
                 <ul class="footerbar">
-                    <li class="footerbarli"><a href="#">ÀÌ¿ë¾à°ü</a></li>
-                    <li class="footerbarli"><a href="#">°³ÀÎÁ¤º¸ Ãë±Þ¹æÄ§</a></li>
-                    <li class="footerbarli"><a href="#">ÆÇ¸Å ¹× È¯ºÒ ¾à°ü</a></li>
-                    <li class="footerbarli"><a href="#">°øÁö»çÇ×</a></li>
-                    <li class="footerbarli"><a href="#">°í°´¼¾ÅÍ</a></li>
-                    <li class="footerbarli"><a href="#">¼¿ÀÕ ºñÁî´Ï½º</a></li>
-                    <li class="footerbarli"><a href="#">ÀÔÁ¡/Á¦ÈÞ ¹®ÀÇ</a></li>
+                    <li class="footerbarli"><a href="#">ì´ìš©ì•½ê´€</a></li>
+                    <li class="footerbarli"><a href="#">ê°œì¸ì •ë³´ ì·¨ê¸‰ë°©ì¹¨</a></li>
+                    <li class="footerbarli"><a href="#">íŒë§¤ ë° í™˜ë¶ˆ ì•½ê´€</a></li>
+                    <li class="footerbarli"><a href="#">ê³µì§€ì‚¬í•­</a></li>
+                    <li class="footerbarli"><a href="#">ê³ ê°ì„¼í„°</a></li>
+                    <li class="footerbarli"><a href="#">ì…€ìž‡ ë¹„ì¦ˆë‹ˆìŠ¤</a></li>
+                    <li class="footerbarli"><a href="#">ìž…ì /ì œíœ´ ë¬¸ì˜</a></li>
             </ul>
             </div>
         </div>

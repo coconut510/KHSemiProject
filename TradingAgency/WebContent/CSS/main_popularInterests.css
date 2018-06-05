@@ -1,0 +1,39 @@
+.popularInterests>.container {
+    display: flex;
+}
+
+.popularInterests .row>div {
+    width: 100%;
+    height: auto;
+    flex: 1;
+}
+
+.additionalDC>.container {
+    display: flex;
+}
+
+.additionalDC .row>div {
+    width: 100%;
+    height: auto;
+    flex: 1;
+}
+
+.toBeSoldGoods>.container {
+    display: flex;
+}
+
+.toBeSoldGoods .row>div {
+    width: 100%;
+    height: auto;
+    flex: 1;
+}
+
+.newGoods>.container {
+    display: flex;
+}
+
+.newGoods .row>div {
+    width: 100%;
+    height: auto;
+    flex: 1;
+}
