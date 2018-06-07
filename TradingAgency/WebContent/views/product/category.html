@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <title>Insert title here</title>
     <link rel="stylesheet" href="../../CSS/common.css" type="text/css"/>
+    <link rel="stylesheet" href="../../CSS/category.css" type="text/css"/>
     <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
      
     <script src="http://code.jquery.com/jquery-3.3.1.js"
@@ -17,12 +18,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     
-    <link rel="stylesheet" href="../../CSS/category.css" type="text/css"/>
     <script src="../../JS/common.js"></script>
     
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js" ></script>
     <script type="text/javascript" src="https://service.iamport.kr/js/iamport.payment-1.1.5.js"></script>
     <script>
+        /*
         IMP.request_pay({
             pg : 'inicis', // version 1.1.0부터 지원.
             pay_method : 'card',
@@ -48,6 +49,7 @@
             }
             alert(msg);
         });
+        */
     </script>    
 </head>
 <body>
@@ -59,18 +61,11 @@
             네비게이션
         </div>
         <div id="content">
-            <div id="categoryTitle" class="dropdown">              
-                  <a id="categoryTitle" data-toggle="dropdown">여성의류
-                    <!--  <a href="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkGE1oYG8JBKlceOymr_QHMYvZA6_O65mJg0HyXAnmDdovyIqdOQ"></a>
-                    -->
-                          <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">HTML</a></li>
-                      <li><a href="#">CSS</a></li>
-                      <li><a href="#">JavaScript</a></li>
-                    </ul>
-                   <!-- <a href="">▽</a>-->
-                <div id="headerLine"></div>
+            <div id="categoryTitle">              
+                카테고리
+                <div id="headerLine">
+                    카테고리 제
+                </div>
             </div>
             <div id="categoryImageSlide">
                 하위카테고리<br>
