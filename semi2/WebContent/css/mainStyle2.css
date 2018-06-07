@@ -1,0 +1,100 @@
+
+body {
+    border: 1px solid black;
+    width: 100%;
+    height: auto;
+    position: relative;
+    box-sizing: border-box;
+    background-color: beige;
+    font-family: 'Sunflower', sans-serif;
+}
+
+.header {
+    border: 1px solid black;
+    width: 100%;
+    height: auto;
+    position: relative;
+    box-sizing: border-box;
+    background-color: aquamarine;
+    font-family: inherit;
+}
+
+.nav {
+    border: 1px solid black;
+    width: 100%;
+    height: auto;
+    position: relative;
+    box-sizing: border-box;
+    background-color: blue;
+    font-family: inherit;
+}
+
+.content {
+    border: 1px solid black;
+    width: 100%;
+    height: auto;
+    position: relative;
+    box-sizing: border-box;
+    background-color: white;
+    font-family: inherit;
+}
+
+.footer {
+    border: 1px solid black;
+    width: 100%;
+    height: auto;
+    position: relative;
+    box-sizing: border-box;
+    background-color: beige;
+    font-family: inherit;
+}
+
+.top_AD_Slider,.popularCate,.plus_popularGoods,.newGoods,.toBeSoldGoods,.additionalDC,.popularInterests,.review,.sellButton,.serviceCenter,.bottomSearch{
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    border: 1px solid black;
+    position: relative;
+    font-family: inherit;
+}
+
+.popularCate_title,.plus_popularGoods_sup,.plus_popularGoods_title,.newGoods_title,.toBeSoldGoods_title,.additionalDC_title,.popularInterests_title,.review_title{
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    border: 1px solid black;
+    background-color: palegoldenrod;
+    font-family: inherit;
+}
+
+.top_AD_Slider div div {
+    width: 50%;
+    height: auto;
+    box-sizing: border-box;
+    position: relative;
+    background-color: dodgerblue;
+    font-family: inherit;
+}
+.popularCate_img{
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    position: relative;
+    font-family: inherit;
+}
+
+.top_AD_Slider>div div>a>img{
+    width: 100%;
+    height: 70%;
+}
+.col-sm{
+    width: 100%;
+    height: auto;
+    background-color: aquamarine;
+}
+.price{
+    background-color: blueviolet;
+}
+.explanation1{
+    background-color: yellow;
+}

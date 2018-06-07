@@ -1,0 +1,17 @@
+.sellButton {
+    display: flex;
+}
+
+.sellButton>.container {
+    width: 70%;
+    height: auto;
+    border: 1px solid black;
+    display: flex;
+}
+
+.sellButton>.container>div:first-child {
+   flex: 2;
+}
+.sellButton>.container>div:last-child {
+   flex: 1;
+}

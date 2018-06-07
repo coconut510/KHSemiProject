@@ -1,0 +1,13 @@
+
+
+.review>.container{
+    display: flex;
+}
+
+.review .row>div{
+    width: 100%;
+  height: auto;
+  flex: 1;  
+}
+
+
