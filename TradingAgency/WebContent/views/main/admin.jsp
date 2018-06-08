@@ -104,7 +104,7 @@
 
 				<ul class="nav nav-sidebar">
 					<li data-toggle="collapse" data-target="#second"
-						class="nav nav-sidebar"><a href="#">고객관리 <span
+						class="nav nav-sidebar"><a href="#">고객관리 123<span
 							class="glyphicon glyphicon-star" aria-hidden="true"></span></a></li>
 					<ul class="sub-menu collapse" id="second">
 						<a href="/views/adminMemberSelect.jsp"> <span class="glyphicon glyphicon-star"
