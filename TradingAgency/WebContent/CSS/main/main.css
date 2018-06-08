@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+html, body {
+	width: 100%;
+	height: auto;
+	background-color: antiquewhite;
+	font-family: 'Sunflower', sans-serif;
+}
+
+.card-img-top {
+	width: 100%;
+	height: 200px;
+}
+
+#imgSliderSec img {
+	width: 100%;
+	height: 700px;
+}
+
+#middleAdSec img {
+	width: 100%;
+	height: 300px;
+}
+
+#newProductSec_row img {
+	width: 500px;
+	height: 300px;
+}
+
+#newProduct_title {
+	width: 100%;
+	height: auto;
+	margin-left: 100px;
+}
+
+.shadow {
+	width: 400px;
+	height: 400px;
+	margin: 10px auto;
+	overflow: hidden;
+	border: 1px solid black;
+}
+
+.shadow img {
+	width: 400px;
+	height: 400px;
+}
+
+.shadow img:hover {
+
+	cursor: pointer;
+	-webkit-transform: scale(1.3); /*  크롬 */
+	-moz-transform: scale(1.3); /* FireFox */
+	-o-transform: scale(1.3); /* Opera */
+	transform: scale(1.3);
+	transition: transform .50s;
+	-o-transition: transform .50s;
+	-moz-transition: transform .50s;
+	-webkit-transition: transform .50s;
+}
