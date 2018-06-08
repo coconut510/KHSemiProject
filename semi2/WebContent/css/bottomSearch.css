@@ -1,0 +1,19 @@
+.bottomSearch input[type="text"]{
+    width: 25%;
+    height: 5%;
+    background-color: white;
+    border-color: green;
+    border-width: thick;
+    margin-bottom: 20px;
+    
+
+}
+
+.bottomSearch button{
+    width: 10%;
+    height: 5%;
+    font-size: 40px;
+    font-weight: 900;
+     
+ 
+}

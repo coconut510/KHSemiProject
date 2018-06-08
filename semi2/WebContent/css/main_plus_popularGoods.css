@@ -1,0 +1,10 @@
+
+.plus_popularGoods>.container {
+    display: flex;
+}
+
+.plus_popularGoods .row>div {
+    width: 100%;
+    height: auto;
+    flex: 1;
+}
