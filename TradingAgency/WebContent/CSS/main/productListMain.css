@@ -1,0 +1,188 @@
+#productSection{
+	width : 100%;
+	height : auto;	
+	background-color : black;
+}
+#topLeftLink > a{
+	float:right;
+}
+#topLeftLink{
+	display:block;
+}
+#crossLine{
+	width:25px;
+	height:1px;
+	background-color:black;
+	display:block;
+	clear:both;
+	margin-bottom : 20px;
+}
+#productTitle{
+	margin-bottom:10px;
+	
+}
+#recommandProductTitle> strong{
+	float:left;
+	margin-bottom:10px;
+}
+#recommandProductContent{
+	clear:both;
+	margin-bottom:10px;
+}
+
+a{
+	color:lightgray;
+    text-decoration-line: none;
+}
+a:link{
+    color: lightgray;
+    text-decoration-line: none;
+}
+a:visited{
+    color: lightgray;
+    text-decoration-line: none;
+}
+a:hover{
+    color: lightgray;
+    text-decoration-line: none;
+}
+a:active{
+    color: lightgray;
+    text-decoration-line: none;
+}
+
+/* 전체 상품 20개 안쪽 모두*/
+#entireProduct{
+	width:100%;
+	height:auto;
+}
+
+#entireProductTitle{
+	float:left;
+	margin-bottom:5px;
+}
+#crossLineLong{
+	clear:both;
+	width:100%;
+	height:1px;
+	background-color:gray;
+	margin-bottom:15px;
+}
+li {
+    list-style-type: none;
+}
+
+.float_wrap{
+	display:block;
+}
+.float_wrap li{
+	display:inline;
+}
+.sort_item a:link , visited,hover,active{
+    color: black;
+    text-decoration-line: none;
+}
+.sort_item>a:visited{
+	color:black;
+}
+
+
+.left{
+	list-style-
+	color:black;
+	float:left;
+}
+.goods_list_style{
+	float:right;
+}
+.goods_list_style>li>a{
+	color:black;
+}
+.right{
+	float:right;
+}
+.productList{
+	clear:both;
+	margin-bottom:20px;
+}
+.productList ul{
+	height:410px;
+	list-style-type: none;
+	margin-bottom:5px;
+	clear:both;
+}
+.productWrap{
+	float:left;
+	width:24%;
+	height:100%;
+	margin-right:6px;
+}
+.productBg{
+	width:100%;
+	height:100%;
+	background-color:white;
+}
+/************************************/
+
+/*제품 리스트 내부*/
+.productWrap{
+	position:relative;
+}
+.productImgMain{
+	width:100%;
+}
+.discountBg{
+	position:absolute;
+	width:60px;
+	height:60px;
+	top: 0;
+	left:0;
+	background-color:#333333;
+	color:white;
+	text-align:center;
+	
+	margin: auto;
+    padding: 7%;
+}
+.productTitle{
+	width:100%;
+}
+.productExplain{
+	width:100%;
+	margin-bottom:3px;
+}
+.productExplainFont{
+	color:gray;
+  font-weight: light;
+}
+.priceOrigin{
+	width:100%;
+}
+.priceOrigin>s{
+	color:gray;
+}
+.myCheck{
+	width:100%;
+	height:30px;
+}
+.myCheck li:first-child{
+		margin-left:26%;
+}
+.myCheck li{
+	float:left;
+	height:20px;
+}
+.freeTransfor{
+	background-color:#f9fbff;
+	border:1px solid gray;
+	width:80px;
+	height:25px;
+}
+
+#footerTest{
+	display:block;
+	clear:both;
+	width:100%;
+	height:300px;
+	background-color:green;
+}
