@@ -40,7 +40,7 @@
 <link rel="stylesheet" type="text/css" href="/CSS/common/common.css">
 <!-- 외부 js파일  -->
 <script src="../js/script2.js"></script>
-<title>인덱스페이지</title>
+<title>메인페이지</title>
 </head>
 
 <body>
@@ -50,7 +50,8 @@
 		<div id="wrapper">
 			<!-- header -->
 			<header id="header">
-			<div id="headerLine">HeadLine1</div>
+			<div id="headerLine">
+				<%@include file="/views/main/test.jsp"%></div>
 			<div id="navigator">Navigator</div>
 			</header>
 
