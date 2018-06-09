@@ -33,7 +33,8 @@
 	crossorigin="anonymous"></script>
 
 <!-- 구글 폰트 -->
-<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:700"
+	rel="stylesheet">
 <!-- 외부css파일  -->
 <link rel="stylesheet" type="text/css" href="/CSS/main/main.css">
 <link rel="stylesheet" type="text/css" href="/CSS/common/common.css">
@@ -44,6 +45,7 @@
 
 <body>
 	<center>
+
 		<!-- Wrapper -->
 		<div id="wrapper">
 			<!-- header -->
@@ -467,7 +469,7 @@
 			<div id="middleAdSec">
 
 				<div id="carouselExampleIndicators" class="carousel slide"
-					data-ride="carousel">
+					id="mdCarousel" data-ride="carousel">
 					<ol class="carousel-indicators">
 						<li data-target="#carouselExampleIndicators" data-slide-to="0"
 							class="active"></li>
@@ -491,15 +493,7 @@
 								alt="세번째 슬라이드"></a>
 						</div>
 					</div>
-					<a class="carousel-control-prev" href="#carouselExampleIndicators"
-						role="button" data-slide="prev"> <span
-						class="carousel-control-prev-icon" aria-hidden="true"></span> <span
-						class="sr-only">이전</span>
-					</a> <a class="carousel-control-next" href="#carouselExampleIndicators"
-						role="button" data-slide="next"> <span
-						class="carousel-control-next-icon" aria-hidden="true"></span> <span
-						class="sr-only">다음</span>
-					</a>
+
 				</div>
 			</div>
 			<br> <br>
@@ -514,6 +508,8 @@
 						<div class="col-md-3" style="width: 18rem;">
 							<a href="#"><img class="card-img-top"
 								src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
+								onmouseover="this.src='img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg'"
+								onmouseout="this.src='img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg'"
 								alt="Card image cap"></a>
 							<div class="card-body">
 								<a href="#">
@@ -524,8 +520,10 @@
 							</div>
 						</div>
 						<div class="col-md-3" style="width: 18rem;">
-							<a href="#"> <img class="card-img-top"
+							<a href="#"><img class="card-img-top"
 								src="img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg"
+								onmouseover="this.src='img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg'"
+								onmouseout="this.src='img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg'"
 								alt="Card image cap"></a>
 							<div class="card-body">
 								<a href="#">
@@ -536,8 +534,10 @@
 							</div>
 						</div>
 						<div class="col-md-3" style="width: 18rem;">
-							<a href="#"> <img class="card-img-top"
-								src="img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg"
+							<a href="#"><img class="card-img-top"
+								src="img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg"
+								onmouseover="this.src='img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg'"
+								onmouseout="this.src='img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg'"
 								alt="Card image cap"></a>
 							<div class="card-body">
 								<a href="#">
@@ -550,7 +550,9 @@
 
 						<div class="col-md-3" style="width: 18rem;">
 							<a href="#"><img class="card-img-top"
-								src="img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg"
+								src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
+								onmouseover="this.src='img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg'"
+								onmouseout="this.src='img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg'"
 								alt="Card image cap"></a>
 							<div class="card-body">
 								<a href="#">
@@ -570,17 +572,8 @@
 						<div class="col-md-3" style="width: 18rem;">
 							<a href="#"><img class="card-img-top"
 								src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
-								alt="Card image cap"></a>
-							<div class="card-body">
-								<a href="#">
-									<h5 class="card-title">Card title</h5>
-								</a>
-								<p class="card-text">product explanation</p>
-							</div>
-						</div>
-						<div class="col-md-3" style="width: 18rem;">
-							<a href="#"> <img class="card-img-top"
-								src="img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg"
+								onmouseover="this.src='img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg'"
+								onmouseout="this.src='img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg'"
 								alt="Card image cap"></a>
 							<div class="card-body">
 								<a href="#">
@@ -591,8 +584,24 @@
 							</div>
 						</div>
 						<div class="col-md-3" style="width: 18rem;">
-							<a href="#"> <img class="card-img-top"
-								src="img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg"
+							<a href="#"><img class="card-img-top"
+								src="img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg"
+								onmouseover="this.src='img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg'"
+								onmouseout="this.src='img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg'"
+								alt="Card image cap"></a>
+							<div class="card-body">
+								<a href="#">
+									<h5 class="card-title">Card title</h5>
+								</a>
+								<p class="card-text">product explanation</p>
+
+							</div>
+						</div>
+						<div class="col-md-3" style="width: 18rem;">
+							<a href="#"><img class="card-img-top"
+								src="img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg"
+								onmouseover="this.src='img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg'"
+								onmouseout="this.src='img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg'"
 								alt="Card image cap"></a>
 							<div class="card-body">
 								<a href="#">
@@ -605,14 +614,15 @@
 
 						<div class="col-md-3" style="width: 18rem;">
 							<a href="#"><img class="card-img-top"
-								src="img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg"
+								src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
+								onmouseover="this.src='img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg'"
+								onmouseout="this.src='img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg'"
 								alt="Card image cap"></a>
 							<div class="card-body">
 								<a href="#">
 									<h5 class="card-title">Card title</h5>
 								</a>
 								<p class="card-text">product explanation</p>
-
 							</div>
 						</div>
 					</div>
@@ -630,6 +640,7 @@
 		</footer>
 		</div>
 	</center>
+
 </body>
 
 </html>
