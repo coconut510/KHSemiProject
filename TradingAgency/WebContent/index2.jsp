@@ -439,23 +439,23 @@
 					<div class="row">
 						<div class="col-md-4">
 							<div class="shadow">
-								<img
+								<a href="#"><img
 									src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
-									width="100%" height="100%">
+									width="100%" height="100%"></a>
 							</div>
 						</div>
 						<div class="col-md-4">
 							<div class="shadow">
-								<img
+									<a href="#"><img
 									src="img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg"
-									width="100%" height="100%">
+									width="100%" height="100%"></a>
 							</div>
 						</div>
 						<div class="col-md-4">
 							<div class="shadow">
-								<img
+									<a href="#"><img
 									src="img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg"
-									width="100%" height="100%">
+									width="100%" height="100%"></a>
 							</div>
 						</div>
 
@@ -629,6 +629,22 @@
 					</div>
 				</div>
 
+			</div>
+			<!-- 하단 고객센터 -->
+			<div id="bottomInfo">
+
+				<div>
+					<ul id="bottomList">
+						<li>COMPANY</li>
+						<li>AGREEMENT</li>
+						<li>PRIVACY POLICY</li>
+						<li>GUIDE</li>
+						<li>PARTNERSHIP</li>
+					</ul>
+				</div>
+				<div>
+					<div></div>
+				</div>
 			</div>
 		</div>
 
