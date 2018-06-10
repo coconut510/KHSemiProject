@@ -51,7 +51,7 @@
 			<!-- header -->
 			<header id="header">
 			<div id="headerLine">
-				<%@include file="/views/main/test.jsp"%></div>
+			<%-- 	<%@include file="/views/main/test.jsp"%></div> --%>
 			<div id="navigator">Navigator</div>
 			</header>
 
@@ -630,22 +630,7 @@
 				</div>
 
 			</div>
-			<!-- 하단 고객센터 -->
-			<div id="bottomInfo">
-
-				<div>
-					<ul id="bottomList">
-						<li>COMPANY</li>
-						<li>AGREEMENT</li>
-						<li>PRIVACY POLICY</li>
-						<li>GUIDE</li>
-						<li>PARTNERSHIP</li>
-					</ul>
-				</div>
-				<div>
-					<div></div>
-				</div>
-			</div>
+			
 		</div>
 
 		</section>
