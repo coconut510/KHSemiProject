@@ -123,6 +123,10 @@
 	text-align: center;
 	padding-top: 20px;
 }
+.snsBtn {
+	border: 0px;
+	background-color: white;
+}
 </style>
 <meta charset="UTF-8">
 <title>Insert title here</title>
@@ -156,22 +160,20 @@
 			<h4>원하는 회원가입 방법을 선택하세요.</h4>
 		</div>
 		<div class="normal-sign-up">
-			<form action="" method="post">
 				<h4>
 					<span>회원 유형 : <input type="radio" name="memberType"
 						value="member" checked="checked">개인
-					</span> <input type="submit" value="회원가입" class="btn btn-default btn-lg"
-						style="color: white; background-color: black;">
+					</span> <button onclick="memberType($('input[name=memberType]:checked').val());" class="btn btn-default btn-lg"
+						style="color: white; background-color: black;">회원가입</button>
 				</h4>
-			</form>
 		</div>
 		<div class="sns-sign-up">
 			<h4>SNS 계정으로 회원가입</h4>
 			<ul class="sns-list">
-				<li><img src="/img/loginByNaver.PNG" class="img-responsive"></li>
+				<li><button onclick="memberType('naver');" class="snsBtn"><img src="/img/loginByNaver.PNG" class="img-responsive"></button></li>
 				<br>
-				<li><img src="/img/btn_google_signin_dark_normal_web.png"
-					class="img-responsive" width="200px"></li>
+				<li><button onclick="memberType('google');" class="snsBtn"><img src="/img/btn_google_signin_dark_normal_web.png"
+					class="img-responsive" width="200px"></button></li>
 			</ul>
 		</div>
 		<div class="etc">
@@ -181,7 +183,12 @@
 
 	<div class="footer">footer 입니다.</div>
 	</div>
-	<script src="/jquery/jquery-3.3.1.js"></script>
+	<script type="text/javascript">
+		function memberType(type) {
+			location.href="/views/member/memberTerms.html?memberType="+type;
+		}
+	</script>
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 	<script type="text/javascript" src="/JS/bootstrap/bootstrap.js"></script>
 
 </body>
