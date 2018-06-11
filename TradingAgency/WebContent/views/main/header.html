@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>SmoothMovingLayer Demo</title>
+<title>header</title>
 
  <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 
@@ -29,13 +29,151 @@ $(document).ready(function(){
     });
 });
 </script>
+</head>
+<style>
+     #header {
+            height: auto;
+            width: 100%;
+/*            border: 1px solid black;*/
+            box-sizing: border-box;
+        }
+    #topoftop {
+        height: 10%;
+        width: 100%:
+/*          border: 1px solid black;*/
+            box-sizing: border-box;
+    }
+        #topleft {
+            height: 13%;
+            width: 20%;
+/*            border: 1px solid black;*/
+            box-sizing: border-box;
+            float: left;
+        }
+
+        
+        #topmiddle {
+            height: 13%;
+            width: 30%;
+/*            border: 1px solid black;*/
+            box-sizing: border-box;
+            float: left;
+        }
+
+        #topright {
+            height: 13%;
+            width: 50%;
+/*            border: 1px solid black;*/
+            box-sizing: border-box;
+            float: left;
+        }
+
+        .minibar {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            height: 100%;
+            width: 100%;
+        }
+
+        .minibar>li {
+            float: left;
+            list-style-type: none;
+            height: 30%;
+            width: 13%;
+            text-align: center;
+            line-height: 40px;
+            background: white;
+            font-size: 7px;
+        }
+        .minibar>li>a{
+             text-decoration: none;
+             text-align: left;
+        }
+       
+        #logoimg {
+            margin-top: 30px;
+            margin-left: 50px;
+        }
+
+        #searchbox {
+            height: 100%;
+            width: 100%;
+/*            border: 1px solid black;*/
+            box-sizing: border-box;
+            float: left;
+        }
+
+        #search {
+            height: 40px;
+            width: 380px;
+            border: 3px solid purple;
+            margin-top: 60px;
+            margin-left: 100px;
+        }
+
+     .bs-example
+    {
+        width:100%;
+        background-color: white;
+        
+    }
+    .nav nav-pills{
+         width:100%;
+    }
+    .navimove{
+       margin-left:400px; 
+    }
+li a:hover {
+    background-color: white;
+}
+    #bookmark{
+        font-weight: 800;
+    }
+</style>
+
+
 
 <body>
-   <center>
+   
    <div id="header">
+           <div id="topoftop">
+       <img src="/semi2/WebContent/img/join_coupon.PNG" height="100%" width="100%";/>
+          
+          </div>
+           
+            <div id="topleft">
+               <img id="logoimg" src="/semi2/WebContent/img/logo.jpg" height="118px" width="270px" alt="셀프이미지"; />
+            </div>
+            <div id="topmiddle">
+                <div id="searchbox">
+                <form action="#" method="get">
+                    <input type="text" id="search" name="searchquery" placeholder="상품명으로 검색해보세요">
+                    <input type="submit" value="검색">
+                </form>
+                </div>
+  
+            </div>
+            <div id="topright">
+                <ul class="minibar">
+                    <li class="li1"><a href="#">LOGIN</a></li>
+                    <li class="li1"><a href="#">JOIN</a></li>
+                    <li class="li1"><a href="#">CART</a></li>
+                    <li class="li1"><a href="#">ORDER</a></li>
+                    <li class="li1"><a href="#">MYPAGE</a></li>
+                    <li class="li1"><a href="#">SELLFCENTER</a></li>
+                    <li class="li1" id="bookmark"><a href="#">+BOOKMARK</a></li>
+                </ul>
+            </div>
+      
        
-   </div>
+       <div id= header_left>     
+          
+       </div>
+       
+ 
     <div class="bs-example">
+       <div class="navimove">
         <ul class="nav nav-pills" role="tablist">
 <!--            <li role="presentation" class="active"><a href="#">전체 카테고리</a></li>-->
             <li role="presentation" class="dropdown">
@@ -225,174 +363,12 @@ $(document).ready(function(){
                 </ul>
             </li>
         </ul>
-        <!-- /pills -->
+        
     </div>
-    <!-- /example -->
-       </center>
+       </div>
+</div>
 
+  </div>
 </body>
-
-<script type="text/javascript">
-//<![CDATA[
-function initMoving(target, position, topLimit, btmLimit) {
-	if (!target)
-		return false;
-
-	var obj = target;
-	var initTop = position;
-	var bottomLimit = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight) - btmLimit - obj.offsetHeight;
-	var top = initTop;
-
-	obj.style.position = 'absolute';
-
-	if (typeof(window.pageYOffset) == 'number') {	//WebKit
-		var getTop = function() {
-			return window.pageYOffset;
-		}
-	} else if (typeof(document.documentElement.scrollTop) == 'number') {
-		var getTop = function() {
-			return Math.max(document.documentElement.scrollTop, document.body.scrollTop);
-		}
-	} else {
-		var getTop = function() {
-			return 0;
-		}
-	}
-
-	if (self.innerHeight) {	//WebKit
-		var getHeight = function() {
-			return self.innerHeight;
-		}
-	} else if(document.documentElement.clientHeight) {
-		var getHeight = function() {
-			return document.documentElement.clientHeight;
-		}
-	} else {
-		var getHeight = function() {
-			return 500;
-		}
-	}
-
-	function move() {
-		if (initTop > 0) {
-			pos = getTop() + initTop;
-		} else {
-			pos = getTop() + getHeight() + initTop;
-		}
-
-		if (pos > bottomLimit)
-			pos = bottomLimit;
-		if (pos < topLimit)
-			pos = topLimit;
-
-		interval = top - pos;
-		top = top - interval / 3;
-		obj.style.top = top + 'px';
-
-		window.setTimeout(function () {
-			move();
-		}, 25);
-	}
-
-	function addEvent(obj, type, fn) {
-		if (obj.addEventListener) {
-			obj.addEventListener(type, fn, false);
-		} else if (obj.attachEvent) {
-			obj['e' + type + fn] = fn;
-			obj[type + fn] = function() {
-				obj['e' + type + fn](window.event);
-			}
-			obj.attachEvent('on' + type, obj[type + fn]);
-		}
-	}
-
-	addEvent(window, 'load', function () {
-		move();
-	});
-}
-//]]>
-</script>
-    
-<style type="text/css">
-
-    body {
-	margin: 0 auto;
-	width: 1000px;
-	position: relative;
-}
-#head {
-	width: 1000px;
-	height: 3000px;
-	background: #eee;
-}
-   
-#gotop {
-	position: absolute;
-	left: 1035px;
-	top: 800px;
-    
-}
-    
-     .bs-example
-    {
-        width:100%;
-          background-color: white;
-    }
-    
-    #gotop>ul>li a {
-            display: block;
-            height: 100%;
-            width: 100%;
-            text-decoration: none;
-            text-align: center;
-            color: blueviolet;
-            line-height: 60px;
-           
-        }
-  
-
-    #gotop>ul>li {
-            list-style-type: none;
-            width:200px;
-            height:60px;
-            background-color: lightpink;
-            font-size: 15px;
-            text-align: center;
-           line-height: 30px;
-
-        }
-
-#gotop>ul>li a {
-    display: block;
-    color: purple;
-    text-align: center;
-    padding: 0px;
-    text-decoration: none;
-}
-
-li a:hover {
-    background-color: white;
-}
-</style>
-</head>
-<body>
-<div id="head">
-	웹사이트 헤더
-</div>
-<div id="gotop">
-<ul>
-    <li><a href="#">관심상품</a></li>
-    <li><a href="#">추천상품</a></li>
-    <li><a href="#">추가할인</a></li>
-    <li><a href="#">새로 등록된 상품</a></li>
-    <li><a href="#">판매 예정 상품</a></li>
-    <li><a href="#">안쓰는 물건 판매하기</a></li>
-
-</ul>
-	
-</div>
-<script type="text/javascript">initMoving(document.getElementById("gotop"), 50, 50, 50);</script>
-
-</body> 
 
 </html>

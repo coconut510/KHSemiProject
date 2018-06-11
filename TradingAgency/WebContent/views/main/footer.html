@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> 풋터 </title>
+
+</head>
+
+<body>
+    <style>
+     
+        #footer {
+            height: 100%;
+            width: 100%;
+/*            border: 1px solid black;*/
+            box-sizing: border-box;
+            float: left;
+            position: fixed;
+            bottom:0;
+            
+        }
+        #footertop{
+            height: 8%;
+            width: 100%;
+/*            border: 1px solid black;*/
+            box-sizing: border-box;
+            float: left;
+        }
+        
+        .footerbar {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            height: 100%;
+            width: 100%;
+        }
+
+        .footerbarli {
+            float: left;
+            list-style-type: none;
+            height: 100%;
+            width: 10%;
+            text-align: center;
+            line-height: 65px;
+        }
+        .footerbarli>a{
+             text-decoration: none;
+             text-align: center;
+        }
+        .vl.short{
+    border-left: 2px solid lightgray;
+    height: 25px;
+    position: absolute;
+    left: 80%;
+    margin-left: -3px;
+    top: 3%;
+}
+        .vl.short.one{
+           
+            left:10%;
+        }
+        .vl.short.two{
+              
+             left: 19.5%;
+        }
+         .vl.short.three{
+             
+             left: 31.5%;
+        }
+        .vl.short.four{
+           
+             left: 39%;
+        }
+        #footermiddle
+        {
+            height: 35%;
+            width: 100%;
+/*            border: 1px solid black;*/
+            box-sizing: border-box;
+            float: left;
+        }
+           .footermiddlebar {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            height: 100%;
+            width: 100%;
+        }
+
+        .corp_info {
+            float: left;
+            list-style-type: none;
+            height: 100%;
+            width: 25%;
+            text-align: center;
+            line-height: 70px;
+        }
+        .corp_info.one{
+              height: 100%;
+            width: 20%;
+        }
+         .corp_info.two{
+            height: 100%;
+            width: 20%;
+        }
+         .corp_info.three{
+              height: 100%;
+            width: 30%;
+        }
+         .corp_info.four{
+              height: 100%;
+            width: 30%;
+        }
+        .corp_info>a{
+             text-decoration: none;
+             text-align: center;
+        }
+        .detail.info{
+            list-style-type: none;
+            text-decoration: none;
+            text-align: center;
+             line-height: 20px;
+            padding: 0;
+        }
+        #imgDiv{
+            margin-left: 228px;
+            margin-top: 17px;
+            position: absolute;
+            z-index: 5;
+            margin:0;
+        }
+        .whitedot{
+             height: 40px;
+    width: 40px;
+    background-color: blue;
+    border-radius: 50%;
+    display: inline-block;
+            z-index: 3;
+              margin-left: 100px;
+            margin-top: 10px;
+            position: absolute;
+          
+        }
+        .dot {
+    height: 40px;
+    width: 40px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+            text-align: center;
+            line-height: 15px;
+         
+}
+        #text{
+            
+        }
+.vl {
+    border-left: 1px solid lightgray;
+    height: 200px;
+    position: absolute;
+    left: 40%;
+    margin-left: -3px;
+    top: 13%;
+}
+        .vl.one{
+                 
+left: 20%;
+            
+        }
+         .vl.three{
+            
+left: 70%;
+        }
+        .contact{
+             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            height: 100%;
+            width: 100%;
+        }
+            .contact_info {
+            float: left;
+            list-style-type: none;
+            height: 100%;
+            width: 10%;
+            text-align: center;
+            line-height: 40px;
+        }
+        .contact_info>a{
+             text-decoration: none;
+             text-align: center;
+        }
+        .circle.text{
+            color: white;
+            font-size: 12px;
+            text-decoration: none;
+        }
+        #footerbottom
+        {
+            height: 20%;
+            width: 100%;
+/*            border: 1px solid black;*/
+            box-sizing: border-box;
+            float: left;
+        }
+    </style>
+    
+   <div id="footer">
+            <div id="footertop">
+                <ul class="footerbar">
+                    <li class="footerbarli"><a href="#">COMPANY</a></li>
+                    <div class="vl short one"></div>
+                    <li class="footerbarli"><a href="#"> AGREEMENT</a></li>
+                    <div class="vl short two"></div>
+                    <li class="footerbarli"><a href="#">PRIVACY POLICY</a></li>
+                    <div class="vl short three"></div>
+                    <li class="footerbarli"><a href="#">GUIDE</a></li>
+                    <div class="vl short four"></div>
+                    <li class="footerbarli"><a href="#">PARTNERSHIP</a></li>
+                </ul>
+                <hr>
+            </div>
+            <div id="footermiddle">
+                 <ul class="footermiddlebar">
+                    <li class="corp_info one" >
+                    <h4>CENTER</h4><a href="#"><H1>02-1111-2222</H1></a>
+                       <ul>
+                        <li class="detail info">MON-FRI AM 09:00~PM 06:00</li>
+                        <li class="detail info">LUNCH PM 12:00~PM 01:00</li>
+                       </ul>
+                     </li>
+                    <div class="vl one"></div>
+                    <li class="corp_info two" >
+                    <h4>BANK INFO</h4>
+                    <p>KH은행 0000000 000 00000000 대표:네고가능</p>
+                 
+                    </li>
+                    <div class="vl two"></div>
+                    <li class="corp_info three">
+                       <h4>RETURN/EXCHANGE</h4>
+                        <ul>
+                        <li class="detail info"><br>서울시 영등포구 어쩌구 저쩌구니ㅏ런이ㅏㅓㄹ나ㅣ얼</li>
+                        <li class="detail info">교환/반품 안내는 문의란 및 FAQ를 참고해주세요. </li>
+                        <li class="detail info img"><a href="#"> 
+                           
+<!--
+                           <div id="imgDiv">
+                               <img id="text" src="/semi2/WebContent/img/text2.PNG">
+                           </div> 
+-->
+                           <span class="dot"><span class="circle text">상품 문의 </span></span></a>
+                        </li>
+                            <li class="detail info dot"><a href="#">  <span class="dot"><span class="circle text">상품 후기</span></span></a> </li>
+                            <li class="detail info dot"> <a href="#"> <span class="dot"><span class="circle text">팩스 번호</span></span> </a></li>
+                       </ul>
+                        
+                    </li>
+                    <div class="vl three"></div>
+                    <li class="corp_info four">
+                        <h4>NOTICE</h4>
+                        
+                    </li>
+                </ul>
+                </div><hr>
+          
+            <div id="footerbottom">
+                <br>
+               <ul class="bottombar">
+                    <li class="detail info last"> COMPANY (주)네고가능 | REPRESENTATIVE 대표명 | ADDRESS 주소를써주세요
+                    | TEL 02-1111-2222 | FAX 031-1111-2222</li>
+                    <li class="detail info last"> CORPORATE BUSINESS NUMBER 123-45-67890 | ONLINE BUSINESS NUMBER 제1234-서울갱냄56789호 | PRIVACY OFFICER 누규 | E-MAIL negookay@kh.or </li>
+                    <li class="detail info last">
+                        Copyright ⓒ (주)네고가능. All Rights Reserved. | Design by Negookay.
+                    </li>
+                    
+                   
+                   
+               </ul>
+            
+                
+            </div>
+    </div>
+        
+</body>
+
+</html>
+

@@ -1,0 +1,170 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>퀵메뉴</title>
+ <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+function initMoving(target, position, topLimit, btmLimit) {
+	if (!target)
+		return false;
+
+	var obj = target;
+	var initTop = position;
+	var bottomLimit = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight) - btmLimit - obj.offsetHeight;
+	var top = initTop;
+
+	obj.style.position = 'absolute';
+
+	if (typeof(window.pageYOffset) == 'number') {	//WebKit
+		var getTop = function() {
+			return window.pageYOffset;
+		}
+	} else if (typeof(document.documentElement.scrollTop) == 'number') {
+		var getTop = function() {
+			return Math.max(document.documentElement.scrollTop, document.body.scrollTop);
+		}
+	} else {
+		var getTop = function() {
+			return 0;
+		}
+	}
+
+	if (self.innerHeight) {	//WebKit
+		var getHeight = function() {
+			return self.innerHeight;
+		}
+	} else if(document.documentElement.clientHeight) {
+		var getHeight = function() {
+			return document.documentElement.clientHeight;
+		}
+	} else {
+		var getHeight = function() {
+			return 500;
+		}
+	}
+
+	function move() {
+		if (initTop > 0) {
+			pos = getTop() + initTop;
+		} else {
+			pos = getTop() + getHeight() + initTop;
+		}
+
+		if (pos > bottomLimit)
+			pos = bottomLimit;
+		if (pos < topLimit)
+			pos = topLimit;
+
+		interval = top - pos;
+		top = top - interval / 3;
+		obj.style.top = top + 'px';
+
+		window.setTimeout(function () {
+			move();
+		}, 25);
+	}
+
+	function addEvent(obj, type, fn) {
+		if (obj.addEventListener) {
+			obj.addEventListener(type, fn, false);
+		} else if (obj.attachEvent) {
+			obj['e' + type + fn] = fn;
+			obj[type + fn] = function() {
+				obj['e' + type + fn](window.event);
+			}
+			obj.attachEvent('on' + type, obj[type + fn]);
+		}
+	}
+
+	addEvent(window, 'load', function () {
+		move();
+	});
+}
+//]]>
+</script>
+    
+<style type="text/css">
+
+    body {
+	margin: 0 auto;
+	width: 1000px;
+	position: relative;
+}
+#head {
+	width: 1000px;
+	height: 3000px;
+	background: #eee;
+}
+   
+#quickmenu {
+	position: absolute;
+	left: 1035px;
+	top: 800px;
+    
+}
+    #quickmenu>ul>li a {
+            display: block;
+            height: 100%;
+            width: 100%;
+            text-decoration: none;
+            text-align: center;
+            color: blueviolet;
+            line-height: 60px;
+           
+        }
+  
+
+    #quickmenu>ul>li {
+            list-style-type: none;
+            width:200px;
+            height:60px;
+            background-color: lightpink;
+            font-size: 15px;
+            text-align: center;
+           line-height: 30px;
+
+        }
+
+#quickmenu>ul>li a {
+    display: block;
+    color: purple;
+    text-align: center;
+    padding: 0px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: white;
+}
+</style>
+</head>
+<body>
+
+<div id="head">
+	웹사이트 헤더
+</div>
+
+<div id="quickmenu">
+<ul>
+    <li><a href="#">관심상품</a></li>
+    <li><a href="#">추천상품</a></li>
+    <li><a href="#">추가할인</a></li>
+    <li><a href="#">새로 등록된 상품</a></li>
+    <li><a href="#">판매 예정 상품</a></li>
+    <li><a href="#">안쓰는 물건 판매하기</a></li>
+
+</ul>
+	
+</div>
+<script type="text/javascript">initMoving(document.getElementById("quickmenu"), 50, 50, 50);</script>
+
+</body> 
+
+</html>
