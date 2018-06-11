@@ -21,6 +21,7 @@
     <link rel="stylesheet" type="text/css" href="CSS/common/common.css">
     <link rel="stylesheet" type="text/css" href="CSS/member/myCart.css">
     <title>장바구니</title>
+
     <style>
         #content {
             width: 100%;
@@ -63,6 +64,9 @@
         .cartContent2 {
             width: 100%;
             height: auto;
+
+
+
         }
 
         .cartContent2>ul>li {
@@ -71,17 +75,78 @@
 
         }
 
-        .orderInfo {
+        .orderInfoTitle {
             width: 100%;
             height: auto;
             display: flex;
         }
-        .orderInfo>ul>li{
-            list-style: none;
-        }
-        
-        .orderInfo>ul>li>span{
+
+
+        .orderInfoTitle>div {
             float: left;
+            flex: 1;
+        }
+
+        .orderInfo2 {
+            width: 100%;
+            height: auto;
+            border: 1px solid black;
+            box-sizing: border-box;
+            display: flex;
+        }
+
+        .orderInfo2>div:first-child {
+            flex: 2;
+            float: left;
+            border: 1px solid black;
+            box-sizing: border-box;
+
+        }
+
+        .orderInfo2>div:last-child {
+            flex: 1;
+            float: left;
+            box-sizing: border-box;
+        }
+
+        .orderInfo2_1>div {
+            width: 100%;
+            height: auto;
+            box-sizing: border-box;
+
+        }
+
+        p {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        .orderInfo2_2 {
+            width: 100%;
+            height: auto;
+
+            box-sizing: border-box;
+        }
+
+        .orderInfo2_2>div {
+            width: 100%;
+            height: auto;
+
+            box-sizing: border-box;
+
+        }
+
+        .selectBtn {
+            width: 100%;
+            height: auto;
+
+            position: relative;
+        }
+
+        .selectBtn>div {
+
+            float: left;
+            margin-left: 20px;
         }
     </style>
 </head>
@@ -114,20 +179,74 @@
                         <div>STEP2 주문/결제</div>
                         <div>STEP3 결제완료</div>
                     </div>
-                    <br><br>
+                    <br>
                 </div>
                 <div class="cartContent2">
-                    <div class="orderInfo">
-                        <ul>
-                            <li><span><input type="checkbox"></span></li>
-                            <li><span>주문상품</span></li>
-                            <li><span>수량</span></li>
-                            <li><span>상품금액</span></li>
-                            <li><span>할인금액</span></li>
-                            <li><span>할인적용금액</span></li>
-                            <li><span>배송비</span></li>
-                        </ul>
+                    <div class="orderInfoTitle">
+                        <div><input type="checkbox"></div>
+                        <div>주문상품</div>
+                        <div>수량</div>
+                        <div>상품금액</div>
+                        <div>할인금액</div>
+                        <div>할인적용금액</div>
+                        <div>배송비</div>
                     </div>
+                </div>
+
+                <hr>
+
+                <script>
+                    window.onload = function() {
+                        $("#orderInfoTitle").hide();
+                    }
+                </script>
+
+                <div class="wishList">
+                    <div class="orderInfoTitle">
+                        <div><input type="checkbox"></div>
+                        <div>주문상품</div>
+                        <div>수량</div>
+                        <div>상품금액</div>
+                        <div>할인금액</div>
+                        <div>할인적용금액</div>
+                        <div>배송비</div>
+                    </div>
+                </div>
+                <hr>
+                <div class="orderInfo2">
+                    <div class="orderInfo2_1">
+                        <div>
+                            <p>구매적립 혜택 &nbsp;&nbsp;&nbsp; 구매확정시 마일리지 <span>0원</span></p>
+                            <p>리뷰작성 혜택 &nbsp;&nbsp;&nbsp; 상품후기 작성 시 마일리지<span> 0원</span></p>
+                        </div>
+                        <hr>
+                        <div>
+                            <p>배송국가 &nbsp;&nbsp;&nbsp; 대한민국 <input type="button" value="다른국가선택"></p>
+                            <p>*해외배송은 원하시는 국가를 선택해주세요</p>
+                        </div>
+                    </div>
+                    <div class="orderInfo2_2">
+                        <div>
+                            <p>상품금액 &nbsp;&nbsp;&nbsp; <span>0원</span></p>
+                            <p>상품금액 &nbsp;&nbsp;&nbsp; <span>0원</span></p>
+                            <p>상품금액 &nbsp;&nbsp;&nbsp; <span>0원</span></p>
+                        </div>
+                        <hr>
+                        <div>
+                            <p>
+                                <h2>결제금액 &nbsp;&nbsp;&nbsp; <span>0원</span></h2>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="selectBtn">
+                    <div id="selectAllBtn">
+                        <input type="button" value="전체선택" /></div>
+                    <div id="deleteBtn">
+                        <input type="button" value="선택삭제" /></div>
+                    <div id="estimateBtn">
+                        <input type="button" value="견적서" /></div>
                 </div>
             </div>
 
