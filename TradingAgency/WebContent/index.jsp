@@ -51,8 +51,8 @@
 			<!-- header -->
 			<header id="header">
 			<div id="headerLine">
-			<%-- 	<%@include file="/views/main/test.jsp"%></div> --%>
-			<div id="navigator">Navigator</div>
+				<%-- 	<%@include file="/views/main/test.jsp"%></div> --%>
+				<div id="navigator">Navigator</div>
 			</header>
 
 
@@ -446,14 +446,14 @@
 						</div>
 						<div class="col-md-4">
 							<div class="shadow">
-									<a href="#"><img
+								<a href="#"><img
 									src="img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg"
 									width="100%" height="100%"></a>
 							</div>
 						</div>
 						<div class="col-md-4">
 							<div class="shadow">
-									<a href="#"><img
+								<a href="#"><img
 									src="img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg"
 									width="100%" height="100%"></a>
 							</div>
@@ -469,32 +469,34 @@
 
 			<div id="middleAdSec">
 
-				<div id="carouselExampleIndicators" class="carousel slide"
-					id="mdCarousel" data-ride="carousel">
-					<ol class="carousel-indicators">
-						<li data-target="#carouselExampleIndicators" data-slide-to="0"
-							class="active"></li>
-						<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-						<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-					</ol>
+				<div id="carouselExampleFade" class="carousel slide carousel-fade"
+					data-ride="carousel">
 					<div class="carousel-inner">
 						<div class="carousel-item active">
-							<a href="#"> <img class="d-block w-100"
+							<img class="d-block w-100"
 								src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
-								alt="첫번째 슬라이드"></a>
+								alt="First slide">
 						</div>
 						<div class="carousel-item">
-							<a href="#"><img class="d-block w-100"
-								src="img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg"
-								alt="두번째 슬라이드"></a>
-						</div>
-						<div class="carousel-item">
-							<a href="#"> <img class="d-block w-100"
+							<img class="d-block w-100"
 								src="img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg"
-								alt="세번째 슬라이드"></a>
+								alt="Second slide">
+						</div>
+						<div class="carousel-item">
+							<img class="d-block w-100"
+								src="img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg"
+								alt="Third slide">
 						</div>
 					</div>
-
+					<a class="carousel-control-prev" href="#carouselExampleFade"
+						role="button" data-slide="prev"> <span
+						class="carousel-control-prev-icon" aria-hidden="true"></span> <span
+						class="sr-only">Previous</span>
+					</a> <a class="carousel-control-next" href="#carouselExampleFade"
+						role="button" data-slide="next"> <span
+						class="carousel-control-next-icon" aria-hidden="true"></span> <span
+						class="sr-only">Next</span>
+					</a>
 				</div>
 			</div>
 			<br> <br>
@@ -630,7 +632,6 @@
 				</div>
 
 			</div>
-			
 		</div>
 
 		</section>
@@ -645,4 +646,4 @@
 
 </body>
 
-</html>
+</html> 
