@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 #productSection{
 	width : 100%;
 	height : auto;	
@@ -9,7 +11,7 @@
 #topLeftLink{
 	display:block;
 }
-/*카테고리*/
+/*移댄뀒怨좊━*/
 	#categorySelect{
 		overflow:auto;
 	}
@@ -98,7 +100,7 @@
 	margin-right:1%;
 	position:relative;
 }
-/*제품위에 커버로 설명해주는 영역*/
+/*�젣�뭹�쐞�뿉 而ㅻ쾭濡� �꽕紐낇빐二쇰뒗 �쁺�뿭*/
 .productCoverBG{
 	position:absolute;
 	top:0;
@@ -110,7 +112,7 @@
 	opacity:0.3;
 }
 
-/*제품위에 커버로 설명해주는 영역*/
+/*�젣�뭹�쐞�뿉 而ㅻ쾭濡� �꽕紐낇빐二쇰뒗 �쁺�뿭*/
 .productCoverExplain{
 	position:absolute;
 	top:0;
@@ -122,7 +124,7 @@
      -webkit-animation: 0.5s  fadeOut;
   	animation: 0.5s  fadeOut;
 }
-/*부모 호버됐을때 제품위에 커버로 설명해주는 영역 효과*/
+/*遺�紐� �샇踰꾨릱�쓣�븣 �젣�뭹�쐞�뿉 而ㅻ쾭濡� �꽕紐낇빐二쇰뒗 �쁺�뿭 �슚怨�*/
 .imgWrapper:hover .productCoverExplain{
 	 -webkit-animation: 0.5s fadeIn;
   	animation: 0.5s fadeIn;
@@ -169,7 +171,7 @@ a:active{
     text-decoration-line: none;
 }
 
-/* 전체 상품 20개 안쪽 모두*/
+/* �쟾泥� �긽�뭹 20媛� �븞履� 紐⑤몢*/
 #entireProduct{
 	width:100%;
 	height:auto;
@@ -250,11 +252,11 @@ li {
 	position:relative;
 }
 
-/*내부이미지 확대*/
+/*�궡遺��씠誘몄� �솗��*/
 .imgWrapper:hover .productImgMain{
     cursor: pointer;
     -webkit-transform: scale(1.2);
-    /*  크롬 */
+    /*  �겕濡� */
     -moz-transform: scale(1.2);
     /* FireFox */
     -o-transform: scale(1.2);
@@ -265,13 +267,13 @@ li {
     -moz-transition: transform .50s;
     -webkit-transition: transform .50s;   
 }
-/*내부이미지 복귀*/
+/*�궡遺��씠誘몄� 蹂듦�*/
 .productImgMain {
 	width:20px;
 	height:100%;
     cursor: pointer;
     -webkit-transform: scale(1);
-    /*  크롬 */
+    /*  �겕濡� */
     -moz-transform: scale(1);
     /* FireFox */
     -o-transform: scale(1);
@@ -284,7 +286,7 @@ li {
 }
 
 
-/*제품 리스트 내부*/
+/*�젣�뭹 由ъ뒪�듃 �궡遺�*/
 .productWrap{
 	position:relative;
 }
