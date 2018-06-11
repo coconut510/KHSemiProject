@@ -95,7 +95,7 @@
                     <div class="tapBtn">찜한 상품</div>
                     <div class="tapBtn">내 쿠폰</div>
                     <div class="tapBtn">내 정보</div>
-                    <div class="tapBtn">알림 설정</div>
+                    <div class="tapBtn">알림 설정1</div>
                 </div>
             </div>
             <div class="MenuContents">
