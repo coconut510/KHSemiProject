@@ -9,6 +9,66 @@
 #topLeftLink{
 	display:block;
 }
+/*카테고리*/
+	#categorySelect{
+		overflow:auto;
+	}
+	#categoryBorder{
+		overflow:auto;
+		border:1px solid lightgray;
+		clear:both;
+		margin:0px;
+		padding:5px;
+	}
+	.categoryTitle{
+		float:left;
+		display:inline-block;
+		margin:0px;
+		width:10%;
+	}
+	.categoryTitleList{
+		float:left;
+		width:90%;
+		height:30%;
+		display:inline-block;
+	}
+	#categoryType{
+		margin:0px;
+		overflow:auto;
+	}
+	.category-btn {
+	    display: inline-block;
+	    float:left;
+	    height: 30px;
+	    font-size: 14px;
+	    line-height: 16px;
+	    padding: 6px 16px;
+	    border-radius: 14px;
+	    border: 1px solid #dbdbdb;
+	    margin: 0 8px 8px 0;
+	    color: #dbdbdb;
+	}
+	.productState-btn {
+	    display: inline-block;
+	    float:left;
+	    height: 30px;
+	    font-size: 14px;
+	    line-height: 16px;
+	    padding: 6px 16px;
+	    border-radius: 14px;
+	    border: 1px solid #dbdbdb;
+	    margin: 0 8px 8px 0;
+	    color: #dbdbdb;
+	}
+	#productState{
+		
+		width:100%;
+		clear:both;
+	}
+	
+	
+/**/
+
 #crossLine{
 	width:25px;
 	height:1px;
@@ -27,8 +87,66 @@
 }
 #recommandProductContent{
 	clear:both;
-	margin-bottom:10px;
+	overflow:auto;
+	margin-bottom:40px;	
 }
+
+
+#recommandProduct{
+	float:left;
+	width:23%;
+	margin-right:1%;
+	position:relative;
+}
+/*제품위에 커버로 설명해주는 영역*/
+.productCoverBG{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background-color:#4a4b4c;
+		
+	opacity:0.3;
+}
+
+/*제품위에 커버로 설명해주는 영역*/
+.productCoverExplain{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+		
+	opacity:0;
+     -webkit-animation: 0.5s  fadeOut;
+  	animation: 0.5s  fadeOut;
+}
+/*부모 호버됐을때 제품위에 커버로 설명해주는 영역 효과*/
+.imgWrapper:hover .productCoverExplain{
+	 -webkit-animation: 0.5s fadeIn;
+  	animation: 0.5s fadeIn;
+  	opacity:1;
+}
+@keyframes fadeInLight {
+  from {
+    opacity:0;
+  }
+  
+  to {
+   	opacity:0.3;
+ }
+}
+@keyframes fadeOutLight {
+  from {
+    opacity:0.3;
+  }
+  
+  to {
+   	opacity:0;
+ }
+}
+
 
 a{
 	color:lightgray;
@@ -55,6 +173,7 @@ a:active{
 #entireProduct{
 	width:100%;
 	height:auto;
+	clear:both;
 }
 
 #entireProductTitle{
@@ -117,12 +236,53 @@ li {
 	height:100%;
 	margin-right:6px;
 }
+/************************************/
 .productBg{
 	width:100%;
 	height:100%;
 	background-color:white;
+	
 }
-/************************************/
+.imgWrapper{
+	width:100%;
+	height:230px;
+	overflow:hidden;
+	position:relative;
+}
+
+/*내부이미지 확대*/
+.imgWrapper:hover .productImgMain{
+    cursor: pointer;
+    -webkit-transform: scale(1.2);
+    /*  크롬 */
+    -moz-transform: scale(1.2);
+    /* FireFox */
+    -o-transform: scale(1.2);
+    /* Opera */
+    transform: scale(1.2);
+    transition: transform .50s;
+    -o-transition: transform .50s;
+    -moz-transition: transform .50s;
+    -webkit-transition: transform .50s;   
+}
+/*내부이미지 복귀*/
+.productImgMain {
+	width:20px;
+	height:100%;
+    cursor: pointer;
+    -webkit-transform: scale(1);
+    /*  크롬 */
+    -moz-transform: scale(1);
+    /* FireFox */
+    -o-transform: scale(1);
+    /* Opera */
+    transform: scale(1);
+    transition: transform .50s;
+    -o-transition: transform .50s;
+    -moz-transition: transform .50s;
+    -webkit-transition: transform .50s;
+}
+
 
 /*제품 리스트 내부*/
 .productWrap{
@@ -143,7 +303,89 @@ li {
 	
 	margin: auto;
     padding: 7%;
+    
+    -webkit-transform : translate(0px,0px);  
+	-moz-transform : translate(0px,0px);     
+	-ms-transform : translate(0px,0px);       
+	-o-transform : translate(0px,0px); 	
+	
+	transition: transform .30s;
+    -o-transition: transform .30s;
+    -moz-transition: transform .30s;
+    -webkit-transition: transform .30s;
 }
+
+.imgWrapper:hover .discountBg{
+	-webkit-transform : translate(10px,10px);  
+	-moz-transform : translate(10px,10px);     
+	-ms-transform : translate(10px,10px);       
+	-o-transform : translate(10px,10px); 	
+	
+	transition: transform .30s;
+    -o-transition: transform .30s;
+    -moz-transition: transform .30s;
+    -webkit-transition: transform .30s;
+}
+
+.productSideMenu{
+	background-color: #f4f6f9;
+	overflow:auto;
+	position:absolute;
+	bottom: 5%;
+	right:0;
+
+	opacity:0;
+     -webkit-animation: 0.5s  fadeOut;
+  	animation: 0.5s  fadeOut;
+
+  	-webkit-transform : translate(0px,0px);  
+	-moz-transform : translate(0px,0px);     
+	-ms-transform : translate(0px,0px);       
+	-o-transform : translate(0px,0px); 	
+	
+	transition: transform .30s;
+    -o-transition: transform .30s;
+    -moz-transition: transform .30s;
+    -webkit-transition: transform .30s;	
+}
+
+.imgWrapper:hover .productSideMenu{
+	
+	 -webkit-animation: 0.5s fadeIn;
+  	animation: 0.5s fadeIn;
+  	opacity:1;
+	
+    -webkit-transform : translate(-5px,0px);  
+	-moz-transform : translate(-5px,0px);     
+	-ms-transform : translate(-5px,0px);       
+	-o-transform : translate(-5px,0px); 	
+	
+	transition: transform .30s;
+    -o-transition: transform .30s;
+    -moz-transition: transform .30s;
+    -webkit-transition: transform .30s;	
+}
+
+@keyframes fadeIn {
+  from {
+    opacity:0;
+  }
+  
+  to {
+   	opacity:1;
+ }
+}
+@keyframes fadeOut {
+  from {
+    opacity:1;
+  }
+  
+  to {
+   	opacity:0;
+ }
+}
+
+
 .productTitle{
 	width:100%;
 }
@@ -166,7 +408,7 @@ li {
 	height:30px;
 }
 .myCheck li:first-child{
-		margin-left:26%;
+	margin-left:26%;
 }
 .myCheck li{
 	float:left;
@@ -179,6 +421,7 @@ li {
 	height:25px;
 }
 
+/****************/
 #footerTest{
 	display:block;
 	clear:both;
