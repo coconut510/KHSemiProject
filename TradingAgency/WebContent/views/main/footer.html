@@ -55,7 +55,7 @@
     position: absolute;
     left: 80%;
     margin-left: -3px;
-    top: 3%;
+    top: 2.5%;
 }
         .vl.short.one{
            
@@ -124,38 +124,47 @@
              line-height: 20px;
             padding: 0;
         }
-        #imgDiv{
-            margin-left: 228px;
-            margin-top: 17px;
-            position: absolute;
-            z-index: 5;
-            margin:0;
-        }
-        .whitedot{
-             height: 40px;
-    width: 40px;
-    background-color: blue;
-    border-radius: 50%;
-    display: inline-block;
-            z-index: 3;
-              margin-left: 100px;
-            margin-top: 10px;
-            position: absolute;
-          
-        }
-        .dot {
-    height: 40px;
-    width: 40px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-            text-align: center;
-            line-height: 15px;
-         
-}
-        #text{
+        .pic1{
+            width:45px; 
+            height:45px;
+            background: url(../../../../semi2/WebContent/img/text.PNG);
+            margin: 0;
             
         }
+       
+        .pic1:hover{
+            width:45px; 
+            height:45px;
+            background: url(../../../../semi2/WebContent/img/itemask.png);
+            margin: 0;
+        }
+         .pic2{
+            width:45px; 
+            height:45px;
+            background: url(../../../../semi2/WebContent/img/camera.png);
+            margin: 0;
+        }
+       
+        .pic2:hover{
+            width:45px; 
+            height:45px;
+            background: url(../../../../semi2/WebContent/img/itemreview.png);
+            margin: 0;
+        }
+         .pic3{
+            width:45px; 
+            height:45px;
+            background: url(../../../../semi2/WebContent/img/square.png);
+            margin: 0;
+        }
+       
+        .pic3:hover{
+            width:45px; 
+            height:45px;
+            background: url(../../../../semi2/WebContent/img/fax.png);
+            margin: 0;
+        }
+        
 .vl {
     border-left: 1px solid lightgray;
     height: 200px;
@@ -205,6 +214,22 @@ left: 70%;
             box-sizing: border-box;
             float: left;
         }
+        .detailList{
+            overflow:auto;
+        }
+       .detailList a{
+            float:left;
+           display:inline-block;
+           margin-left: 90px;
+            
+        }
+        .detailList  a> div{
+            display:inline-block;
+        }
+        ul{
+            list-style-type: none;
+        }
+        
     </style>
     
    <div id="footer">
@@ -241,19 +266,21 @@ left: 70%;
                     <li class="corp_info three">
                        <h4>RETURN/EXCHANGE</h4>
                         <ul>
-                        <li class="detail info"><br>서울시 영등포구 어쩌구 저쩌구니ㅏ런이ㅏㅓㄹ나ㅣ얼</li>
+                        <li class="detail info"><br>서울시 영등포구 선유동2로 57 이레빌딩(구관) 19F</li>
                         <li class="detail info">교환/반품 안내는 문의란 및 FAQ를 참고해주세요. </li>
-                        <li class="detail info img"><a href="#"> 
-                           
-<!--
-                           <div id="imgDiv">
-                               <img id="text" src="/semi2/WebContent/img/text2.PNG">
-                           </div> 
--->
-                           <span class="dot"><span class="circle text">상품 문의 </span></span></a>
+                        <li class="detailList">
+                           <center>
+                                <a href="#"> 
+                                    <div class="pic1"></div>
+                                </a>
+                                <a href="#"> 
+                                    <div class="pic2"></div>
+                                </a>
+                                <a href="#"> 
+                                    <div class="pic3"></div>
+                                </a>
+                            </center>
                         </li>
-                            <li class="detail info dot"><a href="#">  <span class="dot"><span class="circle text">상품 후기</span></span></a> </li>
-                            <li class="detail info dot"> <a href="#"> <span class="dot"><span class="circle text">팩스 번호</span></span> </a></li>
                        </ul>
                         
                     </li>
@@ -268,9 +295,9 @@ left: 70%;
             <div id="footerbottom">
                 <br>
                <ul class="bottombar">
-                    <li class="detail info last"> COMPANY (주)네고가능 | REPRESENTATIVE 대표명 | ADDRESS 주소를써주세요
+                    <li class="detail info last"> COMPANY (주)네고가능 | REPRESENTATIVE 대표명 | ADDRESS 서울시 영등포구 선유동2로 57 이레빌딩(구관) 19F
                     | TEL 02-1111-2222 | FAX 031-1111-2222</li>
-                    <li class="detail info last"> CORPORATE BUSINESS NUMBER 123-45-67890 | ONLINE BUSINESS NUMBER 제1234-서울갱냄56789호 | PRIVACY OFFICER 누규 | E-MAIL negookay@kh.or </li>
+                    <li class="detail info last"> CORPORATE BUSINESS NUMBER 123-45-67890 | ONLINE BUSINESS NUMBER 제1234-서울갱냄56789호 | PRIVACY OFFICER 네고가능 | E-MAIL negookay@kh.or.kr </li>
                     <li class="detail info last">
                         Copyright ⓒ (주)네고가능. All Rights Reserved. | Design by Negookay.
                     </li>
