@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+
+#footerTest {
+	display: block;
+	clear: both;
+	width: 100%;
+	height: 300px;
+	background-color: green;
+}#wrapper {
+	
+	font-family: 'Roboto Slab', serif;
+	background-color: white;
+}
+
+<!-- 창 고정 -->
+@media(max-width:400px){
+    #wrapper{
+        display: block;
+    }
+   #wrapper div{
+        width:100%;
+    }
+   
+}
