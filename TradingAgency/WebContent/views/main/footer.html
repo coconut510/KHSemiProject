@@ -3,14 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
     <title> 풋터 </title>
 
 </head>
 
 <body>
     <style>
-     
         #footer {
             height: 100%;
             width: 100%;
@@ -50,13 +49,13 @@
              text-align: center;
         }
         .vl.short{
-    border-left: 2px solid lightgray;
-    height: 25px;
-    position: absolute;
-    left: 80%;
-    margin-left: -3px;
-    top: 2.5%;
-}
+            border-left: 2px solid lightgray;
+            height: 25px;
+            position: absolute;
+            left: 80%;
+            margin-left: -3px;
+            top: 2.5%;
+        }
         .vl.short.one{
            
             left:10%;
@@ -81,7 +80,7 @@
             box-sizing: border-box;
             float: left;
         }
-           .footermiddlebar {
+        .footermiddlebar {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -180,7 +179,7 @@ left: 20%;
         }
          .vl.three{
             
-left: 70%;
+            left: 70%;
         }
         .contact{
              margin: 0;
@@ -214,13 +213,14 @@ left: 70%;
             box-sizing: border-box;
             float: left;
         }
-        .detailList{
+        .detailList{            
             overflow:auto;
+            margin-left:20%;
         }
-       .detailList a{
+        .detailList a{
             float:left;
            display:inline-block;
-           margin-left: 90px;
+           margin-left: 10%;
             
         }
         .detailList  a> div{
@@ -229,7 +229,14 @@ left: 70%;
         ul{
             list-style-type: none;
         }
-        
+        @media screen and (max-width:1679px)
+        {
+/*
+            #footer{
+                display:none;
+            }
+*/
+        }
     </style>
     
    <div id="footer">
@@ -327,6 +334,7 @@ left: 70%;
                </ul>
             
                 
+            
             </div>
     </div>
         
