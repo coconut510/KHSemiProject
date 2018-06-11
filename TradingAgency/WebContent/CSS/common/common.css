@@ -1,12 +1,17 @@
+*{
+        margin:0;
+        padding:0;
+ }
+section article {margin: 0 auto;}
 #wrapper{
-    width:960px;
+    width:100%;
     height:auto;
-    background-color: aqua;
+ 
 }
 #header{
     width:100%;
     height:140px;
-    background-color: green;
+       background-color:red;
 }
 #nivigation{
     width:100%;
@@ -14,11 +19,21 @@
     background-color:darkorange;
 }
 #content{
-     width:100%;
-    height:900px;
-    background-color:white;
+    width:960px;
+    height:auto;
+    display:block;
 }
+#footer{
+	width:100%;
+	height:auto;
+	display:block;
 
+}
+#crossLine{
+	width:100%;
+	height:10px
+	background-color:gray;
+}
 body{
     font-family: 'Nanum Gothic', sans-serif;
     background-size:cover;
@@ -26,10 +41,8 @@ body{
 h2{
     color:red;
 }
-*{
-        margin:0;
-        padding:0;
- }
+
+
 @media(max-width:400px){
     #main .entireBG {
         display: block;
