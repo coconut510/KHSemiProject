@@ -153,3 +153,9 @@ a:active {
 	color: lightgray;
 	text-decoration-line: none;
 }
+
+
+.container {
+  width: 1120px;
+  max-width: none !important;
+}

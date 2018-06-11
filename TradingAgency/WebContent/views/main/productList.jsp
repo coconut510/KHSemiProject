@@ -10,17 +10,21 @@
 <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<!-- Bootstrap CSS -->
+<!-- 내부 링크건 CSS -->
 <link rel="stylesheet" href="../../CSS/bootstrap/bootstrap.min.css" />
 <link rel="stylesheet" href="../../CSS/common/common.css" />
 <link rel="stylesheet" href="../../CSS/main/productListMain.css" />
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+<!-- 내부 js파일 -->
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
 	integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
 	crossorigin="anonymous"></script>
 <script src="../../JS/bootstrap/bootstrap.min.js"></script>
+
+<script src="../../JS/main/productListMain.js"></script>
 
 
 <title>상품 목록</title>
@@ -48,37 +52,39 @@
 						<div id="categoryType">
 							<div class="categoryTitle">카테고리</div>
 							<div class="categoryTitleList">
-								<a class="category-btn" href="">거실/주방가구</a>
-								<a class="category-btn" href="">게임/타이틀</a>
-								<a class="category-btn" href="">공구</a>
-								<a class="category-btn" href="">공연티켓</a>
-								<a class="category-btn" href="">기저귀/물티슈</a>
-								<a class="category-btn" href="">낚시</a>
-								<a class="category-btn" href="">전자기기</a>
-								<a class="category-btn" href="">남성의류</a>
-								<a class="category-btn" href="">여성의류</a>
-								<a class="category-btn" href="">가방</a>
-								<a class="category-btn" href="">목욕/스킨케어</a>
-								<a class="category-btn" href="">모자</a>
-								<a class="category-btn" href="">생활용품</a>
-								<a class="category-btn" href="">수유/이유용품</a>
-								<a class="category-btn" href="">스마트폰</a>
-								<a class="category-btn" href="">여행,항공권</a>
-								<a class="category-btn" href="">유아가구</a>
-								<a class="category-btn" href="">노트북</a>
-								<a class="category-btn" href="">테블릿</a>
-								<a class="category-btn" href="">입장권</a>
-								<a class="category-btn" href="">유람선 티켓 </a>
+								<a class="category-btn" onclick="selectCategory(this);" >모든상품</a>
+								<a class="category-btn" onclick="selectCategoryMulti(this);" >거실/주방가구</a>
+								<a class="category-btn" onclick="selectCategoryMulti(this);" >게임/타이틀</a>
+								<a class="category-btn" onclick="selectCategoryMulti(this);">공구</a>
+								<a class="category-btn" onclick="selectCategoryMulti(this);">공연티켓</a>
+								<a class="category-btn" onclick="selectCategoryMulti(this);">기저귀/물티슈</a>
+								<a class="category-btn" onclick="selectCategoryMulti(this);" >낚시</a>
+								<a class="category-btn" onclick="selectCategoryMulti(this);" >전자기기</a>
+								<a class="category-btn" onclick="selectCategoryMulti(this);">남성의류</a>
+								<a class="category-btn" onclick="selectCategoryMulti(this);">여성의류</a>
+								<a class="category-btn" onclick="selectCategoryMulti(this);">가방</a>
+								<a class="category-btn" onclick="selectCategoryMulti(this);">목욕/스킨케어</a>
+								<a class="category-btn" onclick="selectCategoryMulti(this);" >모자</a>
+								<a class="category-btn" onclick="selectCategoryMulti(this);" >생활용품</a>
+								<a class="category-btn" onclick="selectCategoryMulti(this);" >수유/이유용품</a>
+								<a class="category-btn" onclick="selectCategoryMulti(this);" >스마트폰</a>
+								<a class="category-btn" onclick="selectCategoryMulti(this);" >여행,항공권</a>
+								<a class="category-btn" onclick="selectCategoryMulti(this);" >유아가구</a>
+								<a class="category-btn" onclick="selectCategoryMulti(this);" >노트북</a>
+								<a class="category-btn" onclick="selectCategoryMulti(this);" >테블릿</a>
+								<a class="category-btn" onclick="selectCategoryMulti(this);" >입장권</a>
+								<a class="category-btn" onclick="selectCategoryMulti(this);" >유람선 티켓 </a>
 							</div>
 						</div>
 						<div id="productState">
 							<div class="categoryTitle">상품상태</div>
 							<div class="categoryTitleList">
-								<a class="productState-btn" href="">최상</a>
-								<a class="productState-btn" href="">상</a>
-								<a class="productState-btn" href="">중</a>
-								<a class="productState-btn" href="">중하</a>
-								<a class="productState-btn" href="">하</a>
+								<a class="productState-btn" onclick="selectProductState();">모든상품</a>
+								<a class="productState-btn" onclick="selectProductMulti(this);">최상</a>
+								<a class="productState-btn" onclick="selectProductMulti(this);">상</a>
+								<a class="productState-btn" onclick="selectProductMulti(this);">중</a>
+								<a class="productState-btn" onclick="selectProductMulti(this);">중하</a>
+								<a class="productState-btn" onclick="selectProductMulti(this);">하</a>
 							</div>
 						</div>
 					</div>
@@ -102,16 +108,12 @@
 									alt="">														
 								
 								<div class="productCoverExplain">
-									<br><br><br>
-									<div style="color:white;">세련된flex 디자인</div>
-									<div style="color:white;">
-										<font style="color:white;"> 제품설명1<br> 제품설명2
-										</font>
-									</div>
-									<div style="color:white;" >
-										<s>￦ 50,000</s>-> ￦ 40,000
-									</div>
-									<div class="productCoverBG"> </div>
+									<br><br><br>				
+									<ul>
+										<li style="color:white;overflow:auto;">	세련된flex 디자인</li>
+										<li style="color:gray;overflow:auto;">	 제품설명1<br> 제품설명2</li>
+										<li style="color:white;overflow:auto;">		<s>￦ 50,000</s>-> ￦ 40,000</li>
+									</ul>
 								</div>
 								<div class="productSideMenu">
 									<div class="display_newwin hide"><img src="../../img/thumb_quickview.png" alt=""></div>
@@ -131,16 +133,12 @@
 									alt="">														
 								
 								<div class="productCoverExplain">
-									<br><br><br>
-									<div style="color:white;">세련된flex 디자인</div>
-									<div style="color:white;">
-										<font style="color:white;"> 제품설명1<br> 제품설명2
-										</font>
-									</div>
-									<div style="color:white;" >
-										<s>￦ 50,000</s>-> ￦ 40,000
-									</div>
-									<div class="productCoverBG"> </div>
+									<br><br><br>				
+									<ul>
+										<li style="color:white;overflow:auto;">	세련된flex 디자인</li>
+										<li style="color:gray;overflow:auto;">	 제품설명1<br> 제품설명2</li>
+										<li style="color:white;overflow:auto;">		<s>￦ 50,000</s>-> ￦ 40,000</li>
+									</ul>
 								</div>
 								<div class="productSideMenu">
 									<div class="display_newwin hide"><img src="../../img/thumb_quickview.png" alt=""></div>
@@ -160,16 +158,12 @@
 									alt="">														
 								
 								<div class="productCoverExplain">
-									<br><br><br>
-									<div style="color:white;">세련된flex 디자인</div>
-									<div style="color:white;">
-										<font style="color:white;"> 제품설명1<br> 제품설명2
-										</font>
-									</div>
-									<div style="color:white;" >
-										<s>￦ 50,000</s>-> ￦ 40,000
-									</div>
-									<div class="productCoverBG"> </div>
+									<br><br><br>				
+									<ul>
+										<li style="color:white;overflow:auto;">	세련된flex 디자인</li>
+										<li style="color:gray;overflow:auto;">	 제품설명1<br> 제품설명2</li>
+										<li style="color:white;overflow:auto;">		<s>￦ 50,000</s>-> ￦ 40,000</li>
+									</ul>
 								</div>
 								<div class="productSideMenu">
 									<div class="display_newwin hide"><img src="../../img/thumb_quickview.png" alt=""></div>
@@ -189,16 +183,12 @@
 									alt="">														
 								
 								<div class="productCoverExplain">
-									<br><br><br>
-									<div style="color:white;">세련된flex 디자인</div>
-									<div style="color:white;">
-										<font style="color:white;"> 제품설명1<br> 제품설명2
-										</font>
-									</div>
-									<div style="color:white;" >
-										<s>￦ 50,000</s>-> ￦ 40,000
-									</div>
-									<div class="productCoverBG"> </div>
+									<br><br><br>				
+									<ul>
+										<li style="color:white;overflow:auto;">	세련된flex 디자인</li>
+										<li style="color:gray;overflow:auto;">	 제품설명1<br> 제품설명2</li>
+										<li style="color:white;overflow:auto;">		<s>￦ 50,000</s>-> ￦ 40,000</li>
+									</ul>
 								</div>
 								<div class="productSideMenu">
 									<div class="display_newwin hide"><img src="../../img/thumb_quickview.png" alt=""></div>

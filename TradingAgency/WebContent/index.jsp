@@ -105,8 +105,7 @@
 					<h1>New Product</h1>
 				</div>
 				<br>
-				<div id="carouselExampleControls" class="carousel slide"
-					data-ride="carousel">
+				<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 					<div class="carousel-inner">
 						<div class="carousel-item active">
 
@@ -114,7 +113,7 @@
 								<div class="row">
 
 
-									<div class="col-md-3" style="width: 18rem;">
+									<div class="col-xs-3" style="width: 23%;">
 										<a href="#"> <img class="card-img-top"
 											src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
 											alt="Card image cap"></a>
@@ -126,7 +125,7 @@
 
 										</div>
 									</div>
-									<div class="col-md-3" style="width: 18rem;">
+									<div class="col-xs-3" style="width: 23%;">
 										<a href="#"> <img class="card-img-top"
 											src="img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg"
 											alt="Card image cap"></a>
@@ -139,7 +138,7 @@
 										</div>
 									</div>
 
-									<div class="col-md-3" style="width: 18rem;">
+									<div class="col-xs-3" style="width: 23%;">
 										<a href="#"> <img class="card-img-top"
 											src="img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg"
 											alt="Card image cap"></a>
@@ -150,7 +149,7 @@
 											<p class="card-text">product explanation</p>
 										</div>
 									</div>
-									<div class="col-md-3" style="width: 18rem;">
+									<div class="col-xs-3" style="width: 23%;">
 										<a href="#"> <img class="card-img-top"
 											src="img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg"
 											alt="Card image cap">
@@ -171,7 +170,7 @@
 
 								<div class="row">
 
-									<div class="col-md-3" style="width: 18rem;">
+									<div class="col-xs-3" style="width: 18rem;">
 										<a href="#"> <img class="card-img-top"
 											src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
 											alt="Card image cap"></a>
@@ -183,7 +182,7 @@
 
 										</div>
 									</div>
-									<div class="col-md-3" style="width: 18rem;">
+									<div class="col-xs-3" style="width: 18rem;">
 										<a href="#"> <img class="card-img-top"
 											src="img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg"
 											alt="Card image cap"></a>
@@ -195,7 +194,7 @@
 										</div>
 									</div>
 
-									<div class="col-md-3" style="width: 18rem;">
+									<div class="col-xs-3" style="width: 18rem;">
 										<a href="#"> <img class="card-img-top"
 											src="img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg"
 											alt="Card image cap"></a>
@@ -206,7 +205,7 @@
 											<p class="card-text">product explanation</p>
 										</div>
 									</div>
-									<div class="col-md-3" style="width: 18rem;">
+									<div class="col-xs-3" style="width: 18rem;">
 										<a href="#"> <img class="card-img-top"
 											src="img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg"
 											alt="Card image cap">
@@ -227,7 +226,7 @@
 
 								<div class="row">
 
-									<div class="col-md-3" style="width: 18rem;">
+									<div class="col-xs-3" style="width: 18rem;">
 										<a href="#"> <img class="card-img-top"
 											src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
 											alt="Card image cap"></a>
@@ -239,7 +238,7 @@
 
 										</div>
 									</div>
-									<div class="col-md-3" style="width: 18rem;">
+									<div class="col-xs-3" style="width: 18rem;">
 										<a href="#"> <img class="card-img-top"
 											src="img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg"
 											alt="Card image cap"></a>
@@ -251,7 +250,7 @@
 										</div>
 									</div>
 
-									<div class="col-md-3" style="width: 18rem;">
+									<div class="col-xs-3" style="width: 18rem;">
 										<a href="#"> <img class="card-img-top"
 											src="img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg"
 											alt="Card image cap"></a>
@@ -263,7 +262,7 @@
 
 										</div>
 									</div>
-									<div class="col-md-3" style="width: 18rem;">
+									<div class="col-xs-3" style="width: 18rem;">
 										<a href="#"> <img class="card-img-top"
 											src="img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg"
 											alt="Card image cap">
@@ -300,7 +299,7 @@
 					<h1>Collection</h1>
 					<br>
 					<div class="row">
-						<div class="col-md-3" style="width: 18rem;">
+						<div class="col-xs-3" style="width: 18rem;">
 							<!-- 이미지 캡션 -->
 							<a href="">
 								<div class="cuadro_intro_hover"
@@ -333,7 +332,7 @@
 
 							</div>
 						</div>
-						<div class="col-md-3" style="width: 18rem;">
+						<div class="col-xs-3" style="width: 18rem;">
 							<a href="">
 								<div class="cuadro_intro_hover"
 									style="background-color: #cccccc;">
@@ -363,7 +362,7 @@
 
 							</div>
 						</div>
-						<div class="col-md-3" style="width: 18rem;">
+						<div class="col-xs-3" style="width: 18rem;">
 							<a href="">
 								<div class="cuadro_intro_hover"
 									style="background-color: #cccccc;">
@@ -394,7 +393,7 @@
 							</div>
 						</div>
 
-						<div class="col-md-3" style="width: 18rem;">
+						<div class="col-xs-3" style="width: 18rem;">
 							<a href="">
 								<div class="cuadro_intro_hover"
 									style="background-color: #cccccc;">
@@ -437,21 +436,21 @@
 			<div id="imghoverSec">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-4">
+						<div class="col-xs-4">
 							<div class="shadow">
 								<a href="#"><img
 									src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
 									width="100%" height="100%"></a>
 							</div>
 						</div>
-						<div class="col-md-4">
+						<div class="col-xs-4">
 							<div class="shadow">
 								<a href="#"><img
 									src="img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg"
 									width="100%" height="100%"></a>
 							</div>
 						</div>
-						<div class="col-md-4">
+						<div class="col-xs-4">
 							<div class="shadow">
 								<a href="#"><img
 									src="img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg"
@@ -508,7 +507,7 @@
 					<h1>BEST ITEM</h1>
 					<br>
 					<div class="row">
-						<div class="col-md-3" style="width: 18rem;">
+						<div class="col-xs-3" style="width: 18rem;">
 							<a href="#"><img class="card-img-top"
 								src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
 								onmouseover="this.src='img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg'"
@@ -522,7 +521,7 @@
 
 							</div>
 						</div>
-						<div class="col-md-3" style="width: 18rem;">
+						<div class="col-xs-3" style="width: 18rem;">
 							<a href="#"><img class="card-img-top"
 								src="img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg"
 								onmouseover="this.src='img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg'"
@@ -536,7 +535,7 @@
 
 							</div>
 						</div>
-						<div class="col-md-3" style="width: 18rem;">
+						<div class="col-xs-3" style="width: 18rem;">
 							<a href="#"><img class="card-img-top"
 								src="img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg"
 								onmouseover="this.src='img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg'"
@@ -551,7 +550,7 @@
 							</div>
 						</div>
 
-						<div class="col-md-3" style="width: 18rem;">
+						<div class="col-xs-3" style="width: 18rem;">
 							<a href="#"><img class="card-img-top"
 								src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
 								onmouseover="this.src='img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg'"
@@ -572,7 +571,7 @@
 
 				<div class="container">
 					<div class="row">
-						<div class="col-md-3" style="width: 18rem;">
+						<div class="col-xs-3" style="width: 18rem;">
 							<a href="#"><img class="card-img-top"
 								src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
 								onmouseover="this.src='img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg'"
@@ -586,7 +585,7 @@
 
 							</div>
 						</div>
-						<div class="col-md-3" style="width: 18rem;">
+						<div class="col-xs-3" style="width: 18rem;">
 							<a href="#"><img class="card-img-top"
 								src="img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg"
 								onmouseover="this.src='img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg'"
@@ -600,7 +599,7 @@
 
 							</div>
 						</div>
-						<div class="col-md-3" style="width: 18rem;">
+						<div class="col-xs-3" style="width: 18rem;">
 							<a href="#"><img class="card-img-top"
 								src="img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg"
 								onmouseover="this.src='img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg'"
@@ -615,7 +614,7 @@
 							</div>
 						</div>
 
-						<div class="col-md-3" style="width: 18rem;">
+						<div class="col-xs-3" style="width: 18rem;">
 							<a href="#"><img class="card-img-top"
 								src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
 								onmouseover="this.src='img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg'"
