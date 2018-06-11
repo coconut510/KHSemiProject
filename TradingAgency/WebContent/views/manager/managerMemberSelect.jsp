@@ -97,7 +97,7 @@
                 </div>
                 <div class="sidebar-header">
                     <div class="user-pic">
-                        <img class="img-responsive img-rounded" src="/IMG/4dollar.jpg"style="width:65px;height:65px;">
+                        <img class="img-responsive img-rounded" src="/img/4dollar.jpg"style="width:65px;height:65px;">
                     </div>
                     
                     <div class="user-info"> <!-- 접속한 관리자 정보를 출력하는 공간 -->

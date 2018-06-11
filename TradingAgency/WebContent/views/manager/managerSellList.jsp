@@ -37,8 +37,8 @@
 	src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
 
 <!-- 사이드바와 네비를 위한 공통적인 스크립트파일과 css파일  -->
-<link rel="stylesheet" type="text/css" href="/CSS/admin-nav.css">
-<script src="/JS/admin-nav.js"></script>
+<link rel="stylesheet" type="text/css" href="/CSS/manager/manager.css">
+<script src="/JS/manager/manager.js"></script>
 
 <title>Dashboard Template for Bootstrap</title>
 
@@ -99,7 +99,7 @@
                 </div>
                 <div class="sidebar-header">
                     <div class="user-pic">
-                        <img class="img-responsive img-rounded" src="/IMG/4dollar.jpg"style="width:65px;height:65px;">
+                        <img class="img-responsive img-rounded" src="/img/4dollar.jpg"style="width:65px;height:65px;">
                     </div>
                     
                     <div class="user-info"> <!-- 접속한 관리자 정보를 출력하는 공간 -->
