@@ -15,6 +15,97 @@
     <link rel="stylesheet" type="text/css" href="/CSS/product/productInsert.css">
 </head>
 
+<style>
+body {
+	margin: 0px;
+	width: 100%;
+	height: auto;
+}
+
+header {
+	text-align: center;
+	border: 1px solid black;
+	width: 100%;
+	height: 150px;
+}
+
+footer {
+	text-align: center;
+	border: 1px solid black;
+	width: 100%;
+	height: 150px;
+}
+/*바디부분 크기 */
+.bodyWrapper {
+	width: 80%;
+	margin: 5% auto 0px auto;
+}
+/*상품등록페이지 div */
+.insertTitle {
+	margin-top: 8px;
+	padding-top: 5%;
+}
+/* 상품등록페이지 h2 */
+#mainTitle {
+	padding-left: 2%;
+}
+/* 상세정보 랩퍼 */
+.dataWrapper {
+	width: auto;
+	margin: 5%;
+}
+/*상품 상세정보 span*/
+.dataWrapper>#dataTitle {
+	font-size: 25px;
+}
+/* 상세정보 내용 */
+.dataCon {
+	margin: 3%;
+}
+/* 상세정보 내용 폼 */
+#dataInsert {
+	margin: 1%;
+}
+/*상세설명 라벨*/
+#detaile {
+	padding-top: 4%;
+	padding-bottom: 1%;
+	margin: 1%;
+	font-size: 20px;
+}
+/* 작성 취소 버튼 div */
+.howSubmit {
+	padding-top: 1%;
+	padding-left: 75%;
+}
+/* 작성 취소 버튼 */
+.howSubmit button {
+	margin: 1%;
+	margin-right: 10%;
+}
+
+/*광고 */
+.ad {
+	padding-top: 6%;
+	margin-bottom: 5%;
+}
+/*판매가격 */
+#input {
+	float: left;
+}
+/*상세정보 분류제목 */
+#subTitle {
+	padding-left: 5%;
+}
+
+.thumb-image {
+	float: left;
+	width: 100px;
+	position: relative;
+	padding: 5px;
+}    
+</style>    
+    
 <body>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script type="text/javascript">
@@ -110,6 +201,31 @@
 
     <body>
         
+    <script>
+    $("#bCategory").on("click",function(){
+       selectCategory(); 
+    });
+        
+    function selectCategory(){
+        var value = $("#bCategory option:selected").text();
+        
+        switch(value){
+            case "전자제품" : $('<option>스마트폰</option><option>태블릿PC</option><option>노트북/PC</option><option>노트북/PC주변기기</option><option>카메라</option><option>음향가전/학습기기</option><option>게임/타이틀</option><option>웨어러블</option><option>영상가전</option><option>생활/주방/미용가전</option><option>자동차기기</option><option>기타 전자기기</option>').insertAfter('#sCategory'); break;
+            case "패션의류" : break;
+            case "패션잡화" : break;
+            case "화장품/미용" : break;
+            case "스포츠/레저" : break;
+            case "유아동/출산" : break;
+            case "완구/문구/취미" : break;
+            case "해외명품" : break;
+            case "도서/음반/DVD" : break;
+            case "가구/인테리어" : break;
+            case "여행/문화" : break;
+            case "생활/건강" : break;
+                
+        }
+    }
+    </script>
             <section class="bodyWrapper">
                 <div class="shadow p-3 mb-5 bg-white rounded">
                 <div class="insertTitle">
@@ -124,22 +240,17 @@
                             <div class="form-row">
                                 <div class="form-group col-md-3">
                                     <label id="subTitle">카테고리</label>
-                                    <select id="inputState" class="form-control">
-                                <option selected>전자제품</option>
+                                    <select id="bCategory" class="form-control">
+                                <option selected>카테고리를 선택해주세요</option>
+                                        <option>전자제품</option>
+                                        <option>패션잡화</option>
                                 
                                     </select>
                                 </div>
                                 <div class="form-group col-md-3">
                                     <label id="subTitle">카테고리(소분류)</label>
-                                    <select id="inputState" class="form-control">
-                                <option selected>스마트폰</option>
-                                <option>태블릿PC</option>
-                                <option>노트북/PC</option>
-                                <option>태블릿/PC주변기기</option>
-                                <option>카메라</option>
-                                <option>음향가전/학습기기</option>
-                                <option>게임/타이틀</option>
-                                <option>웨어러블</option>
+                                    <select id="sCategory" class="form-control">
+        
                                     </select>
                                 </div>
                                 <div class="form-group col-md-6">
@@ -189,6 +300,7 @@
                                     <label id="subTitle"><b>상품 사진</b></label>
                                     <div id="wrapper" style="margin-top: 20px;"><input id="fileUpload" multiple="multiple" type="file" />
                                         <div id="image-holder"></div>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -248,6 +360,12 @@
             </div>
 
         </section>
+    
+    
+    
+    
+    
+    
 
 
     </body>

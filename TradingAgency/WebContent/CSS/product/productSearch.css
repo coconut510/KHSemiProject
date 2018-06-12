@@ -41,7 +41,7 @@ body {
         }
         
         #productFilter{
-            width: 900%;
+            width: 90%;
             border: 1px solid lightgray;
             padding: 30px 30px 22px;
             margin-bottom: 40px;
@@ -60,7 +60,7 @@ body {
             margin-bottom: 2.5%;
         }
         .listSort{
-            margin: 2% 10% 7%;
+            margin: 2% 0% 7%;
             
         }
         .listSort>*{

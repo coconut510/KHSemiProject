@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+
+        <script>
+
+        $(document).ready(function (event){
+
+        $(window).scroll(function(){
+
+        
+
+        var scrollHeight = $(window).scrollTop() + $(window).height();
+
+        var documentHeight = $(document).height();
+
+        
+
+        //스크롤이 맨아래로 갔는지 아닌지 확인하는 if문
+
+        if(scrollHeight == documentHeight){
+
+        for(var i = 0; i < 10; i++){
+
+        $('<div class="col-md-3" id = "i" style="width: 18rem;"><div class="idWrapper"><div class="uploadId">계정명</div></div><img class="card-img-top" src="../../img/2.PNG"alt="Card image cap"><div class="card-body"><h5 class="card-title">Card title</h5><p class="card-text">Some quick example text to build onthe card title and make up the bulk of the cards content.</p><a href="#" class="btn btn-primary">자세히보기</a></div></div>').appendTo('#i');
+
+        }      
+
+        }
+
+        
+
+        });
+
+        });
+
+        
+
+        //테스트를 위해 내부에 공간을 채워서 스크롤을 임의로 만듬
+
+        $(document).ready(function(){
+
+        for(var i = 0; i < 20; i++){
+
+        $('<div class="col-md-3" id = "i" style="width: 18rem;"><div class="idWrapper"><div class="uploadId">계정명</div></div><img class="card-img-top" src="../../img/2.PNG"alt="Card image cap"><div class="card-body"><h5 class="card-title">Card title</h5><p class="card-text">Some quick example text to build onthe card title and make up the bulk of the cards content.</p><a href="#" class="btn btn-primary">자세히보기</a></div></div>').appendTo('#i');
+
+        }      
+
+        });
+
+        
+
+    </script>
+
+</head>
+
+<body>
+
+        <div>
+
+        <p>지금 내 생각을</p>
+
+        <h1>150</h1>
+
+        <textarea cols="70" rows="5"></textarea>
+
+        </div>
+
+</body>
+
+</html>
+
+
+
+출처: http://gakari.tistory.com/entry/jquery-window객체를-활용하며-무한-스크롤-구현하기 [가카리의 공부방]
