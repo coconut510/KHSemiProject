@@ -120,17 +120,13 @@
 							</div>
 						</div>
 					</div>
-					<div class="goods_tabs">
-						<ul class="nav nav-tabs">
-							<li class="on"><a href="#goods_description" class="tab_01">상품상세설명</a></li>
-							<li><a href="#goods_review" class="tab_02">상품후기<span>(0)</span></a></li>
-							<li><a href="#goods_qna" class="tab_03">상품문의<span>(0)</span></a></li>
-							<li><a href="#exchange_guide" class="tab_04">교환/반품/배송정보</a></li>
-						</ul>
-					</div>
-					<div id="productDetailExplain">
-					
-					</div>
+				</div>
+				<div id="productDetailExplain">		
+					<ul class="nav nav-tabs">
+					  <li role="presentation" class="active"><a href="#">Home</a></li>
+					  <li role="presentation"><a href="#">Profile</a></li>
+					  <li role="presentation"><a href="#">Messages</a></li>
+					</ul>
 				</div>
 			</section>			
 			<footer id="footer">

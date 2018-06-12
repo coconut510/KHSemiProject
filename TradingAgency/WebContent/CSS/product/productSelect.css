@@ -23,6 +23,7 @@
 	width:50%;
 	float:left;
 	margin-left:10%;
+	margin-bottom:40px;
 }
 
 .hl{
@@ -127,12 +128,16 @@ a{
 	color:gray;
 }
 
+/*상품 상세 설명 탭*/
 
-/*상품 상세설명 탭*/
 #productDetailExplain{
-	margin-top:20px;
+	margin-top:50px;
 	clear:both;
 	width:100%;
 	height:500px;
 	background-color:#efefef;
+}
+.nav-tabs {
+    border-bottom: 1px solid black;
+    background-color: white;
 }
