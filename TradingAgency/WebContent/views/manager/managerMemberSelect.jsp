@@ -38,7 +38,7 @@
 <link rel="stylesheet" type="text/css" href="/CSS/manager/manager.css">
 <script src="/JS/manager/manager.js"></script>
 
-<title>Dashboard Template for Bootstrap</title>
+<title>회원관리</title>
 
 
 
@@ -132,9 +132,6 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">상품 등록 현황</a>
-                                    </li>
-                                    <li>
                                         <a href="#">Dashboard 3</a>
                                     </li>
                                 </ul>
@@ -154,10 +151,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="">????</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">접속관리(블랙리스트)</a>
+                                        <a href="/views/manager/managerBlackList.jsp">블랙리스트</a>
                                     </li>
                                 </ul>
                             </div>
@@ -173,17 +167,12 @@
                                         <a href="/views/manager/managerBoard.jsp">게시판 현황</a>
                                     </li>
                                     <li>
-                                        <a href="#">Panels</a>
+                                        <a href="/views/manager/managerQnABoard.jsp">Panels</a>
                                     </li>
                                     <li>
                                         <a href="#">Tables</a>
                                     </li>
-                                    <li>
-                                        <a href="#">Icons</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Forms</a>
-                                    </li>
+                                   
                                 </ul>
                             </div>
                             
@@ -258,28 +247,56 @@
 				<div
 					class="col-md-10 col-md-offset-1 col-md-11 col-md-offset-1 main">
 					<br> <br> <label><h2>회원정보 조회</h2></label>
-					<hr>
+				
 					<form action="" method="post">
-						<table class="table">
+						<table class="table table-bordered">
 							<tr>
 								<th>개인정보</th>
-								<td><select name="selInfo"><option>이름</option>
-										<option>아이디</option>
-										<option>이메일</option>
-										<option>휴대전화</option></select> <input type="text" name="memberInfo" />
-									<input type="submit" value="정보 조회!" /></td>
+								<td colspan="3">
+									<select name="selInfo">  <!-- option의 value값은 하기 편한걸로!!  -->
+	 									<option value="userName">이름</option>
+										<option value="userId">아이디</option>
+										<option value="userEmail">이메일</option>
+										<option value="userPhone">휴대전화</option>
+									</select> 
+										<input type="text" name="memberInfo" />
+								</td>
+								
+							</tr>
+							<tr><th>회원등급</th>
+								<td><select name="selGrade">
+									<option>전체</option>
+									<option>브론즈</option>
+									<option>실버</option>
+									<option>골드</option>
+									</select>
+								</td>
+								<th>성별</th>
+								<td><input type="radio" name="gender" value="all">전체  
+										<input type="radio" name="gender" value="M">남   
+										<input type="radio" name="gender" value="F">여
+								</td>
 							</tr>
 						</table>
+						<center>
+						<input type="submit" class="btn btn-outline-success" value="정보 조회!" />
+						</center>
 					</form>
 					<br>
 
 					<hr>
 					<br> <br> <label><h3>조회 결과</h3></label> <label><h5
 							style="color: red;">[총 n명 검색]</h5></label>
+							<br>
+					 <label><select name="viewNum">   <!-- 한 페이지당 출력할 내용의 갯수 선택. -->
+					 			<option value="10">10</option>
+					 			<option value="30">30</option>
+					 			<option value="50">50</option>
+					 		</select></label>개 씩 보기
 					<div id="selectInfoResult">
 						<table class="table">
 							<tr>
-								<th>체크</th>
+								<th><input type="checkbox" name="allCheck"></th>
 								<th>아이디</th>
 								<th>고객명</th>
 								<th>등급</th>
