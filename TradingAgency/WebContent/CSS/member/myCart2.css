@@ -1,4 +1,9 @@
 @charset "UTF-8";
+
+@charset "UTF-8";
+html,body{
+	font-family: 'Sunflower', sans-serif;
+}
 #footerTest {
     display: block;
     clear: both;
@@ -17,6 +22,8 @@
     width: 100%;
     height: auto;
     box-sizing: border-box;
+    box-sizing: border-box;
+  /*   border: 1px solid black; */
 
 }
 
@@ -24,7 +31,7 @@
     width: 100%;
     height: auto;
     box-sizing: border-box;
-    border: 1px solid black;
+  /*   border: 1px solid black; */
 }
 
 .selectBtn2 {
@@ -116,10 +123,11 @@
 
 #deliveryInfo {
     border: 1px solid black;
-    width: 60%;
+    width: 55%;
     height: auto;
     padding: 30px;
-
+    margin-left:10px;
+    margin-right:10px;
     float: left;
     position: relative;
 
@@ -127,7 +135,7 @@
 
 #orderListInfo {
     border: 1px solid black;
-    width: 40%;
+    width: 38%;
     height: auto;
     margin: 0 auto;
     float: left;
@@ -165,7 +173,7 @@
 }
 
 #orderListInfoWrap > div {
-    border: 1px solid black;
+/*     border: 1px solid black; */
     width: 100%;
     height: 60px;
     margin-top: 15px;
@@ -174,17 +182,22 @@
 }
 
 #orderListInfoWrap > div > span:first-child {
-    border: 1px solid black;
+	
+ /*     border: 1px solid black; */
     width: 100%;
     height: 60px;
     flex: 1;
-    padding: 10px;
+    padding-top: 15px;
     box-sizing: border-box;
 }
 
-
+#content{
+	width:960px;
+	height:auto;
+	
+}
 #orderListInfoWrap > div > span:last-child {
-    border: 1px solid black;
+ /*     border: 1px solid black; */
     width: 100%;
     height: 60px;
     flex: 2.5;
@@ -195,7 +208,7 @@
 
 
 #orderListInfoWrap > div:last-child {
-    border: 1px solid black;
+ /*     border: 1px solid black; */
     width: 100%;
     height: 60px;
     padding-left: 18px;

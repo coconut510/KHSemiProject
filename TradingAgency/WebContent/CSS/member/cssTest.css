@@ -18,37 +18,16 @@
     height: auto;
     box-sizing: border-box;
     border: 1px solid black;
-    display: flex;
-}
-
-div[class*="step"] {
-    width: 100%;
-    height: auto;
-    font-size: 20px;    font-size: 20px;
-
-    flex: 1;
-    margin: 10px;
-}
-
-.step_2 {
-    font-weight: 700;
-}
-
-
-
-.cartListSec {
-    width: 100%;
-    height: auto;
-    box-sizing: border-box;
-    border: 1px solid black;
+  
 }
 
 .selectBtn1,
-.selectBtn2 {
+ {
     width: 100%;
     height: auto;
     box-sizing: border-box;
     position: relative;
+  
 }
 
 .selectBtn1>input[type="button"] {
@@ -56,26 +35,6 @@ div[class*="step"] {
     margin-right: 10px;
     width: 130px;
     height: 40px;
-}
-
-.selectBtn2>input[type="button"] {
-    margin-right: 20px;
-    width: 250px;
-    height: 50px;
-    font-size: 25px;
-    font-weight: 700;
-}
-
-.selectBtn2>input[type="button"]:last-child {
-    background-color: orange;
-}
-
-td {
-    width: 10%;
-}
-
-td:nth-child(2) {
-    width: 30%;
 }
 
 #orderListInfo {
@@ -98,24 +57,78 @@ td:nth-child(2) {
     flex: 1;
 }
 
-#reward>dt {
-    float: left;
+
+.container {
+	margin-left: auto;
+	margin-right: auto;
+}
+.sign-up {
+	display: block;
+	margin-top: 30px;
+	margin-bottom: 30px;
 }
 
-.orderListInfo_2>dt {
-    float: left;
+.sign-up>ul {
+	padding: 0px;
+	margin-bottom: 30px;
 }
 
-#deliveryCountry {
-    width: 100%;
-    height: auto;
-    display: flex;
+.sign-up>ul li {
+	text-align: center;
+	margin: 0 10px;
+	display: inline-block;
+	width: 24%;
+	border-bottom: 3px solid gray;
 }
 
-#deliveryCountry>div:first-child {
-    flex: 1;
+.sign-up>ul li h3 {
+	font-weight: 600;
+	color : gray;
 }
 
-#deliveryCountry>div:last-child {
-    flex: 3;
+.sign-up>h4 {
+	font-weight: 600;
+	margin-top: 0px;
+	margin-bottom: 20px;
+}
+.sign-up li.active {
+	border-bottom: 3px solid black;
+}
+.sign-up li.active h3{
+	color:black;
+}
+
+.sign-up li.active h3 small{
+	color:black;
+}
+
+.orderGoodsInfo1{
+   float: left;
+}
+
+.orderGoodsInfo2{
+    
+     float: right;
+}
+
+.orderGoodsName{
+    margin-left: 5px;
+}
+
+.orderGoodsOption{
+    margin-left: 5px;
+}
+.purchase{
+    float: right;
+}
+#purchaseBtn{
+    width: 300px;
+    height: 80px;
+    margin-bottom: 100px;
+
+}
+.cart_billing_label,.cart_billing_price{
+float: right;
+    margin-left: 40px;
+   padding-bottom: 10px;
 }
