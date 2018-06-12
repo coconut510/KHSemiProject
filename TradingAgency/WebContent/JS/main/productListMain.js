@@ -47,3 +47,9 @@ function selectProductMulti(state)
 	state.style.backgroundColor = "gray";	
 	stateArr.push(state);
 }
+
+
+function test()
+{
+	alert("테스트");
+}
