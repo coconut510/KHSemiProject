@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+ 
+    <title> 풋터 </title>
+
+</head>
+
+<body>
+    <style>
+        #footer {
+            height: 100%;
+            width: 100%;
+/*            border: 1px solid black;*/
+            box-sizing: border-box;
+            float: left;
+            position: fixed;
+            bottom:0;
+            
+        }
+        #footertop{
+            height: 8%;
+            width: 100%;
+/*            border: 1px solid black;*/
+            box-sizing: border-box;
+            float: left;
+        }
+        
+        .footerbar {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            height: 100%;
+            width: 100%;
+        }
+
+        .footerbarli {
+            float: left;
+            list-style-type: none;
+            height: 100%;
+            width: 10%;
+            text-align: center;
+            line-height: 65px;
+        }
+        .footerbarli>a{
+             text-decoration: none;
+             text-align: center;
+        }
+        .vl.short{
+            border-left: 2px solid lightgray;
+            height: 25px;
+            position: absolute;
+            left: 80%;
+            margin-left: -3px;
+            top: 2.5%;
+        }
+        .vl.short.one{
+           
+            left:10%;
+        }
+        .vl.short.two{
+              
+             left: 19.5%;
+        }
+         .vl.short.three{
+             
+             left: 31.5%;
+        }
+        .vl.short.four{
+           
+             left: 39%;
+        }
+        #footermiddle
+        {
+            height: 35%;
+            width: 100%;
+/*            border: 1px solid black;*/
+            box-sizing: border-box;
+            float: left;
+        }
+        .footermiddlebar {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            height: 100%;
+            width: 100%;
+        }
+
+        .corp_info {
+            float: left;
+            list-style-type: none;
+            height: 100%;
+            width: 25%;
+            text-align: center;
+            line-height: 70px;
+        }
+        .corp_info.one{
+              height: 100%;
+            width: 20%;
+        }
+         .corp_info.two{
+            height: 100%;
+            width: 20%;
+        }
+         .corp_info.three{
+              height: 100%;
+            width: 30%;
+        }
+         .corp_info.four{
+              height: 100%;
+            width: 30%;
+        }
+        .corp_info>a{
+             text-decoration: none;
+             text-align: center;
+        }
+        .detail.info{
+            list-style-type: none;
+            text-decoration: none;
+            text-align: center;
+             line-height: 20px;
+            padding: 0;
+        }
+        .pic1{
+            width:45px; 
+            height:45px;
+            background: url(../../../../semi2/WebContent/img/text.PNG);
+            margin: 0;
+            
+        }
+       
+        .pic1:hover{
+            width:45px; 
+            height:45px;
+            background: url(../../../../semi2/WebContent/img/itemask.png);
+            margin: 0;
+        }
+         .pic2{
+            width:45px; 
+            height:45px;
+            background: url(../../../../semi2/WebContent/img/camera.png);
+            margin: 0;
+        }
+       
+        .pic2:hover{
+            width:45px; 
+            height:45px;
+            background: url(../../../../semi2/WebContent/img/itemreview.png);
+            margin: 0;
+        }
+         .pic3{
+            width:45px; 
+            height:45px;
+            background: url(../../../../semi2/WebContent/img/square.png);
+            margin: 0;
+        }
+       
+        .pic3:hover{
+            width:45px; 
+            height:45px;
+            background: url(../../../../semi2/WebContent/img/fax.png);
+            margin: 0;
+        }
+        
+.vl {
+    border-left: 1px solid lightgray;
+    height: 200px;
+    position: absolute;
+    left: 40%;
+    margin-left: -3px;
+    top: 13%;
+}
+        .vl.one{
+                 
+left: 20%;
+            
+        }
+         .vl.three{
+            
+            left: 70%;
+        }
+        .contact{
+             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            height: 100%;
+            width: 100%;
+        }
+            .contact_info {
+            float: left;
+            list-style-type: none;
+            height: 100%;
+            width: 10%;
+            text-align: center;
+            line-height: 40px;
+        }
+        .contact_info>a{
+             text-decoration: none;
+             text-align: center;
+        }
+        .circle.text{
+            color: white;
+            font-size: 12px;
+            text-decoration: none;
+        }
+        #footerbottom
+        {
+            height: 20%;
+            width: 100%;
+/*            border: 1px solid black;*/
+            box-sizing: border-box;
+            float: left;
+        }
+        .detailList{            
+            overflow:auto;
+            margin-left:20%;
+        }
+        .detailList a{
+            float:left;
+           display:inline-block;
+           margin-left: 10%;
+            
+        }
+        .detailList  a> div{
+            display:inline-block;
+        }
+        ul{
+            list-style-type: none;
+        }
+        @media screen and (max-width:1679px)
+        {
+/*
+            #footer{
+                display:none;
+            }
+*/
+        }
+    </style>
+    
+   <div id="footer">
+            <div id="footertop">
+                <ul class="footerbar">
+                    <li class="footerbarli"><a href="#">COMPANY</a></li>
+                    <div class="vl short one"></div>
+                    <li class="footerbarli"><a href="#"> AGREEMENT</a></li>
+                    <div class="vl short two"></div>
+                    <li class="footerbarli"><a href="#">PRIVACY POLICY</a></li>
+                    <div class="vl short three"></div>
+                    <li class="footerbarli"><a href="#">GUIDE</a></li>
+                    <div class="vl short four"></div>
+                    <li class="footerbarli"><a href="#">PARTNERSHIP</a></li>
+                </ul>
+                <hr>
+            </div>
+            <div id="footermiddle">
+                 <ul class="footermiddlebar">
+                    <li class="corp_info one" >
+                    <h4>CENTER</h4><a href="#"><H1>02-1111-2222</H1></a>
+                       <ul>
+                        <li class="detail info">MON-FRI AM 09:00~PM 06:00</li>
+                        <li class="detail info">LUNCH PM 12:00~PM 01:00</li>
+                       </ul>
+                     </li>
+                    <div class="vl one"></div>
+                    <li class="corp_info two" >
+                    <h4>BANK INFO</h4>
+                    <p>KH은행 0000000 000 00000000 대표:네고가능</p>
+                     <select>
+                         <option value="goto internet banking" selected>인터넷뱅킹 바로가기</option>
+                         <option value="kb">KB국민은행</option>
+                         <option value="ibk">IBK기업은행</option>
+                         <option value="nh">농협</option>
+                         <option value="mg">MG새마을금고</option>
+                         <option value="sh">신한은행</option>
+                         <option value="city">씨티은행</option>
+                         <option value="woori">우리은행</option>
+                         <option value="post">우체국</option>
+                         <option value="sc">SC제일은행</option>
+                         <option value="keb">KEB하나은행</option>
+                         <option value="kn">경남은행</option>
+                         <option value="kj">광주은행</option>
+                         <option value="dgb">DGB대구은행</option>
+                         <option value="bnk">BNK부산은행</option>
+                         <option value="jb">전북은행</option>
+                         <option value="jj">제주은행</option>
+                         <option value="suhyub">수협</option>
+                         <option value="shinhyub">신협</option>
+                     </select>
+                    </li>
+                    <div class="vl two"></div>
+                    <li class="corp_info three">
+                       <h4>RETURN/EXCHANGE</h4>
+                        <ul>
+                        <li class="detail info"><br>서울시 영등포구 선유동2로 57 이레빌딩(구관) 19F</li>
+                        <li class="detail info">교환/반품 안내는 문의란 및 FAQ를 참고해주세요. </li>
+                        <li class="detailList">
+                           <center>
+                                <a href="#"> 
+                                    <div class="pic1"></div>
+                                </a>
+                                <a href="#"> 
+                                    <div class="pic2"></div>
+                                </a>
+                                <a href="#"> 
+                                    <div class="pic3"></div>
+                                </a>
+                            </center>
+                        </li>
+                       </ul>
+                        
+                    </li>
+                    <div class="vl three"></div>
+                    <li class="corp_info four">
+                        <h4>NOTICE</h4>
+                        
+                    </li>
+                </ul>
+                </div><hr>
+          
+            <div id="footerbottom">
+                <br>
+               <ul class="bottombar">
+                    <li class="detail info last"> COMPANY (주)네고가능 | REPRESENTATIVE 대표명 | ADDRESS 서울시 영등포구 선유동2로 57 이레빌딩(구관) 19F
+                    | TEL 02-1111-2222 | FAX 031-1111-2222</li>
+                    <li class="detail info last"> CORPORATE BUSINESS NUMBER 123-45-67890 | ONLINE BUSINESS NUMBER 제1234-서울갱냄56789호 | PRIVACY OFFICER 네고가능 | E-MAIL negookay@kh.or.kr </li>
+                    <li class="detail info last">
+                        Copyright ⓒ (주)네고가능. All Rights Reserved. | Design by Negookay.
+                    </li>
+                    
+                   
+                   
+               </ul>
+            
+                
+            
+            </div>
+    </div>
+        
+</body>
+
+</html>
+
