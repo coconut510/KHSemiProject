@@ -138,6 +138,11 @@ a{
 	background-color:#efefef;
 }
 .nav-tabs {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid lightgray;
     background-color: white;
+
+}
+.nav-tabs li:first-child{
+    margin-left:32%;
+	
 }

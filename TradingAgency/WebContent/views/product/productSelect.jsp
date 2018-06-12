@@ -11,9 +11,9 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <!-- 내부 링크건 CSS -->
-<link rel="stylesheet" href="../../CSS/bootstrap/bootstrap.min.css" />
-<link rel="stylesheet" href="../../CSS/common/common.css" />
-<link rel="stylesheet" href="../../CSS/product/productSelect.css" />
+<link rel="stylesheet" href="../../CSS/bootstrap/bootstrap.min.css?ver=1" />
+<link rel="stylesheet" href="../../CSS/common/common.css?ver=1" />
+<link rel="stylesheet" href="../../CSS/product/productSelect.css?ver=1" />
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
@@ -22,10 +22,12 @@
 	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
 	integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
 	crossorigin="anonymous"></script>
-<script src="../../JS/bootstrap/bootstrap.min.js"></script>
+<script src="../../JS/bootstrap/bootstrap.min.js?ver=1"></script>
 
-<script src="../../JS/product/productSelect.js"></script>
-
+<script src="../../JS/product/productSelect.js" type="text/javascript"></script>
+<script>
+	
+</script>
 
 <title>상품 선택 화면</title>
 </head>
@@ -121,12 +123,15 @@
 						</div>
 					</div>
 				</div>
-				<div id="productDetailExplain">		
-					<ul class="nav nav-tabs">
-					  <li role="presentation" class="active"><a href="#">Home</a></li>
-					  <li role="presentation"><a href="#">Profile</a></li>
-					  <li role="presentation"><a href="#">Messages</a></li>
-					</ul>
+				<div id="productDetailExplain">	
+					<center>	
+						<ul class="nav nav-tabs">
+						  <li id="firstLi" onclick="changeTab(this);"  class="active"><a>상품정보</a></li>
+						  <li onclick="changeTab(this);"><a >상품후기</a></li>
+						  <li onclick="changeTab(this);"><a >상품문의</a></li>
+						  <li onclick="changeTab(this);"><a>교환/반품/배송정보</a></li>
+						</ul>
+					</center>
 				</div>
 			</section>			
 			<footer id="footer">
