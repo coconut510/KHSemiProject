@@ -5,13 +5,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>내 쿠폰</title>
+<title>내 정보</title>
 <style>
-.couponcolor{
-  background-color:#F2F2F2;
-}
-
-
 
 body
 {
@@ -160,7 +155,7 @@ box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
 }
     div{background-color: white;}
     
-    .header{border:3px solid white;
+     .header{border:3px solid white;
        background-color: #7151FC;
         width: auto;
         height: 100px;}
@@ -201,10 +196,11 @@ ul.mpMenuAll li a:hover{
 	color:#7151FC;
 }
 
+
 ul.mpMenuItems li a.current,ul.vert-one li a.current:hover{
 background:black url("http://www.blueb.co.kr/data/201010/IJ12872476173279/vert-one_arrow.gif") no-repeat 0 9px;}
     
-    .mpMenuTitle
+        .mpMenuTitle
     {   
   width: auto;
   height: 16.5%;
@@ -224,9 +220,7 @@ background:black url("http://www.blueb.co.kr/data/201010/IJ12872476173279/vert-o
         width: 100%;
         height: 70%; 
         font-size: 30px;
-    }  
-    
-    
+    } 
     .tapBtn
     {
         margin: 0px;
@@ -430,68 +424,192 @@ table tr:hover td {
 	background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f0f0f0));
 	background: -moz-linear-gradient(top,  #f2f2f2,  #f0f0f0);	
 }
+    @import url(http://weloveiconfonts.com/api/?family=fontawesome);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+
+
+a {
+  color: #eee;
+  outline: 0;
+  text-decoration: none;
+}
+a:focus, a:hover {
+  text-decoration: underline;
+}
+
+input {
+  border: 0;
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  -webkit-transition: background-color .3s;
+          transition: background-color .3s;
+}
+
+.site__container {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 3rem 0;
+}
+
+.form input[type="password"], .form input[type="text"], .form input[type="submit"] {
+  width: 100%;
+}
+.form--login {
+  color: #606468;
+}
+.form--login label,
+.form--login input[type="text"],
+.form--login input[type="password"],
+.form--login input[type="submit"] {
+  border-radius: 0.25rem;
+  padding: 1rem;
+}
+.form--login label {
+  background-color: #363b41;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+.form--login input[type="text"], .form--login input[type="password"] {
+  background-color: #3b4148;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+.form--login input[type="text"]:focus, .form--login input[type="text"]:hover, .form--login input[type="password"]:focus, .form--login input[type="password"]:hover {
+  background-color: #434A52;
+}
+.form--login input[type="submit"] {
+  background-color: #7151FC;
+  color: #eee;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.form--login input[type="submit"]:focus, .form--login input[type="submit"]:hover {
+  background-color: #d44179;
+}
+.form__field {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1rem;
+}
+.form__input {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.align {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.text--center {
+  text-align: center;
+}
+
+.grid__container {
+  margin: 0 auto;
+  max-width: 20rem;
+  width: 90%;
+}
     
 </style>
 </head>
 <body align ="center">
 
 <div class="header">헤더</div>
-
+<center>
         <div class="contents">
             <div class="mpMenuItems">
-                            <div class="mpMenuTitle"><h1>마이 페이지</h1></div>
-
+                         <div class="mpMenuTitle"><h1>마이 페이지</h1></div>
+						
                 <ul class="mpMenuAll" role="tablist" style="none">
-					<li role="presentation" class="selfcolor"><a href="/views/member/mySelf.jsp" aria-controls="sales" role="tab" data-toggle="tab" aria-expanded="false">판매내역</a></li>
+					<li role="presentation" class=""><a href="/views/member/mySelf.jsp" aria-controls="sales" role="tab" data-toggle="tab" aria-expanded="false">판매내역</a></li>
 					
 					
-					<li role="presentation" class="buycolor"><a href="/views/member/myBuy.jsp" aria-controls="order" role="tab" data-toggle="tab" aria-expanded="false">구매내역</a></li>
+					<li role="presentation" class=""><a href="/views/member/myBuy.jsp" aria-controls="order" role="tab" data-toggle="tab" aria-expanded="false">구매내역</a></li>
 					
 					
-					<li role="presentation" class="jjimcolor"><a href="/views/member/jjim.jsp" aria-controls="member" role="tab" data-toggle="tab" aria-expanded="false">찜한 상품</a></li>
+					<li role="presentation" class=""><a href="/views/member/jjim.jsp" aria-controls="member" role="tab" data-toggle="tab" aria-expanded="false">찜한 상품</a></li>
 					
 					
-					<li role="presentation" class="couponcolor"><a href="/views/member/myCoupon.jsp" aria-controls="settings" role="tab" data-toggle="tab" aria-expanded="true">내 쿠폰</a></li>
+					<li role="presentation" class="active"><a href="/views/member/myCoupon.jsp" aria-controls="settings" role="tab" data-toggle="tab" aria-expanded="true">내 쿠폰</a></li>
 					
-					<li role="presentation" class="infocolor"><a href="/views/member/myInfoQuiz.jsp" aria-controls="settings" role="tab" data-toggle="tab" aria-expanded="true">내 정보</a></li>
+					<li role="presentation" class="active"><a href="/views/member/myInfoQuiz.jsp" aria-controls="settings" role="tab" data-toggle="tab" aria-expanded="true">내 정보</a></li>
 					
-					<li role="presentation" class="saycolor"><a href="/views/member/mySay.jsp" aria-controls="settings" role="tab" data-toggle="tab" aria-expanded="true">알림 설정</a></li>
+					<li role="presentation" class="active"><a href="/views/member/mySay.jsp" aria-controls="settings" role="tab" data-toggle="tab" aria-expanded="true">알림 설정</a></li>
                     
 				</ul>
             </div>
             <div class="MenuContents">
             
-                <div class="MenuConTitle"><H2>내 쿠폰</H2></div>
+                <div class="MenuConTitle"><H2>내 정보</H2></div>
 
 <div class="MenuCon1"><!-- 테이블창 -->
-<div class="table-users">
-<% ArrayList<Member> list = (ArrayList<Member>)request.getAttribute("userList"); %>
-<center>
-<%if(list!=null){ %>
- <table>  
-   		<% for(Member m : list){%>
+  <div class="site__container">
 
-	<tr class="even">
-			<td>쿠폰이름</td>
-			<td>100% 할인</td>
-			<td>Yes</td>
-	</tr>
-<%} %>
-</table>
-<%}else{ %>
-   <div>지급된 쿠폰이 없습니다.   </div>
-<%} %>
-</div>
+    <div class="grid__container">
+
+      <form action="/login" method="post" class="form form--login">
+
+        <div class="form__field">
+          <label class="fontawesome-lock" for="login__password" id="userPwd"><span class="hidden">Password</span></label>
+          <input id="login__password" type="password" class="form__input" placeholder="Password" required>
+        </div>
+
+        <div class="form__field">
+          <input type="submit" value="확인 'ㅅ^">
+        </div>
+
+      </form>
+    </div>
+
+  </div>
 </div>
                 <div class="MenuCon2"><!-- 안내창 -->
                 <div>
-                - 이미 사용하였거나 유효기간이 만료된 쿠폰은 3개월 후 자동 삭제됩니다.<br>
-                - 쿠폰은 중복사용할 수 없습니다. 1회 결제시 1개의 쿠폰만 사용 가능합니다.<br>
-                - 모든 쿠폰은 셀잇 검증 상품에만 사용 가능합니다. (상품권 제외)
+                	정보를 안전하게 보호하기 위해 비밀번호를 다시 한번 확인합니다.<br>
+                	<a href="/views/member/myInfo.jsp"> 비번 입력할시 가는창 ^_^</a>
                 </div>
                 </div>
             </div>
   </div>
+  </center>
 <div class="footer">푸터</div>
 </body>
 

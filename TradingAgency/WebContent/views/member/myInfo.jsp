@@ -5,70 +5,53 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>내 정보</title>
+   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <style>
 div {
 	background-color: white;
 }
 
-.header {
-	border: 3px solid white;
-	background-color: blueviolet;
-	width: auto;
-	height: 100px;
+  .header{border:3px solid white;
+       background-color: #7151FC;
+        width: auto;
+        height: 100px;}
+    .contents{
+        border:3px solid white;
+           width: auto;
+        height: 800px;  
+    }
+    .footer{border:3px solid white;
+    background-color: #7151FC;
+    width: auto;
+    height: 120px;
+    }
+    .mpMenuItems{border: 3px solid white;
+    float: left;
+    width: auto;
+    height: 100%;
+    }
+    
+    
+    .mpMenuAll{border: 3px solid none;
+	margin:0;padding:0;list-style-type:none;display:block;
+	  font: 50px/50px 'Lucida Grande', Verdana, sans-serif;
+	hieght:100%;
+	width:auto;
+	
+    }
+    ul.mpMenuAll li{
+	margin:0;padding:0;border-top:1px solid none;
+	border-bottom:1px solid white;
+}
+ul.mpMenuAll li a{
+	display:block;text-decoration:none;color:black;
+	background:white;padding:5px 0 5px 20px;width:140px;
+}
+ul.mpMenuAll li a:hover{
+	background:#F2F2F2 url("http://www.blueb.co.kr/data/201010/IJ12872476173279/vert-one_arrow.gif") no-repeat 0 9px;
+	color:#7151FC;
 }
 
-.contents {
-	border: 3px solid white;
-	width: 100%;
-	height: 800px;
-}
-
-.footer {
-	border: 3px solid white;
-	background-color: blueviolet;
-	width: auto;
-	height: 120px;
-}
-
-.mpMenuItems {
-	border: 3px solid white;
-	float: left;
-	width: auto;
-	height: 100%;
-}
-
-.mpMenuAll {
-	border: 3px solid none;
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-	display: block;
-	font: bold 12px tahoma, sans-serif;
-	hieght: 100%;
-	width: auto;
-}
-
-ul.mpMenuAll li {
-	margin: 0;
-	padding: 0;
-	border-top: 1px solid #4D0000;
-	border-bottom: 1px solid white;
-}
-
-ul.mpMenuAll li a {
-	display: block;
-	text-decoration: none;
-	color: #fff;
-	background: blueviolet;
-	padding: 5px 0 5px 20px;
-	width: 140px;
-}
-
-ul.mpMenuAll li a:hover {
-	background: black
-		url("http://www.blueb.co.kr/data/201010/IJ12872476173279/vert-one_arrow.gif")
-		no-repeat 0 9px;
-}
 
 ul.mpMenuItems li a.current, ul.vert-one li a.current:hover {
 	background: black
@@ -76,12 +59,18 @@ ul.mpMenuItems li a.current, ul.vert-one li a.current:hover {
 		no-repeat 0 9px;
 }
 
-.mpMenuTitle {
-	display: inline-block;
-	width: 100%;
-	height: 16.5%;
-	font-size: 30px;
-}
+    .mpMenuTitle
+    {   
+  width: auto;
+  height: 16.5%;
+  animation: background 1s linear infinite;
+  background: linear-gradient(90deg, rgba(150,48,30,1) 0%,rgba(199,201,88,1) 10%,rgba(28,147,46,1) 20%,rgba(74,165,168,1) 30%,rgba(89,90,165,1) 40%,rgba(84,16,67,1) 50%,rgba(28,58,63,1) 60%,rgba(82,175,183,1) 70%,rgba(78,170,76,1) 80%,rgba(150,48,30,1) 90%,rgba(199,201,88,1) 100%);
+  background-size: 1000% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top:50px;
+  margin-left:20px;
+    }
 
 .mpMenuAll {
 	position: static;
@@ -106,7 +95,7 @@ ul.mpMenuItems li a.current, ul.vert-one li a.current:hover {
 
 .MenuContents {
 	position: static;
-	width: 79%;
+	width: 89%;
 	height: 100%;
 	float: right;
 }
@@ -269,30 +258,29 @@ float:left;
 }
 
 .search {
-	position: relative;
-	width: 100px;
+	margin-bottom:10px;
+	width: auto;
 	display: inline-block;
 	color: #ecf0f1;
 	text-decoration: none;
 	border-radius: 5px;
-	border: solid 1px blueviolet;
-	background: blueviolet;
+	border: solid 1px #7151FC;
+	background: #7151FC;
 	text-align: center;
 	padding: 16px 18px 14px;
 	font-size: 30px;
-	margin:8px;
 	-webkit-transition: all 0.1s;
 	-moz-transition: all 0.1s;
 	transition: all 0.1s;
 	-webkit-box-shadow: 0px 6px 0px rebeccapurple;
 	-moz-box-shadow: 0px 6px 0px rebeccapurple;
-	box-shadow: 0px 6px 0px rebeccapurple;
+	box-shadow: 0px 0px 0px rebeccapurple;
 }
 
 .search:active {
 	-webkit-box-shadow: 0px 2px 0px rebeccapurple;
 	-moz-box-shadow: 0px 2px 0px rebeccapurple;
-	box-shadow: 0px 2px 0px rebeccapurple;
+	box-shadow: 0px 0px 0px rebeccapurple;
 	position: relative;
 	top: 4px;
 }
@@ -306,8 +294,8 @@ float:left;
 	color: #ecf0f1;
 	text-decoration: none;
 	border-radius: 5px;
-	border: solid 1px blueviolet;
-	background: blueviolet;
+	border: solid 1px #7151FC;
+	background: #7151FC;
 	text-align: center;
 	padding: 16px 18px 14px;
 	margin: 12px;
@@ -317,13 +305,13 @@ float:left;
 	transition: all 0.1s;
 	-webkit-box-shadow: 0px 6px 0px rebeccapurple;
 	-moz-box-shadow: 0px 6px 0px rebeccapurple;
-	box-shadow: 0px 6px 0px rebeccapurple;
+	box-shadow: 0px 0px 0px rebeccapurple;
 }
 
 .phone:active {
 	-webkit-box-shadow: 0px 2px 0px rebeccapurple;
 	-moz-box-shadow: 0px 2px 0px rebeccapurple;
-	box-shadow: 0px 2px 0px rebeccapurple;
+	box-shadow: 0px 0px 0px rebeccapurple;
 	position: relative;
 	top: 4px;
 }
@@ -361,8 +349,8 @@ body {
 	color: #ecf0f1;
 	text-decoration: none;
 	border-radius: 5px;
-	border: solid 1px blueviolet;
-	background: blueviolet;
+	border: solid 1px #7151FC;
+	background: #7151FC;
 	text-align: center;
 	padding: 16px 18px 14px;
 	margin: 12px;
@@ -372,26 +360,26 @@ body {
 	transition: all 0.1s;
 	-webkit-box-shadow: 0px 6px 0px rebeccapurple;
 	-moz-box-shadow: 0px 6px 0px rebeccapurple;
-	box-shadow: 0px 6px 0px rebeccapurple;
+	box-shadow: 0px 0px 0px rebeccapurple;
 }
 
 .save:active {
 	-webkit-box-shadow: 0px 2px 0px rebeccapurple;
 	-moz-box-shadow: 0px 2px 0px rebeccapurple;
-	box-shadow: 0px 2px 0px rebeccapurple;
+	box-shadow: 0px 0px 0px rebeccapurple;
 	position: relative;
 	top: 4px;
 }
 .delete {
-float:left;
+	float:left;
 	position: relative;
 	width: 100px;
 	display: inline-block;
 	color: #ecf0f1;
 	text-decoration: none;
 	border-radius: 5px;
-	border: solid 1px blueviolet;
-	background: blueviolet;
+	border: solid 1px #7151FC;
+	background: #7151FC;
 	text-align: center;
 	padding: 16px 18px 14px;
 	margin: 12px;
@@ -401,20 +389,20 @@ float:left;
 	transition: all 0.1s;
 	-webkit-box-shadow: 0px 6px 0px rebeccapurple;
 	-moz-box-shadow: 0px 6px 0px rebeccapurple;
-	box-shadow: 0px 6px 0px rebeccapurple;
+	box-shadow: 0px 0px 0px rebeccapurple;
 }
 
 .delete:active {
 	-webkit-box-shadow: 0px 2px 0px rebeccapurple;
 	-moz-box-shadow: 0px 2px 0px rebeccapurple;
-	box-shadow: 0px 2px 0px rebeccapurple;
+	box-shadow: 0px 0px 0px rebeccapurple;
 	position: relative;
 	top: 4px;
 }
 
 </style>
-<link rel="stylesheet" href="/data/201010/IJ12874238457466/buttons.css"
-	type="text/css" media="screen" />
+<!--  <link rel="stylesheet" href="/data/201010/IJ12874238457466/buttons.css"
+	type="text/css" media="screen" />-->
 </head>
 <body align="center">
 
@@ -422,35 +410,29 @@ float:left;
 
 	<div class="contents">
 		<div class="mpMenuItems">
-			<div class="mpMenuTitle">마이 페이지</div>
+			<div class="mpMenuTitle"><h1>마이 페이지</h1></div>
 
 			<ul class="mpMenuAll" role="tablist" style="">
 				<li role="presentation" class=""><a
-					href="/views/member/mySelf.jsp" aria-controls="sales" role="tab"
-					data-toggle="tab" aria-expanded="false">판매내역</a></li>
+					href="/views/member/mySelf.jsp">판매내역</a></li>
 
 
 				<li role="presentation" class=""><a
-					href="/views/member/myBuy.jsp" aria-controls="order" role="tab"
-					data-toggle="tab" aria-expanded="false">구매내역</a></li>
+					href="/views/member/myBuy.jsp">구매내역</a></li>
 
 
 				<li role="presentation" class=""><a
-					href="/views/member/jjim.jsp" aria-controls="member" role="tab"
-					data-toggle="tab" aria-expanded="false">찜한 상품</a></li>
+					href="/views/member/jjim.jsp">찜한 상품</a></li>
 
 
 				<li role="presentation" class="active"><a
-					href="/views/member/myCoupon.jsp" aria-controls="settings"
-					role="tab" data-toggle="tab" aria-expanded="true">내 쿠폰</a></li>
+					href="/views/member/myCoupon.jsp">내 쿠폰</a></li>
 
 				<li role="presentation" class="active"><a
-					href="/views/member/myInfo.jsp" aria-controls="settings" role="tab"
-					data-toggle="tab" aria-expanded="true">내 정보</a></li>
+					href="/views/member/myInfoQuiz.jsp">내 정보</a></li>
 
 				<li role="presentation" class="active"><a
-					href="/views/member/mySay.jsp" aria-controls="settings" role="tab"
-					data-toggle="tab" aria-expanded="true">알림 설정</a></li>
+					href="/views/member/mySay.jsp">알림 설정</a></li>
 
 			</ul>
 		</div>
@@ -477,7 +459,7 @@ float:left;
 						<div class="emaildiv">
 							<!-- 이메일 div start -->
 							<div class="insertTitle" style="font-size: 20px">이메일</div>
-							<input type="email" style="width: 250px; height: 40px;"
+							<input type="email" style="width: 300px; height: 40px;"
 								style="border:1px solid maroon;background:transparent;"
 								placeholder="이메일을 입력하세요">
 						</div>
@@ -492,41 +474,41 @@ float:left;
 					<div class="deliveryright">
 						
 				
-						<!-- 1번째 -->
+						<!-- 주소1번째 -->
 						<div class="address1">
 								<div class="insertTitle"
-								style="margin-top: 30px; font-size: 20px">주소</div>
-						
+								style="margin-top: 10px; font-size: 20px">주소</div>
 								<div>
-								<input autocomplete="off" class="address11" id="user_address"
+								<input autocomplete="off" class="postcodify_postcode5" id="user_address"
 								ng-keypress="keypress($event)" ng-model="addressKeyword"
 								placeholder="읍, 면, 동으로 검색해주세요." type="text"
-								style="width: 250px; height: 40px;"
-								style="border:1px solid maroon; background:transparent;">
+								style="width: 300px; height: 40px;"
+								style="border:1px solid maroon; background:transparent;" name="postNum">
 								</div>
-							<div><a href="#" class="search">검색</a></div>
+								
+								
+							<div><button id="postcodify_search_button" class="search">검색</button></div>
 						</div>
-						<!-- 2번째 -->
+						<!-- 주소2번째 -->
 						<div class="address2">
 								<div class="insertTitle"
 								style="margin-top: 30px; font-size: 20px"> </div>
-						
-								<div>
-							<input class="address22" ng-model="profile.addr1"
+								<div>								
+							<input class="postcodify_address" ng-model="profile.addr1"
 								placeholder="주소검색을 이용해주세요" readonly="readonly"
-								style="width: 250px; height: 40px;"
-								style="border:1px solid maroon; background:transparent;">
+								style="width: 300px; height: 40px;"
+								style="border:1px solid maroon; background:transparent;" name="addrInfo">
 						</div>
 						</div>
-						<!-- 3번째 -->
+						<!-- 주소3번째 -->
 						<div class="address3">
 								<div class="insertTitle"
-								style="margin-top: 30px; font-size: 20px"> </div>
-						
+								style="margin-top: 20px; font-size: 20px"> </div>
 								<div>
-							<input class="address33" id="user-addr2" ng-model="profile.addr2"
-								placeholder="상세주소" style="width: 250px; height: 40px;"
-								style="border:1px solid maroon; background:transparent;">
+							
+							<input class="postcodify_details" id="user-addr2" ng-model="profile.addr2"
+								placeholder="상세주소" style="width: 300px; height: 40px;"
+								style="border:1px solid maroon; background:transparent;" name="addrDetail">
 
 						</div>
 					</div>
@@ -547,7 +529,7 @@ float:left;
 								class="form-control profedit-form-input ng-pristine ng-valid"
 								ng-model="profile.bank_name"
 								ng-options="item for item in bankNames"
-								style="width: 250px; height: 40px;"
+								style="width: 300px; height: 40px;"
 								style="border:1px solid maroon;background:transparent;"><option
 									value="" selected="selected" label=""></option>
 								<option value="0" label="국민은행">국민은행</option>
@@ -611,7 +593,7 @@ float:left;
 							<div class="insertTitle" style="margin-top: 30px; font-size: 20px">예금주
 							</div>
 							<div>
-							<input type="email" style="width: 250px; height: 40px;"
+							<input type="email" style="width: 300px; height: 40px;"
 								style="border:1px solid maroon;background:transparent;" value="">
 							</div>
 						</div>
@@ -621,7 +603,7 @@ float:left;
 								style="margin-top: 30px; font-size: 20px">계좌번호
 							</div>
 							<div>
-							<input type="text" style="width: 250px; height: 40px;"
+							<input type="text" style="width: 300px; height: 40px;"
 								style="border:1px solid maroon;background:transparent;" value="">
 							</div>
 						</div>
@@ -637,6 +619,12 @@ float:left;
 	</center>
 	</div>
 </div>
+
+   <script> $(function() { $("#postcodify_search_button").postcodifyPopUp(); }); </script> <!-- 주소 검색 -->
+   <script src="//d1p7wdleee1q2z.cloudfront.net/post/search.min.js"></script> <!-- 주소 api -->
+   <script type="text/javascript" src="/JS/bootstrap/bootstrap.js"></script>
+
+
 	<div class="footer">푸터</div>
 	</center>
 </body>

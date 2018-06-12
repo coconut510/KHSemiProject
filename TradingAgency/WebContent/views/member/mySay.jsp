@@ -6,23 +6,24 @@
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>알림설정</title>
 <style>
+
     div{background-color: white;}
     
     .header{border:3px solid white;
-       background-color: blueviolet;
+       background-color: #7151FC;
         width: auto;
         height: 100px;}
     .contents{
         border:3px solid white;
-        width: 100%;
+           width: auto;
         height: 800px;  
     }
     .footer{border:3px solid white;
-    background-color: blueviolet;
+    background-color: #7151FC;
     width: auto;
     height: 120px;
     }
-      .mpMenuItems{border: 3px solid white;
+    .mpMenuItems{border: 3px solid white;
     float: left;
     width: auto;
     height: 100%;
@@ -31,32 +32,39 @@
     
     .mpMenuAll{border: 3px solid none;
 	margin:0;padding:0;list-style-type:none;display:block;
-	font:bold 12px tahoma, sans-serif;
+	  font: 50px/50px 'Lucida Grande', Verdana, sans-serif;
 	hieght:100%;
 	width:auto;
 	
     }
     ul.mpMenuAll li{
-	margin:0;padding:0;border-top:1px solid #4D0000;
+	margin:0;padding:0;border-top:1px solid none;
 	border-bottom:1px solid white;
 }
 ul.mpMenuAll li a{
-	display:block;text-decoration:none;color:#fff;
-	background:blueviolet;padding:5px 0 5px 20px;width:140px;
+	display:block;text-decoration:none;color:black;
+	background:white;padding:5px 0 5px 20px;width:140px;
 }
 ul.mpMenuAll li a:hover{
-	background:black url("http://www.blueb.co.kr/data/201010/IJ12872476173279/vert-one_arrow.gif") no-repeat 0 9px;
+	background:#F2F2F2 url("http://www.blueb.co.kr/data/201010/IJ12872476173279/vert-one_arrow.gif") no-repeat 0 9px;
+	color:#7151FC;
 }
+
 
 ul.mpMenuItems li a.current,ul.vert-one li a.current:hover{
 background:black url("http://www.blueb.co.kr/data/201010/IJ12872476173279/vert-one_arrow.gif") no-repeat 0 9px;}
     
-    .mpMenuTitle
+      .mpMenuTitle
     {   
-        display: inline-block;
-        width: 100%;
-        height: 16.5%;
-       font-size: 30px;
+  width: auto;
+  height: 16.5%;
+  animation: background 1s linear infinite;
+  background: linear-gradient(90deg, rgba(150,48,30,1) 0%,rgba(199,201,88,1) 10%,rgba(28,147,46,1) 20%,rgba(74,165,168,1) 30%,rgba(89,90,165,1) 40%,rgba(84,16,67,1) 50%,rgba(28,58,63,1) 60%,rgba(82,175,183,1) 70%,rgba(78,170,76,1) 80%,rgba(150,48,30,1) 90%,rgba(199,201,88,1) 100%);
+  background-size: 1000% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top:50px;
+  margin-left:20px;
     }
     .mpMenuAll
     {
@@ -85,7 +93,7 @@ background:black url("http://www.blueb.co.kr/data/201010/IJ12872476173279/vert-o
     {
         position: static;
         background-color: rebeccapurple;
-        width: 79%;
+        width: 89%;
         height: 100%;
         float: right;
     }
@@ -295,7 +303,7 @@ p.caption {
 
         <div class="contents">
             <div class="mpMenuItems">
-                <div class="mpMenuTitle">마이 페이지</div>
+                            <div class="mpMenuTitle"><h1>마이 페이지</h1></div>
 
                 <ul class="mpMenuAll" role="tablist" style="none">
 					<li role="presentation" class=""><a href="/views/member/mySelf.jsp" aria-controls="sales" role="tab" data-toggle="tab" aria-expanded="false">판매내역</a></li>
@@ -309,7 +317,7 @@ p.caption {
 					
 					<li role="presentation" class="active"><a href="/views/member/myCoupon.jsp" aria-controls="settings" role="tab" data-toggle="tab" aria-expanded="true">내 쿠폰</a></li>
 					
-					<li role="presentation" class="active"><a href="/views/member/myInfo.jsp" aria-controls="settings" role="tab" data-toggle="tab" aria-expanded="true">내 정보</a></li>
+					<li role="presentation" class="active"><a href="/views/member/myInfoQuiz.jsp" aria-controls="settings" role="tab" data-toggle="tab" aria-expanded="true">내 정보</a></li>
 					
 					<li role="presentation" class="active"><a href="/views/member/mySay.jsp" aria-controls="settings" role="tab" data-toggle="tab" aria-expanded="true">알림 설정</a></li>
                     
@@ -317,12 +325,10 @@ p.caption {
             </div>
             <center>
             <div class="MenuContents">
-          
-          
-          
-           <div class="bluelight">
-	<a href="#">준비중..</a>
-</div>
+       		
+            <div class="bluelight">
+			<a href="#">준비중</a>
+			</div>
                    
             </center>
             </div>
