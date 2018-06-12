@@ -36,19 +36,12 @@
 <link rel="stylesheet" type="text/css" href="/CSS/manager/manager.css">
 <script src="/JS/manager/manager.js"></script>
 
-<title>Dashboard Template for Bootstrap</title>
+<title>Sell:F Manager Page</title>
 
 
-
-<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
 
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+
 
 </head>
 
@@ -118,9 +111,7 @@
                                             <span class="badge badge-pill badge-success">Pro</span>
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="#">상품 등록 현황</a>
-                                    </li>
+                      
                                     <li>
                                         <a href="#">Dashboard 3</a>
                                     </li>
@@ -137,14 +128,10 @@
                                 <ul>
                                     <li>
                                         <a href="/views/manager/managerMemberSelect.jsp">회원 정보 조회
-                                            
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="">????</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">접속관리(블랙리스트)</a>
+                                        <a href="/views/manager/managerBlackList.jsp">블랙리스트</a>
                                     </li>
                                 </ul>
                             </div>
@@ -160,16 +147,10 @@
                                         <a href="/views/manager/managerBoard.jsp">게시판 현황</a>
                                     </li>
                                     <li>
-                                        <a href="#">Panels</a>
+                                        <a href="/views/manager/managerQnABoard.jsp">Panels</a>
                                     </li>
                                     <li>
                                         <a href="#">Tables</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Icons</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Forms</a>
                                     </li>
                                 </ul>
                             </div>

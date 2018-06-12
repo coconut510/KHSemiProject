@@ -40,7 +40,7 @@
 <link rel="stylesheet" type="text/css" href="/CSS/manager/manager.css">
 <script src="/JS/manager/manager.js"></script>
 
-<title>Dashboard Template for Bootstrap</title>
+<title>게시판 관리</title>
 
 
 
@@ -131,9 +131,7 @@
                                             <span class="badge badge-pill badge-success">Pro</span>
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="#">상품 등록 현황</a>
-                                    </li>
+                                   
                                     <li>
                                         <a href="#">Dashboard 3</a>
                                     </li>
@@ -154,10 +152,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="">????</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">접속관리(블랙리스트)</a>
+                                        <a href="/views/manager/managerBlackList.jsp">블랙리스트</a>
                                     </li>
                                 </ul>
                             </div>
@@ -173,16 +168,10 @@
                                         <a href="/views/manager/managerBoard.jsp">게시판 현황</a>
                                     </li>
                                     <li>
-                                        <a href="#">Panels</a>
+                                        <a href="/views/manager/managerQnABoard.jsp">Panels</a>
                                     </li>
                                     <li>
                                         <a href="#">Tables</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Icons</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Forms</a>
                                     </li>
                                 </ul>
                             </div>
@@ -250,7 +239,7 @@
 
 			<div class="row">
 				<div
-					class="col-md-10 col-md-offset-1 col-md-11 col-md-offset-1 main">
+					class="col-md-10 col-md-offset-1 col-md-11 col-md-offset-1 main"> <!-- 내용집어넣는 곳입니다. -->
 					<br> <br>
 					<h3>게시판</h3>
 					<div id="noticePan">

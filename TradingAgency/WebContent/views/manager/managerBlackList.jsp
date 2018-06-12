@@ -40,7 +40,7 @@
 <link rel="stylesheet" type="text/css" href="/CSS/manager/manager.css">
 <script src="/JS/manager/manager.js"></script>
 
-<title>상품 관리</title>
+<title>BlackList</title>
 
 
 
@@ -133,7 +133,7 @@
                                             <span class="badge badge-pill badge-success">Pro</span>
                                         </a>
                                     </li>
-                                   
+                                  
                                     <li>
                                         <a href="#">Dashboard 3</a>
                                     </li>
@@ -153,7 +153,7 @@
                                             
                                         </a>
                                     </li>
-                                    <li>
+                                     <li>
                                         <a href="/views/manager/managerBlackList.jsp">블랙리스트</a>
                                     </li>
                                 </ul>
@@ -176,7 +176,6 @@
                                         <a href="#">Tables</a>
                                     </li>
                                     
-                                    </li>
                                 </ul>
                             </div>
                             
@@ -251,81 +250,34 @@
 				<div
 					class="col-md-10 col-md-offset-1 col-md-11 col-md-offset-1 main">
 
-					<h3>상품 정보 조회</h3>
+					<h3>블랙리스트 회원 보기</h3>
 					<hr>
-					<form action="" method="post">
-						<table class="table table-bordered">
+					<table class="table">
 							<tr>
-								<th>검색분류</th>
-								<td><select name="searchProduct"> <!-- value값은 차차 생각!! -->
-										<option value="">상품명</option>
-										<option value="">카테고리</option>
-										<option value="">판매자</option>
-										<option value="">상품번호</option>
-										
-								</select><input type="text" name="getSearch" /></td>
+								<th>체크</th>
+								<th>아이디</th>
+								<th>고객명</th>
+								<th>등급</th>
+								<th>휴대폰 번호</th>
+								<th>성별</th>
+								<th>가입일자</th>
+								
 							</tr>
-							<tr><th>상품 분류</th> <td>
-							<select name="productCategory">
-								<!-- 카테고리를 db에서 읽어와서 출력. -->
-								<option>-대분류 선택-</option>
-								<option>1</option>
-								<option>2</option>
-								<option>3</option>
-							</select>
-							 
-							 <select name="productItem">
-								<!-- 카테고리에 딸린 소분류를 db에서 읽어와서 출력. -->
-								<option>-소분류 선택-</option>
-								<option></option>
-								<option></option>
-							</select>
-						
-						
-						</tr>
 							<tr>
-								<th>상품 상태</th>
-								<td> <input type="radio" name="status" value="all" checked />전체 
-									 <input type="radio" name="status" value="top" />상  
-									 <input type="radio" name="status" value="middleTop" />중상  
-									 <input type="radio" name="status" value="middle" />중  
-									 <input type="radio" name="status" value="middleBottom" />중하  
-									 <input type="radio" name="status" value="bottom" />하 
-								</td>
+									<td><input type="checkbox" name="check"><input
+										type="hidden"></td>
+									<!-- 체크된 회원의 아이디를 보내어 불량회원 또는 등급변경 가능하게 설정 -->
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									
+									<!-- 조회결과 출력 -->
 							</tr>
 						</table>
-						<center>
-							<input type="submit" class="btn btn-outline-warning btn-sm" value="검색" /> <input type="reset"
-								class="btn btn-outline-secondary btn-sm" value="초기화" />
-						</center>
-					</form>
-					<hr>
-					<br><br>
-					<div id="searchResult">
-					 <label><h3>조회결과</h3></label><br>
-					 <label><select name="viewNum"> <!-- 한 페이지당 출력할 내용의 갯수 선택. -->
-					 			<option value="10">10</option>
-					 			<option value="30">30</option>
-					 			<option value="50">50</option>
-					 		</select></label>개 씩 보기
-						<table class="table">
-							<tr>
-								<th>상품번호</th>
-								<th>상품코드</th>
-								<th>상품명</th>
-								<th>판매가</th>
-								<th>회원정보</th>
-							</tr>
-							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-							</tr>
-							<!-- 조회결과 출력 -->
-						</table>
-						<button type="button" class="btn btn-outline-warning btn-sm">삭제</button>
+						<button type="button" class="btn btn-outline-info btn-sm" onclick="">불량회원 해제</button>
 					</div>
 				</div>
 			</div>
