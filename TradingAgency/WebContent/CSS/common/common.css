@@ -28,6 +28,7 @@ section article {margin: 0 auto;}
 	height:auto;
 	display:block;
 
+
 }
 #crossLine{
 	width:100%;
@@ -44,13 +45,11 @@ h2{
 
 
 @media(max-width:400px){
-    #main .entireBG {
+    wrapper {
         display: block;
     }
-    #main .entireBG div{
+    wrapper div{
         width:100%;
     }
-    #main .entireBG a h3{
-        font-size: 8vw;
-    }
+  
 }
