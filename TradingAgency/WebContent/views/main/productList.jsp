@@ -14,6 +14,8 @@
 <link rel="stylesheet" href="../../CSS/bootstrap/bootstrap.min.css" />
 <link rel="stylesheet" href="../../CSS/common/common.css" />
 <link rel="stylesheet" href="../../CSS/main/productListMain.css" />
+<script type="text/javascript" href="../../JS/common/header.js"></script>
+<link rel="stylesheet" type="text/css" href="../../CSS/common/header.css">
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
@@ -35,8 +37,7 @@
 		<div id="wrapper">
 			<!--  Header -->
 			<header id="header">
-			<div id="headerLine">HeadLine1</div>
-			<div id="navigator">Navigator</div>
+				 <%@include  file="../../views/common/header.jsp" %>
 			</header>
 
 			<section id="content">

@@ -10,8 +10,7 @@ section article {margin: 0 auto;}
 }
 #header{
     width:100%;
-    height:140px;
-       background-color:red;
+    overflow:auto;
 }
 #navigation{
     width:100%;
