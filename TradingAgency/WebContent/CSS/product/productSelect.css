@@ -132,10 +132,15 @@ a{
 
 #productDetailExplain{
 	margin-top:50px;
+	margin-bottom:50px;
 	clear:both;
 	width:100%;
-	height:500px;
-	background-color:#efefef;
+	height:700px;
+	<!--border:1px solid #efefef;-->
+	background-color:white;
+}
+#productDetailExplain ul:last-child{
+	overflow:auto;	
 }
 .nav-tabs {
     border-bottom: 1px solid lightgray;
@@ -145,4 +150,174 @@ a{
 .nav-tabs li:first-child{
     margin-left:32%;
 	
+}
+
+/*상품정보 표시 탭*/
+#productStateIconGroup{
+	clear:both;
+	display:block;
+	overflow:auto;
+	margin-bottom:30px;
+	margin-left:100px;
+}
+.productIconGroup{
+	float:left;
+	margin-left:30px;
+	overflow:auto;
+	display:block;
+}
+#useState{
+	float:left;
+	margin-left:30px;
+	overflow:auto;
+	display:block;
+}
+#useState:hover #useStateDetail{
+	display:block;
+}
+.stateIcon{
+	height:70px;	
+	margin-left:20px;
+}
+.productStateTitle{
+	color:#666666;
+	margin-left:20px;
+}
+
+#useStateDetail{
+	display:none;
+	position:absolute;
+	width:300px;
+	height:200px;
+	background-color:white;
+	border:2px solid #efefef;
+}
+#useStateTitle{
+	margin-top:20px;
+}
+#useStateGraph{
+	margin-top:50px;
+}
+
+.noneSelectDot {
+  	height: 15px;
+  	width: 15px;
+  	background-color: lightgray;
+ 	border-radius: 50%;
+  	display: inline-block;
+  	margin-bottom:9px;
+}
+.selectDot{
+	height:30px;
+	width:30px;
+	background-color: purple;
+	border-radius:50%;
+	display:inline-block;
+	margin-top:6px;
+}
+.stateLine{
+	height:4px;
+	width:60px;
+	background-color:lightgray;
+ 	display: inline-block;
+ 	margin-bottom:14px;
+}
+#useStateText>div{
+	float:left;
+	display:inline-block;
+	margin-left:40px;
+}
+
+#useState{
+	float:left;
+	margin-left:30px;
+	overflow:auto;
+	display:block;
+}
+#productGradeGraph{
+	margin-top:50px;
+}
+#productGradeDetail{
+	display:none;
+	position:absolute;
+	width:400px;
+	height:200px;
+	background-color:white;
+	border:2px solid #efefef;
+}
+#productGradeState:hover #productGradeDetail{
+	display:block;
+}
+
+#brokenStateDetail{
+	display:none;
+	position:absolute;
+	width:300px;
+	height:200px;
+	background-color:white;
+	border:2px solid #efefef;
+}
+#brokenState:hover #brokenStateDetail{
+	display:block;
+}
+
+
+#packageStateDetail{
+	display:none;
+	position:absolute;
+	width:200px;
+	height:200px;
+	background-color:white;
+	border:2px solid #efefef;
+}
+#packageState:hover #packageStateDetail{
+	display:block;
+}
+
+
+#returnPosibleStateDetail{
+	display:none;
+	position:absolute;
+	width:300px;
+	height:330px;
+	background-color:white;
+	border:2px solid #efefef;
+	padding:20px;
+}
+#returnPosibleState:hover #returnPosibleStateDetail{
+	display:block;
+}
+
+
+#deliveryStateDetail{
+	display:none;
+	position:absolute;
+	width:280px;
+	height:260px;
+	background-color:white;
+	border:2px solid #efefef;
+	padding:20px;
+}
+#deliveryState:hover #deliveryStateDetail{
+	display:block;
+}
+
+/*상품정보 텍스트로 표시*/
+#productInfoTextDetail{
+	margin-top:30px;
+	width:100%;
+	overflow:auto;
+}
+.productInfoTextTitle{
+	text-align:left;
+	display:inline-block;
+	width:15%;
+	color:gray;
+	margin-bottom:20px;
+}
+.productInfoTextExplain{
+	text-align:left;
+	display:inline-block;
+	width:80%;
+	margin-bottom:20px;
 }

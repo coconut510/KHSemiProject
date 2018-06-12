@@ -4,9 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-	crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -24,10 +22,7 @@
 	crossorigin="anonymous"></script>
 <script src="../../JS/bootstrap/bootstrap.min.js?ver=1"></script>
 
-<script src="../../JS/product/productSelect.js" type="text/javascript"></script>
-<script>
-	
-</script>
+<script src="../../JS/product/productSel.js?ver=1"></script>
 
 <title>상품 선택 화면</title>
 </head>
@@ -124,18 +119,174 @@
 					</div>
 				</div>
 				<div id="productDetailExplain">	
-					<center>	
-						<ul class="nav nav-tabs">
-						  <li id="firstLi" onclick="changeTab(this);"  class="active"><a>상품정보</a></li>
-						  <li onclick="changeTab(this);"><a >상품후기</a></li>
-						  <li onclick="changeTab(this);"><a >상품문의</a></li>
-						  <li onclick="changeTab(this);"><a>교환/반품/배송정보</a></li>
-						</ul>
-					</center>
+					<ul class="nav nav-tabs">
+					  <li id="firstLi" onclick="changeTab(this,tab1);" class="active"><a>상품정보</a></li>
+					  <li onclick="changeTab(this,tab2);"><a>상품후기</a></li>
+					  <li onclick="changeTab(this,tab3);"><a>상품문의</a></li>
+					  <li onclick="changeTab(this,tab4);"><a>교환/반품/배송정보</a></li>
+					</ul>
+					
+					<ul style="list-style:none;">
+						<li class="tabContents" id="tab1">
+							<h3 style="float:left; margin-left:20px;">상품정보</h3>
+							<div id="productStateIconGroup" class="productIconGroup">
+								<div id="useState">
+									<img class="stateIcon"  src="../../img/icoUse_3x_ofrw9u.jpg" />
+									<div class="productStateTitle">사용</div>
+									<div id="useStateDetail">
+										<div id="useStateTitle">
+											<h4>상품상태</h4>
+										</div>
+										<div id="useStateGraph">										
+											<div id="useStateIcon1" class="noneSelectDot"></div>
+											<div class="stateLine"></div>
+											<div id="useStateIcon2" class="noneSelectDot"></div>
+											<div class="stateLine"></div>
+											<div id="useStateIcon3" class="selectDot"></div>
+										</div>
+										<div id="useStateText">
+											<div id="useStateText1">새상품</div>
+											<div id="useStateText2">미사용</div>
+											<div id="useStateText3">&nbsp;&nbsp;&nbsp;사용</div>
+										</div>
+									</div>
+								</div>
+								<div id="productGradeState"  class="productIconGroup">
+									<img class="stateIcon" src="../../img/icoGradeAplus_3x_fgsqml.jpg" />
+									<div class="productStateTitle">A+</div>
+									<div id="productGradeDetail">
+										<div id="useStateTitle">
+											<h4>제품등급</h4>
+										</div>
+										<div id="productGradeGraph">										
+											<div id="productGradeIcon1" class="noneSelectDot"></div>
+											<div class="stateLine"></div>
+											<div id="productGradeIcon2" class="noneSelectDot"></div>
+											<div class="stateLine"></div>
+											<div id="productGradeIcon3" class="noneSelectDot"></div>
+											<div class="stateLine"></div>
+											<div id="productGradeIcon4" class="selectDot"></div>
+										</div>
+										<div id="useStateText">
+											<div id="useStateText1">&nbsp;A+급</div>
+											<div id="useStateText2">&nbsp;&nbsp;&nbsp;A급</div>
+											<div id="useStateText3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B급</div>
+											<div id="useStateText3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C급</div>
+										</div>
+									</div>
+								</div>
+								<div id="brokenState" class="productIconGroup">
+									<img class="stateIcon" src="../../img/icoNoBreakage_3x_iev7l3.jpg" />
+									<div class="productStateTitle">없음</div>
+									<div id="brokenStateDetail">
+										<div id="useStateTitle">
+											<h4>찍힘/깨짐</h4>
+										</div>
+										<div id="productGradeGraph">										
+											<div id="productBrokenIcon1" class="noneSelectDot"></div>
+											<div class="stateLine"></div>
+											<div id="productBrokenIcon2" class="noneSelectDot"></div>
+											<div class="stateLine"></div>
+											<div id="productBrokenIcon3" class="selectDot"></div>
+										</div>
+										<div id="useStateText">
+											<div id="useStateText1">&nbsp;&nbsp;없음</div>
+											<div id="useStateText2">&nbsp;&nbsp;약간</div>
+											<div id="useStateText3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;심함</div>
+										</div>
+									</div>
+								</div>
+								<div id="packageState" class="productIconGroup">
+									<img class="stateIcon" src="../../img/icoComponentYes_3x_i2j0in.jpg" />
+									<div class="productStateTitle">구성품</div>
+									<div id="packageStateDetail">
+										<div id="useStateTitle">
+											<h4>구성품</h4>
+										</div>
+										<div id="productGradeGraph">										
+											<div id="productBrokenIcon1" class="noneSelectDot"></div>
+											<div class="stateLine"></div>
+											<div id="productBrokenIcon2" class="selectDot"></div>
+										</div>
+										<div id="useStateText">
+											<div id="useStateText1">있음</div>
+											<div id="useStateText2">&nbsp;&nbsp;&nbsp;&nbsp;없음</div>
+										</div>
+									</div>
+								</div>
+								<div id="returnPosibleState" class="productIconGroup">
+									<img class="stateIcon" src="../../img/icoReturnC_3x_okkgam.jpg" />
+									<div class="productStateTitle">환불 가능 여부</div>
+									<div id="returnPosibleStateDetail">
+										<div id="useStateTitle">
+											<h4>환불가능</h4>
+												1. 안전거래가 적용됩니다.
+												<br><br>
+												2. 구매자가 구매확정한 후 판매자에게 입금처리됩니다.
+												<br><br>
+												3. 제품 수령일로 부터 3일내 환불 신청 가능합니다.
+												<br><br>
+												4. 단순 변심 환불의 경우 환불 배송비는 구매자가 부담합니다.
+										</div>
+									</div>
+								</div>
+								<div id="deliveryState" class="productIconGroup">
+									<img class="stateIcon" src="../../img/icoDeliver_3x_sjwqny.jpg" />
+									<div class="productStateTitle">일반택배</div>
+									<div id="deliveryStateDetail">
+										<div id="useStateTitle">
+											<h4>일반택배 배송</h4>
+													
+												1. 판매자가 제품을 발송하면 택배사, 송장번호를 안내해드립니다.
+												<br><br>
+												2. 결제 후 3일내 판매자가 제품을 
+												<br>
+												발송하지 않으면 
+												<br>
+												거래가 자동 취소됩니다.
+										</div>
+									</div>
+								</div>
+							</div>
+							<hr style="clear:both;">
+							<div id="productInfoTextDetail">
+								<div id="productUseStateInfoTitle1" class="productInfoTextTitle">상품상태</div>
+								<div id="productUseStateInfo1" class="productInfoTextExplain">사용</div>
+								
+								<div id="productUseStateInfoTitle1" class="productInfoTextTitle">제품정보 제목1</div>
+								<div id="productUseStateInfo1" class="productInfoTextExplain">제품정보 내용1</div>
+								
+								<div id="productUseStateInfoTitle1" class="productInfoTextTitle">제품정보 제목2</div>
+								<div id="productUseStateInfo1" class="productInfoTextExplain">제품정보 내용2</div>
+								
+								<div id="productUseStateInfoTitle1" class="productInfoTextTitle">제품정보 제목3</div>
+								<div id="productUseStateInfo1" class="productInfoTextExplain">제품정보 내용3</div>
+								
+								<div id="productUseStateInfoTitle1" class="productInfoTextTitle">제품정보 제목4</div>
+								<div id="productUseStateInfo1" class="productInfoTextExplain">제품정보 내용4</div>
+								
+								<div id="productUseStateInfoTitle1" class="productInfoTextTitle">제품정보 제목N</div>
+								<div id="productUseStateInfo1" class="productInfoTextExplain">제품정보 내용N</div>
+							
+							</div>
+						</li>
+						<li class="tabContents" id="tab2">
+							<div id="productReview">
+							</div>
+						</li>
+						<li class="tabContents" id="tab3">
+							<div id="qa">
+							</div>
+						</li>
+						<li class="tabContents" id="tab4">
+							<div id="productDetailTap">
+							</div>
+						</li>
+					</ul>
 				</div>
 			</section>			
 			<footer id="footer">
-				<div id="footerTest"></div>
+				<div id="footerTest" style="width:100%;height:300px;background-color:green;"></div>
 			</footer>
 		</div>
 	</center>
