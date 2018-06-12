@@ -14,7 +14,7 @@
         height: 100px;}
     .contents{
         border:3px solid white;
-        width: 960px;
+        width: 100%;
         height: 800px;  
     }
     .footer{border:3px solid white;
@@ -22,11 +22,35 @@
     width: auto;
     height: 120px;
     }
-    .mpMenuItems{border: 3px solid white;
+     .mpMenuItems{border: 3px solid white;
     float: left;
     width: auto;
     height: 100%;
     }
+    
+    
+    .mpMenuAll{border: 3px solid none;
+	margin:0;padding:0;list-style-type:none;display:block;
+	font:bold 12px tahoma, sans-serif;
+	hieght:100%;
+	width:auto;
+	
+    }
+    ul.mpMenuAll li{
+	margin:0;padding:0;border-top:1px solid #4D0000;
+	border-bottom:1px solid white;
+}
+ul.mpMenuAll li a{
+	display:block;text-decoration:none;color:#fff;
+	background:blueviolet;padding:5px 0 5px 20px;width:140px;
+}
+ul.mpMenuAll li a:hover{
+	background:black url("http://www.blueb.co.kr/data/201010/IJ12872476173279/vert-one_arrow.gif") no-repeat 0 9px;
+}
+
+ul.mpMenuItems li a.current,ul.vert-one li a.current:hover{
+background:black url("http://www.blueb.co.kr/data/201010/IJ12872476173279/vert-one_arrow.gif") no-repeat 0 9px;}
+    
     .mpMenuTitle
     {   
         display: inline-block;
@@ -77,33 +101,148 @@
         height: 80%;
         float: inherit;
     }
-    
+    body {
+  font: 13px/20px 'Lucida Grande', Verdana, sans-serif;
+  color: #404040;
+  background: white;
+}
+
+.container {
+  margin: 50px auto;
+  width: 580px;
+  text-align: center;
+}
+.container > .button {
+  margin: 12px;
+}
+
+.button {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  height: 36px;
+  line-height: 35px;
+  padding: 0 20px;
+  font-size: 13px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 -1px rgba(0, 0, 0, 0.4);
+  background-clip: padding-box;
+  border: 1px solid;
+  border-radius: 2px;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.08), 0 1px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.08), 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+.button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  background-image: -webkit-radial-gradient(center top, farthest-corner, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0));
+  background-image: -moz-radial-gradient(center top, farthest-corner, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0));
+  background-image: -o-radial-gradient(center top, farthest-corner, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0));
+  background-image: radial-gradient(center top, farthest-corner, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0));
+}
+.button:hover:before {
+  background-image: -webkit-radial-gradient(farthest-corner, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.03));
+  background-image: -moz-radial-gradient(farthest-corner, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.03));
+  background-image: -o-radial-gradient(farthest-corner, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.03));
+  background-image: radial-gradient(farthest-corner, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.03));
+}
+.button:active {
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+.button:active:before {
+  content: none;
+}
     
     
 </style>
 </head>
 <body align ="center">
-  <center>
+
 <div class="header">헤더</div>
 
         <div class="contents">
             <div class="mpMenuItems">
                 <div class="mpMenuTitle">마이 페이지</div>
-                <div class="mpMenuAll">
-                    <div class="tapBtn">판매내역</div>
-                    <div class="tapBtn">구매내역</div>
-                    <div class="tapBtn">찜한 상품</div>
-                    <div class="tapBtn">내 쿠폰</div>
-                    <div class="tapBtn">내 정보</div>
-                    <div class="tapBtn">알림 설정</div>
-                </div>
+
+                <ul class="mpMenuAll" role="tablist" style="none">
+					<li role="presentation" class=""><a href="/views/member/mySelf.jsp" aria-controls="sales" role="tab" data-toggle="tab" aria-expanded="false">판매내역</a></li>
+					
+					
+					<li role="presentation" class=""><a href="/views/member/myBuy.jsp" aria-controls="order" role="tab" data-toggle="tab" aria-expanded="false">구매내역</a></li>
+					
+					
+					<li role="presentation" class=""><a href="/views/member/jjim.jsp" aria-controls="member" role="tab" data-toggle="tab" aria-expanded="false">찜한 상품</a></li>
+					
+					
+					<li role="presentation" class="active"><a href="/views/member/myCoupon.jsp" aria-controls="settings" role="tab" data-toggle="tab" aria-expanded="true">내 쿠폰</a></li>
+					
+					<li role="presentation" class="active"><a href="/views/member/myInfo.jsp" aria-controls="settings" role="tab" data-toggle="tab" aria-expanded="true">내 정보</a></li>
+					
+					<li role="presentation" class="active"><a href="/views/member/mySay.jsp" aria-controls="settings" role="tab" data-toggle="tab" aria-expanded="true">알림 설정</a></li>
+                    
+				</ul>
             </div>
+      
             <div class="MenuContents">
-                <div class="MenuConTitle"><H2>판매내역</H2></div>
-                <div class="MenuCon">아직 거래내역이 없습니다.</div>
+                  <div class="table-users">
+   <div class="header">판매내역</div>
+
+   <table>
+      <tr>
+         <th>상품이미지</th>
+         <th>상품명</th>
+         <th>가격</th>
+         <th>수량</th>
+         <th width="230">몰라양</th>
+      </tr>
+
+      <tr>
+         <td><img src="http://lorempixel.com/100/100/people/1" alt="" /></td>
+         <td>Jane Doe</td>
+         <td>jane.doe@foo.com</td>
+         <td>01 800 2000</td>
+         <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </td>
+      </tr>
+
+      <tr>
+         <td><img src="http://lorempixel.com/100/100/sports/2" alt="" /></td>
+         <td>John Doe</td>
+         <td>john.doe@foo.com</td>
+         <td>01 800 2000</td>
+         <td>Blanditiis, aliquid numquam iure voluptatibus ut maiores explicabo ducimus neque, nesciunt rerum perferendis, inventore.</td>
+      </tr>
+
+      <tr>
+         <td><img src="http://lorempixel.com/100/100/people/9" alt="" /></td>
+         <td>Jane Smith</td>
+         <td>jane.smith@foo.com</td>
+         <td>01 800 2000</td>
+         <td> Culpa praesentium unde pariatur fugit eos recusandae voluptas.</td>
+      </tr>
+
+      <tr>
+         <td><img src="http://lorempixel.com/100/100/people/3" alt="" /></td>
+         <td>John Smith</td>
+         <td>john.smith@foo.com</td>
+         <td>01 800 2000</td>
+         <td>Aut voluptatum accusantium, eveniet, sapiente quaerat adipisci consequatur maxime temporibus quas, dolorem impedit.</td>
+      </tr>
+   </table>
+</div>
+
             </div>
+            </center>
         </div>
-   </center>
+
 <div class="footer">푸터</div>
 </body>
 
