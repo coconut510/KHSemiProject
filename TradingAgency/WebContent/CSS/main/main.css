@@ -2,24 +2,26 @@
 
 #wrapper {
 	font-family: 'Roboto Slab', serif;
+	background-color: white;
 }
 
 .card-img-top {
 	width: 100%;
-	height: 200px;
+	height: 0200px;
 }
 /*-광고영역 css*/
 #middleAdSec, #imgSliderSec {
 	width: 100%;
 	height: auto;
+	font-family: 'Roboto Slab', serif;
 }
 
-<!-- 나머지 섹션 css -->
+/*  나머지 섹션 css - */
 #newProductSec, #collectionSec, #imghoverSec, #bestItemSec,
 	#bestItemSec2 {
 	width: 100%;
 	height: auto;
-
+	font-family: 'Roboto Slab', serif;
 }
 
 #imgSliderSec img {
@@ -42,23 +44,30 @@
 	height: auto;
 }
 
-.shadow {
+.shadow img {
 	width: 100%;
 	height: 300px;
-	margin: 10px auto;
-	overflow: hidden;
-	
+	cursor: pointer;
+	overflow: auto;
+	-webkit-transform: scale(1);
+	�겕濡� -moz-transform: scale(1);
+	FireFox -o-transform: scale(1);
+	Opera transform: scale(1);
+	transition: transform .50s;
+	-o-transition: transform .50s;
+	-moz-transition: transform .50s;
+	-webkit-transition: transform .50s;
 }
 
 .shadow img:hover {
 	cursor: pointer;
-	-webkit-transform: scale(1.3);
+	-webkit-transform: scale(1.1);
 	/*  크롬 */
-	-moz-transform: scale(1.3);
+	-moz-transform: scale(1.1);
 	/* FireFox */
-	-o-transform: scale(1.3);
+	-o-transform: scale(1.1);
 	/* Opera */
-	transform: scale(1.3);
+	transform: scale(1.1);
 	transition: transform .50s;
 	-o-transition: transform .50s;
 	-moz-transition: transform .50s;
@@ -94,7 +103,7 @@
 
 .cuadro_intro_hover .caption {
 	position: absolute;
-	top: 140px; /* 호버전 모양 이상할경우 참고 !! */ 
+	top: 140px; /* 호버전 모양 이상할경우 참고 !! */
 	-webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -154,8 +163,110 @@ a:active {
 	text-decoration-line: none;
 }
 
+.productList {
+	clear: both;
+	margin-bottom: 20px;
+}
+
+.productWrap {
+	position: relative;
+}
+
+#productImgMain {
+	width: 100%;
+}
+
+.discountBg {
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	top: 0;
+	left: 0;
+	background-color: #333333;
+	color: white;
+	text-align: center;
+	margin: auto;
+	padding: 7%;
+	-webkit-transform: translate(0px, 0px);
+	-moz-transform: translate(0px, 0px);
+	-ms-transform: translate(0px, 0px);
+	-o-transform: translate(0px, 0px);
+	transition: transform .30s;
+	-o-transition: transform .30s;
+	-moz-transition: transform .30s;
+	-webkit-transition: transform .30s;
+}
+
+.imgWrapper:hover .discountBg {
+	-webkit-transform: translate(10px, 10px);
+	-moz-transform: translate(10px, 10px);
+	-ms-transform: translate(10px, 10px);
+	-o-transform: translate(10px, 10px);
+	transition: transform .30s;
+	-o-transition: transform .30s;
+	-moz-transition: transform .30s;
+	-webkit-transition: transform .30s;
+}
+
+.productSideMenu {
+	background-color: #f4f6f9;
+	overflow: auto;
+	position: absolute;
+	bottom: 40%;
+	right: 0;
+	opacity: 0;
+	-webkit-animation: 0.5s fadeOut;
+	animation: 0.5s fadeOut;
+	-webkit-transform: translate(0px, 0px);
+	-moz-transform: translate(0px, 0px);
+	-ms-transform: translate(0px, 0px);
+	-o-transform: translate(0px, 0px);
+	transition: transform .30s;
+	-o-transition: transform .30s;
+	-moz-transition: transform .30s;
+	-webkit-transition: transform .30s;
+}
+
+.imgWrapper:hover .productSideMenu {
+	-webkit-animation: 0.5s fadeIn;
+	animation: 0.5s fadeIn;
+	opacity: 1;
+	-webkit-transform: translate(-5px, 0px);
+	-moz-transform: translate(-5px, 0px);
+	-ms-transform: translate(-5px, 0px);
+	-o-transform: translate(-5px, 0px);
+	transition: transform .30s;
+	-o-transition: transform .30s;
+	-moz-transition: transform .30s;
+	-webkit-transition: transform .30s;
+}
 
 .container {
-  width: 1120px;
-  max-width: none !important;
+	width: 1120px;
+	max-width: none !important;
+
+}
+
+.col_container {
+	margin-left: 50px;
+}
+
+.col-xs-3 {
+	margin-right: 18px;
+}
+
+#content .row {
+	margin-right: 100px;
+}
+
+.carousel-control-prev {
+	margin: 0 auto;
+}
+
+ .carousel-control-next-icon{
+	 background-image:url("../../img/arrow.png");
+}
+.carousel-control-prev-icon{
+	background-image:url("../../img/arrow.png");
+	transform: rotate(180deg);
 }

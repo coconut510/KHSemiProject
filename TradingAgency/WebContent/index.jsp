@@ -68,19 +68,19 @@
 					</ol>
 					<div class="carousel-inner">
 						<div class="carousel-item active">
-							<img class="d-block w-100"
+							<a href="index.jsp"><img class="d-block w-100"
 								src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
-								alt="첫번째 슬라이드">
+								alt="첫번째 슬라이드"></a>
 						</div>
 						<div class="carousel-item">
-							<img class="d-blockw-100"
+							<a href="index.jsp"><img class="d-blockw-100"
 								src="img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg"
-								alt="두번째 슬라이드">
+								alt="두번째 슬라이드"></a>
 						</div>
 						<div class="carousel-item">
-							<img class="d-block w-100"
+							<a href="index.jsp"><img class="d-block w-100"
 								src="img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg"
-								alt="세번째 슬라이드">
+								alt="세번째 슬라이드"></a>
 						</div>
 					</div>
 					<a class="carousel-control-prev" href="#carouselExampleIndicators"
@@ -105,352 +105,371 @@
 					<h1>New Product</h1>
 				</div>
 				<br>
-				<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-					<div class="carousel-inner">
-						<div class="carousel-item active">
 
-							<div class="container">
-								<div class="row">
+				<div id="carouselExampleControls" class="carousel slide"
+					data-ride="carousel">
+					<div class="container">
+						<div class="carousel-inner">
+							<div class="carousel-item active">
 
+								<div class="container">
+									<div class="row" style="margin-left: 15px;">
 
-									<div class="col-xs-3" style="width: 23%;">
-										<a href="#"> <img class="card-img-top"
-											src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
-											alt="Card image cap"></a>
-										<div class="card-body">
-											<a href="#">
-												<h5 class="card-title">Card title</h5>
-											</a>
-											<p class="card-text">product explanation</p>
+										<div class="col-xs-3" style="width: 23%;">
+											<a href="#"> <img class="card-img-top"
+												src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
+												alt="Card image cap"></a>
+											<div class="card-body">
+												<a href="#">
+													<h5 class="card-title">Card title</h5>
+												</a>
+												<p class="card-text">product explanation</p>
 
+											</div>
 										</div>
-									</div>
-									<div class="col-xs-3" style="width: 23%;">
-										<a href="#"> <img class="card-img-top"
-											src="img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg"
-											alt="Card image cap"></a>
-										<div class="card-body">
-											<a href="#">
-												<h5 class="card-title">Card title</h5>
-											</a>
-											<p class="card-text">product explanation</p>
+										<div class="col-xs-3" style="width: 23%;">
+											<a href="#"> <img class="card-img-top"
+												src="img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg"
+												alt="Card image cap"></a>
+											<div class="card-body">
+												<a href="#">
+													<h5 class="card-title">Card title</h5>
+												</a>
+												<p class="card-text">product explanation</p>
 
+											</div>
 										</div>
-									</div>
 
-									<div class="col-xs-3" style="width: 23%;">
-										<a href="#"> <img class="card-img-top"
-											src="img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg"
-											alt="Card image cap"></a>
-										<div class="card-body">
-											<a href="#">
-												<h5 class="card-title">Card title</h5>
-											</a>
-											<p class="card-text">product explanation</p>
+										<div class="col-xs-3" style="width: 23%;">
+											<a href="#"> <img class="card-img-top"
+												src="img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg"
+												alt="Card image cap"></a>
+											<div class="card-body">
+												<a href="#">
+													<h5 class="card-title">Card title</h5>
+												</a>
+												<p class="card-text">product explanation</p>
+											</div>
 										</div>
-									</div>
-									<div class="col-xs-3" style="width: 23%;">
-										<a href="#"> <img class="card-img-top"
-											src="img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg"
-											alt="Card image cap">
-										</a>
-										<div class="card-body">
-											<a href="#">
-												<h5 class="card-title">Card title</h5>
+										<div class="col-xs-3" style="width: 23%;">
+											<a href="#"> <img class="card-img-top"
+												src="img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg"
+												alt="Card image cap">
 											</a>
-											<p class="card-text">product explanation</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="carousel-item">
-							<div class="container">
-
-								<div class="row">
-
-									<div class="col-xs-3" style="width: 18rem;">
-										<a href="#"> <img class="card-img-top"
-											src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
-											alt="Card image cap"></a>
-										<div class="card-body">
-											<a href="#">
-												<h5 class="card-title">Card title</h5>
-											</a>
-											<p class="card-text">product explanation</p>
-
-										</div>
-									</div>
-									<div class="col-xs-3" style="width: 18rem;">
-										<a href="#"> <img class="card-img-top"
-											src="img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg"
-											alt="Card image cap"></a>
-										<div class="card-body">
-											<a href="#">
-												<h5 class="card-title">Card title</h5>
-											</a>
-											<p class="card-text">product explanation</p>
-										</div>
-									</div>
-
-									<div class="col-xs-3" style="width: 18rem;">
-										<a href="#"> <img class="card-img-top"
-											src="img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg"
-											alt="Card image cap"></a>
-										<div class="card-body">
-											<a href="#">
-												<h5 class="card-title">Card title</h5>
-											</a>
-											<p class="card-text">product explanation</p>
-										</div>
-									</div>
-									<div class="col-xs-3" style="width: 18rem;">
-										<a href="#"> <img class="card-img-top"
-											src="img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg"
-											alt="Card image cap">
-										</a>
-										<div class="card-body">
-											<a href="#">
-												<h5 class="card-title">Card title</h5>
-											</a>
-											<p class="card-text">product explanation</p>
-
+											<div class="card-body">
+												<a href="#">
+													<h5 class="card-title">Card title</h5>
+												</a>
+												<p class="card-text">product explanation</p>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="carousel-item">
-							<div class="container">
 
-								<div class="row">
+							<div class="carousel-item">
+								<div class="container">
 
-									<div class="col-xs-3" style="width: 18rem;">
-										<a href="#"> <img class="card-img-top"
-											src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
-											alt="Card image cap"></a>
-										<div class="card-body">
-											<a href="#">
-												<h5 class="card-title">Card title</h5>
-											</a>
-											<p class="card-text">product explanation</p>
+									<div class="row" style="margin-left: 15px;">
 
+										<div class="col-xs-3" style="width: 23%;">
+											<a href="#"> <img class="card-img-top"
+												src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
+												alt="Card image cap"></a>
+											<div class="card-body">
+												<a href="#">
+													<h5 class="card-title">Card title</h5>
+												</a>
+												<p class="card-text">product explanation</p>
+
+											</div>
 										</div>
-									</div>
-									<div class="col-xs-3" style="width: 18rem;">
-										<a href="#"> <img class="card-img-top"
-											src="img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg"
-											alt="Card image cap"></a>
-										<div class="card-body">
-											<a href="#">
-												<h5 class="card-title">Card title</h5>
-											</a>
-											<p class="card-text">product explanation</p>
+										<div class="col-xs-3" style="width: 23%;">
+											<a href="#"> <img class="card-img-top"
+												src="img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg"
+												alt="Card image cap"></a>
+											<div class="card-body">
+												<a href="#">
+													<h5 class="card-title">Card title</h5>
+												</a>
+												<p class="card-text">product explanation</p>
+											</div>
 										</div>
-									</div>
 
-									<div class="col-xs-3" style="width: 18rem;">
-										<a href="#"> <img class="card-img-top"
-											src="img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg"
-											alt="Card image cap"></a>
-										<div class="card-body">
-											<a href="#">
-												<h5 class="card-title">Card title</h5>
-											</a>
-											<p class="card-text">product explanation</p>
-
+										<div class="col-xs-3" style="width: 23%;">
+											<a href="#"> <img class="card-img-top"
+												src="img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg"
+												alt="Card image cap"></a>
+											<div class="card-body">
+												<a href="#">
+													<h5 class="card-title">Card title</h5>
+												</a>
+												<p class="card-text">product explanation</p>
+											</div>
 										</div>
-									</div>
-									<div class="col-xs-3" style="width: 18rem;">
-										<a href="#"> <img class="card-img-top"
-											src="img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg"
-											alt="Card image cap">
-										</a>
-										<div class="card-body">
-											<a href="#">
-												<h5 class="card-title">Card title</h5>
+										<div class="col-xs-3" style="width: 23%;">
+											<a href="#"> <img class="card-img-top"
+												src="img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg"
+												alt="Card image cap">
 											</a>
-											<p class="card-text">product explanation</p>
+											<div class="card-body">
+												<a href="#">
+													<h5 class="card-title">Card title</h5>
+												</a>
+												<p class="card-text">product explanation</p>
 
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
+							<div class="carousel-item">
+								<div class="container">
+
+									<div class="row" style="margin-left: 15px;">
+
+										<div class="col-xs-3" style="width: 23%;">
+											<a href="#"> <img class="card-img-top"
+												src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
+												alt="Card image cap"></a>
+											<div class="card-body">
+												<a href="#">
+													<h5 class="card-title">Card title</h5>
+												</a>
+												<p class="card-text">product explanation</p>
+
+											</div>
+										</div>
+										<div class="col-xs-3" style="width: 23%;">
+											<a href="#"> <img class="card-img-top"
+												src="img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg"
+												alt="Card image cap"></a>
+											<div class="card-body">
+												<a href="#">
+													<h5 class="card-title">Card title</h5>
+												</a>
+												<p class="card-text">product explanation</p>
+											</div>
+										</div>
+
+										<div class="col-xs-3" style="width: 23%;">
+											<a href="#"> <img class="card-img-top"
+												src="img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg"
+												alt="Card image cap"></a>
+											<div class="card-body">
+												<a href="#">
+													<h5 class="card-title">Card title</h5>
+												</a>
+												<p class="card-text">product explanation</p>
+
+											</div>
+										</div>
+										, ,
+										<div class="col-xs-3" style="width: 23%;">
+											<a href="#"> <img class="card-img-top"
+												src="img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg"
+												alt="Card image cap">
+											</a>
+											<div class="card-body">
+												<a href="#">
+													<h5 class="card-title">Card title</h5>
+												</a>
+												<p class="card-text">product explanation</p>
+
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
 						</div>
-						<a class="carousel-control-prev" href="#carouselExampleControls"
-							role="button" data-slide="prev"> <span
-							class="carousel-control-prev-icon" aria-hidden="true"></span> <span
-							class="sr-only">이전</span>
-						</a> <a class="carousel-control-next" href="#carouselExampleControls"
-							role="button" data-slide="next"> <span
-							class="carousel-control-next-icon" aria-hidden="true"></span> <span
-							class="sr-only">다음</span>
+						<div class="col-xs-3" style="width: 23%;">
+							<a class="carousel-control-prev" href="#carouselExampleControls"
+								id="prevBTN" role="button" data-slide="prev"> <span
+								class="carousel-control-prev-icon" aria-hidden="true"></span> <span
+								class="sr-only">이전</span>
+							</a>
+						</div>
+						<div class="col-xs-3" style="width: 23%;">
+							<a class="carousel-control-next" href="#carouselExampleControls"
+								id="nextBTN" role="button" data-slide="next"> <span
+								class="carousel-control-next-icon" aria-hidden="true"></span> <span
+								class="sr-only">다음</span>
+							</a>
+						</div>
+
+
+					</div>
+
+
+
+				</div>
+			</div>
+
+
+		</div>
+		<br> <br>
+		<section id="content"> <!-- collection 섹션 -->
+		<div id="collectionSec">
+			<h1>Collection</h1>
+			<div class="container" id="col_container">
+
+				<br>
+				<div class="row">
+
+					<div class="col-xs-3" style="width: 23%;">
+						<!-- 이미지 캡션 -->
+
+						<div class="cuadro_intro_hover" style="background-color: #cccccc;">
+							<p style="text-align: center; margin-top: 0px;">
+								<img
+									src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
+									class="img-responsive" alt=""
+									style="width: 100%; height: 200px;">
+							</p>
+							<div class="caption">
+								<div class="blur"></div>
+								<div class="caption-text">
+									<h3 style="padding: 10px;">상품설명</h3>
+									<p align="center" style="padding: 10px;">Loren ipsum dolor
+										si amet ipsum dolor si amet ipsum dolor...</p>
+
+									<a class=" btn btn-default" href="#"><span
+										class="glyphicon glyphicon-plus">가격:</span></a>
+								</div>
+							</div>
+						</div>
+						<div class="card-body">
+							<a href="#">
+								<h5 class="card-title">Card title</h5>
+							</a>
+							<p class="card-text">product explanation</p>
+
+						</div>
+					</div>
+					<div class="col-xs-3" style="width: 23%;">
+						<a href="">
+							<div class="cuadro_intro_hover"
+								style="background-color: #cccccc;">
+								<p style="text-align: center; margin-top: 0px;">
+									<img
+										src="img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg"
+										class="img-responsive" style="width: 100%; height: 200px;"
+										alt="">
+								</p>
+								<div class="caption">
+									<div class="blur"></div>
+									<div class="caption-text">
+										<h3 style="padding: 10px;">상품설명</h3>
+										<p align="center" style="padding: 10px;">Loren ipsum dolor
+											si amet ipsum dolor si amet ipsum dolor...</p>
+										<a class=" btn btn-default" href="#"><span
+											class="glyphicon glyphicon-plus">가격:</span></a>
+									</div>
+								</div>
+							</div>
 						</a>
+						<div class="card-body">
+							<a href="#">
+								<h5 class="card-title">Card title</h5>
+							</a>
+							<p class="card-text">product explanation</p>
+
+						</div>
+					</div>
+					<div class="col-xs-3" style="width: 23%;">
+						<a href="">
+							<div class="cuadro_intro_hover"
+								style="background-color: #cccccc;">
+								<p style="text-align: center; margin-top: 0px;">
+									<img
+										src="img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg"
+										class="img-responsive" style="width: 100%; height: 200px;"
+										alt="">
+								</p>
+								<div class="caption">
+									<div class="blur"></div>
+									<div class="caption-text">
+										<h3 style="padding: 10px;">상품설명</h3>
+										<p align="center" style="padding: 10px;">Loren ipsum dolor
+											si amet ipsum dolor si amet ipsum dolor...</p>
+										<a class=" btn btn-default" href="#"><span
+											class="glyphicon glyphicon-plus">가격:</span></a>
+									</div>
+								</div>
+							</div>
+						</a>
+						<div class="card-body">
+							<a href="#">
+								<h5 class="card-title">Card title</h5>
+							</a>
+							<p class="card-text">product explanation</p>
+
+						</div>
+					</div>
+
+					<div class="col-xs-3" style="width: 23%;">
+						<a href="">
+							<div class="cuadro_intro_hover"
+								style="background-color: #cccccc;">
+								<p style="text-align: center; margin-top: 0px;">
+									<img
+										src="img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg"
+										class="img-responsive" style="width: 100%; height: 200px;"
+										alt="">
+								</p>
+								<div class="caption">
+									<div class="blur"></div>
+									<div class="caption-text">
+										<h3 style="padding: 10px;">상품설명</h3>
+										<p align="center" style="padding: 10px;">Loren ipsum dolor
+											si amet ipsum dolor si amet ipsum dolor...</p>
+										<a class=" btn btn-default" href="#"><span
+											class="glyphicon glyphicon-plus">가격:</span></a>
+									</div>
+								</div>
+
+							</div>
+						</a>
+						<div class="card-body">
+							<a href="#">
+								<h5 class="card-title">Card title</h5>
+							</a>
+							<p class="card-text">product explanation</p>
+
+						</div>
 					</div>
 				</div>
 
 			</div>
-			<br> <br>
-			<section id="content"> <!-- collection 섹션 -->
-			<div id="collectionSec">
+		</div>
 
+		<br>
+		<br>
+
+		<!-- 이미지 hover 섹션 -->
+
+
+		<div id="imghoverSec">
+			<center>
 				<div class="container">
-					<h1>Collection</h1>
-					<br>
+
 					<div class="row">
-						<div class="col-xs-3" style="width: 18rem;">
-							<!-- 이미지 캡션 -->
-							<a href="">
-								<div class="cuadro_intro_hover"
-									style="background-color: #cccccc;">
-									<p style="text-align: center; margin-top: 0px;">
-										<img
-											src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
-											class="img-responsive" alt=""
-											style="width: 100%; height: 200px;">
-									</p>
-									<div class="caption">
-										<div class="blur"></div>
-										<div class="caption-text">
-											<h3 style="padding: 10px;">상품설명</h3>
-											<p align="center" style="padding: 10px;">Loren ipsum
-												dolor si amet ipsum dolor si amet ipsum dolor...</p>
-											<a class=" btn btn-default" href="#"><span
-												class="glyphicon glyphicon-plus">가격:</span></a>
-										</div>
-									</div>
-								</div>
-							</a>
-
-							<!-- 이미지 하단 설명 -->
-							<div class="card-body">
-								<a href="#">
-									<h5 class="card-title">Card title</h5>
-								</a>
-								<p class="card-text">product explanation</p>
-
-							</div>
-						</div>
-						<div class="col-xs-3" style="width: 18rem;">
-							<a href="">
-								<div class="cuadro_intro_hover"
-									style="background-color: #cccccc;">
-									<p style="text-align: center; margin-top: 0px;">
-										<img
-											src="img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg"
-											class="img-responsive" style="width: 100%; height: 200px;"
-											alt="">
-									</p>
-									<div class="caption">
-										<div class="blur"></div>
-										<div class="caption-text">
-											<h3 style="padding: 10px;">상품설명</h3>
-											<p align="center" style="padding: 10px;">Loren ipsum
-												dolor si amet ipsum dolor si amet ipsum dolor...</p>
-											<a class=" btn btn-default" href="#"><span
-												class="glyphicon glyphicon-plus">가격:</span></a>
-										</div>
-									</div>
-								</div>
-							</a>
-							<div class="card-body">
-								<a href="#">
-									<h5 class="card-title">Card title</h5>
-								</a>
-								<p class="card-text">product explanation</p>
-
-							</div>
-						</div>
-						<div class="col-xs-3" style="width: 18rem;">
-							<a href="">
-								<div class="cuadro_intro_hover"
-									style="background-color: #cccccc;">
-									<p style="text-align: center; margin-top: 0px;">
-										<img
-											src="img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg"
-											class="img-responsive" style="width: 100%; height: 200px;"
-											alt="">
-									</p>
-									<div class="caption">
-										<div class="blur"></div>
-										<div class="caption-text">
-											<h3 style="padding: 10px;">상품설명</h3>
-											<p align="center" style="padding: 10px;">Loren ipsum
-												dolor si amet ipsum dolor si amet ipsum dolor...</p>
-											<a class=" btn btn-default" href="#"><span
-												class="glyphicon glyphicon-plus">가격:</span></a>
-										</div>
-									</div>
-								</div>
-							</a>
-							<div class="card-body">
-								<a href="#">
-									<h5 class="card-title">Card title</h5>
-								</a>
-								<p class="card-text">product explanation</p>
-
-							</div>
-						</div>
-
-						<div class="col-xs-3" style="width: 18rem;">
-							<a href="">
-								<div class="cuadro_intro_hover"
-									style="background-color: #cccccc;">
-									<p style="text-align: center; margin-top: 0px;">
-										<img
-											src="img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg"
-											class="img-responsive" style="width: 100%; height: 200px;"
-											alt="">
-									</p>
-									<div class="caption">
-										<div class="blur"></div>
-										<div class="caption-text">
-											<h3 style="padding: 10px;">상품설명</h3>
-											<p align="center" style="padding: 10px;">Loren ipsum
-												dolor si amet ipsum dolor si amet ipsum dolor...</p>
-											<a class=" btn btn-default" href="#"><span
-												class="glyphicon glyphicon-plus">가격:</span></a>
-										</div>
-									</div>
-
-								</div>
-							</a>
-							<div class="card-body">
-								<a href="#">
-									<h5 class="card-title">Card title</h5>
-								</a>
-								<p class="card-text">product explanation</p>
-
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</div>
-
-			<br>
-			<br>
-
-			<!-- 이미지 hover 섹션 -->
-			<div id="imghoverSec">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-4">
+						<div class="col-xs-4" style="width: 30%; margin-right: 33.5px;">
 							<div class="shadow">
 								<a href="#"><img
 									src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
 									width="100%" height="100%"></a>
 							</div>
 						</div>
-						<div class="col-xs-4">
+						<div class="col-xs-4" style="width: 30%; margin-right: 33.5px;">
 							<div class="shadow">
 								<a href="#"><img
 									src="img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg"
 									width="100%" height="100%"></a>
 							</div>
 						</div>
-						<div class="col-xs-4">
+						<div class="col-xs-4" style="width: 30%; margin-right: 33.5px;">
 							<div class="shadow">
 								<a href="#"><img
 									src="img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg"
@@ -459,180 +478,397 @@
 						</div>
 
 					</div>
+
 				</div>
-			</div>
-			</section>
+			</center>
+		</div>
+		</section>
 
-			<br> <br>
-			<!-- 중간광고 -->
+		<br> <br>
+		<!-- 중간광고 -->
 
-			<div id="middleAdSec">
+		<div id="middleAdSec">
 
-				<div id="carouselExampleFade" class="carousel slide carousel-fade"
-					data-ride="carousel">
-					<div class="carousel-inner">
-						<div class="carousel-item active">
-							<img class="d-block w-100"
-								src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
-								alt="First slide">
-						</div>
-						<div class="carousel-item">
-							<img class="d-block w-100"
-								src="img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg"
-								alt="Second slide">
-						</div>
-						<div class="carousel-item">
-							<img class="d-block w-100"
-								src="img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg"
-								alt="Third slide">
-						</div>
+			<div id="carouselExampleFade" class="carousel slide carousel-fade"
+				data-ride="carousel">
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<a href="#"><img class="d-block w-100"
+							src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
+							alt="First slide"></a>
 					</div>
-					<a class="carousel-control-prev" href="#carouselExampleFade"
-						role="button" data-slide="prev"> <span
-						class="carousel-control-prev-icon" aria-hidden="true"></span> <span
-						class="sr-only">Previous</span>
-					</a> <a class="carousel-control-next" href="#carouselExampleFade"
-						role="button" data-slide="next"> <span
-						class="carousel-control-next-icon" aria-hidden="true"></span> <span
-						class="sr-only">Next</span>
-					</a>
+					<div class="carousel-item">
+						<a href="#"> <img class="d-block w-100"
+							src="img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg"
+							alt="Second slide"></a>
+					</div>
+					<div class="carousel-item">
+						<a href="#"><img class="d-block w-100"
+							src="img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg"
+							alt="Third slide"></a>
+					</div>
 				</div>
+				<a class="carousel-control-prev" href="#carouselExampleFade"
+					role="button" data-slide="prev"> <span
+					class="carousel-control-prev-icon" aria-hidden="true"></span> <span
+					class="sr-only">Previous</span>
+				</a> <a class="carousel-control-next" href="#carouselExampleFade"
+					role="button" data-slide="next"> <span
+					class="carousel-control-next-icon" aria-hidden="true"></span> <span
+					class="sr-only">Next</span>
+				</a>
 			</div>
-			<br> <br>
-			<section id="content"> <!--  베스트 아이템 구역 -->
+		</div>
+		<br> <br>
+		<section id="content"> <!--  베스트 아이템 구역 -->
 
-			<div id="bestItemSec">
+		<div id="bestItemSec">
+			<h1>BEST ITEM</h1>
+			<div class="container">
 
-				<div class="container">
-					<h1>BEST ITEM</h1>
-					<br>
-					<div class="row">
-						<div class="col-xs-3" style="width: 18rem;">
-							<a href="#"><img class="card-img-top"
-								src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
-								onmouseover="this.src='img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg'"
-								onmouseout="this.src='img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg'"
-								alt="Card image cap"></a>
-							<div class="card-body">
-								<a href="#">
-									<h5 class="card-title">Card title</h5>
-								</a>
-								<p class="card-text">product explanation</p>
+				<br>
+				<div class="row">
+					<div class="col-xs-3" style="width: 23%;">
+						<div class="productList">
+							<div class="productWrap">
+								<div class="productBg">
+									<div class="imgWrapper">
+										<a href="#"> <img class="card-img-top" id="productImgMain"
+											src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
+											onmouseover="this.src='img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg'"
+											onmouseout="this.src='img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg'"
+											alt="Card image cap">
+										</a>
 
-							</div>
-						</div>
-						<div class="col-xs-3" style="width: 18rem;">
-							<a href="#"><img class="card-img-top"
-								src="img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg"
-								onmouseover="this.src='img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg'"
-								onmouseout="this.src='img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg'"
-								alt="Card image cap"></a>
-							<div class="card-body">
-								<a href="#">
-									<h5 class="card-title">Card title</h5>
-								</a>
-								<p class="card-text">product explanation</p>
+										<div class="productSideMenu">
+											<div class="display_quickview">
+												<a href="#"><img src="img/thumb_quickview.png"
+													alt="미리보기"></a>
+											</div>
+											<div class="display_option">
+												<a href="#"><img src="img/thumb_option.png" alt="옵션보기"></a>
+												<div class="hide display_opt_bak" act=""></div>
+											</div>
+											<div class="display_send">
+												<a href="#"> <img src="img/thumb_send.png" alt="SNS보내기"></a>
+											</div>
+											<div class="display_zzim">
+												<a href="#"> <img src="img/thumb_zzim_off.png" alt="찜하기"><img
+													src="img/thumb_quickview.png" style="display: none"
+													alt="찜하기">
+											</div>
+										</div>
 
-							</div>
-						</div>
-						<div class="col-xs-3" style="width: 18rem;">
-							<a href="#"><img class="card-img-top"
-								src="img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg"
-								onmouseover="this.src='img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg'"
-								onmouseout="this.src='img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg'"
-								alt="Card image cap"></a>
-							<div class="card-body">
-								<a href="#">
-									<h5 class="card-title">Card title</h5>
-								</a> </a>
-								<p class="card-text">product explanation</p>
+										<div class="card-body">
+											<a href="#">
+												<h5 class="card-title">Card title</h5>
+											</a>
+											<p class="card-text">product explanation</p>
 
-							</div>
-						</div>
-
-						<div class="col-xs-3" style="width: 18rem;">
-							<a href="#"><img class="card-img-top"
-								src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
-								onmouseover="this.src='img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg'"
-								onmouseout="this.src='img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg'"
-								alt="Card image cap"></a>
-							<div class="card-body">
-								<a href="#">
-									<h5 class="card-title">Card title</h5>
-								</a>
-								<p class="card-text">product explanation</p>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>
+					<div class="col-xs-3" style="width: 23%;">
+						<div class="productList">
+							<div class="productWrap">
+								<div class="productBg">
+									<div class="imgWrapper">
+										<a href="#"> <img class="card-img-top" id="productImgMain"
+											src="img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg"
+											onmouseover="this.src='img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg'"
+											onmouseout="this.src='img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg'"
+											alt="Card image cap"></a>
 
-			<div id="bestItemSec2">
+										<div class="productSideMenu">
+											<div class="display_quickview">
+												<a href="#"><img src="img/thumb_quickview.png"
+													alt="미리보기"></a>
+											</div>
+											<div class="display_option">
+												<a href="#"><img src="img/thumb_option.png" alt="옵션보기"></a>
+												<div class="hide display_opt_bak" act=""></div>
+											</div>
+											<div class="display_send">
+												<a href="#"> <img src="img/thumb_send.png" alt="SNS보내기"></a>
+											</div>
+											<div class="display_zzim">
+												<a href="#"> <img src="img/thumb_zzim_off.png" alt="찜하기"><img
+													src="img/thumb_quickview.png" style="display: none"
+													alt="찜하기">
+											</div>
+										</div>
+										<div class="card-body">
+											<a href="#">
+												<h5 class="card-title">Card title</h5>
+											</a>
+											<p class="card-text">product explanation</p>
 
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-3" style="width: 18rem;">
-							<a href="#"><img class="card-img-top"
-								src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
-								onmouseover="this.src='img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg'"
-								onmouseout="this.src='img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg'"
-								alt="Card image cap"></a>
-							<div class="card-body">
-								<a href="#">
-									<h5 class="card-title">Card title</h5>
-								</a>
-								<p class="card-text">product explanation</p>
-
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="col-xs-3" style="width: 18rem;">
-							<a href="#"><img class="card-img-top"
-								src="img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg"
-								onmouseover="this.src='img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg'"
-								onmouseout="this.src='img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg'"
-								alt="Card image cap"></a>
-							<div class="card-body">
-								<a href="#">
-									<h5 class="card-title">Card title</h5>
-								</a>
-								<p class="card-text">product explanation</p>
+					</div>
+					<div class="col-xs-3" style="width: 23%;">
+						<div class="productList">
+							<div class="productWrap">
+								<div class="productBg">
+									<div class="imgWrapper">
+										<a href="#"> <img class="card-img-top" id="productImgMain"
+											src="img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg"
+											onmouseover="this.src='img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg'"
+											onmouseout="this.src='img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg'"
+											alt="Card image cap"></a>
+										<div class="productSideMenu">
+											<div class="display_quickview">
+												<a href="#"><img src="img/thumb_quickview.png"
+													alt="미리보기"></a>
+											</div>
+											<div class="display_option">
+												<a href="#"><img src="img/thumb_option.png" alt="옵션보기"></a>
+												<div class="hide display_opt_bak" act=""></div>
+											</div>
+											<div class="display_send">
+												<a href="#"> <img src="img/thumb_send.png" alt="SNS보내기"></a>
+											</div>
+											<div class="display_zzim">
+												<a href="#"> <img src="img/thumb_zzim_off.png" alt="찜하기"><img
+													src="img/thumb_quickview.png" style="display: none"
+													alt="찜하기">
+											</div>
+										</div>
+										<div class="card-body">
+											<a href="#">
+												<h5 class="card-title">Card title</h5>
+											</a> </a>
+											<p class="card-text">product explanation</p>
 
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="col-xs-3" style="width: 18rem;">
-							<a href="#"><img class="card-img-top"
-								src="img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg"
-								onmouseover="this.src='img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg'"
-								onmouseout="this.src='img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg'"
-								alt="Card image cap"></a>
-							<div class="card-body">
-								<a href="#">
-									<h5 class="card-title">Card title</h5>
-								</a> </a>
-								<p class="card-text">product explanation</p>
+					</div>
 
-							</div>
-						</div>
-
-						<div class="col-xs-3" style="width: 18rem;">
-							<a href="#"><img class="card-img-top"
-								src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
-								onmouseover="this.src='img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg'"
-								onmouseout="this.src='img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg'"
-								alt="Card image cap"></a>
-							<div class="card-body">
-								<a href="#">
-									<h5 class="card-title">Card title</h5>
-								</a>
-								<p class="card-text">product explanation</p>
+					<div class="col-xs-3" style="width: 23%;">
+						<div class="productList">
+							<div class="productWrap">
+								<div class="productBg">
+									<div class="imgWrapper">
+										<a href="#"> <img class="card-img-top" id="productImgMain"
+											src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
+											onmouseover="this.src='img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg'"
+											onmouseout="this.src='img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg'"
+											alt="Card image cap"></a>
+										<div class="productSideMenu">
+											<div class="display_quickview">
+												<a href="#"><img src="img/thumb_quickview.png"
+													alt="미리보기"></a>
+											</div>
+											<div class="display_option">
+												<a href="#"><img src="img/thumb_option.png" alt="옵션보기"></a>
+												<div class="hide display_opt_bak" act=""></div>
+											</div>
+											<div class="display_send">
+												<a href="#"> <img src="img/thumb_send.png" alt="SNS보내기"></a>
+											</div>
+											<div class="display_zzim">
+												<a href="#"> <img src="img/thumb_zzim_off.png" alt="찜하기"><img
+													src="img/thumb_quickview.png" style="display: none"
+													alt="찜하기">
+											</div>
+										</div>
+										<div class="card-body">
+											<a href="#">
+												<h5 class="card-title">Card title</h5>
+											</a>
+											<p class="card-text">product explanation</p>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-
 			</div>
 		</div>
 
+		<div id="bestItemSec2">
+
+			<div class="container">
+
+
+				<div class="row">
+					<div class="col-xs-3" style="width: 23%;">
+						<div class="productList">
+							<div class="productWrap">
+								<div class="productBg">
+									<div class="imgWrapper">
+										<a href="#"> <img class="card-img-top" id="productImgMain"
+											src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
+											onmouseover="this.src='img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg'"
+											onmouseout="this.src='img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg'"
+											alt="Card image cap">
+										</a>
+
+										<div class="productSideMenu">
+											<div class="display_quickview">
+												<a href="#"><img src="img/thumb_quickview.png"
+													alt="미리보기"></a>
+											</div>
+											<div class="display_option">
+												<a href="#"><img src="img/thumb_option.png" alt="옵션보기"></a>
+												<div class="hide display_opt_bak" act=""></div>
+											</div>
+											<div class="display_send">
+												<a href="#"> <img src="img/thumb_send.png" alt="SNS보내기"></a>
+											</div>
+											<div class="display_zzim">
+												<a href="#"> <img src="img/thumb_zzim_off.png" alt="찜하기"><img
+													src="img/thumb_quickview.png" style="display: none"
+													alt="찜하기">
+											</div>
+										</div>
+
+										<div class="card-body">
+											<a href="#">
+												<h5 class="card-title">Card title</h5>
+											</a>
+											<p class="card-text">product explanation</p>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-3" style="width: 23%;">
+						<div class="productList">
+							<div class="productWrap">
+								<div class="productBg">
+									<div class="imgWrapper">
+										<a href="#"> <img class="card-img-top" id="productImgMain"
+											src="img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg"
+											onmouseover="this.src='img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg'"
+											onmouseout="this.src='img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg'"
+											alt="Card image cap"></a>
+
+										<div class="productSideMenu">
+											<div class="display_quickview">
+												<a href="#"><img src="img/thumb_quickview.png"
+													alt="미리보기"></a>
+											</div>
+											<div class="display_option">
+												<a href="#"><img src="img/thumb_option.png" alt="옵션보기"></a>
+												<div class="hide display_opt_bak" act=""></div>
+											</div>
+											<div class="display_send">
+												<a href="#"> <img src="img/thumb_send.png" alt="SNS보내기"></a>
+											</div>
+											<div class="display_zzim">
+												<a href="#"> <img src="img/thumb_zzim_off.png" alt="찜하기"><img
+													src="img/thumb_quickview.png" style="display: none"
+													alt="찜하기">
+											</div>
+										</div>
+										<div class="card-body">
+											<a href="#">
+												<h5 class="card-title">Card title</h5>
+											</a>
+											<p class="card-text">product explanation</p>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-3" style="width: 23%;">
+						<div class="productList">
+							<div class="productWrap">
+								<div class="productBg">
+									<div class="imgWrapper">
+										<a href="#"> <img class="card-img-top" id="productImgMain"
+											src="img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg"
+											onmouseover="this.src='img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg'"
+											onmouseout="this.src='img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg'"
+											alt="Card image cap"></a>
+										<div class="productSideMenu">
+											<div class="display_quickview">
+												<a href="#"><img src="img/thumb_quickview.png"
+													alt="미리보기"></a>
+											</div>
+											<div class="display_option">
+												<a href="#"><img src="img/thumb_option.png" alt="옵션보기"></a>
+												<div class="hide display_opt_bak" act=""></div>
+											</div>
+											<div class="display_send">
+												<a href="#"> <img src="img/thumb_send.png" alt="SNS보내기"></a>
+											</div>
+											<div class="display_zzim">
+												<a href="#"> <img src="img/thumb_zzim_off.png" alt="찜하기"><img
+													src="img/thumb_quickview.png" style="display: none"
+													alt="찜하기">
+											</div>
+										</div>
+										<div class="card-body">
+											<a href="#">
+												<h5 class="card-title">Card title</h5>
+											</a> </a>
+											<p class="card-text">product explanation</p>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xs-3" style="width: 23%;">
+						<div class="productList">
+							<div class="productWrap">
+								<div class="productBg">
+									<div class="imgWrapper">
+										<a href="#"> <img class="card-img-top" id="productImgMain"
+											src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
+											onmouseover="this.src='img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg'"
+											onmouseout="this.src='img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg'"
+											alt="Card image cap"></a>
+										<div class="productSideMenu">
+											<div class="display_quickview">
+												<a href="#"><img src="img/thumb_quickview.png"
+													alt="미리보기"></a>
+											</div>
+											<div class="display_option">
+												<a href="#"><img src="img/thumb_option.png" alt="옵션보기"></a>
+												<div class="hide display_opt_bak" act=""></div>
+											</div>
+											<div class="display_send">
+												<a href="#"> <img src="img/thumb_send.png" alt="SNS보내기"></a>
+											</div>
+											<div class="display_zzim">
+												<a href="#"> <img src="img/thumb_zzim_off.png" alt="찜하기"><img
+													src="img/thumb_quickview.png" style="display: none"
+													alt="찜하기">
+											</div>
+										</div>
+										<div class="card-body">
+											<a href="#">
+												<h5 class="card-title">Card title</h5>
+											</a>
+											<p class="card-text">product explanation</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		</section>
 		<br> <br>
 
@@ -645,4 +881,4 @@
 
 </body>
 
-</html> 
+</html>
