@@ -38,15 +38,10 @@
 
 <!-- 외부 js파일  -->
 
-<script>
-	$(function() {
-		$("#postcodify_search_button").postcodifyPopUp();
-	});
-</script>
 <!-- 주소 검색 -->
-<script src="//d1p7wdleee1q2z.cloudfront.net/post/search.min.js"></script>
-<!-- 주소 api -->
-<script type="text/javascript" src="/JS/bootstrap/bootstrap.js"></script>
+	<script> $(function() { $("#postcodify_search_button").postcodifyPopUp(); }); </script> <!-- 주소 검색 -->
+	<script src="//d1p7wdleee1q2z.cloudfront.net/post/search.min.js"></script> <!-- 주소 api -->
+	<script type="text/javascript" src="/JS/bootstrap/bootstrap.js"></script>
 <title>주문하기 (step2)</title>
 </head>
 <body>
@@ -137,14 +132,18 @@
 					<h2>결제상품</h2>
 					<hr>
 					<div id="goodsInfo">
-						<img
-							src="img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg"
+						<img src="../../img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg"
 							style="width: 100px; height: 100px; float: left;">
+							
 						<div id="goodsName">[새상품] 삼성 22인치 모니터 S22F350</div>
 						<div id="goodsPrice">151,000원</div>
 					</div>
 
-
+					<script type="text/javascript">
+						function availableCouponsBtn() {
+							window.open("/views/member/availableCoupons.jsp","pop","toolbar=no,location=no,status=no,menubar=no,scrollbars=auto,width=400px,height=500px");
+						}
+					</script>
 
 					<div id="orderListInfoWrap">
 						<div>
@@ -152,7 +151,9 @@
 						</div>
 						<div>
 							<span>쿠폰사용</span> <span>
-								<button type="button" class="btn btn-secondary">사용가능쿠폰</button>
+								<button type="button" class="btn btn-secondary"
+									onclick="availableCouponsBtn();">사용가능쿠폰</button>
+
 							</span>
 						</div>
 						<div>
@@ -166,9 +167,14 @@
 							<span>결제 금액</span> <span>-원</span>
 						</div>
 						<div>
+						<script type="text/javascript">
+						function orderBtn() {
+							location.href="/views/member/myCart3.jsp";
+							
+						}</script>
 							<!--  외부 API 결제시스템 반영 or 기존에 적립한 포인트로 결제하는 방법  -->
-							<button type="button" class="btn btn-secondary"
-								style="width: 300px; height: 50px;">주문하기</button>
+							<button type="button" class="btn btn-secondary" onclick="orderBtn();"
+								style="width: 300px; height: 50px; margin-right: 15px;">주문하기</button>
 						</div>
 					</div>
 

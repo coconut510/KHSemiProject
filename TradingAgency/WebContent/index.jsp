@@ -524,11 +524,10 @@
 
 		<div id="bestItemSec">
 			<h1>BEST ITEM</h1>
-			<div class="container">
-
+			<div class="container" style="margin-left:30px;">
 				<br>
 				<div class="row">
-					<div class="col-xs-3" style="width: 23%;">
+					<div class="col-xs-3" style="width: 23%;" >
 						<div class="productList">
 							<div class="productWrap">
 								<div class="productBg">
@@ -697,10 +696,7 @@
 		</div>
 
 		<div id="bestItemSec2">
-
-			<div class="container">
-
-
+			<div class="container"  style="margin-left:30px;">
 				<div class="row">
 					<div class="col-xs-3" style="width: 23%;">
 						<div class="productList">

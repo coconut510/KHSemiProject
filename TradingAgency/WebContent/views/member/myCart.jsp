@@ -36,6 +36,7 @@
 <link rel="stylesheet" type="text/css" href="/CSS/member/myCart.css">
 <link rel="stylesheet" type="text/css" href="/CSS/common/common.css">
 <!-- 외부 js파일  -->
+<script type="text/javascript" src="/JS/member/myCart.js"></script>
 <title>장바구니 (step1)</title>
 </head>
 
@@ -58,9 +59,6 @@
 						<!--        <p> 장바구니에 담은 상품은 일주일동안 보관됩니다. 일주일 후에는 상품이 삭제될 수 있음을 알려드립니다. 오랫동안 보관하고 싶은 상품은 위시리스트에 추가해주세요.</p> -->
 					</div>
 				</div>
-				<script>
-					/* 장바구니 리스트 표시 스크립트 넣기*/
-				</script>
 				<div id="orderStepSec">
 					<div class="sign-up">
 						<ul>
@@ -85,13 +83,17 @@
 				</div>
 				<br> <br>
 
-
+				<script type="text/javascript">
+					
+				</script>
 				<div id="cartListSec">
 					<table class="table"
 						style="table-layout: fixed; margin: auto; text-align: center;">
+
 						<thead>
 							<tr>
-								<th scope="col" style="width: 10%;"><input type="checkbox" /></th>
+								<th scope="col" style="width: 10%;"><input type="checkbox"
+									id="allCheckBox" /></th>
 								<th scope="col" style="width: 30%;">주문상품</th>
 								<th scope="col">수량</th>
 								<th scope="col">상품금액</th>
@@ -99,82 +101,79 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr style="height: auto;">
-								<td scope="row" style="width: 10%;"><input type="checkbox" />
-								</td>
+
+							<tr style="height: auto;" id="infoSelectTr">
+
+								<td scope="row" style="width: 10%;"><input type="checkbox"
+									style="margin-top: 50px;" name="chk" /></td>
 								<td style="width: 30%;">
 									<div class="orderGoodsInfo1">
 										<img
-											src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
-											style="width: 50px; height: 50px;" />
+											src="../../img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
+											style="width: 100px; height: 100px; margin-top: 10px;" />
 									</div>
 									<div class="orderGoodsInfo2">
-										<div class="orderGoodsName">
-											<a href="#" style="font-size: 13px;">상품명:<span>?????</span>
+										<div class="orderGoodsName" style="margin-top: 30px;">
+											<a href="#" style="font-size: 13px;">상품명:<span>????????????????????</span>
 										</div>
 										<div class="orderGoodsOption">(옵션:색상-그레이)</div>
 									</div>
 								</td>
-
-								<td><span style="font-size: 15px;">1</span><br> 
-								
-								<script>
-							
-									function quantityChange() {
-										var p1 = document.getElementById("quantityUp");
-										var p2 = document.getElementById("quantityDown");
-										p1.style.display = "block";
-										p2.style.display = "none";
-										
-										var p3 = document.getElementById("changeBtn");
-										p3.hide();
-									}
-								</script> 
-								
-								<span id="quantityUp"></span> 
-								<span id="quantityDown"></span>
+								<td style="padding-top: 50px;"><span
+									style="font-size: 15px;" id="orderquantity">1</span> <br>
+									<button type="button" class="btn btn-info" id="quantityUp"
+										style="font-size: 10px;">+</button>
+									<button type="button" class="btn btn-info" id="quantityDown"
+										style="font-size: 10px;">-</button>
 									<button type="button" class="btn btn-info" id="changeBtn"
-										style="font-size: 10px;" onclick="quantityChange();">변경</button></td>
-
-								<td><span style="font-size: 15px;">상품금액</span></td>
+										style="font-size: 10px;">변경</button></td>
+								<td style="padding-top: 60px;"><span
+									style="font-size: 15px;" id="goodsPrice" name="goodsPrices">10000</span>원</td>
 							</tr>
+
 						</tbody>
 					</table>
+					<br><br>
+				</div>
+		  
+		  
+				<div id="notGoodsList">
+				
 				</div>
 				<br>
+				
 				<hr>
 				<div class="selectBtn1">
-					<button type="button" class="btn btn-info" style="float: left;">전체선택</button>
-					<button type="button" class="btn btn-info"
-						style="float: left; margin-left: 5px;">선택상품삭제</button>
+				
+					<button type="button" class="btn btn-info" style="float: left;"
+						id="allSelectBtn" onclick="selectAllChk();">전체선택/해제</button>
+					<button type="button" class="btn btn-info" id="deleteOneBtn"
+						onclick="deleteOneBtn();" style="float: left; margin-left: 5px;">선택상품삭제</button>
 				</div>
 				<div class="purchase">
-					<div class="cart_billing_label" style="float: left;">상품 금액 합계</div>
+					<div class="cart_billing_label"
+						style="float: left; font-size: 20px;" id="totalPrice ">상품 금액
+						합계</div>
 					<div class="cart_billing_price" style="float: right;">????????</div>
 				</div>
 				<br> <br>
 				<div class="purchase">
-					<div class="cart_billing_label" style="float: left;">배송비</div>
+					<div class="cart_billing_label"
+						style="float: left; font-size: 20px;">배&nbsp;&nbsp;송&nbsp;&nbsp;비</div>
 					<div class="cart_billing_price" style="float: right;">????????</div>
 				</div>
 				<br> <br>
 				<hr>
 				<div class="purchase">
-					<div class="cart_billing_label" style="float: left;">총합계</div>
+					<div class="cart_billing_label"
+						style="float: left; font-size: 20px;">총&nbsp;&nbsp;합&nbsp;&nbsp;계</div>
 					<div class="cart_billing_price" style="float: right;">????????</div>
 				</div>
 				<br> <br>
-				<script>
-					$(function() {
-						$("#purchaseBtn").click(function() {
-							location.href = "/views/member/myCart2.jsp";
-						});
-					});
-				</script>
+
 				<div class="purchase">
 					<button type="button" class="btn btn-info" id="purchaseBtn">구매하기</button>
 				</div>
-
 			</div>
 			<br> <br> <br>
 			<footer>
