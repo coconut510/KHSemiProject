@@ -28,6 +28,12 @@
 
 <script src="../../JS/main/productListMain.js"></script>
 
+<!-- Header 링크파일 -->
+
+<script type="text/javascript" href="../../JS/common/header.js?ver=1"></script>
+
+<link rel="stylesheet" type="text/css" href="../../CSS/common/header.css?ver=1">
+
 
 <title>상품 목록</title>
 </head>
