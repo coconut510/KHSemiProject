@@ -36,8 +36,8 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:700"
 	rel="stylesheet">
 <!-- 외부css파일  -->
-<link rel="stylesheet" type="text/css" href="/CSS/main/main.css">
-<link rel="stylesheet" type="text/css" href="/CSS/common/common.css">
+<link rel="stylesheet" type="text/css" href="/CSS/main/main.css?ver=1">
+<link rel="stylesheet" type="text/css" href="/CSS/common/common.css?ver=1">
 <!-- 외부 js파일  -->
 <script src="../js/script2.js"></script>
 <title>메인페이지</title>
@@ -264,7 +264,6 @@
 
 											</div>
 										</div>
-										, ,
 										<div class="col-xs-3" style="width: 23%;">
 											<a href="#"> <img class="card-img-top"
 												src="img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg"

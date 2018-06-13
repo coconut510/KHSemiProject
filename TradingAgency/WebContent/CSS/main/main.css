@@ -266,8 +266,12 @@ a:active {
 }
 
 #content .row {
+<<<<<<< HEAD
 	margin-right: 90px;
 	
+=======
+	/*margin-right: 100px;*/
+>>>>>>> ac1d9a69b13690100a4d6f263bd4532fa9106e15
 }
 
 .carousel-control-prev {
