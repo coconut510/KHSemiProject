@@ -208,34 +208,19 @@ body {
 	background: #E6EAE9;
 }
 
-a {
-	color: #c75f3e;
-}
 
-#mytable {
-	width: 700px;
-	padding: 0;
-	margin: 0;
-}
-
-caption {
-	padding: 0 0 5px 0;
-	width: 700px;	 
-	font: italic 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
-	text-align: right;
-}
 
 th {
 	font: bold 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
 	color: #4f6b72;
-	border-right: 1px solid #C1DAD7;
-	border-bottom: 1px solid #C1DAD7;
-	border-top: 1px solid #C1DAD7;
+	border-right: 1px solid #F2F2F2;
+	border-bottom: 1px solid #F2F2F2;
+	border-top: 1px solid #F2F2F2;
 	letter-spacing: 2px;
 	text-transform: uppercase;
 	text-align: left;
 	padding: 6px 6px 6px 12px;
-	background: #CAE8EA url(/data/201011/IJ12896448126037/bg_header.jpg) no-repeat;
+	background: #F2F2F2 url(/data/201011/IJ12896448126037/bg_header.jpg) no-repeat;
 }
 
 th.nobg {
@@ -246,8 +231,8 @@ th.nobg {
 }
 
 td {
-	border-right: 1px solid #C1DAD7;
-	border-bottom: 1px solid #C1DAD7;
+	border-right: 1px solid #F2F2F2;
+	border-bottom: 1px solid #F2F2F2;
 	background: #fff;
 	padding: 6px 6px 6px 12px;
 	color: #4f6b72;
@@ -255,19 +240,19 @@ td {
 
 
 td.alt {
-	background: #F5FAFA;
-	color: #797268;
+	background: #F2F2F2;
+	color: #F2F2F2;
 }
 
 th.spec {
-	border-left: 1px solid #C1DAD7;
+	border-left: 1px solid #F2F2F2;
 	border-top: 0;
 	background: #fff url(/data/201011/IJ12896448126037/bullet1.gif) no-repeat;
 	font: bold 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
 }
 
 th.specalt {
-	border-left: 1px solid #C1DAD7;
+	border-left: 1px solid #F2F2F2;
 	border-top: 0;
 	background: #f5fafa url(/data/201011/IJ12896448126037/bullet2.gif) no-repeat;
 	font: bold 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
@@ -279,18 +264,23 @@ th.specalt {
 
 <div class="header">헤더</div>
 
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
         <div class="contents">
             <div class="mpMenuItems">
                 <div class="mpMenuTitle"><h1>마이 페이지</h1>
                 </div>  
                 <div></div>
                 <ul class="mpMenuAll" role="tablist" style="none">
-					<li role="presentation" class="active"><a href="/views/member/mySelf.jsp" aria-controls="sales" role="tab" data-toggle="tab" aria-expanded="false">판매내역</a></li>
-					<li role="presentation" class="active"><a href="/views/member/myBuy.jsp" aria-controls="order" role="tab" data-toggle="tab" aria-expanded="false">구매내역</a></li>
-					<li role="presentation" class="active"><a href="/views/member/jjim.jsp" aria-controls="member" role="tab" data-toggle="tab" aria-expanded="false">찜한 상품</a></li>
-					<li role="presentation" class="active"><a href="/views/member/myCoupon.jsp" aria-controls="settings" role="tab" data-toggle="tab" aria-expanded="true">내 쿠폰</a></li>
-					<li role="presentation" class="active"><a href="/views/member/myInfoQuiz.jsp" aria-controls="settings" role="tab" data-toggle="tab" aria-expanded="true">내 정보</a></li>		
-					<li role="presentation" class="active"><a href="/views/member/mySay.jsp" aria-controls="settings" role="tab" data-toggle="tab" aria-expanded="true">알림 설정</a></li>    
+					<li role="presentation" class="active"><a href="/views/member/mySelf.jsp" aria-controls="sales">판매내역</a></li>
+					<li role="presentation" class="active"><a href="/views/member/myBuy.jsp" aria-controls="order">구매내역</a></li>
+					<li role="presentation" class="active"><a href="/views/member/jjim.jsp" aria-controls="member">찜한 상품</a></li>
+					<li role="presentation" class="active"><a href="/views/member/myCoupon.jsp" aria-controls="settings">내 쿠폰</a></li>
+					<li role="presentation" class="active"><a href="/views/member/myInfoQuiz.jsp" aria-controls="settings">내 정보</a></li>		
+					<li role="presentation" class="active"><a href="/views/member/mySay.jsp" aria-controls="settings">알림 설정</a></li>    
 				</ul>
             </div>
             <div class="MenuContents">
@@ -300,27 +290,55 @@ th.specalt {
 <% ArrayList<Member> list = (ArrayList<Member>)request.getAttribute("userList"); %>
 <center>
 <%if(list!=null){ %>
-   		<% for(Member m : list){%>
-   		   <table>
-      <tr>
-         <th width="200">상품사진</th>
-         <th width="150">상품이름</th>
-         <th width="100">상품가격</th>
-         <th width="100">상태</th>
-         <th width="100">관리</th>
-      </tr>
-      <tr>
-         <td><img src="http://lorempixel.com/100/100/people/1" alt="" /></td>
-         <td>그림한장</td>
-         <td>100000원</td>
-         <td>판매중</td>
-         <td><div><center><a href="#" class="delete">삭제</a></center><div> </td>
-      </tr>
-         </table>
-    	 <%} %>
+  	<table id="cart" class="table table-hover table-condensed">
+  			<thead>
+						<tr>
+							<th style="width:50%">찜한 상품</th>
+							<th style="width:10%">가격</th>
+							<th style="width:8%">수량</th>
+							<th style="width:22%" class="text-center">총 가격</th>
+							<th style="width:10%">삭제<th>
+						</tr>
+					</thead>
+  		<% for(Member m : list){%>
+    	
+					<tbody>
+						<tr>
+							<td data-th="Product">
+								<div class="row">
+									<div class="col-sm-2 hidden-xs"><img src="http://placehold.it/100x100" alt="..." class="img-responsive"/></div>
+									<div class="col-sm-10">
+										<h4 class="nomargin">주ㅡㅡㅡ멘</h4>
+										<p>주멘은 대한민국 원탑 공격수입니다 ^ㅅ^</p>
+									</div>
+								</div>
+							</td>
+							<td data-th="Price" id="Price">1000원</td>
+							<td data-th="Quantity">
+								<input type="number" class="form-control text-center" value="1">
+							</td>
+							<td data-th="Subtotal" class="text-center">몰라.. ㅠ_ㅠ</td>
+							<td class="actions" data-th="">
+								<button class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>
+								<button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>								
+							</td>
+						</tr>
+					</tbody>
+					<tfoot>
+						
+						<tr>
+							<td><a href="#" class="btn btn-warning"><i class="fa fa-angle-left"></i>Shopping</a></td>
+							<td colspan="2" class="hidden-xs"></td>
+							<td class="hidden-xs text-center"><strong>총합 : 102313원</strong></td>
+							<td><a href="#" class="btn btn-success btn-block">구매하기 <i class="fa fa-angle-right"></i></a></td>
+						</tr>
+					</tfoot>
+					<%} %>
+				</table>
 <%}else{ %>
-   <div>등록한 찜 상품이 없습니다. 제품 상세 페이지에서 찜하기 버튼을 이용하여 상품을 등록해 보세요.   </div>
+   <div>아직 구매내역이 없습니다. Sell:F 에서 스마트하게 쇼핑해보세요.</div>
 <%} %>
+
 
 </div></div>
             </div>
