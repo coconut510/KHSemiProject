@@ -7,18 +7,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <!-- Required meta tags -->
 <meta charset="utf-8">
-
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<!-- 고정형 만들기  -->
-<!-- <meta name="viewport" content="width=640, user-scalable=yes"> -->
+	
 <!-- Bootstrap CSS -->
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
 	integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
 	crossorigin="anonymous">
 <!-- Optional JavaScript -->
-
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -36,10 +33,15 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:700"
 	rel="stylesheet">
 <!-- 외부css파일  -->
-<link rel="stylesheet" type="text/css" href="/CSS/main/main.css?ver=1">
-<link rel="stylesheet" type="text/css" href="/CSS/common/common.css?ver=1">
+<link rel="stylesheet" type="text/css" href="CSS/main/main.css">
+<link rel="stylesheet" type="text/css" href="CSS/common/common.css">
+<link rel="stylesheet" type="text/css" href="CSS/common/header.css">
+
 <!-- 외부 js파일  -->
 <script src="../js/script2.js"></script>
+
+
+
 <title>메인페이지</title>
 </head>
 
@@ -49,10 +51,9 @@
 		<!-- Wrapper -->
 		<div id="wrapper">
 			<!-- header -->
-			<header id="header">
-			<div id="headerLine">
-				<%-- 	<%@include file="/views/main/test.jsp"%></div> --%>
-				<div id="navigator">Navigator</div>
+			<header id="header"> 
+			<%@include file="/views/common/header.jsp"%>
+				 <!--   <div id="navigator"></div> -->
 			</header>
 
 
@@ -264,6 +265,7 @@
 
 											</div>
 										</div>
+										, ,
 										<div class="col-xs-3" style="width: 23%;">
 											<a href="#"> <img class="card-img-top"
 												src="img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg"
@@ -523,10 +525,11 @@
 
 		<div id="bestItemSec">
 			<h1>BEST ITEM</h1>
-			<div class="container" style="margin-left:30px;">
+			<div class="container">
+
 				<br>
 				<div class="row">
-					<div class="col-xs-3" style="width: 23%;" >
+					<div class="col-xs-3" style="width: 23%;">
 						<div class="productList">
 							<div class="productWrap">
 								<div class="productBg">
@@ -695,7 +698,10 @@
 		</div>
 
 		<div id="bestItemSec2">
-			<div class="container"  style="margin-left:30px;">
+
+			<div class="container">
+
+
 				<div class="row">
 					<div class="col-xs-3" style="width: 23%;">
 						<div class="productList">

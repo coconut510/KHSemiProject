@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- 구글 폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Sunflower:300" rel="stylesheet">
+
+    <!-- css 외부파일 -->
+    <link rel="stylesheet" type="text/css" href="../../CSS/common/common.css">
+    <title>비밀번호 찾기</title>
+    <style>
+        html,
+        body {
+            margin: 0 auto;
+            font-family: 'Sunflower', sans-serif;
+        }
+
+        #wrapper {
+            width: 100%;
+            height: auto;
+            font-family: 'Sunflower', sans-serif;
+        }
+
+
+        #footer {
+            width: 100%;
+            height: 250px;
+            background-color: green;
+        }
+
+        #nextBtn {
+            width: 100px;
+            height: 40px;
+
+        }
+
+        #certificationBtn {
+            margin-left: 5px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <center>
+        <div id="wrapper">
+
+            <header id="header">
+                headLine
+            </header>
+
+            <div id="content">
+                <div id="title">
+                    <h1>비밀번호찾기</h1>
+                </div>
+                <hr>
+                <div id="findIdContainer">
+                    <div>
+                        <h4>본인확인 이메일 인증</h4>
+                        <h7>등록한 이메일 주소와 입력한 이메일 주소가 같아야, 인증번호를 받을 수 있습니다.</h7>
+                    </div>
+                    <br>
+                    <hr>
+                    <div id="inputContainer">
+                        <table>
+                            <tr>
+                                <td>이름</td>
+                                <td>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="이름을 입력해주세요" aria-label="Username" aria-describedby="basic-addon1" name="memberName" style="width:300px; height:50px;">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>아이디</td>
+                                <td>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="아이디을 입력해주세요" aria-label="Username" aria-describedby="basic-addon1" name="memberId" style="width:300px; height:50px;">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>이메일주소</td>
+                                <td>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="메일 주소를 입력해주세요" aria-label="Username" aria-describedby="basic-addon1" name="memberEmail" style="width:300px; height:50px;">
+                                    </div>
+                                </td>
+                                <td>
+
+                                    <button type="button" class="btn btn-secondary" name="certificationBtn" id="certificationBtn" style=" margin-bottom:16px; height:45px;">인증번호받기<button></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="인증번호" aria-label="Username" aria-describedby="basic-addon1" name="certificationNum" style="width:300px; height:50px;">
+                                    </div>
+                                </td>
+                                <td></td>
+                            </tr>
+                            
+                        </table>
+                    </div>
+                    <br><hr><br>
+                    <div>
+                        <button type="button" class="btn btn-secondary" id="nextBtn">다음<button>
+                    </div>
+                    <br>
+                </div>
+            </div>
+
+            <footer id="footer">
+                footer
+            </footer>
+
+        </div>
+    </center>
+</body>
+
+</html>

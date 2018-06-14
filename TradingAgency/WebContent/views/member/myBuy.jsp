@@ -5,23 +5,20 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>구매내역</title>
+<title>판매내역</title>
 <style>
-
-    div{background-color: white;}
+div{background-color: white;}
     
-    
-    
-    
-     .header{border:3px solid white;
+   .header{border:3px solid white;
        background-color: #7151FC;
         width: auto;
         height: 100px;}
-    .contents{
-        border:3px solid white;
-           width: 1150px;
-        height: 800px;  
-    }
+.contents {
+	position: relative;
+	border: 3px solid white;
+	width: 1300px;
+	height: 800px;
+}
     .footer{border:3px solid white;
     background-color: #7151FC;
     width: auto;
@@ -96,10 +93,9 @@ background:black url("http://www.blueb.co.kr/data/201010/IJ12872476173279/vert-o
     .MenuContents
     {
         position: static;
-        background-color: rebeccapurple;
-        width: 89%;
+        width: 70%;
         height: 100%;
-        float: right;
+        float:inherit;
     }
     .MenuConTitle
     {
@@ -113,15 +109,16 @@ background:black url("http://www.blueb.co.kr/data/201010/IJ12872476173279/vert-o
         height: 80%;
         float: inherit;
     }
-    .delete {
+   .delete {
+	float:left;
 	position: relative;
 	width: 100px;
 	display: inline-block;
 	color: #ecf0f1;
 	text-decoration: none;
 	border-radius: 5px;
-	border: solid 1px blueviolet;
-	background: blueviolet;
+	border: solid 1px #7151FC;
+	background: #7151FC;
 	text-align: center;
 	padding: 16px 18px 14px;
 	margin: 12px;
@@ -131,7 +128,7 @@ background:black url("http://www.blueb.co.kr/data/201010/IJ12872476173279/vert-o
 	transition: all 0.1s;
 	-webkit-box-shadow: 0px 6px 0px rebeccapurple;
 	-moz-box-shadow: 0px 6px 0px rebeccapurple;
-	box-shadow: 0px 6px 0px rebeccapurple;
+	box-shadow: 0px 0px 0px rebeccapurple;
 }
 
 .delete:active {
@@ -202,11 +199,6 @@ background:black url("http://www.blueb.co.kr/data/201010/IJ12872476173279/vert-o
 .button:active:before {
   content: none;
 }
- body {
-	font: normal 11px auto "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
-	color: #4f6b72;
-	background: #E6EAE9;
-}
 
 a {
 	color: #c75f3e;
@@ -235,7 +227,7 @@ th {
 	text-transform: uppercase;
 	text-align: left;
 	padding: 6px 6px 6px 12px;
-	background: #CAE8EA url(/data/201011/IJ12896448126037/bg_header.jpg) no-repeat;
+	background: #F2F2F2 url(/data/201011/IJ12896448126037/bg_header.jpg) no-repeat;
 }
 
 th.nobg {
@@ -273,56 +265,151 @@ th.specalt {
 	font: bold 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
 	color: #797268;
 }    
-        
-    
+
+.menu-button {
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  transition: 0.4s;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  border-radius: 50%;
+  background-color: #7151FC;
+  color: #FFFFFF;
+  font-size: 24px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+}
+.menu-button:hover {
+  background: #d81557;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.28), 0 4px 15px 0 rgba(0, 0, 0, 0.25);
+}
+.menu-button a {
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  transition: 0.4s;
+  opacity: 0;
+  width: 0px;
+  height: 0px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  color: #FFFFFF;
+  font-size: 24px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+}
+.menu-button a:hover {
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.28), 0 4px 15px 0 rgba(0, 0, 0, 0.25);
+}
+.menu-button a:nth-child(2) {
+  -webkit-transition-delay: 0.3s;
+  -moz-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  background: #55acee;
+}
+.menu-button a:nth-child(3) {
+  -webkit-transition-delay: 0.4s;
+  -moz-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  background: #dc4e41;
+}
+.menu-button a:nth-child(4) {
+  -webkit-transition-delay: 0.5s;
+  -moz-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  background: yellow;
+}
+.menu-button:hover a {
+  opacity: 1;
+  width: 50px;
+  height: 50px;
+}
+.menu-button:hover a:nth-child(2) {
+  right: 80px;
+  bottom: 0px;
+}
+.menu-button:hover a:nth-child(2):hover {
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  transition-delay: 0s;
+  background: #3ea1ec;
+}
+.menu-button:hover a:nth-child(3) {
+  right: 65px;
+  bottom: 65px;
+}
+.menu-button:hover a:nth-child(3):hover {
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  transition-delay: 0s;
+  background: #d83a2b;
+}
+.menu-button:hover a:nth-child(4) {
+  right: 0px;
+  bottom: 80px;
+}
+.menu-button:hover a:nth-child(4):hover {
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  transition-delay: 0s;
+  background: yellow;
+}    
     
 </style>
 </head>
 <body align ="center">
 
 <div class="header">헤더</div>
-
+<center>
         <div class="contents">
             <div class="mpMenuItems">
-                   <div class="mpMenuTitle"><h1>마이 페이지</h1></div>
+                      <div class="mpMenuTitle"><h1>My Page</h1></div>
 
                 <ul class="mpMenuAll" role="tablist" style="none">
-					<li role="presentation" class="active"><a href="/views/member/mySelf.jsp" aria-controls="sales" role="tab" data-toggle="tab" aria-expanded="false">판매내역</a></li>
-					
-					
-					<li role="presentation" class="active"><a href="/views/member/myBuy.jsp" aria-controls="order" role="tab" data-toggle="tab" aria-expanded="false">구매내역</a></li>
-					
-					
-					<li role="presentation" class="active"><a href="/views/member/jjim.jsp" aria-controls="member" role="tab" data-toggle="tab" aria-expanded="false">찜한 상품</a></li>
-					
-					
-					<li role="presentation" class="active"><a href="/views/member/myCoupon.jsp" aria-controls="settings" role="tab" data-toggle="tab" aria-expanded="true">내 쿠폰</a></li>
-					
-					<li role="presentation" class="active"><a href="/views/member/myInfoQuiz.jsp" aria-controls="settings" role="tab" data-toggle="tab" aria-expanded="true">내 정보</a></li>
-					
-					<li role="presentation" class="active"><a href="/views/member/mySay.jsp" aria-controls="settings" role="tab" data-toggle="tab" aria-expanded="true">알림 설정</a></li>
-                    
+					<li role="presentation" class="active"><a href="/views/member/mySelf.jsp">판매내역</a></li>
+					<li role="presentation" class="active"><a href="/views/member/myBuy.jsp">구매내역</a></li>
+					<li role="presentation" class="active"><a href="/views/member/jjim.jsp">찜한 상품</a></li>
+					<li role="presentation" class="active"><a href="/views/member/myCoupon.jsp">내 쿠폰</a></li>
+					<li role="presentation" class="active"><a href="/views/member/myInfoQuiz.jsp">내 정보</a></li>
+					<li role="presentation" class="active"><a href="/views/member/mySay.jsp">알림 설정</a></li>
 				</ul>
             </div>
 
             <div class="MenuContents">
-                  <div class="MenuConTitle"><H2>구매 내역</H2></div>
+                 <div class="MenuConTitle"><H2>구매 내역</H2></div>
                 <div class="MenuCon">  <div class="table-users">
 
 <% ArrayList<Member> list = (ArrayList<Member>)request.getAttribute("userList"); %>
 <center>
-
-   <table>
-         <tr>
-         <th width="200">상품사진</th>
-         <th width="150">상품이름</th>
-         <th width="100">상품가격</th>
+<%if(list!=null){ %>
+<table>
+      <tr>
+         <th width="200">상품이미지</th>
+         <th width="150">상품명</th>
+         <th width="100">가격</th>
          <th width="100">상태</th>
          <th width="100">관리</th>
       </tr>
-
+   		<% for(Member m : list){%>
+<<<<<<< HEAD
    		
 
+=======
+>>>>>>> 0e0931762d9e3717e4988e69a427609469d61bd3
       <tr>
          <td><img src="http://lorempixel.com/100/100/people/1" alt="" /></td>
          <td>사진</td>
@@ -330,15 +417,23 @@ th.specalt {
          <td>판매중</td>
          <td>		<div><center><a href="#" class="delete">삭제</a></center><div> </td>
       </tr>
-      
-  
-    	    </table>
-
-
+     
+    	 <%} %>
+    	     </table>
+    	          </center>
+    	     
+<%}else{ %>
+   <div>아직 구매내역이 없습니다. Sell:F 에서 스마트하게 쇼핑해보세요..</div>
+<%} %>
 </div></div>
             </div>
-
+  <div class="menu-button"><i class="Qbtn"></i>
+	<a href="/views/member/myCart.jsp" style="background-image:url(/../../img/messageQbtn.png)"> <i class="messageQbtn"></i> </a>
+	<a href="/index.jsp" style="background-image:url(/../../img/homeQbtn.png)"> <i class="homeQbtn"> </i> </a>
+	<a href="/views/member/myCart3.jsp" style="background-image:url(/../../img/sayQbtn.png)"> <i class="sayQbtn"> </i> </a>
+</div>
         </div>
+    
         </center>
 <div class="footer">푸터</div>
 </body>

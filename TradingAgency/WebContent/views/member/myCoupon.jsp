@@ -164,11 +164,12 @@ box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
        background-color: #7151FC;
         width: auto;
         height: 100px;}
-    .contents{
-        border:3px solid white;
-           width: auto;
-        height: 800px;  
-    }
+.contents {
+	position: relative;
+	border: 3px solid white;
+	width: 1300px;
+	height: 800px;
+}
     .footer{border:3px solid white;
     background-color: #7151FC;
     width: auto;
@@ -242,10 +243,8 @@ background:black url("http://www.blueb.co.kr/data/201010/IJ12872476173279/vert-o
     .MenuContents
     {
         position: static;
-        background-color: rebeccapurple;
-        width: 89%;
+        width: 70%;
         height: 100%;
-        float: right;
     }
     .MenuConTitle{
       width:100%;
@@ -430,33 +429,126 @@ table tr:hover td {
 	background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f0f0f0));
 	background: -moz-linear-gradient(top,  #f2f2f2,  #f0f0f0);	
 }
-    
+ 
+.menu-button {
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  transition: 0.4s;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  border-radius: 50%;
+  background-color: #7151FC;
+  color: #FFFFFF;
+  font-size: 24px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+}
+.menu-button:hover {
+  background: #d81557;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.28), 0 4px 15px 0 rgba(0, 0, 0, 0.25);
+}
+.menu-button a {
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  transition: 0.4s;
+  opacity: 0;
+  width: 0px;
+  height: 0px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  color: #FFFFFF;
+  font-size: 24px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+}
+.menu-button a:hover {
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.28), 0 4px 15px 0 rgba(0, 0, 0, 0.25);
+}
+.menu-button a:nth-child(2) {
+  -webkit-transition-delay: 0.3s;
+  -moz-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  background: #55acee;
+}
+.menu-button a:nth-child(3) {
+  -webkit-transition-delay: 0.4s;
+  -moz-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  background: #dc4e41;
+}
+.menu-button a:nth-child(4) {
+  -webkit-transition-delay: 0.5s;
+  -moz-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  background: yellow;
+}
+.menu-button:hover a {
+  opacity: 1;
+  width: 50px;
+  height: 50px;
+}
+.menu-button:hover a:nth-child(2) {
+  right: 80px;
+  bottom: 0px;
+}
+.menu-button:hover a:nth-child(2):hover {
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  transition-delay: 0s;
+  background: #3ea1ec;
+}
+.menu-button:hover a:nth-child(3) {
+  right: 65px;
+  bottom: 65px;
+}
+.menu-button:hover a:nth-child(3):hover {
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  transition-delay: 0s;
+  background: #d83a2b;
+}
+.menu-button:hover a:nth-child(4) {
+  right: 0px;
+  bottom: 80px;
+}
+.menu-button:hover a:nth-child(4):hover {
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  transition-delay: 0s;
+  background: yellow;
+}   
 </style>
 </head>
 <body align ="center">
 
 <div class="header">헤더</div>
-
+<center>
         <div class="contents">
             <div class="mpMenuItems">
-                            <div class="mpMenuTitle"><h1>마이 페이지</h1></div>
+                            <div class="mpMenuTitle"><h1>My Page</h1></div>
 
                 <ul class="mpMenuAll" role="tablist" style="none">
-					<li role="presentation" class="selfcolor"><a href="/views/member/mySelf.jsp" aria-controls="sales" role="tab" data-toggle="tab" aria-expanded="false">판매내역</a></li>
-					
-					
-					<li role="presentation" class="buycolor"><a href="/views/member/myBuy.jsp" aria-controls="order" role="tab" data-toggle="tab" aria-expanded="false">구매내역</a></li>
-					
-					
-					<li role="presentation" class="jjimcolor"><a href="/views/member/jjim.jsp" aria-controls="member" role="tab" data-toggle="tab" aria-expanded="false">찜한 상품</a></li>
-					
-					
-					<li role="presentation" class="couponcolor"><a href="/views/member/myCoupon.jsp" aria-controls="settings" role="tab" data-toggle="tab" aria-expanded="true">내 쿠폰</a></li>
-					
-					<li role="presentation" class="infocolor"><a href="/views/member/myInfoQuiz.jsp" aria-controls="settings" role="tab" data-toggle="tab" aria-expanded="true">내 정보</a></li>
-					
-					<li role="presentation" class="saycolor"><a href="/views/member/mySay.jsp" aria-controls="settings" role="tab" data-toggle="tab" aria-expanded="true">알림 설정</a></li>
-                    
+					<li role="presentation" class="active"><a href="/views/member/mySelf.jsp">판매내역</a></li>
+					<li role="presentation" class="active"><a href="/views/member/myBuy.jsp">구매내역</a></li>
+					<li role="presentation" class="active"><a href="/views/member/jjim.jsp">찜한 상품</a></li>
+					<li role="presentation" class="active"><a href="/views/member/myCoupon.jsp">내 쿠폰</a></li>
+					<li role="presentation" class="active"><a href="/views/member/myInfoQuiz.jsp">내 정보</a></li>
+					<li role="presentation" class="active"><a href="/views/member/mySay.jsp">알림 설정</a></li>
 				</ul>
             </div>
             <div class="MenuContents">
@@ -469,15 +561,23 @@ table tr:hover td {
 <center>
 <%if(list!=null){ %>
  <table>  
-   		<% for(Member m : list){%>
+      <tr>
+
+         <th width="100">쿠폰이름</th>
+         <th width="100">할인율</th>
+         <th width="100">사용여부</th>
+      </tr>
+ 		<% for(Member m : list){%>
 
 	<tr class="even">
-			<td>쿠폰이름</td>
-			<td>100% 할인</td>
-			<td>Yes</td>
+			<td>신규회원 쿠폰</td>
+			<td>10%</td>
+			<td>No</td>
 	</tr>
-<%} %>
-</table>
+
+   	 <%} %>
+    	    </table>
+    	    </center>
 <%}else{ %>
    <div>지급된 쿠폰이 없습니다.   </div>
 <%} %>
@@ -491,7 +591,14 @@ table tr:hover td {
                 </div>
                 </div>
             </div>
+  <div class="menu-button"><i class="Qbtn"></i>
+	<a href="/views/member/myCart.jsp" style="background-image:url(/../../img/messageQbtn.png)"> <i class="messageQbtn"></i> </a>
+	<a href="/index.jsp" style="background-image:url(/../../img/homeQbtn.png)"> <i class="homeQbtn"> </i> </a>
+	<a href="/views/member/myCart3.jsp" style="background-image:url(/../../img/sayQbtn.png)"> <i class="sayQbtn"> </i> </a>
+</div>
   </div>
+
+  </center>
 <div class="footer">푸터</div>
 </body>
 
