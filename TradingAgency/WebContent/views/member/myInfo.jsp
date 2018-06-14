@@ -15,11 +15,12 @@ div {
        background-color: #7151FC;
         width: auto;
         height: 100px;}
-    .contents{
-        border:3px solid white;
-           width: auto;
-        height: 800px;  
-    }
+.contents {
+	position: relative;
+	border: 3px solid white;
+	width: 1300px;
+	height: 800px;
+}
     .footer{border:3px solid white;
     background-color: #7151FC;
     width: auto;
@@ -93,12 +94,13 @@ ul.mpMenuItems li a.current, ul.vert-one li a.current:hover {
 	font-size: 31px;
 }
 
-.MenuContents {
-	position: static;
-	width: 89%;
-	height: 100%;
-	float: right;
-}
+    .MenuContents
+    {
+        position: static;
+        width: 70%;
+        height: 100%;
+        float:inherit;
+    }
 
 .MenuConTitle {
 	width: 100%;
@@ -400,6 +402,109 @@ body {
 	top: 4px;
 }
 
+.menu-button {
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  transition: 0.4s;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  border-radius: 50%;
+  background-color: #7151FC;
+  color: #FFFFFF;
+  font-size: 24px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+}
+.menu-button:hover {
+  background: #d81557;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.28), 0 4px 15px 0 rgba(0, 0, 0, 0.25);
+}
+.menu-button a {
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  transition: 0.4s;
+  opacity: 0;
+  width: 0px;
+  height: 0px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  color: #FFFFFF;
+  font-size: 24px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+}
+.menu-button a:hover {
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.28), 0 4px 15px 0 rgba(0, 0, 0, 0.25);
+}
+.menu-button a:nth-child(2) {
+  -webkit-transition-delay: 0.3s;
+  -moz-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  background: #55acee;
+}
+.menu-button a:nth-child(3) {
+  -webkit-transition-delay: 0.4s;
+  -moz-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  background: #dc4e41;
+}
+.menu-button a:nth-child(4) {
+  -webkit-transition-delay: 0.5s;
+  -moz-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  background: yellow;
+}
+.menu-button:hover a {
+  opacity: 1;
+  width: 50px;
+  height: 50px;
+}
+.menu-button:hover a:nth-child(2) {
+  right: 80px;
+  bottom: 0px;
+}
+.menu-button:hover a:nth-child(2):hover {
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  transition-delay: 0s;
+  background: #3ea1ec;
+}
+.menu-button:hover a:nth-child(3) {
+  right: 65px;
+  bottom: 65px;
+}
+.menu-button:hover a:nth-child(3):hover {
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  transition-delay: 0s;
+  background: #d83a2b;
+}
+.menu-button:hover a:nth-child(4) {
+  right: 0px;
+  bottom: 80px;
+}
+.menu-button:hover a:nth-child(4):hover {
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  transition-delay: 0s;
+  background: yellow;
+}
+
 </style>
 <!--  <link rel="stylesheet" href="/data/201010/IJ12874238457466/buttons.css"
 	type="text/css" media="screen" />-->
@@ -407,34 +512,19 @@ body {
 <body align="center">
 
 	<div class="header">헤더</div>
-
+<center>
 	<div class="contents">
 		<div class="mpMenuItems">
-			<div class="mpMenuTitle"><h1>마이 페이지</h1></div>
+			<div class="mpMenuTitle"><h1>My Page</h1></div>
 
-			<ul class="mpMenuAll" role="tablist" style="">
-				<li role="presentation" class=""><a
-					href="/views/member/mySelf.jsp">판매내역</a></li>
-
-
-				<li role="presentation" class=""><a
-					href="/views/member/myBuy.jsp">구매내역</a></li>
-
-
-				<li role="presentation" class=""><a
-					href="/views/member/jjim.jsp">찜한 상품</a></li>
-
-
-				<li role="presentation" class="active"><a
-					href="/views/member/myCoupon.jsp">내 쿠폰</a></li>
-
-				<li role="presentation" class="active"><a
-					href="/views/member/myInfoQuiz.jsp">내 정보</a></li>
-
-				<li role="presentation" class="active"><a
-					href="/views/member/mySay.jsp">알림 설정</a></li>
-
-			</ul>
+		 <ul class="mpMenuAll" role="tablist" style="none">
+					<li role="presentation" class="active"><a href="/views/member/mySelf.jsp">판매내역</a></li>
+					<li role="presentation" class="active"><a href="/views/member/myBuy.jsp">구매내역</a></li>
+					<li role="presentation" class="active"><a href="/views/member/jjim.jsp">찜한 상품</a></li>
+					<li role="presentation" class="active"><a href="/views/member/myCoupon.jsp">내 쿠폰</a></li>
+					<li role="presentation" class="active"><a href="/views/member/myInfoQuiz.jsp">내 정보</a></li>
+					<li role="presentation" class="active"><a href="/views/member/mySay.jsp">알림 설정</a></li>
+				</ul>
 		</div>
 		<center>
 			<div class="MenuContents">
@@ -617,15 +707,20 @@ body {
 	</div>
 	</div>
 	</center>
-	</div>
+ <div class="menu-button"><i class="Qbtn"></i>
+	<a href="/views/member/myCart.jsp" style="background-image:url(/../../img/messageQbtn.png)"> <i class="messageQbtn"></i> </a>
+	<a href="/index.jsp" style="background-image:url(/../../img/homeQbtn.png)"> <i class="homeQbtn"> </i> </a>
+	<a href="/views/member/myCart3.jsp" style="background-image:url(/../../img/sayQbtn.png)"> <i class="sayQbtn"> </i> </a>
 </div>
+	</div>
+
+
 
    <script> $(function() { $("#postcodify_search_button").postcodifyPopUp(); }); </script> <!-- 주소 검색 -->
    <script src="//d1p7wdleee1q2z.cloudfront.net/post/search.min.js"></script> <!-- 주소 api -->
    <script type="text/javascript" src="/JS/bootstrap/bootstrap.js"></script>
 
-
-	<div class="footer">푸터</div>
 	</center>
+	<div class="footer">푸터</div>
 </body>
 </html>
