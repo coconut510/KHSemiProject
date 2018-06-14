@@ -35,7 +35,7 @@
 <!-- 외부css파일  -->
 <link rel="stylesheet" type="text/css" href="/CSS/common/common.css">
 <link rel="stylesheet" type="text/css" href="/CSS/member/myCart2.css">
-
+<link rel="stylesheet" type="text/css" href="../../CSS/common/header.css">
 <!-- 외부 js파일  -->
 
 <!-- 주소 검색 -->
@@ -50,9 +50,9 @@
 		<div id="wrapper">
 			<!-- header -->
 			<header id="header">
-			<div id="headerLine">headerLine</div>
+				<%@include file="/views/common/header.jsp"%>
 			</header>
-			<div id="navigation">Navigator</div>
+		
 			<br>
 			<div id="content">
 				<div id="orderStepSec">
@@ -78,7 +78,7 @@
 				</div>
 
 				<br>
-				<div id="deliveryInfo">
+				<div id="deliveryInfo" style="margin-bottom:80px;">
 					<h2>주문정보</h2>
 					<hr>
 					<h3 style="float: left;">배송지</h3>
@@ -109,7 +109,7 @@
 					<br> <br> <br> <br>
 					<button type="button" class="btn btn-secondary btn-sm"
 						onclick="findAddr();" id="postcodify_search_button"
-						style="margin-left: -80px; margin-top: -3px">주소검색</button>
+						style="margin-left: -80px; margin-top: -3px;">주소검색</button>
 
 
 					<div class="input-group input-group-sm mb-3"
