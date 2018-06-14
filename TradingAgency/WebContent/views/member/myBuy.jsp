@@ -19,7 +19,7 @@
         height: 100px;}
     .contents{
         border:3px solid white;
-           width: auto;
+           width: 1150px;
         height: 800px;  
     }
     .footer{border:3px solid white;
@@ -311,17 +311,18 @@ th.specalt {
 
 <% ArrayList<Member> list = (ArrayList<Member>)request.getAttribute("userList"); %>
 <center>
-<%if(list!=null){ %>
+
    <table>
-   		<% for(Member m : list){%>
-   		
-      <tr>
+         <tr>
          <th width="200">상품사진</th>
          <th width="150">상품이름</th>
          <th width="100">상품가격</th>
          <th width="100">상태</th>
          <th width="100">관리</th>
       </tr>
+
+   		
+
       <tr>
          <td><img src="http://lorempixel.com/100/100/people/1" alt="" /></td>
          <td>사진</td>
@@ -330,11 +331,9 @@ th.specalt {
          <td>		<div><center><a href="#" class="delete">삭제</a></center><div> </td>
       </tr>
       
-    	 <%} %>
+  
     	    </table>
-<%}else{ %>
-   <div>아직 구매내역이 없습니다. Sell:F 에서 스마트하게 쇼핑해보세요.</div>
-<%} %>
+
 
 </div></div>
             </div>
