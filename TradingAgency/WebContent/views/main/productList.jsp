@@ -7,6 +7,7 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
 	crossorigin="anonymous"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -32,8 +33,11 @@
 
 <script type="text/javascript" href="../../JS/common/header.js?ver=1"></script>
 
-<link rel="stylesheet" type="text/css" href="../../CSS/common/header.css?ver=1">
-
+<!--<link rel="stylesheet" type="text/css" href="../../CSS/common/header.css?ver=1">-->
+ <link rel="stylesheet" type="text/css" href="../../CSS/common/adv.css">
+  <script type="text/javascript" src="../../JS/common/adv.js"></script>
+   <link rel="stylesheet" type="text/css" href="../../CSS/common/header.css">
+  <link rel="stylesheet" type="text/css" href="../../CSS/common/adv.css">
 
 <title>상품 목록</title>
 </head>

@@ -29,6 +29,27 @@ $(document).ready(function(){
     });
 });
 </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+$(document).ready(function(){
+     $('#show').hide();
+    $('#hideBtn').click(function(){
+ $('#exerImg2').slideToggle();
+          $('#hideBtn').slideToggle();
+        $('#show').show();
+        
+     
+    });
+    $('#show').click(function(){
+        $('#exerImg2').slideToggle();
+          $('#hideBtn').slideToggle();
+         $('#show').hide();
+         
+    });
+});
+    
+</script>
 </head>
 <style>
         *{
@@ -107,16 +128,60 @@ $(document).ready(function(){
         }
       
         
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+.container img {
+    width: 100%;
+    height: auto;
+}
+
+.container .btn {
+    position: absolute;
+    top: 5.5%;
+    left: 96.5%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #555;
+    color: white;
+    font-size: 16px;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0px;
+    text-align: center;
+}
+
+.container .btn:hover {
+    background-color: red;
+}
+    
+    #show {
+   
+   border: 2px solid black;
+   width: 40px;
+   height: 40px;
+   background:url(../../img/toggleBtn.PNG) no-repeat;background-position: center; 
+}
 </style>
 
 <body>
     <div class="content">
        
        
+
+<div class="container" id="div2">
         <div id="advertising"> 
-           <img src="/semi2/WebContent/img/join_coupon.PNG" width="100%";/>
+           <img id="exerImg2" src="/semi2/WebContent/img/join_coupon.PNG" width="100%";/>
+           <button onclick="disappear();" class="btn" id="hideBtn">x</button>
         </div>
+            </div>
             
+
+<button value="" id="show"></button>
         <div id="headerDetailGroup">
            
            
