@@ -1,9 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<div id="advertising">
-	<img src="../../img/join_coupon.PNG" width="100%";/>
-</div>
-
+<div class="content">    
+  <div class="container" id="div2">
+    <div id="advertising">
+	    <img id="exerImg2" src="../../img/join_coupon.PNG" height="120px";/>
+	     <button class="btn" id="hideBtn">x</button>
+    </div>
+      
+  </div>
+<center><button value="" id="show"></button></center>
 <div id="headerDetailGroup">
 	<div id="logoarea">
 		<img id="logoimg" src="../../img/logo.jpg" height="120px"
@@ -325,5 +330,6 @@
 				</ul></li>
 		</ul>
 
-	</div>
+	    </div>
+    </div>
 </div>
