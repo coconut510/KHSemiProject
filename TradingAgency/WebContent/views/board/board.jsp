@@ -74,42 +74,42 @@
 							</tr>
 							<tr>
 								<td>6</td>
-								<td><a>TEST</a></td>
+								<td><a href="/views/board/boardSelect.jsp">TEST</a></td>
 								<td>관리자</td>
 								<td>2018-06-14</td>
 								<td>15</td>
 							</tr>
 							<tr>
 								<td>5</td>
-								<td><a>TEST</a></td>
+								<td><a href="/views/board/boardSelect.jsp">TEST</a></td>
 								<td>관리자</td>
 								<td>2018-06-14</td>
 								<td>15</td>
 							</tr>
 							<tr>
 								<td>4</td>
-								<td><a>TEST</a></td>
+								<td><a href="/views/board/boardSelect.jsp">TEST</a></td>
 								<td>관리자</td>
 								<td>2018-06-14</td>
 								<td>15</td>
 							</tr>
 							<tr>
 								<td>3</td>
-								<td><a>TEST</a></td>
+								<td><a href="/views/board/boardSelect.jsp">TEST</a></td>
 								<td>관리자</td>
 								<td>2018-06-14</td>
 								<td>15</td>
 							</tr>
 							<tr>
 								<td>2</td>
-								<td><a>TEST</a></td>
+								<td><a href="/views/board/boardSelect.jsp">TEST</a></td>
 								<td>관리자</td>
 								<td>2018-06-14</td>
 								<td>15</td>
 							</tr>
 							<tr>
 								<td>1</td>
-								<td><a>TEST</a></td>
+								<td><a href="/views/board/boardSelect.jsp">TEST</a></td>
 								<td>관리자</td>
 								<td>2018-06-14</td>
 								<td>15</td>
@@ -134,42 +134,42 @@
 							</tr>
 							<tr>
 								<td>6</td>
-								<td><a>TEST</a></td>
+								<td><a href="/views/board/boardSelect.jsp">TEST</a></td>
 								<td>관리자</td>
 								<td>2018-06-14</td>
 								<td>15</td>
 							</tr>
 							<tr>
 								<td>5</td>
-								<td><a>TEST</a></td>
+								<td><a href="/views/board/boardSelect.jsp">TEST</a></td>
 								<td>관리자</td>
 								<td>2018-06-14</td>
 								<td>15</td>
 							</tr>
 							<tr>
 								<td>4</td>
-								<td><a>TEST</a></td>
+								<td><a href="/views/board/boardSelect.jsp">TEST</a></td>
 								<td>관리자</td>
 								<td>2018-06-14</td>
 								<td>15</td>
 							</tr>
 							<tr>
 								<td>3</td>
-								<td><a>TEST</a></td>
+								<td><a href="/views/board/boardSelect.jsp">TEST</a></td>
 								<td>관리자</td>
 								<td>2018-06-14</td>
 								<td>15</td>
 							</tr>
 							<tr>
 								<td>2</td>
-								<td><a>TEST</a></td>
+								<td><a href="/views/board/boardSelect.jsp">TEST</a></td>
 								<td>관리자</td>
 								<td>2018-06-14</td>
 								<td>15</td>
 							</tr>
 							<tr>
 								<td>1</td>
-								<td><a>TEST</a></td>
+								<td><a href="/views/board/boardSelect.jsp">TEST</a></td>
 								<td>관리자</td>
 								<td>2018-06-14</td>
 								<td>15</td>
@@ -194,42 +194,42 @@
 							</tr>
 							<tr>
 								<td>6</td>
-								<td><a>TEST</a></td>
+								<td><a href="/views/board/boardSelect.jsp">TEST</a></td>
 								<td>관리자</td>
 								<td>2018-06-14</td>
 								<td>15</td>
 							</tr>
 							<tr>
 								<td>5</td>
-								<td><a>TEST</a></td>
+								<td><a href="/views/board/boardSelect.jsp">TEST</a></td>
 								<td>관리자</td>
 								<td>2018-06-14</td>
 								<td>15</td>
 							</tr>
 							<tr>
 								<td>4</td>
-								<td><a>TEST</a></td>
+								<td><a href="/views/board/boardSelect.jsp">TEST</a></td>
 								<td>관리자</td>
 								<td>2018-06-14</td>
 								<td>15</td>
 							</tr>
 							<tr>
 								<td>3</td>
-								<td><a>TEST</a></td>
+								<td><a href="/views/board/boardSelect.jsp">TEST</a></td>
 								<td>관리자</td>
 								<td>2018-06-14</td>
 								<td>15</td>
 							</tr>
 							<tr>
 								<td>2</td>
-								<td><a>TEST</a></td>
+								<td><a href="/views/board/boardSelect.jsp">TEST</a></td>
 								<td>관리자</td>
 								<td>2018-06-14</td>
 								<td>15</td>
 							</tr>
 							<tr>
 								<td>1</td>
-								<td><a>TEST</a></td>
+								<td><a href="/views/board/boardSelect.jsp">TEST</a></td>
 								<td>관리자</td>
 								<td>2018-06-14</td>
 								<td>15</td>
