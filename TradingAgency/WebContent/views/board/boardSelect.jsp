@@ -27,6 +27,19 @@
 
 <script src="../../JS/board/boardJs.js?ver=1"></script>
 
+<!-- Header 링크파일 -->
+
+<script type="text/javascript" href="../../JS/common/header.js?ver=1"></script>
+
+<!--<link rel="stylesheet" type="text/css" href="../../CSS/common/header.css?ver=1">-->
+<link rel="stylesheet" type="text/css" href="../../CSS/common/adv.css">
+<script type="text/javascript" src="../../JS/common/adv.js"></script>
+<link rel="stylesheet" type="text/css"
+	href="../../CSS/common/header.css">
+<link rel="stylesheet" type="text/css" href="../../CSS/common/adv.css">
+<link rel="stylesheet" type="text/css"
+	href="../../CSS/common/footer.css">
+
 <title>게시판</title>
 
 </head>
@@ -137,7 +150,8 @@
 			</section>
 		</div>
 		<footer id="footer">
-			<div id="footerTest" style="width:100%; height:300px; background-color:gray;"></div>
+			<%@include file="../../views/common/footer.jsp"%>
+			<!--  <div id="footerTest" style="width:100%; height:300px; background-color:gray;"></div>-->
 		</footer>
 	</center>
 
