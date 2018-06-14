@@ -76,7 +76,7 @@
 						</ul>
 					</div>
 				</div>
-
+<br>
 				<br>
 				<div id="deliveryInfo" style="margin-bottom:80px;">
 					<h2>주문정보</h2>

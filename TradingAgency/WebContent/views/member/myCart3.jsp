@@ -61,6 +61,7 @@
                         </ul>
                     </div>
                 </div>
+                <br>
                 <div id="orderComplete">   
                     <div id="orderCompleteTitle">   
                         <h1>주문완료</h1>
@@ -68,6 +69,7 @@
                         <span style="font-size:20px;">쇼핑몰을 이용해주셔서 감사합니다.</span>
                     </div>
                 </div>    
+                <br>
                 <div id="orderInfo">
                     <div>
                         <table class="table" style="table-layout: fixed; margin: auto; text-align: center;">
