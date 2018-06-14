@@ -83,9 +83,9 @@
                             <tbody>
                                 <tr style="height: auto;" id="infoSelectTr">
                                     <td style="width: 30%; padding-top:10px;">    
-                                        <div class="orderGoodsInfo1"> <img src="../../img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg" style="width: 50px; height: 50px;" /> </div>
+                                        <div class="orderGoodsInfo1"> <img src="../../img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg" style="width: 100px; height: 100px;" /> </div>
                                         <div class="orderGoodsInfo2">
-                                            <div class="orderGoodsName"> <a href="#" style="font-size: 13px;">상품명:<span>?????</span></a> </div>
+                                            <div class="orderGoodsName"> <a href="#" >상품명:<span>?????</span></a> </div>
                                             <div class="orderGoodsOption">(옵션:색상-그레이)</div>
                                         </div>
                                     </td>
