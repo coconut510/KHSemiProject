@@ -313,15 +313,16 @@ th.specalt {
 <center>
 <%if(list!=null){ %>
    <table>
-   		<% for(Member m : list){%>
-   		
-      <tr>
+         <tr>
          <th width="200">상품사진</th>
          <th width="150">상품이름</th>
          <th width="100">상품가격</th>
          <th width="100">상태</th>
          <th width="100">관리</th>
       </tr>
+   		<% for(Member m : list){%>
+   		
+
       <tr>
          <td><img src="http://lorempixel.com/100/100/people/1" alt="" /></td>
          <td>사진</td>
