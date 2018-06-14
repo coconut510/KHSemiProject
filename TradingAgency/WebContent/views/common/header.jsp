@@ -6,9 +6,9 @@
 	    <img id="exerImg2" src="../../img/join_coupon.PNG" height="120px";/>
 	     <button class="btn" id="hideBtn">x</button>
     </div>
-      <center><button value="" id="show"></button></center>
+      
   </div>
-
+<center><button value="" id="show"></button></center>
 <div id="headerDetailGroup">
 
 
