@@ -167,7 +167,7 @@
                                         <a href="/views/manager/managerBoard.jsp">게시판 현황</a>
                                     </li>
                                     <li>
-                                        <a href="/views/manager/managerQnABoard.jsp">Panels</a>
+                                        <a href="/views/manager/managerQnABoard.jsp">Q&A게시판</a>
                                     </li>
                                     <li>
                                         <a href="#">Tables</a>
@@ -259,6 +259,13 @@
 						 </tr>
 					
 					</table>
+					<button type="button" class="btn btn-primary btn-sm" onclick="reWrite();"> 답글</button>
+					<script> 
+						function reWrite(){
+							window.open("/views/manager/managerBoardWrite.jsp","_blank","width=500px,height=500px");
+						}
+					
+					</script>
 					</div>
 					</div>
 					</div>

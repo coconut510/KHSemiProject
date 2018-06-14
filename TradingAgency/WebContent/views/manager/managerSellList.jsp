@@ -170,7 +170,7 @@
                                         <a href="/views/manager/managerBoard.jsp">게시판 현황</a>
                                     </li>
                                     <li>
-                                        <a href="/views/manager/managerQnABoard.jsp">Panels</a>
+                                        <a href="/views/manager/managerQnABoard.jsp">Q&A게시판</a>
                                     </li>
                                     <li>
                                         <a href="#">Tables</a>
@@ -325,12 +325,24 @@
 							</tr>
 							<!-- 조회결과 출력 -->
 						</table>
-						<button type="button" class="btn btn-outline-warning btn-sm">삭제</button>
+						<button type="button" class="btn btn-outline-warning btn-sm" onclick="sellDel();">삭제</button>
 					</div>
 				</div>
 			</div>
 		</div>
 		</main>
+		<script>
+			function sellDel()
+			{
+				var result = window.confirm("정말 삭제하겠습니까??");
+				if(result==true)
+					{
+						alert("삭제되었습니다.");
+					}else{
+						alert("삭제가 취소되었습니다.");
+					}
+			}
+		</script>
 		
 </body>
 </html>

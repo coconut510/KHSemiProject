@@ -170,7 +170,7 @@
                                         <a href="/views/manager/managerBoard.jsp">게시판 현황</a>
                                     </li>
                                     <li>
-                                        <a href="/views/manager/managerQnABoard.jsp">Panels</a>
+                                        <a href="/views/manager/managerQnABoard.jsp">Q&A게시판</a>
                                     </li>
                                     <li>
                                         <a href="#">Tables</a>
