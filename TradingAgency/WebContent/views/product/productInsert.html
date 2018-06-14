@@ -73,17 +73,6 @@ footer {
 	margin: 1%;
 	font-size: 20px;
 }
-/* 작성 취소 버튼 div */
-.howSubmit {
-	padding-top: 1%;
-	padding-left: 75%;
-}
-/* 작성 취소 버튼 */
-.howSubmit button {
-	margin: 1%;
-	margin-right: 10%;
-}
-
 /*광고 */
 .ad {
 	padding-top: 6%;
@@ -103,7 +92,18 @@ footer {
 	width: 100px;
 	position: relative;
 	padding: 5px;
-}    
+} 
+.submitWrapper{
+    display: inline;  
+          }
+.submitWrapper > button{
+        float: right;
+        margin-right: 2%;
+}
+ input[type="date"]::-webkit-inner-spin-button {
+     display: none;
+     appearance: none;
+ }
 </style>    
     
 <body>
@@ -201,31 +201,6 @@ footer {
 
     <body>
         
-    <script>
-    $("#bCategory").on("click",function(){
-       selectCategory(); 
-    });
-        
-    function selectCategory(){
-        var value = $("#bCategory option:selected").text();
-        
-        switch(value){
-            case "전자제품" : $('<option>스마트폰</option><option>태블릿PC</option><option>노트북/PC</option><option>노트북/PC주변기기</option><option>카메라</option><option>음향가전/학습기기</option><option>게임/타이틀</option><option>웨어러블</option><option>영상가전</option><option>생활/주방/미용가전</option><option>자동차기기</option><option>기타 전자기기</option>').insertAfter('#sCategory'); break;
-            case "패션의류" : break;
-            case "패션잡화" : break;
-            case "화장품/미용" : break;
-            case "스포츠/레저" : break;
-            case "유아동/출산" : break;
-            case "완구/문구/취미" : break;
-            case "해외명품" : break;
-            case "도서/음반/DVD" : break;
-            case "가구/인테리어" : break;
-            case "여행/문화" : break;
-            case "생활/건강" : break;
-                
-        }
-    }
-    </script>
             <section class="bodyWrapper">
                 <div class="shadow p-3 mb-5 bg-white rounded">
                 <div class="insertTitle">
@@ -239,27 +214,39 @@ footer {
                         <form id="dataInsert">
                             <div class="form-row">
                                 <div class="form-group col-md-3">
-                                    <label id="subTitle">카테고리</label>
-                                    <select id="bCategory" class="form-control">
-                                <option selected>카테고리를 선택해주세요</option>
-                                        <option>전자제품</option>
-                                        <option>패션잡화</option>
+                                    <label id="subTitle">카테고리</label><span id = "bCateCheck"></span>
+                                    <select id="bCategory" class="form-control" onchange="Category(this)">
+                                <option selected value="0">카테고리를 선택</option>
+                                        <option value="1">전자제품</option>
+                                        <option value="2">패션의류</option>
+                                        <option value="3">패션잡화</option>
+                                        <option value="4">화장품/미용</option>
+                                        <option value="5">스포츠/레저</option>
+                                        <option value="6">유아동/출산</option>
+                                        <option value="7">완구/문구/취미</option>
+                                        <option value="8">해외명품</option>
+                                        <option value="9">자동차</option>
+                                        <option value="10">도서/음반/DVD</option>
+                                        <option value="11">가구/인테리어</option>
+                                        <option value="12">여행/문화</option>
+                                        <option value="13">생활/건강</option>
+                                        
                                 
                                     </select>
                                 </div>
                                 <div class="form-group col-md-3">
                                     <label id="subTitle">카테고리(소분류)</label>
-                                    <select id="sCategory" class="form-control">
-        
+                                    <select id="sCategory" class="form-control" onchange="sCategory">
+                                    <option selected value="0"></option>
                                     </select>
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label id="subTitle">상품 이름</label>
-                                    <input type="text" class="form-control" id="inputEmail4" placeholder="상품명을 입력하세요">
+                                    <input type="text" id = "productName" class="form-control" placeholder="상품명을 입력하세요">
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label id="subTitle">상품 상태</label>
-                                    <select id="inputState" class="form-control">
+                                    <select id="inputState" class="form-control" onchange="state">
         <option selected>새 제품</option>
         <option>중고(사용)</option>
           <option>중고(미사용)</option>
@@ -267,12 +254,13 @@ footer {
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label id="subTitle">상품 수량</label>
-                                    <select id="inputState" class="form-control">
-                            <option selected>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
+                                    <select id="number" class="form-control" onchange="number">
+                            <option selected>선택하세요</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
                             </select>
                                 </div>
                                 <div class="form-group col-md-3">
@@ -321,9 +309,11 @@ footer {
                             </div>
 
                             <div class="howSubmit">
-                                <button type="submit" class="btn btn-outline-secondary">작성</button>
-                                <button type="submit" class="btn btn-outline-secondary">취소</button>
-
+                                <div class = "submitWrapper">
+                                <button type="reset" class="btn btn-outline-secondary">취소</button>
+                                <button type="submit" class="btn btn-outline-secondary" onclick="return check();">작성</button>
+                                
+                                </div>
                             </div>
                     </div>
 
@@ -361,6 +351,70 @@ footer {
 
         </section>
     
+ <!--   
+    <select onchange="categoryChange(this)">
+  <option>걸그룹을 선택해주세요</option>
+  <option value="a">블랙핑크</option>
+  <option value="b">에프엑스</option>
+  <option value="c">EXID</option>
+</select>
+ 
+<select id="good">
+<option>좋아하는 멤버를 선택해주세요</option>
+</select>
+-->
+    
+<script>
+function Category(e) {
+    var sCate_1 = ["","스마트폰", "태블릿PC", "노트북/PC", "노트북/PC 주변기기", "카메라", "음향가전/학습기기", "게임/타이틀", "웨어러블", "영상가전", "생활/주방/미용가전", "자동차기기", "기타 전자기기"];
+    var sCate_2 = ["","여성의류", "남성의류", "언더웨어/잠옷"];
+    var sCate_3 = ["","신발", "여성가방", "남성가방", "지갑", "시계", "주얼리", "모자", "여행용 가방/소품", "기타잡화"];
+    var sCate_4 = ["","스킨케어", "선케어", "베이스메이크업", "색조메이크업", "클렌징", "마스크/팩", "헤어케어", "헤어스타일링", "바디케어", "네일케어", "남성화장품", "향수", "뷰티소품"];
+    var sCate_5 = ["","캠핑", "등산", "골프", "자전거/오토바이/스쿠터", "스키/보드", "낚시", "수영/헬스/요가", "스케이트/보드/롤러", "축구/야구/농구", "기타 스포츠 용품"];
+    var sCate_6 = ["","유모차/카시트", "완구/교육/교구", "수유/이유용품", "외출용품", "유아기구", "목욕/스킨케어", "위생/건강/세제", "임부복", "유아동 의류/잡화", "안전용품", "기저귀/물티슈", "분유/이유식/간식"];
+    var sCate_7 = ["","문구/사무용품", "화방용품", "악기", "피규어"];
+    var sCate_8 = ["","명품가방", "명품지갑", "명품시계", "명품신발", "명품악세서리"];
+    var sCate_9 = ["","자동차"];
+    var sCate_10 = ["","도서", "DVD/음반"];
+    var sCate_11 = ["","침실가구", "거실/주방가구", "수납가구", "침구단품", "커튼", "서재/사무용가구", "DIY자재/용품", "침구세트", "아동/주니어가구", "인테리어소품", "베개/솜류", "수예", "카페트/러그"];
+    var sCate_12 = ["","지류/카드상품권", "공연/티켓", "모바일쿠폰/상품권", "여행/항공권", "레저이용권"];
+    var sCate_13 = ["","자동차용품", "주방용품", "세탁용품", "수납/정리용품", "공구", "애완", "식품"];
+
+    
+
+    
+  var target = document.getElementById("sCategory");
+ 
+  if(e.value == "1") var d = sCate_1;
+    else if(e.value == "2") var d = sCate_2;
+    else if(e.value == "3") var d = sCate_3;
+    else if(e.value == "4") var d = sCate_4;
+    else if(e.value == "5") var d = sCate_5;
+    else if(e.value == "6") var d = sCate_6;
+    else if(e.value == "7") var d = sCate_7;
+    else if(e.value == "8") var d = sCate_8;
+    else if(e.value == "9") var d = sCate_9;
+    else if(e.value == "10") var d = sCate_10;
+    else if(e.value == "11") var d = sCate_11;
+    else if(e.value == "12") var d = sCate_12;
+    else if(e.value == "13") var d = sCate_13;
+
+    
+ 
+  target.options.length = 0;
+ 
+  for (x in d) {
+    var opt = document.createElement("option");
+    opt.value = d[x];
+    opt.innerHTML = d[x];
+    target.appendChild(opt);
+  } 
+}
+
+    
+</script>
+
+    
     
     
     
@@ -369,6 +423,73 @@ footer {
 
 
     </body>
+<script>
+    //값 가져오기
+    $(document).ready(function(){
+       $('#bCategory').on("change",function(){
+        console.log($("#bCategory option:selected").val());
+        console.log($("#bCategory option:selected").text());
+       });
+        $('#sCategory').on("change",function(){
+        console.log($("#sCategory option:selected").val());
+        console.log($("#sCategory option:selected").text());
+       });
+        $('#inputState').on("change",function(){
+        console.log($("#inputState option:selected").val());
+        console.log($("#inputState option:selected").text());
+       });
+        $('#number').on("change",function(){
+        console.log($("#number option:selected").text());
+        console.log($("#date").val());
+       });
+        
+    });
+    
+    
+</script>
+
+    
+    
+    
+    
+<script>
+    function check(){
+        var bCategory = $("#bCategory option:selected").val();
+        var sCategory = $("#sCategory option:selected").text();
+        var productName = document.getElementById('productName').value;
+        var number = $("#number option:selected").text();
+        var date = $("#date").val();
+        alert(date);
+        
+
+  
+
+//        console(picker);
+//        alert(date);
+//        alert(date.getDate(),date.getMonth(),date.getYear());
+//        alert(productName);
+        //alert(sCategory);
+    //    alert(bCategory);
+        
+        if(bCategory == 0){
+            alert("카테고리를 선택해주세요");
+            return false;
+        }
+        else if(!(/^[가-힣A-Z/]+$/).test(sCategory)){
+            alert("소분류 선택");
+            return false;
+        }
+        else if(!(/^[가-힣a-z-A-Z0-9]+$/).test(productName)){
+            alert("제목입력");
+            return false;
+        }
+        else if(!(1 <= number ||number <= 5)){
+            alert("수량선택");
+            return false;
+        }
+        
+    }
+</script>
 
 
 
