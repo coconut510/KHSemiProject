@@ -25,6 +25,7 @@
     <!-- 외부css파일  -->  
     <link rel="stylesheet" type="text/css" href="../../CSS/member/myCart3.css">
     <link rel="stylesheet" type="text/css" href="../../CSS/common/common.css">    
+    <link rel="stylesheet" type="text/css" href="../../CSS/common/header.css">
     <title>주문완료</title>
        
     <style>
@@ -37,9 +38,9 @@
         <div id="wrapper" style="font-family: 'Sunflower', sans-serif;">
             <!-- header -->
             <header id="header">
-                <div id="headerLine">headerLine</div>
+            <%@include file="/views/common/header.jsp"%>
             </header>
-            <div id="navigation">Navigator</div>
+          
             <br>
             <div id="content">
                 <div id="orderStepSec">
@@ -60,6 +61,7 @@
                         </ul>
                     </div>
                 </div>
+                <br>
                 <div id="orderComplete">   
                     <div id="orderCompleteTitle">   
                         <h1>주문완료</h1>
@@ -67,6 +69,7 @@
                         <span style="font-size:20px;">쇼핑몰을 이용해주셔서 감사합니다.</span>
                     </div>
                 </div>    
+                <br>
                 <div id="orderInfo">
                     <div>
                         <table class="table" style="table-layout: fixed; margin: auto; text-align: center;">

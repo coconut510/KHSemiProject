@@ -24,7 +24,7 @@ $(document).ready(function() {
 		if (num < 10) {
 			num++;
 		}
-		$("#orderquantity").text(num);
+		$("#orderQuantity").text(num);
 
 	});
 });
@@ -34,7 +34,7 @@ $(document).ready(function() {
 		if (num > 1) {
 			num--;
 		}
-		$("#orderquantity").text(num);
+		$("#orderQuantity").text(num);
 
 	});
 });
@@ -58,7 +58,7 @@ function deleteOneBtn() {
 		console.log($('tbody>tr').length);
 	}
 	if ($('tbody>tr').length <= 0) {
-		$('#notGoodsList').text("장바구니에 담긴 상품이 없습니다.");
+		$('#dontHaveGoodsList').text("장바구니에 담긴 상품이 없습니다.");
 	}
 }
 

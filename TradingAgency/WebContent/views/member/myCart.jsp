@@ -35,6 +35,8 @@
 <!-- 외부css파일  -->
 <link rel="stylesheet" type="text/css" href="/CSS/member/myCart.css">
 <link rel="stylesheet" type="text/css" href="/CSS/common/common.css">
+<link rel="stylesheet" type="text/css"
+	href="../../CSS/common/header.css">
 <!-- 외부 js파일  -->
 <script type="text/javascript" src="/JS/member/myCart.js"></script>
 <title>장바구니 (step1)</title>
@@ -44,20 +46,17 @@
 
 	<center>
 		<div id="wrapper">
-			<!-- header -->
-			<header id="header">
-			<div id="headerLine">headerLine</div>
-			</header>
-			<div id="navigation">Navigator</div>
+
+			<header id="header"> <%@include
+				file="/views/common/header.jsp"%> </header>
+
 			<br>
 			<div id="content">
 				<div id="titleSec">
 					<div id="title">
 						<h1>장바구니</h1>
 					</div>
-					<div id="explan">
-						<!--        <p> 장바구니에 담은 상품은 일주일동안 보관됩니다. 일주일 후에는 상품이 삭제될 수 있음을 알려드립니다. 오랫동안 보관하고 싶은 상품은 위시리스트에 추가해주세요.</p> -->
-					</div>
+					<div id="explan"></div>
 				</div>
 				<div id="orderStepSec">
 					<div class="sign-up">
@@ -89,7 +88,6 @@
 				<div id="cartListSec">
 					<table class="table"
 						style="table-layout: fixed; margin: auto; text-align: center;">
-
 						<thead>
 							<tr>
 								<th scope="col" style="width: 10%;"><input type="checkbox"
@@ -97,54 +95,56 @@
 								<th scope="col" style="width: 30%;">주문상품</th>
 								<th scope="col">수량</th>
 								<th scope="col">상품금액</th>
-
 							</tr>
 						</thead>
+
 						<tbody>
-
-							<tr style="height: auto;" id="infoSelectTr">
-
-								<td scope="row" style="width: 10%;"><input type="checkbox"
-									style="margin-top: 50px;" name="chk" /></td>
-								<td style="width: 30%;">
-									<div class="orderGoodsInfo1">
-										<img
-											src="../../img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
-											style="width: 100px; height: 100px; margin-top: 10px;" />
-									</div>
-									<div class="orderGoodsInfo2">
-										<div class="orderGoodsName" style="margin-top: 30px;">
-											<a href="#" style="font-size: 13px;">상품명:<span>????????????????????</span>
+						<!--  장바구니하는 개수만큼 장바구니에 리스트 출력하는 구문  -->
+							<c:forEach begin="0" end="cartList.length-1" step="1">
+								<tr style="height: auto;" id="infoSelectTr">
+									<td scope="row" style="width: 10%;"><input type="checkbox"
+										style="margin-top: 50px;" name="chk" id="allCheckBox" /></td>
+									<td style="width: 30%;">
+										<div class="orderGoodsInfo1">
+											<img
+												src="../../img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
+												style="width: 100px; height: 100px; margin-top: 10px;"
+												id="cartGoodsImg" />
 										</div>
-										<div class="orderGoodsOption">(옵션:색상-그레이)</div>
-									</div>
-								</td>
-								<td style="padding-top: 50px;"><span
-									style="font-size: 15px;" id="orderquantity">1</span> <br>
-									<button type="button" class="btn btn-info" id="quantityUp"
-										style="font-size: 10px;">+</button>
-									<button type="button" class="btn btn-info" id="quantityDown"
-										style="font-size: 10px;">-</button>
-									<button type="button" class="btn btn-info" id="changeBtn"
-										style="font-size: 10px;">변경</button></td>
-								<td style="padding-top: 60px;"><span
-									style="font-size: 15px;" id="goodsPrice" name="goodsPrices">10000</span>원</td>
-							</tr>
+										<div class="orderGoodsInfo2">
+											<div class="orderGoodsName" style="margin-top: 30px;">
+												<a href="#" style="font-size: 13px;">상품명:<span
+													id="cartGoodsName">????????????????????</span>
+											</div>
+											<div class="cartGoodsOption">(옵션:색상-그레이)</div>
+										</div>
+									</td>
+									<td style="padding-top: 50px;"><span
+										style="font-size: 15px;" id="orderQuantity">1</span> <br>
+										<button type="button" class="btn btn-info" id="quantityUp"
+											style="font-size: 10px;">+</button>
+										<button type="button" class="btn btn-info" id="quantityDown"
+											style="font-size: 10px;">-</button>
+										<button type="button" class="btn btn-info" id="changeBtn"
+											style="font-size: 10px;">변경</button></td>
+									<td style="padding-top: 60px;"><span
+										style="font-size: 15px;" id="goodsPrice" name="goodsPrices">10000</span>원</td>
 
+								</tr>
+							</c:forEach>
 						</tbody>
 					</table>
-					<br><br>
+					<br>
+					<br>
 				</div>
-		  
-		  
-				<div id="notGoodsList">
-				
-				</div>
+
+
+				<div id="dontHaveGoodsList"></div>
 				<br>
-				
+
 				<hr>
 				<div class="selectBtn1">
-				
+
 					<button type="button" class="btn btn-info" style="float: left;"
 						id="allSelectBtn" onclick="selectAllChk();">전체선택/해제</button>
 					<button type="button" class="btn btn-info" id="deleteOneBtn"
