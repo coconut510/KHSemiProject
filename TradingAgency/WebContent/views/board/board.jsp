@@ -35,8 +35,9 @@
 		<div id="wrapper">
 			<!--  Header -->
 			<header id="header">
-			<div style="background-color: gray; width: 100%; height: 200px;">
-			</div>
+					<%@include file="../../views/common/header.jsp"%>
+			<!--<div style="background-color: gray; width: 100%; height: 200px;">
+			</div>-->
 			</header>
 			<section id="content">
 			<div id="topLeftLink">

@@ -15,8 +15,7 @@
 <link rel="stylesheet" href="../../CSS/bootstrap/bootstrap.min.css" />
 <link rel="stylesheet" href="../../CSS/common/common.css" />
 <link rel="stylesheet" href="../../CSS/main/productListMain.css" />
-<script type="text/javascript" src="../../JS/common/header.js"></script>
-<link rel="stylesheet" type="text/css" href="../../CSS/common/header.css">
+
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
@@ -34,10 +33,13 @@
 <script type="text/javascript" href="../../JS/common/header.js?ver=1"></script>
 
 <!--<link rel="stylesheet" type="text/css" href="../../CSS/common/header.css?ver=1">-->
- <link rel="stylesheet" type="text/css" href="../../CSS/common/adv.css">
-  <script type="text/javascript" src="../../JS/common/adv.js"></script>
-   <link rel="stylesheet" type="text/css" href="../../CSS/common/header.css">
-  <link rel="stylesheet" type="text/css" href="../../CSS/common/adv.css">
+<link rel="stylesheet" type="text/css" href="../../CSS/common/adv.css">
+<script type="text/javascript" src="../../JS/common/adv.js"></script>
+<link rel="stylesheet" type="text/css"
+	href="../../CSS/common/header.css">
+<link rel="stylesheet" type="text/css" href="../../CSS/common/adv.css">
+<link rel="stylesheet" type="text/css"
+	href="../../CSS/common/footer.css">
 
 <title>상품 목록</title>
 </head>
@@ -862,7 +864,7 @@
 			</section>
 
 			<footer id="footer">
-			<div id="footerTest"></div>
+				<%@include file="../../views/common/footer.jsp"%> 
 			</footer>
 		</div>
 	</center>

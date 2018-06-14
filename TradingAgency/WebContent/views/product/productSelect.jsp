@@ -30,6 +30,20 @@
 <script src="../../JS/externalJs/labs.js" type="text/javascript"></script>
 
 
+<!-- Header 링크파일 -->
+
+<script type="text/javascript" href="../../JS/common/header.js?ver=1"></script>
+
+<!--<link rel="stylesheet" type="text/css" href="../../CSS/common/header.css?ver=1">-->
+<link rel="stylesheet" type="text/css" href="../../CSS/common/adv.css">
+<script type="text/javascript" src="../../JS/common/adv.js"></script>
+<link rel="stylesheet" type="text/css"
+	href="../../CSS/common/header.css">
+<link rel="stylesheet" type="text/css" href="../../CSS/common/adv.css">
+<link rel="stylesheet" type="text/css"
+	href="../../CSS/common/footer.css">
+
+
 <title>상품 선택 화면</title>
 </head>
 <body>
@@ -38,8 +52,10 @@
 		<div id="wrapper">
 			<!--  Header -->
 			<header id="header">
-			<div id="headerLine">HeadLine1</div>
-			<div id="navigator">Navigator</div>
+				<%@include file="../../views/common/header.jsp"%>
+				<!--  <div id="headerLine">HeadLine1</div>
+				<div id="navigator">Navigator</div>
+				-->
 			</header>
 			<section id="content">
 			<div id="topLeftLink">
@@ -449,8 +465,8 @@
 			</div>
 			</section>
 			<footer id="footer">
-			<div id="footerTest"
-				style="width: 100%; height: 300px; background-color: green;"></div>
+				<!--  <div id="footerTest" style="width: 100%; height: 300px; background-color: green;"></div>-->
+				<%@include file="../../views/common/footer.jsp"%> 
 			</footer>
 		</div>
 	</center>
