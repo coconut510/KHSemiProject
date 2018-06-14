@@ -119,13 +119,12 @@ ul.mpMenuItems li a.current, ul.vert-one li a.current:hover {
 	font-size: 31px;
 }
 
-    .MenuContents
-    {
-        position: static;
-        width: 70%;
-        height: 100%;
-        float:inherit;
-    }
+.MenuContents {
+	position: static;
+	width: 70%;
+	height: 100%;
+	float: inherit;
+}
 
 .MenuConTitle {
 	width: 100%;
@@ -140,7 +139,7 @@ ul.mpMenuItems li a.current, ul.vert-one li a.current:hover {
 }
 
 .delete {
-	float:left;
+	float: left;
 	position: relative;
 	width: 100px;
 	display: inline-block;
@@ -245,10 +244,6 @@ body {
 	content: none;
 }
 
-a {
-	color: #c75f3e;
-}
-
 #mytable {
 	width: 700px;
 	padding: 0;
@@ -265,13 +260,15 @@ caption {
 th {
 	font: bold 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
 	color: #4f6b72;
-	border-right: 1px solid #C1DAD7;
-	border-bottom: 1px solid #C1DAD7;
-	border-top: 1px solid #C1DAD7;
+	border-right: 1px solid #F2F2F2;
+	border-bottom: 1px solid #F2F2F2;
+	border-top: 1px solid #F2F2F2;
 	letter-spacing: 2px;
 	text-transform: uppercase;
 	text-align: left;
 	padding: 6px 6px 6px 12px;
+	background: #F2F2F2 url(/data/201011/IJ12896448126037/bg_header.jpg)
+		no-repeat;
 	background: #F2F2F2 url(/data/201011/IJ12896448126037/bg_header.jpg)
 		no-repeat;
 }
@@ -284,20 +281,20 @@ th.nobg {
 }
 
 td {
-	border-right: 1px solid #C1DAD7;
-	border-bottom: 1px solid #C1DAD7;
+	border-right: 1px solid #F2F2F2;
+	border-bottom: 1px solid #F2F2F2;
 	background: #fff;
 	padding: 6px 6px 6px 12px;
 	color: #4f6b72;
 }
 
 td.alt {
-	background: #F5FAFA;
-	color: #797268;
+	background: #F2F2F2;
+	color: #F2F2F2;
 }
 
 th.spec {
-	border-left: 1px solid #C1DAD7;
+	border-left: 1px solid #F2F2F2;
 	border-top: 0;
 	background: #fff url(/data/201011/IJ12896448126037/bullet1.gif)
 		no-repeat;
@@ -305,7 +302,7 @@ th.spec {
 }
 
 th.specalt {
-	border-left: 1px solid #C1DAD7;
+	border-left: 1px solid #F2F2F2;
 	border-top: 0;
 	background: #f5fafa url(/data/201011/IJ12896448126037/bullet2.gif)
 		no-repeat;
@@ -314,109 +311,127 @@ th.specalt {
 }
 
 .menu-button {
-  -webkit-transition: 0.4s;
-  -moz-transition: 0.4s;
-  transition: 0.4s;
-  position: absolute;
-  right: 30px;
-  bottom: 30px;
-  width: 60px;
-  height: 60px;
-  text-align: center;
-  line-height: 60px;
-  border-radius: 50%;
-  background-color: #7151FC;
-  color: #FFFFFF;
-  font-size: 24px;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.22);
-  cursor: pointer;
+	-webkit-transition: 0.4s;
+	-moz-transition: 0.4s;
+	transition: 0.4s;
+	position: absolute;
+	right: 30px;
+	bottom: 30px;
+	width: 60px;
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+	border-radius: 50%;
+	background-color: #7151FC;
+	color: #FFFFFF;
+	font-size: 24px;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0
+		rgba(0, 0, 0, 0.22);
+	cursor: pointer;
 }
+
 .menu-button:hover {
-  background: #d81557;
-  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.28), 0 4px 15px 0 rgba(0, 0, 0, 0.25);
+	background: #d81557;
+	box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.28), 0 4px 15px 0
+		rgba(0, 0, 0, 0.25);
 }
+
 .menu-button a {
-  -webkit-transition: 0.4s;
-  -moz-transition: 0.4s;
-  transition: 0.4s;
-  opacity: 0;
-  width: 0px;
-  height: 0px;
-  text-align: center;
-  line-height: 50px;
-  border-radius: 50%;
-  color: #FFFFFF;
-  font-size: 24px;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.22);
-  cursor: pointer;
+	-webkit-transition: 0.4s;
+	-moz-transition: 0.4s;
+	transition: 0.4s;
+	opacity: 0;
+	width: 0px;
+	height: 0px;
+	text-align: center;
+	line-height: 50px;
+	border-radius: 50%;
+	color: #FFFFFF;
+	font-size: 24px;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0
+		rgba(0, 0, 0, 0.22);
+	cursor: pointer;
 }
+
 .menu-button a:hover {
-  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.28), 0 4px 15px 0 rgba(0, 0, 0, 0.25);
+	box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.28), 0 4px 15px 0
+		rgba(0, 0, 0, 0.25);
 }
+
 .menu-button a:nth-child(2) {
-  -webkit-transition-delay: 0.3s;
-  -moz-transition-delay: 0.3s;
-  transition-delay: 0.3s;
-  position: absolute;
-  right: 30px;
-  bottom: 30px;
-  background: #55acee;
+	-webkit-transition-delay: 0.3s;
+	-moz-transition-delay: 0.3s;
+	transition-delay: 0.3s;
+	position: absolute;
+	right: 30px;
+	bottom: 30px;
+	background: #55acee;
 }
+
 .menu-button a:nth-child(3) {
-  -webkit-transition-delay: 0.4s;
-  -moz-transition-delay: 0.4s;
-  transition-delay: 0.4s;
-  position: absolute;
-  right: 30px;
-  bottom: 30px;
-  background: #dc4e41;
+	-webkit-transition-delay: 0.4s;
+	-moz-transition-delay: 0.4s;
+	transition-delay: 0.4s;
+	position: absolute;
+	right: 30px;
+	bottom: 30px;
+	background: #dc4e41;
 }
+
 .menu-button a:nth-child(4) {
-  -webkit-transition-delay: 0.5s;
-  -moz-transition-delay: 0.5s;
-  transition-delay: 0.5s;
-  position: absolute;
-  right: 30px;
-  bottom: 30px;
-  background: yellow;
+	-webkit-transition-delay: 0.5s;
+	-moz-transition-delay: 0.5s;
+	transition-delay: 0.5s;
+	position: absolute;
+	right: 30px;
+	bottom: 30px;
+	background: yellow;
 }
+
 .menu-button:hover a {
-  opacity: 1;
-  width: 50px;
-  height: 50px;
+	opacity: 1;
+	width: 50px;
+	height: 50px;
 }
+
 .menu-button:hover a:nth-child(2) {
-  right: 80px;
-  bottom: 0px;
+	right: 80px;
+	bottom: 0px;
 }
+
 .menu-button:hover a:nth-child(2):hover {
-  -webkit-transition-delay: 0s;
-  -moz-transition-delay: 0s;
-  transition-delay: 0s;
-  background: #3ea1ec;
+	-webkit-transition-delay: 0s;
+	-moz-transition-delay: 0s;
+	transition-delay: 0s;
+	background: #3ea1ec;
 }
+
 .menu-button:hover a:nth-child(3) {
-  right: 65px;
-  bottom: 65px;
+	right: 65px;
+	bottom: 65px;
 }
+
 .menu-button:hover a:nth-child(3):hover {
-  -webkit-transition-delay: 0s;
-  -moz-transition-delay: 0s;
-  transition-delay: 0s;
-  background: #d83a2b;
+	-webkit-transition-delay: 0s;
+	-moz-transition-delay: 0s;
+	transition-delay: 0s;
+	background: #d83a2b;
 }
+
 .menu-button:hover a:nth-child(4) {
-  right: 0px;
-  bottom: 80px;
+	right: 0px;
+	bottom: 80px;
 }
+
 .menu-button:hover a:nth-child(4):hover {
-  -webkit-transition-delay: 0s;
-  -moz-transition-delay: 0s;
-  transition-delay: 0s;
-  background: yellow;
+	-webkit-transition-delay: 0s;
+	-moz-transition-delay: 0s;
+	transition-delay: 0s;
+	background: yellow;
 }
 </style>
 </head>
+
 <body align="center">
 
 	<div class="header">헤더</div>
@@ -424,16 +439,22 @@ th.specalt {
 		<div class="contents">
 			<div class="mpMenuItems">
 				<div class="mpMenuTitle">
-				           <h1>My Page</h1>
+					<h1>My Page</h1>
 				</div>
 				<div></div>
-				 <ul class="mpMenuAll" role="tablist" style="none">
-					<li role="presentation" class="active"><a href="/views/member/mySelf.jsp">판매내역</a></li>
-					<li role="presentation" class="active"><a href="/views/member/myBuy.jsp">구매내역</a></li>
-					<li role="presentation" class="active"><a href="/views/member/jjim.jsp">찜한 상품</a></li>
-					<li role="presentation" class="active"><a href="/views/member/myCoupon.jsp">내 쿠폰</a></li>
-					<li role="presentation" class="active"><a href="/views/member/myInfoQuiz.jsp">내 정보</a></li>
-					<li role="presentation" class="active"><a href="/views/member/mySay.jsp">알림 설정</a></li>
+				<ul class="mpMenuAll" role="tablist" style="">
+					<li role="presentation" class="active"><a
+						href="/views/member/mySelf.jsp">판매내역</a></li>
+					<li role="presentation" class="active"><a
+						href="/views/member/myBuy.jsp">구매내역</a></li>
+					<li role="presentation" class="active"><a
+						href="/views/member/jjim.jsp">찜한 상품</a></li>
+					<li role="presentation" class="active"><a
+						href="/views/member/myCoupon.jsp">내 쿠폰</a></li>
+					<li role="presentation" class="active"><a
+						href="/views/member/myInfoQuiz.jsp">내 정보</a></li>
+					<li role="presentation" class="active"><a
+						href="/views/member/mySay.jsp">알림 설정</a></li>
 				</ul>
 			</div>
 			<div class="MenuContents">
@@ -446,7 +467,9 @@ th.specalt {
 							ArrayList<Member> list = (ArrayList<Member>) request.getAttribute("userList");
 						%>
 						<center>
-				<%if(list!=null){ %>
+							<%
+								if (list != null) {
+							%>
 							<table id="cart" class="table table-hover table-condensed">
 								<thead>
 									<tr>
@@ -456,9 +479,11 @@ th.specalt {
 										<th style="width: 22%" class="text-center">총 가격</th>
 										<th style="width: 10%">삭제</th>
 									</tr>
-									
+
 								</thead>
-							 		<% for(Member m : list){%>
+								<%
+									for (Member m : list) {
+								%>
 								<tbody>
 									<tr>
 										<td data-th="Product">
@@ -478,7 +503,7 @@ th.specalt {
 											class="form-control text-center" value="1"></td>
 										<td data-th="Subtotal" class="text-center">몰라.. ㅠ_ㅠ</td>
 										<td class="actions" data-th="">
-									
+
 											<button class="delete">
 												삭제</i>
 											</button>
@@ -492,31 +517,40 @@ th.specalt {
 										<td colspan="2" class="hidden-xs"></td>
 										<td class="hidden-xs text-center"><strong>총합 :
 												102313원</strong></td>
-										<td><a href="#" class="btn btn-success btn-block">장바구니에 추가
-												<i class="fa fa-angle-right"></i>
+										<td><a href="#" class="btn btn-success btn-block">장바구니에
+												추가 <i class="fa fa-angle-right"></i>
 										</a></td>
 									</tr>
 								</tfoot>
-						   	 <%} %>
+								<%
+									}
+								%>
 							</table>
 						</center>
-					<%}else{ %>
+						<%
+							} else {
+						%>
 						<div>살까말까 고민되는 물건을 찜해보세요!</div>
-				<%} %>
+						<%
+							}
+						%>
 					</div>
-					
 				</div>
 			</div>
- <div class="menu-button"><i class="Qbtn"></i>
-	<a href="/views/member/myCart.jsp" style="background-image:url(/../../img/messageQbtn.png)"> <i class="messageQbtn"></i> </a>
-	<a href="/index.jsp" style="background-image:url(/../../img/homeQbtn.png)"> <i class="homeQbtn"> </i> </a>
-	<a href="/views/member/myCart3.jsp" style="background-image:url(/../../img/sayQbtn.png)"> <i class="sayQbtn"> </i> </a>
-</div>
+			<div class="menu-button">
+				<i class="Qbtn"></i> <a href="/views/member/myCart.jsp"
+					style="background-image: url(/../../img/messageQbtn.png)"> <i
+					class="messageQbtn"></i>
+				</a> <a href="/index.jsp"
+					style="background-image: url(/../../img/homeQbtn.png)"> <i
+					class="homeQbtn"> </i>
+				</a> <a href="/views/member/myCart3.jsp"
+					style="background-image: url(/../../img/sayQbtn.png)"> <i
+					class="sayQbtn"> </i>
+				</a>
+			</div>
 		</div>
-
 	</center>
-	
 	<div class="footer">푸터</div>
 </body>
-
 </html>

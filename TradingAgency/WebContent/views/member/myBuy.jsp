@@ -5,12 +5,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>구매내역</title>
+<title>판매내역</title>
 <style>
-
-    div{background-color: white;}
-
-     .header{border:3px solid white;
+div{background-color: white;}
+    
+   .header{border:3px solid white;
        background-color: #7151FC;
         width: auto;
         height: 100px;}
@@ -68,14 +67,16 @@ background:black url("http://www.blueb.co.kr/data/201010/IJ12872476173279/vert-o
   margin-top:50px;
   margin-left:20px;
     }
-.mpMenuAll {
-	position: static;
-	padding: inherit;
-	border: 3px solid none;
-	width: 100%;
-	height: 70%;
-	font-size: 30px;
-}
+    .mpMenuAll
+    {
+        position: static;
+        padding: inherit;
+        border:3px solid none;
+        width: 100%;
+        height: 70%; 
+        font-size: 30px;
+    }  
+    
     
     .tapBtn
     {
@@ -98,10 +99,9 @@ background:black url("http://www.blueb.co.kr/data/201010/IJ12872476173279/vert-o
     }
     .MenuConTitle
     {
-    	width:100%;
+        width:100%;
         height: 20%;
         float: right;
-        position: relative;
     }
     .MenuCon
     {
@@ -109,7 +109,7 @@ background:black url("http://www.blueb.co.kr/data/201010/IJ12872476173279/vert-o
         height: 80%;
         float: inherit;
     }
-     .delete {
+   .delete {
 	float:left;
 	position: relative;
 	width: 100px;
@@ -130,6 +130,7 @@ background:black url("http://www.blueb.co.kr/data/201010/IJ12872476173279/vert-o
 	-moz-box-shadow: 0px 6px 0px rebeccapurple;
 	box-shadow: 0px 0px 0px rebeccapurple;
 }
+
 .delete:active {
 	-webkit-box-shadow: 0px 2px 0px rebeccapurple;
 	-moz-box-shadow: 0px 2px 0px rebeccapurple;
@@ -199,7 +200,6 @@ background:black url("http://www.blueb.co.kr/data/201010/IJ12872476173279/vert-o
   content: none;
 }
 
-
 a {
 	color: #c75f3e;
 }
@@ -265,8 +265,7 @@ th.specalt {
 	font: bold 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
 	color: #797268;
 }    
-        
-  
+
 .menu-button {
   -webkit-transition: 0.4s;
   -moz-transition: 0.4s;
@@ -368,7 +367,7 @@ th.specalt {
   -moz-transition-delay: 0s;
   transition-delay: 0s;
   background: yellow;
-}  
+}    
     
 </style>
 </head>
@@ -378,8 +377,9 @@ th.specalt {
 <center>
         <div class="contents">
             <div class="mpMenuItems">
-                   <div class="mpMenuTitle"><h1>My Page</h1></div>
-               <ul class="mpMenuAll" role="tablist" style="none">
+                      <div class="mpMenuTitle"><h1>My Page</h1></div>
+
+                <ul class="mpMenuAll" role="tablist" style="none">
 					<li role="presentation" class="active"><a href="/views/member/mySelf.jsp">판매내역</a></li>
 					<li role="presentation" class="active"><a href="/views/member/myBuy.jsp">구매내역</a></li>
 					<li role="presentation" class="active"><a href="/views/member/jjim.jsp">찜한 상품</a></li>
@@ -388,21 +388,28 @@ th.specalt {
 					<li role="presentation" class="active"><a href="/views/member/mySay.jsp">알림 설정</a></li>
 				</ul>
             </div>
+
             <div class="MenuContents">
-                  <div class="MenuConTitle"><H2>구매 내역</H2></div>
+                 <div class="MenuConTitle"><H2>구매 내역</H2></div>
                 <div class="MenuCon">  <div class="table-users">
+
 <% ArrayList<Member> list = (ArrayList<Member>)request.getAttribute("userList"); %>
 <center>
 <%if(list!=null){ %>
-   <table>
-         <tr>
-         <th width="200">상품사진</th>
-         <th width="150">상품이름</th>
-         <th width="100">상품가격</th>
+<table>
+      <tr>
+         <th width="200">상품이미지</th>
+         <th width="150">상품명</th>
+         <th width="100">가격</th>
          <th width="100">상태</th>
          <th width="100">관리</th>
       </tr>
    		<% for(Member m : list){%>
+<<<<<<< HEAD
+   		
+
+=======
+>>>>>>> 0e0931762d9e3717e4988e69a427609469d61bd3
       <tr>
          <td><img src="http://lorempixel.com/100/100/people/1" alt="" /></td>
          <td>사진</td>
@@ -410,21 +417,23 @@ th.specalt {
          <td>판매중</td>
          <td>		<div><center><a href="#" class="delete">삭제</a></center><div> </td>
       </tr>
+     
     	 <%} %>
-    	    </table>
-    	    </center>
+    	     </table>
+    	          </center>
+    	     
 <%}else{ %>
-   <div>아직 구매내역이 없습니다. Sell:F 에서 스마트하게 쇼핑해보세요.</div>
+   <div>아직 구매내역이 없습니다. Sell:F 에서 스마트하게 쇼핑해보세요..</div>
 <%} %>
 </div></div>
             </div>
-    <div class="menu-button"><i class="Qbtn"></i>
+  <div class="menu-button"><i class="Qbtn"></i>
 	<a href="/views/member/myCart.jsp" style="background-image:url(/../../img/messageQbtn.png)"> <i class="messageQbtn"></i> </a>
 	<a href="/index.jsp" style="background-image:url(/../../img/homeQbtn.png)"> <i class="homeQbtn"> </i> </a>
 	<a href="/views/member/myCart3.jsp" style="background-image:url(/../../img/sayQbtn.png)"> <i class="sayQbtn"> </i> </a>
 </div>
         </div>
-
+    
         </center>
 <div class="footer">푸터</div>
 </body>

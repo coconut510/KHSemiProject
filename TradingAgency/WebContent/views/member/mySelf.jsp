@@ -8,7 +8,6 @@
 <title>판매내역</title>
 <style>
 div{background-color: white;}
-    
    .header{border:3px solid white;
        background-color: #7151FC;
         width: auto;
@@ -405,8 +404,11 @@ th.specalt {
          <th width="100">관리</th>
       </tr>
    		<% for(Member m : list){%>
+<<<<<<< HEAD
    		
 
+=======
+>>>>>>> 0e0931762d9e3717e4988e69a427609469d61bd3
       <tr>
          <td><img src="http://lorempixel.com/100/100/people/1" alt="" /></td>
          <td>사진</td>

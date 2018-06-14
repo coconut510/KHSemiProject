@@ -226,7 +226,7 @@ li {
 	margin-bottom:20px;
 }
 .productList ul{
-	height:410px;
+	height:auto;
 	list-style-type: none;
 	margin-bottom:5px;
 	clear:both;
