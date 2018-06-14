@@ -5,8 +5,6 @@
 </div>
 
 <div id="headerDetailGroup">
-
-
 	<div id="logoarea">
 		<img id="logoimg" src="../../img/logo.jpg" height="120px"
 			width="270px" alt="셀프이미지" ; />
