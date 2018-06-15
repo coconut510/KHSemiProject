@@ -38,6 +38,7 @@
 <link rel="stylesheet" type="text/css" href="../../CSS/common/header.css">
 <!-- 외부 js파일  -->
 <script type="text/javascript" src="../../JS/member/myCart.js"></script>
+<script type="text/javascript" src="../../JS/common/header.js"></script>
 <title>장바구니 (step1)</title>
 </head>
 

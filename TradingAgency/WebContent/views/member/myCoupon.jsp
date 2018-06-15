@@ -6,6 +6,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 
+<!-- 외부 js파일 -->
+<script type="text/javascript" src="../../JS/common/header.js"></script>
+
 <title>내 쿠폰</title>
 <style>
 .couponcolor{

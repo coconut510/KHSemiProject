@@ -40,6 +40,8 @@
 <!-- js 외부파일  -->
 <script src="../../JS/member/findIdPwd.js"></script>
 <script src="../../JS/common/common.js"></script>
+<script type="text/javascript" src="../../JS/common/header.js"></script>
+
 <title>Insert title here</title>
 </head>
 <body>

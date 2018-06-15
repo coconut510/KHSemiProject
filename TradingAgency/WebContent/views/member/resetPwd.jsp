@@ -37,6 +37,8 @@
 	
 <!--  js 외부 파일  -->
 <script  src="../../JS/member/resetPwd.js"></script>
+<script type="text/javascript" src="../../JS/common/header.js"></script>
+
 <style>
 .title {
 	width: 100%;

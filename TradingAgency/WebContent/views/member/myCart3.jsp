@@ -32,6 +32,8 @@
 	    <link rel="stylesheet" type="text/css" href="../../CSS/common/adv.css">
 	    <link rel="stylesheet" type="text/css" href="../../CSS/common/footer.css">
 	    <link rel="stylesheet" type="text/css" href="../../CSS/common/header.css">
+	    <!-- 외부 js파일  -->
+	    <script type="text/javascript" src="../../JS/common/header.js"></script>
 		<title>주문완료</title>
 
 <style>

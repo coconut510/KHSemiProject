@@ -49,7 +49,8 @@
 <script src="//d1p7wdleee1q2z.cloudfront.net/post/search.min.js"></script>
 <!-- 주소 api -->
 <script type="text/javascript" src="/JS/bootstrap/bootstrap.js"></script>
-<!--  스크립트 외부파일 호출불가 -->
+<!-- 외부 js파일  -->
+<script type="text/javascript" src="../../JS/common/header.js"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
 		$("#orderBtn")
