@@ -13,12 +13,14 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <!-- 구글 폰트 -->
     <link href="https://fonts.googleapis.com/css?family=Sunflower:300" rel="stylesheet">
-   <!-- css 외부파일 -->
+  	 <!-- css 외부파일 -->
     <link rel="stylesheet" type="text/css" href="../../CSS/common/common.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/common/footer.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/common/header.css">
     <link rel="stylesheet" type="text/css" href="../../CSS/member/findIdPwd.css">
     <!-- js 외부파일  -->
     <script src="../../JS/member/findIdPwd.js"></script>
-    
+    <script src="../../JS/common/common.js"></script>
 <title>Insert title here</title>
 </head>
 <body>
@@ -27,7 +29,7 @@
         <div id="wrapper">
             <!--header -->
             <header id="header">
-                headLine
+                <%@include file="../../views/common/header.jsp" %>
             </header>
 
             <div id="content">
