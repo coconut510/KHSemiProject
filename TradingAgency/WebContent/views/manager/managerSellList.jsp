@@ -25,16 +25,13 @@
 	src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css"
 	rel="stylesheet">
+<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css"
+	rel="stylesheet">
 
 
-<link rel="stylesheet"
-	href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-<script
-	src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-<script
-	src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+
 
 <!-- 사이드바와 네비를 위한 공통적인 스크립트파일과 css파일  -->
 <link rel="stylesheet" type="text/css" href="/CSS/manager/manager.css">
@@ -170,7 +167,7 @@
                                         <a href="/views/manager/managerBoard.jsp">게시판 현황</a>
                                     </li>
                                     <li>
-                                        <a href="/views/manager/managerQnABoard.jsp">Panels</a>
+                                        <a href="/views/manager/managerQnABoard.jsp">상담게시판</a>
                                     </li>
                                     <li>
                                         <a href="#">Tables</a>
@@ -250,9 +247,17 @@
 			<div class="row">
 				<div
 					class="col-md-10 col-md-offset-1 col-md-11 col-md-offset-1 main">
-
-					<h3>상품 정보 조회</h3>
-					<hr>
+<br>
+					<h3>상품 정보 조회</h3> 
+					<div class="row" style="float:right;">
+        <div class="btn-group btn-breadcrumb" >
+            <a href="#" class="btn btn-primary btn-sm"><i class="fas fa-home"></i></a>
+            <a href="#" class="btn btn-info btn-sm disabled" >상품관리</a>
+            <a href="#" class="btn btn-success btn-sm">상품조회</a>
+          
+        </div>
+	</div>
+				<br>
 					<form action="" method="post">
 						<table class="table table-bordered">
 							<tr>
@@ -325,12 +330,24 @@
 							</tr>
 							<!-- 조회결과 출력 -->
 						</table>
-						<button type="button" class="btn btn-outline-warning btn-sm">삭제</button>
+						<button type="button" class="btn btn-outline-warning btn-sm" onclick="sellDel();">삭제</button>
 					</div>
 				</div>
 			</div>
 		</div>
 		</main>
+		<script> 
+			function sellDel()
+			{
+				var result = window.confirm("정말 삭제하겠습니까??");
+				if(result==true)
+					{
+						alert("삭제되었습니다.");
+					}else{
+						alert("삭제가 취소되었습니다.");
+					}
+			}
+		</script>
 		
 </body>
 </html>
