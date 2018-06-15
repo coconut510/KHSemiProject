@@ -47,8 +47,7 @@ crossorigin="anonymous">
 <body>
  <center>
         <div id="wrapper" style="overflow:hidden;">
-          <header id="header"> <%@include
-				file="../../views/common/header.jsp"%> </header>
+          <header id="header"> <%@include file="../../views/common/header.jsp"%> </header>
             <br>
             <div id="content">
                 <div class="title">

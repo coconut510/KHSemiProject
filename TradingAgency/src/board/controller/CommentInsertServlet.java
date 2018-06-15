@@ -37,9 +37,9 @@ public class CommentInsertServlet extends HttpServlet {
 		if(session.getAttribute("user")!=null)
 		{
 			BoardComment bc = new BoardComment();
-			bc.setContent(request.getParameter("comment"));
-			bc.setUserId((Member)session.getAttribute("user")).getUserId());
-			bc.setNoticeNo(Integer.parseInt(request.getParameter("notice")));
+		//	bc.setContent(request.getParameter("comment"));
+		//	bc.setUserId((Member)session.getAttribute("user")).getUserId());
+		//	bc.setNoticeNo(Integer.parseInt(request.getParameter("notice")));
 			int result = new BoardService().commentInsert(bc); 
 			
 			if(result>0)
