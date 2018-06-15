@@ -7,11 +7,9 @@
 <title>내 정보</title>
    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <style>
-div {
-	background-color: white;
-}
-
-  .header{border:3px solid white;
+div{background-color: white;}
+    
+.header{border:3px solid white;
        background-color: #7151FC;
         width: auto;
         height: 100px;}
@@ -26,22 +24,18 @@ div {
     width: auto;
     height: 120px;
     }
-    .mpMenuItems{border: 3px solid white;
+    .mpMenuItems{border: 1px solid white;
     float: left;
     width: auto;
     height: 100%;
     }
-    
-    
-    .mpMenuAll{border: 3px solid none;
-	margin:0;padding:0;list-style-type:none;display:block;
-	  font: 50px/50px 'Lucida Grande', Verdana, sans-serif;
-	hieght:100%;
-	width:auto;
-	
+    .mpMenuAll{border: 1px solid #F2F2F2;
+    margin-bottom:10px;
+	list-style-type:none;
+	font: 15px/40px 'Lucida Grande', Verdana, sans-serif;	
     }
     ul.mpMenuAll li{
-	margin:0;padding:0;border-top:1px solid none;
+	margin:0;padding:0;border-top:1px solid #F2F2F2;
 	border-bottom:1px solid white;
 }
 ul.mpMenuAll li a{
@@ -53,33 +47,34 @@ ul.mpMenuAll li a:hover{
 	color:#7151FC;
 }
 
+ul.mpMenuItems li a.current,ul.vert-one li a.current:hover{
+background:black url("http://www.blueb.co.kr/data/201010/IJ12872476173279/vert-one_arrow.gif") no-repeat 0 9px;}
 
-ul.mpMenuItems li a.current, ul.vert-one li a.current:hover {
-	background: black
-		url("http://www.blueb.co.kr/data/201010/IJ12872476173279/vert-one_arrow.gif")
-		no-repeat 0 9px;
+
+
+.mpMenuTitle {
+	width: auto;
+	margin-top:55px;
+	height: 5%;
+	animation: background 1s linear infinite;
+	background: linear-gradient(90deg, rgba(150, 48, 30, 1) 0%,
+		rgba(199, 201, 88, 1) 10%, rgba(28, 147, 46, 1) 20%,
+		rgba(74, 165, 168, 1) 30%, rgba(89, 90, 165, 1) 40%,
+		rgba(84, 16, 67, 1) 50%, rgba(28, 58, 63, 1) 60%,
+		rgba(82, 175, 183, 1) 70%, rgba(78, 170, 76, 1) 80%,
+		rgba(150, 48, 30, 1) 90%, rgba(199, 201, 88, 1) 100%);
+	background-size: 1000% 100%;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
-
-    .mpMenuTitle
-    {   
-  width: auto;
-  height: 16.5%;
-  animation: background 1s linear infinite;
-  background: linear-gradient(90deg, rgba(150,48,30,1) 0%,rgba(199,201,88,1) 10%,rgba(28,147,46,1) 20%,rgba(74,165,168,1) 30%,rgba(89,90,165,1) 40%,rgba(84,16,67,1) 50%,rgba(28,58,63,1) 60%,rgba(82,175,183,1) 70%,rgba(78,170,76,1) 80%,rgba(150,48,30,1) 90%,rgba(199,201,88,1) 100%);
-  background-size: 1000% 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-top:50px;
-  margin-left:20px;
-    }
 
 .mpMenuAll {
 	position: static;
 	padding: inherit;
 	border: 3px solid none;
 	width: 100%;
-	height: 70%;
-	font-size: 30px;
+	height: 39%;
+	text-align:left;
 }
 
 .tapBtn {
@@ -102,11 +97,14 @@ ul.mpMenuItems li a.current, ul.vert-one li a.current:hover {
         float:inherit;
     }
 
-.MenuConTitle {
-	width: 100%;
-	height: 15%;
-	float: right;
-}
+    .MenuConTitle
+    {
+    	margin-top:30px;
+        width:100%;
+        height: 10%;
+        float: left;
+ 		text-align: justify;
+    }
 .insertTitle {
 	text-align: left;
 	width: 80px;
@@ -231,7 +229,7 @@ float:left;
 .deleteok {width: 100%;height: 5%;float: right;}
 .save {
 	width: 100px;
-	height: 30px;
+	height: 50px;
 	float: right;
 	position: relative;
 	display: inline-block;
@@ -270,7 +268,7 @@ float:left;
 	background: #7151FC;
 	text-align: center;
 	padding: 16px 18px 14px;
-	font-size: 30px;
+	font-size: 15px;
 	-webkit-transition: all 0.1s;
 	-moz-transition: all 0.1s;
 	transition: all 0.1s;
@@ -291,7 +289,7 @@ float:left;
 
 .phone {
 	position: relative;
-	width: 300px;
+	width: 265px;
 	display: inline-block;
 	color: #ecf0f1;
 	text-decoration: none;
@@ -301,7 +299,7 @@ float:left;
 	text-align: center;
 	padding: 16px 18px 14px;
 	margin: 12px;
-	font-size: 30px;
+	font-size: 25px;
 	-webkit-transition: all 0.1s;
 	-moz-transition: all 0.1s;
 	transition: all 0.1s;
@@ -345,18 +343,18 @@ body {
 }
 
 .save {
-	position: relative;
-	width: 100px;
+text-align:center;
+ 	height:60px;
+	width:80px;
 	display: inline-block;
 	color: #ecf0f1;
 	text-decoration: none;
 	border-radius: 5px;
 	border: solid 1px #7151FC;
 	background: #7151FC;
-	text-align: center;
 	padding: 16px 18px 14px;
 	margin: 12px;
-	font-size: 40px;
+	font-size: 20px;
 	-webkit-transition: all 0.1s;
 	-moz-transition: all 0.1s;
 	transition: all 0.1s;
@@ -385,7 +383,7 @@ body {
 	text-align: center;
 	padding: 16px 18px 14px;
 	margin: 12px;
-	font-size: 25px;
+	font-size: 15px;
 	-webkit-transition: all 0.1s;
 	-moz-transition: all 0.1s;
 	transition: all 0.1s;
@@ -562,8 +560,6 @@ body {
 					<H2>배송정보</H2>
 					</div>
 					<div class="deliveryright">
-						
-				
 						<!-- 주소1번째 -->
 						<div class="address1">
 								<div class="insertTitle"
@@ -595,11 +591,9 @@ body {
 								<div class="insertTitle"
 								style="margin-top: 20px; font-size: 20px"> </div>
 								<div>
-							
 							<input class="postcodify_details" id="user-addr2" ng-model="profile.addr2"
 								placeholder="상세주소" style="width: 300px; height: 40px;"
 								style="border:1px solid maroon; background:transparent;" name="addrDetail">
-
 						</div>
 					</div>
 				</div>
@@ -700,11 +694,14 @@ body {
 					</div>
 				</div>
 				<div class="deleteok">
-					<div><a href="#" class="delete">회원탈퇴</a><div>
-					<div><a href="#" class="save">확인</a><div>
-				</div>
-			</div>
-	</div>
+				
+				<form action="deleteComplate.jsp" method="post" style="display:inLine;">
+				<input type="submit" id="delBtn" value="회원탈퇴" class="delete" onclick="return deletecheck();" />
+				</form>
+					<div>
+						<div><button id="save" class="save">확인</button></div>
+					</div>
+					</div>
 	</div>
 	</center>
  <div class="menu-button"><i class="Qbtn"></i>
@@ -719,6 +716,25 @@ body {
    <script> $(function() { $("#postcodify_search_button").postcodifyPopUp(); }); </script> <!-- 주소 검색 -->
    <script src="//d1p7wdleee1q2z.cloudfront.net/post/search.min.js"></script> <!-- 주소 api -->
    <script type="text/javascript" src="/JS/bootstrap/bootstrap.js"></script>
+<script>
+var swi = false;
+function deletecheck(){
+	if(swi==false){
+		var result = window.confirm("계정을 삭제하면 개인 정보 및 거래 내역이 모두 삭제됩니다.             그래도 계정을 삭제하시겠습니까?                                              전화번호 또는 이메일을 변경하고 싶다면 기본정보에서                   변경할 수 있습니다.");
+		if(result){
+			session.invalidate();
+			alert('탈퇴하였습니다');
+			
+		swi =true;
+		}else{
+		alert('취소했어양!! ^ㅅ^');
+		}
+	}else{
+	return true;
+}
+	return false;
+}
+</script>
 
 	</center>
 	<div class="footer">푸터</div>

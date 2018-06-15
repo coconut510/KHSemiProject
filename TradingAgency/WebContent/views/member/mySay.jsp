@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"    pageEncoding="EUC-KR"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -7,9 +6,9 @@
 <title>알림설정</title>
 <style>
 
-    div{background-color: white;}
+ div{background-color: white;}
     
-    .header{border:3px solid white;
+.header{border:3px solid white;
        background-color: #7151FC;
         width: auto;
         height: 100px;}
@@ -24,22 +23,20 @@
     width: auto;
     height: 120px;
     }
-    .mpMenuItems{border: 3px solid white;
+    .mpMenuItems{border: 1px solid white;
     float: left;
     width: auto;
     height: 100%;
     }
     
     
-    .mpMenuAll{border: 3px solid none;
-	margin:0;padding:0;list-style-type:none;display:block;
-	  font: 50px/50px 'Lucida Grande', Verdana, sans-serif;
-	hieght:100%;
-	width:auto;
-	
+    .mpMenuAll{border: 1px solid #F2F2F2;
+    margin-bottom:10px;
+	list-style-type:none;
+	font: 15px/40px 'Lucida Grande', Verdana, sans-serif;	
     }
     ul.mpMenuAll li{
-	margin:0;padding:0;border-top:1px solid none;
+	margin:0;padding:0;border-top:1px solid #F2F2F2;
 	border-bottom:1px solid white;
 }
 ul.mpMenuAll li a{
@@ -51,13 +48,12 @@ ul.mpMenuAll li a:hover{
 	color:#7151FC;
 }
 
-
 ul.mpMenuItems li a.current,ul.vert-one li a.current:hover{
 background:black url("http://www.blueb.co.kr/data/201010/IJ12872476173279/vert-one_arrow.gif") no-repeat 0 9px;}
-    
 .mpMenuTitle {
 	width: auto;
-	height: 16.5%;
+	margin-top:55px;
+	height: 5%;
 	animation: background 1s linear infinite;
 	background: linear-gradient(90deg, rgba(150, 48, 30, 1) 0%,
 		rgba(199, 201, 88, 1) 10%, rgba(28, 147, 46, 1) 20%,
@@ -68,8 +64,6 @@ background:black url("http://www.blueb.co.kr/data/201010/IJ12872476173279/vert-o
 	background-size: 1000% 100%;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	margin-top: 50px;
-	margin-left: 20px;
 }
     .mpMenuAll
     {
@@ -77,8 +71,8 @@ background:black url("http://www.blueb.co.kr/data/201010/IJ12872476173279/vert-o
         padding: inherit;
         border:3px solid none;
         width: 100%;
-        height: 70%; 
-        font-size: 30px;
+        height: 39%; 
+        text-align:left;
     }  
     
     
@@ -103,9 +97,11 @@ background:black url("http://www.blueb.co.kr/data/201010/IJ12872476173279/vert-o
     }
     .MenuConTitle
     {
+    	margin-top:30px;
         width:100%;
-        height: 20%;
-        float: right;
+        height: 10%;
+        float: left;
+ 		text-align: justify;
     }
     .MenuCon
     {
@@ -690,7 +686,7 @@ p.caption {
 				</ul>
             </div>
             <div class="MenuContents">
-                 <div class="MenuConTitle"><H2>알림 설정</H2></div>
+                 <div class="MenuConTitle"><H2>알림 설정</H2></div><hr>
        		<div class="bluelight">
 			<a href="/index.jsp">준비중<img alt="" src="/../../img/wow.gif"></a>
 			</div>

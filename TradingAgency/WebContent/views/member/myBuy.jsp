@@ -7,9 +7,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>판매내역</title>
 <style>
+body {
+	font: 13px/20px 'Lucida Grande', Verdana, sans-serif;
+	color: #404040;
+	background: white;
+}
 div{background-color: white;}
     
-   .header{border:3px solid white;
+.header{border:3px solid white;
        background-color: #7151FC;
         width: auto;
         height: 100px;}
@@ -24,22 +29,20 @@ div{background-color: white;}
     width: auto;
     height: 120px;
     }
-    .mpMenuItems{border: 3px solid white;
+    .mpMenuItems{border: 1px solid white;
     float: left;
     width: auto;
     height: 100%;
     }
     
     
-    .mpMenuAll{border: 3px solid none;
-	margin:0;padding:0;list-style-type:none;display:block;
-	  font: 50px/50px 'Lucida Grande', Verdana, sans-serif;
-	hieght:100%;
-	width:auto;
-	
+    .mpMenuAll{border: 1px solid #F2F2F2;
+    margin-bottom:10px;
+	list-style-type:none;
+	font: 15px/40px 'Lucida Grande', Verdana, sans-serif;	
     }
     ul.mpMenuAll li{
-	margin:0;padding:0;border-top:1px solid none;
+	margin:0;padding:0;border-top:1px solid #F2F2F2;
 	border-bottom:1px solid white;
 }
 ul.mpMenuAll li a{
@@ -51,45 +54,32 @@ ul.mpMenuAll li a:hover{
 	color:#7151FC;
 }
 
-
 ul.mpMenuItems li a.current,ul.vert-one li a.current:hover{
 background:black url("http://www.blueb.co.kr/data/201010/IJ12872476173279/vert-one_arrow.gif") no-repeat 0 9px;}
-    
-       .mpMenuTitle
-    {   
-  width: auto;
-  height: 16.5%;
-  animation: background 1s linear infinite;
-  background: linear-gradient(90deg, rgba(150,48,30,1) 0%,rgba(199,201,88,1) 10%,rgba(28,147,46,1) 20%,rgba(74,165,168,1) 30%,rgba(89,90,165,1) 40%,rgba(84,16,67,1) 50%,rgba(28,58,63,1) 60%,rgba(82,175,183,1) 70%,rgba(78,170,76,1) 80%,rgba(150,48,30,1) 90%,rgba(199,201,88,1) 100%);
-  background-size: 1000% 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-top:50px;
-  margin-left:20px;
-    }
+.mpMenuTitle {
+	width: auto;
+	margin-top:55px;
+	height: 5%;
+	animation: background 1s linear infinite;
+	background: linear-gradient(90deg, rgba(150, 48, 30, 1) 0%,
+		rgba(199, 201, 88, 1) 10%, rgba(28, 147, 46, 1) 20%,
+		rgba(74, 165, 168, 1) 30%, rgba(89, 90, 165, 1) 40%,
+		rgba(84, 16, 67, 1) 50%, rgba(28, 58, 63, 1) 60%,
+		rgba(82, 175, 183, 1) 70%, rgba(78, 170, 76, 1) 80%,
+		rgba(150, 48, 30, 1) 90%, rgba(199, 201, 88, 1) 100%);
+	background-size: 1000% 100%;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
     .mpMenuAll
     {
         position: static;
         padding: inherit;
         border:3px solid none;
         width: 100%;
-        height: 70%; 
-        font-size: 30px;
+        height: 39%; 
+        text-align: justify;
     }  
-    
-    
-    .tapBtn
-    {
-        margin: 0px;
-        border: 1px solid gray;
-        width: 100%;
-        height: 10%;
-    }
-    .tapBtn:hover{
-       /* border:2px solid white;*/
-        color: rebeccapurple;
-        font-size: 31px;
-    }   
     .MenuContents
     {
         position: static;
@@ -99,9 +89,11 @@ background:black url("http://www.blueb.co.kr/data/201010/IJ12872476173279/vert-o
     }
     .MenuConTitle
     {
+    	margin-top:30px;
         width:100%;
-        height: 20%;
-        float: right;
+        height: 10%;
+        float: left;
+ 		text-align: justify;
     }
     .MenuCon
     {
@@ -139,11 +131,6 @@ background:black url("http://www.blueb.co.kr/data/201010/IJ12872476173279/vert-o
 	top: 4px;
 }
     
-    body {
-  font: 13px/20px 'Lucida Grande', Verdana, sans-serif;
-  color: #404040;
-  background: white;
-}
 
 .container {
   margin: 50px auto;
@@ -390,7 +377,8 @@ th.specalt {
             </div>
 
             <div class="MenuContents">
-                 <div class="MenuConTitle"><H2>구매 내역</H2></div>
+                 <div class="MenuConTitle"><H2>구매 내역</H2>
+                </div> <hr>
                 <div class="MenuCon">  <div class="table-users">
 
 <% ArrayList<Member> list = (ArrayList<Member>)request.getAttribute("userList"); %>

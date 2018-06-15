@@ -11,12 +11,6 @@
   background-color:#F2F2F2;
 }
 
-
-
-body
-{
-  background-color:#eee
-}
 .wrap
 {
   margin:50px auto 0 auto;
@@ -158,9 +152,9 @@ box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
     width:400px;
   }
 }
-    div{background-color: white;}
+div{background-color: white;}
     
-    .header{border:3px solid white;
+.header{border:3px solid white;
        background-color: #7151FC;
         width: auto;
         height: 100px;}
@@ -175,22 +169,20 @@ box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
     width: auto;
     height: 120px;
     }
-    .mpMenuItems{border: 3px solid white;
+    .mpMenuItems{border: 1px solid white;
     float: left;
     width: auto;
     height: 100%;
     }
     
     
-    .mpMenuAll{border: 3px solid none;
-	margin:0;padding:0;list-style-type:none;display:block;
-	  font: 50px/50px 'Lucida Grande', Verdana, sans-serif;
-	hieght:100%;
-	width:auto;
-	
+    .mpMenuAll{border: 1px solid #F2F2F2;
+    margin-bottom:10px;
+	list-style-type:none;
+	font: 15px/40px 'Lucida Grande', Verdana, sans-serif;	
     }
     ul.mpMenuAll li{
-	margin:0;padding:0;border-top:1px solid none;
+	margin:0;padding:0;border-top:1px solid #F2F2F2;
 	border-bottom:1px solid white;
 }
 ul.mpMenuAll li a{
@@ -205,26 +197,29 @@ ul.mpMenuAll li a:hover{
 ul.mpMenuItems li a.current,ul.vert-one li a.current:hover{
 background:black url("http://www.blueb.co.kr/data/201010/IJ12872476173279/vert-one_arrow.gif") no-repeat 0 9px;}
     
-    .mpMenuTitle
-    {   
-  width: auto;
-  height: 16.5%;
-  animation: background 1s linear infinite;
-  background: linear-gradient(90deg, rgba(150,48,30,1) 0%,rgba(199,201,88,1) 10%,rgba(28,147,46,1) 20%,rgba(74,165,168,1) 30%,rgba(89,90,165,1) 40%,rgba(84,16,67,1) 50%,rgba(28,58,63,1) 60%,rgba(82,175,183,1) 70%,rgba(78,170,76,1) 80%,rgba(150,48,30,1) 90%,rgba(199,201,88,1) 100%);
-  background-size: 1000% 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-top:50px;
-  margin-left:20px;
-    }
+.mpMenuTitle {
+	width: auto;
+	margin-top:55px;
+	height: 5%;
+	animation: background 1s linear infinite;
+	background: linear-gradient(90deg, rgba(150, 48, 30, 1) 0%,
+		rgba(199, 201, 88, 1) 10%, rgba(28, 147, 46, 1) 20%,
+		rgba(74, 165, 168, 1) 30%, rgba(89, 90, 165, 1) 40%,
+		rgba(84, 16, 67, 1) 50%, rgba(28, 58, 63, 1) 60%,
+		rgba(82, 175, 183, 1) 70%, rgba(78, 170, 76, 1) 80%,
+		rgba(150, 48, 30, 1) 90%, rgba(199, 201, 88, 1) 100%);
+	background-size: 1000% 100%;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
     .mpMenuAll
     {
         position: static;
         padding: inherit;
         border:3px solid none;
         width: 100%;
-        height: 70%; 
-        font-size: 30px;
+        height: 39%; 
+        text-align: justify;
     }  
     
     
@@ -246,10 +241,13 @@ background:black url("http://www.blueb.co.kr/data/201010/IJ12872476173279/vert-o
         width: 70%;
         height: 100%;
     }
-    .MenuConTitle{
-      width:100%;
-      height: 20%;
-      float: right;
+     .MenuConTitle
+    {
+    	margin-top:30px;
+        width:100%;
+        height: 10%;
+        float: left;
+ 		text-align: justify;
     }
    .MenuCon1{
    width:100%;
@@ -554,6 +552,7 @@ table tr:hover td {
             <div class="MenuContents">
             
                 <div class="MenuConTitle"><H2>내 쿠폰</H2></div>
+                <hr>
 
 <div class="MenuCon1"><!-- 테이블창 -->
 <div class="table-users">
