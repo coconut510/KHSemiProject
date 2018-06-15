@@ -31,7 +31,8 @@
             <header id="header">
                 <%@include file="../../views/common/header.jsp" %>
             </header>
-
+			<br>
+			<hr>	
             <div id="content">
                 <ul class="nav nav-tabs">
                     <li> <a href="#tab2" data-toggle="tab">&nbsp;아이디 찾기&nbsp;&nbsp;&nbsp;</a></li>
