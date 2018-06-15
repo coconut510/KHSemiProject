@@ -134,6 +134,38 @@
 					</div>
 			</div>
 			</div>
+			<div id=comment> 
+			 <form action="/commentInsert" method="post">
+			 <%if(((Member)session.getAttribute("user"))==null){%>
+			 <textarea rows="5" cols="100" name="comment" readonly placeholder="로그인한 사용자만 댓글 작성이 가능합니다."
+			style="resize:none;" onclick="login();"><w/textarea><br>
+			<%}else{%>
+			 <textarea rows="5" cols="100" name="comment" placeholder="댓글을 작성하세요" style="resize:none;"></textarea><br>
+			 <input type="hidden" name="noticeNo" value=<%=b.getNoticeNo()%> />
+			 <input type="submit" value="댓글작성" /> 
+			 </form>
+			 <%}%>
+			 <%for(BoardComment bc : list){%>
+			 작성자 : <%=bc.getUserId()%> / 작성일 : <%=bc.getRegDate()%> / <br> 
+			 <label id=<%=bc.getCommentNo()%>><%=bc.getContent()%></label>
+  			<%if(((Member)session.getAttribute("user"))!=null && ((Member)session.getAttribute("user")).getUserId().equals(bc.getUserId())){%>
+  			<form action="commentInsert" method="post" style="display:inline;"> 
+  			<input type="hidden" name="comment" id="<%=bc.getCommentNo()%>_input" value="<%=nc.getContent()%>"/>
+		    <input type="hidden" name="commentNo" value="<%=bc.getCommentNo()%>"/>
+			<input type="hidden" name="noticeNo" value="<%=bc.getNoticeNo()%>" />
+			<button type="button" id="<%=bc.getCommentNo()%>_btn" onclick="modify(<%=bc.getCommentNo()%>);">수정</button>
+			<input type="hidden" id="<%=bc.getCommentNo()%>_submit" value="수정">
+			<button type="button" id="<%=bc.getCommentNo()%>_reBtn" style="display:none;" onclick="cancle(<%=bc.getCommentNo()%>);">취소</button>
+			</form>
+			<form action="commentDelete" method="post" style="display:inline;"> 
+			<input type="hidden" name="noticeNo" value="<%=bc.getNoticeNo()%>" />
+			<input type="hidden" name="commentNo" value="<%=bc.getCommentNo()%>" /> 
+			<input type="submit" value="삭제">
+			</form>
+			<%}%>			 
+			<br>
+			<%}%>
+			</div>
 			</section>
 		</div>
 		<footer id="footer">
