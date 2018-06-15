@@ -53,7 +53,7 @@ crossorigin="anonymous">
 
 <body>
 	<center>
-		<div id="wrapper" style="font-family: 'Sunflower', sans-serif;">
+		<div id="wrapper" style="overflow:hidden;">
 			<!-- header -->
 			<header id="header"> <%@include file="/views/common/header.jsp"%> </header>
 			<br>

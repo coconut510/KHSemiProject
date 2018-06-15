@@ -49,7 +49,7 @@ crossorigin="anonymous">
 <body>
 
 	<center>
-		<div id="wrapper">
+		<div id="wrapper" style="overflow:hidden;" >
 
 			<header id="header"> <%@include
 				file="/views/common/header.jsp"%> </header>
