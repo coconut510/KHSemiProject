@@ -35,13 +35,20 @@
 <!-- 외부css파일  -->
 <link rel="stylesheet" type="text/css" href="/CSS/common/common.css">
 <link rel="stylesheet" type="text/css" href="/CSS/member/myCart2.css">
-<link rel="stylesheet" type="text/css" href="../../CSS/common/header.css">
+<link rel="stylesheet" type="text/css"
+	href="../../CSS/common/header.css">
 <!-- 외부 js파일  -->
-
+<script type="text/javascript" src="../../JS/member/myCart2.js"></script>
 <!-- 주소 검색 -->
-	<script> $(function() { $("#postcodify_search_button").postcodifyPopUp(); }); </script> <!-- 주소 검색 -->
-	<script src="//d1p7wdleee1q2z.cloudfront.net/post/search.min.js"></script> <!-- 주소 api -->
-	<script type="text/javascript" src="/JS/bootstrap/bootstrap.js"></script>
+<script>
+	$(function() {
+		$("#postcodify_search_button").postcodifyPopUp();
+	});
+</script>
+<!-- 주소 검색 -->
+<script src="//d1p7wdleee1q2z.cloudfront.net/post/search.min.js"></script>
+<!-- 주소 api -->
+<script type="text/javascript" src="/JS/bootstrap/bootstrap.js"></script>
 <title>주문하기 (step2)</title>
 </head>
 <body>
@@ -49,10 +56,9 @@
 	<center>
 		<div id="wrapper">
 			<!-- header -->
-			<header id="header">
-				<%@include file="/views/common/header.jsp"%>
-			</header>
-		
+			<header id="header"> <%@include
+				file="/views/common/header.jsp"%> </header>
+
 			<br>
 			<div id="content">
 				<div id="orderStepSec">
@@ -76,9 +82,8 @@
 						</ul>
 					</div>
 				</div>
-<br>
-				<br>
-				<div id="deliveryInfo" style="margin-bottom:80px;">
+				<br> <br>
+				<div id="deliveryInfo" style="margin-bottom: 80px;">
 					<h2>주문정보</h2>
 					<hr>
 					<h3 style="float: left;">배송지</h3>
@@ -86,25 +91,25 @@
 					<div class="input-group input-group-sm mb-3"
 						style="width: 300px; float: left;">
 						<input type="text" class="form-control" aria-label="Small"
-							aria-describedby="inputGroup-sizing-sm" placeholder="받는 분">
+							aria-describedby="inputGroup-sizing-sm" placeholder="받는 분" name="memberName" id="memberName">
 					</div>
 					<div class="input-group input-group-sm mb-3"
 						style="width: 300px; float: left;">
 						<input type="tel" class="form-control" aria-label="Small"
 							aria-describedby="inputGroup-sizing-sm"
-							placeholder="휴대폰번호(숫자만입력)">
+							placeholder="휴대폰번호(숫자만입력)" name="phone" id="phone">
 					</div>
 					<br> <br>
 					<div class="input-group input-group-sm mb-3"
 						style="width: 300px; float: left;">
 						<div class="input-group-prepend"></div>
 						<input type="email" class="form-control" aria-label="Small"
-							aria-describedby="inputGroup-sizing-sm" placeholder="이메일주소">
+							aria-describedby="inputGroup-sizing-sm" placeholder="이메일주소" name="email" id="email">
 					</div>
 					<div class="input-group input-group-sm mb-3"
 						style="width: 300px; float: left;">
 						<input type="text" class="form-control" aria-label="Small"
-							aria-describedby="inputGroup-sizing-sm" placeholder="주소검색">
+							aria-describedby="inputGroup-sizing-sm" placeholder="주소" name="address" id="address">
 					</div>
 					<br> <br> <br> <br>
 					<button type="button" class="btn btn-secondary btn-sm"
@@ -115,7 +120,7 @@
 					<div class="input-group input-group-sm mb-3"
 						style="width: 400px; float: left;">
 						<input type="text" class="form-control" aria-label="Small"
-							aria-describedby="inputGroup-sizing-sm" placeholder="상세주소">
+							aria-describedby="inputGroup-sizing-sm" placeholder="상세주소" name="detailAddress" id="detailAddress">
 					</div>
 					<br> <br> <br> <br> <br>
 
@@ -123,8 +128,32 @@
 					<hr>
 					<br> <input type="button" value="신용카드" class="payButton"><input
 						type="button" value="무통장입금(가상계좌)" class="payButton">
+					
+					<script type="text/javascript">
+					$(document).ready(function(){
+						var memberName = $("#memberName").text();
+						var email = $("#email").val();
+						var phone = $("#phone").val();
+						var detailAddress = $("#detailAddress").val();
+						var address = $("#address").val();
+						
+						
+						$("#orderBtn").click(function(){
+							console.log(memberName);	
+							if(memberName ==""|| email =="" || phone =="" || detailAddress ==""|| address =="" ){
+								
+								alert("값을 다 입력해줘!");
+								location.reload();	
+								
+							}else{
+									
+								alert("잘했어");
+								location.href("/index.jsp");
+							}
+						});
+					});
 
-
+					</script>
 				</div>
 
 				<div id="orderListInfo">
@@ -132,16 +161,21 @@
 					<h2>결제상품</h2>
 					<hr>
 					<div id="goodsInfo">
-						<img src="../../img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg"
+						<img
+							src="../../img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg"
 							style="width: 100px; height: 100px; float: left;">
-							
+
 						<div id="goodsName">[새상품] 삼성 22인치 모니터 S22F350</div>
 						<div id="goodsPrice">151,000원</div>
 					</div>
 
 					<script type="text/javascript">
 						function availableCouponsBtn() {
-							window.open("/views/member/availableCoupons.jsp","pop","toolbar=no,location=no,status=no,menubar=no,scrollbars=auto,width=400px,height=500px");
+							window
+									.open(
+											"/views/member/availableCoupons.jsp",
+											"pop",
+											"toolbar=no,location=no,status=no,menubar=no,scrollbars=auto,width=400px,height=500px");
 						}
 					</script>
 
@@ -167,13 +201,15 @@
 							<span>결제 금액</span> <span>-원</span>
 						</div>
 						<div>
-						<script type="text/javascript">
-						function orderBtn() {
-							location.href="/views/member/myCart3.jsp";
-							
-						}</script>
+							<script type="text/javascript">
+								function orderBtn() {
+									location.href = "/views/member/myCart3.jsp";
+
+								}
+							</script>
 							<!--  외부 API 결제시스템 반영 or 기존에 적립한 포인트로 결제하는 방법  -->
-							<button type="button" class="btn btn-secondary" onclick="orderBtn();"
+							<button type="button" class="btn btn-secondary"
+								id = "orderBtn"
 								style="width: 300px; height: 50px; margin-right: 15px;">주문하기</button>
 						</div>
 					</div>

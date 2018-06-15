@@ -38,7 +38,7 @@
 <link rel="stylesheet" type="text/css"
 	href="../../CSS/common/header.css">
 <!-- 외부 js파일  -->
-<script type="text/javascript" src="/JS/member/myCart.js"></script>
+<script type="text/javascript" src="../../JS/member/myCart.js"></script>
 <title>장바구니 (step1)</title>
 </head>
 
@@ -99,11 +99,11 @@
 						</thead>
 
 						<tbody>
-						<!--  장바구니하는 개수만큼 장바구니에 리스트 출력하는 구문  -->
+							<!--  장바구니하는 개수만큼 장바구니에 리스트 출력하는 구문  -->
 							<c:forEach begin="0" end="cartList.length-1" step="1">
 								<tr style="height: auto;" id="infoSelectTr">
 									<td scope="row" style="width: 10%;"><input type="checkbox"
-										style="margin-top: 50px;" name="chk" id="allCheckBox" /></td>
+										style="margin-top: 50px;" name="chk" id="oneCheckBox" /></td>
 									<td style="width: 30%;">
 										<div class="orderGoodsInfo1">
 											<img
@@ -134,8 +134,7 @@
 							</c:forEach>
 						</tbody>
 					</table>
-					<br>
-					<br>
+					<br> <br>
 				</div>
 
 
@@ -170,7 +169,27 @@
 					<div class="cart_billing_price" style="float: right;">????????</div>
 				</div>
 				<br> <br>
-
+				<script type="text/javascript">
+				
+				
+				
+				$(document).ready(function() {
+					$("#purchaseBtn").click(function() {
+						var check = $("input:checkbox[name='chk']").is(':checked');
+						if (check == 0) {
+							alert("주문상품을 체크해주세요 ");
+							location.reload();
+						} else if (check > 1) {
+							alert("주문상품을 하나만 체크해주세요");
+				
+						} else {
+							alert("주문페이지 넘기기 성공");
+							location.href = "../../views/member/myCart2.jsp";
+						}
+					});
+				});
+				
+				</script>
 				<div class="purchase">
 					<button type="button" class="btn btn-info" id="purchaseBtn">구매하기</button>
 				</div>
