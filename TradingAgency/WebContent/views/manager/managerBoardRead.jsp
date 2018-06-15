@@ -173,7 +173,7 @@
 									<ul>
 										<li><a href="/views/manager/managerBoard.jsp">게시판 현황</a>
 										</li>
-										<li><a href="/views/manager/managerQnABoard.jsp">Q&A게시판</a>
+										<li><a href="/views/manager/managerQnABoard.jsp">상담게시판</a>
 										</li>
 										<li><a href="#">Tables</a></li>
 									</ul>
@@ -222,7 +222,10 @@
 					class="col-md-10 col-md-offset-1 col-md-11 col-md-offset-1 main">
 			
 				<br><br>
-				
+		
+          
+        </div>
+	</div>
 					<div id="boardRead">
 						<span id="titleRead"> <!-- 제목 -->
 						제목  : <input type="text" readonly id="title"/>

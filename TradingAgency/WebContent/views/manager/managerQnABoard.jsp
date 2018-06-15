@@ -167,7 +167,7 @@
                                         <a href="/views/manager/managerBoard.jsp">게시판 현황</a>
                                     </li>
                                     <li>
-                                        <a href="/views/manager/managerQnABoard.jsp">Q&A게시판</a>
+                                        <a href="/views/manager/managerQnABoard.jsp">상담게시판</a>
                                     </li>
                                     <li>
                                         <a href="#">Tables</a>
@@ -249,7 +249,13 @@
 					
 					<br><br>
 					<h3>Q&A게시판</h3>
-					<hr>
+							<div class="row" style="float:right;">
+        <div class="btn-group btn-breadcrumb" >
+            <a href="#" class="btn btn-primary btn-sm"><i class="fas fa-home"></i></a>
+            <a href="#" class="btn btn-info btn-sm disabled" >게시판&상담</a>
+            <a href="#" class="btn btn-success btn-sm">Q&A게시판</a>
+            </div></div><br>
+					
 					<table class="table">
 						<tr>
 							<th>No</th><th>제목</th><th>작성자</th><th>작성일</th>

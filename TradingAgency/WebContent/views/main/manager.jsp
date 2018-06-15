@@ -141,7 +141,7 @@
 									<ul>
 										<li><a href="/views/manager/managerBoard.jsp">게시판 현황</a>
 										</li>
-										<li><a href="/views/manager/managerQnABoard.jsp">Q&A게시판</a>
+										<li><a href="/views/manager/managerQnABoard.jsp">상담게시판</a>
 										</li>
 										<li><a href="#">Tables</a></li>
 									</ul>
@@ -244,7 +244,7 @@
 								});
 							</script>
 							<div id="salesResult"
-								style="height: 400px; width: 520px; background-color: blue; float: left;">
+								style="height: 400px; width: 510px; background-color: blue; float: left;">
 								아배고프다.</div>
 						</div>
 
@@ -252,14 +252,14 @@
 							<div id="order" style="height: 400px; width: 535px; background-color: pink; float: left;">그래프</div>
 
 							<div id="salesResult"
-								style="height: 400px; width: 520px; background-color: yellow; float: left;">
+								style="height: 400px; width: 510px; background-color: yellow; float: left;">
 								아배고프다.</div>
 						</div>
 						<div role="tabpanel" class="tab-pane fade" id="memberStatus">
 							<div id="memberGraph"
 								style="height: 400px; width: 535px; background-color: pink; float: left;"></div>
 							<div id="memberResult"
-								style="height: 400px; width: 520px; background-color: blue; float: left;">
+								style="height: 400px; width: 510px; background-color: blue; float: left;">
 								<table class="table">
 									<tr>
 										<th>날짜</th>

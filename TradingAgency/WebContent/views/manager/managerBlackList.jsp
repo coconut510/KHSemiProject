@@ -170,7 +170,7 @@
                                         <a href="/views/manager/managerBoard.jsp">게시판 현황</a>
                                     </li>
                                     <li>
-                                        <a href="/views/manager/managerQnABoard.jsp">Q&A게시판</a>
+                                        <a href="/views/manager/managerQnABoard.jsp">상담게시판</a>
                                     </li>
                                     <li>
                                         <a href="#">Tables</a>
@@ -251,7 +251,12 @@
 					class="col-md-10 col-md-offset-1 col-md-11 col-md-offset-1 main">
 
 					<h3>블랙리스트 회원 보기</h3>
-					<hr>
+					<div class="row" style="float:right;">
+        <div class="btn-group btn-breadcrumb" >
+            <a href="#" class="btn btn-primary btn-sm"><i class="fas fa-home"></i></a>
+            <a href="#" class="btn btn-info btn-sm disabled" >회원관리</a>
+            <a href="#" class="btn btn-success btn-sm">블랙리스트 </a>
+            </div></div><br>
 					<table class="table">
 							<tr>
 								<th>체크</th>
