@@ -875,7 +875,8 @@
 
 		<!-- footer -->
 		<footer id="footer">
-		<div id="footerTest"></div>
+	<!-- 	<div id="footerTest"> -->
+		<%@ include file="/views/common/footerTemp.html" %><!-- </div> -->
 		</footer>
 		</div>
 	</center>
