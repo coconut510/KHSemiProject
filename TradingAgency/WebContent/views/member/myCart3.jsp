@@ -27,12 +27,11 @@
 		<link href="https://fonts.googleapis.com/css?family=Sunflower:300"
 			rel="stylesheet">
 		<!-- 외부css파일  -->
-		<link rel="stylesheet" type="text/css"
-			href="../../CSS/member/myCart3.css">
-		<link rel="stylesheet" type="text/css"
-			href="../../CSS/common/common.css">
-		<link rel="stylesheet" type="text/css"
-			href="../../CSS/common/header.css">
+		<link rel="stylesheet" type="text/css" href="../../CSS/member/myCart3.css">		
+		<link rel="stylesheet" type="text/css" href="../../CSS/common/common.css">
+	    <link rel="stylesheet" type="text/css" href="../../CSS/common/adv.css">
+	    <link rel="stylesheet" type="text/css" href="../../CSS/common/footer.css">
+	    <link rel="stylesheet" type="text/css" href="../../CSS/common/header.css">
 		<title>주문완료</title>
 
 <style>
@@ -43,9 +42,7 @@
 	<center>
 		<div id="wrapper" style="font-family: 'Sunflower', sans-serif;">
 			<!-- header -->
-			<header id="header"> <%@include
-				file="/views/common/header.jsp"%> </header>
-
+			<header id="header"> <%@include file="/views/common/header.jsp"%> </header>
 			<br>
 			<div id="content">
 				<div id="orderStepSec">
@@ -104,11 +101,8 @@
 											<div class="orderGoodsOption">(옵션:색상-그레이)</div>
 										</div>
 									</td>
-									<td style="padding-top: 30px;"><span
-										style="font-size: 15px;" id="orderquantity">1</span> <br>
-									</td>
-									<td style="padding-top: 30px;"><span
-										style="font-size: 15px;">총결제금액</span></td>
+									<td style="padding-top: 50px;"><span style="font-size: 15px;" id="orderquantity">1</span> <br></td>
+									<td style="padding-top: 50px;"><span style="font-size: 15px;">총결제금액</span></td>										
 								</tr>
 							</tbody>
 						</table>

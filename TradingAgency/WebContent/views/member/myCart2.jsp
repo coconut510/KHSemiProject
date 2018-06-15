@@ -33,8 +33,10 @@
 <!-- 외부css파일  -->
 <link rel="stylesheet" type="text/css" href="/CSS/common/common.css">
 <link rel="stylesheet" type="text/css" href="/CSS/member/myCart2.css">
-<link rel="stylesheet" type="text/css"
-	href="../../CSS/common/header.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/common/common.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/common/adv.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/common/footer.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/common/header.css">
 <!-- 외부 js파일  -->
 <script src="../../JS/member/myCart2.js"></script>
 
@@ -203,18 +205,19 @@
 							<div>
 								<span>결제 금액</span> <span>-원</span>
 							</div>
-							<div>
 								<script type="text/javascript">
 									function orderBtn() {
 										location.href = "/views/member/myCart3.jsp";
 
 									}
 								</script>
+							<div style="padding-left:16px;">
 								<!--  외부 API 결제시스템 반영 or 기존에 적립한 포인트로 결제하는 방법  -->
-								<button type="button" class="btn btn-secondary" id="orderBtn"
+								<button type="button" class="btn btn-secondary" id="orderBtn" 
 									style="width: 300px; height: 50px; margin-right: 15px;">주문하기</button>
+									
 							</div>
-
+							<br>
 						</div>
 					</div>
 				</div>

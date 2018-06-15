@@ -33,8 +33,9 @@
 <!-- 외부css파일  -->
 <link rel="stylesheet" type="text/css" href="/CSS/member/myCart.css">
 <link rel="stylesheet" type="text/css" href="/CSS/common/common.css">
-<link rel="stylesheet" type="text/css"
-	href="../../CSS/common/header.css">
+<link rel="stylesheet" type="text/css" href="../../CSS/common/adv.css">
+<link rel="stylesheet" type="text/css" href="../../CSS/common/footer.css">
+<link rel="stylesheet" type="text/css" href="../../CSS/common/header.css">
 <!-- 외부 js파일  -->
 <script type="text/javascript" src="../../JS/member/myCart.js"></script>
 <title>장바구니 (step1)</title>
