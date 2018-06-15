@@ -1,70 +1,28 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-
 <head>
-    <meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<!--  Jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
     <!-- 구글 폰트 -->
     <link href="https://fonts.googleapis.com/css?family=Sunflower:300" rel="stylesheet">
-
-    <!-- css 외부파일 -->
+   <!-- css 외부파일 -->
     <link rel="stylesheet" type="text/css" href="../../CSS/common/common.css">
-    <title>아이디찾기</title>
-    <style>
-        html,
-        body {
-            margin: 0 auto;
-            font-family: 'Sunflower', sans-serif;
-        }
-
-        #wrapper {
-            width: 100%;
-            height: auto;
-            font-family: 'Sunflower', sans-serif;
-        }
-
-
-        #footer {
-            width: 100%;
-            height: 250px;
-            background-color: green;
-        }
-
-        #nextBtn {
-            width: 100px;
-            height: 40px;
-
-        }
-
-        #certificationBtn {
-            margin-left: 5px;
-        }
-
-        table {
-            text-align: center;
-        }
-
-        table td {
-            padding-right: 20px;
-        }
-
-        .title {
-            width: 100%;
-            height: 100px;
-            font-size: 50px;
-            padding-top: 10px;
-            background-color: skyblue;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="../../CSS/member/findIdPwd.css">
+    <!-- js 외부파일  -->
+    <script src="../../JS/member/findIdPwd.js"></script>
+    
+<title>Insert title here</title>
 </head>
-
 <body>
-    <center>
+ <center>
         <!--wrapper -->
         <div id="wrapper">
             <!--header -->
@@ -80,13 +38,13 @@
                 <div class="tab-content">
                     <div class="tab-pane active show" id="tab2">
                         <div class="title">
-                            아이디 찾기
+                       		     아이디 찾기
                         </div>
                         <br><br>
                         <div id="findIdContainer">
                             <div>
                                 <h4>본인확인 이메일 인증</h4>
-                                <h7>등록한 이메일 주소와 입력한 이메일 주소가 같아야, 인증번호를 받을 수 있습니다.</h7>
+                                <h6>등록한 이메일 주소와 입력한 이메일 주소가 같아야, 인증번호를 받을 수 있습니다.</h6>
                             </div>
                             <br>
                             <hr>
@@ -96,7 +54,7 @@
                                         <td>이름</td>
                                         <td>
                                             <div class="input-group mb-3">
-                                                <input type="text" class="form-control" placeholder="이름을 입력해주세요" aria-label="Username" aria-describedby="basic-addon1" name="memberName" style="width:300px; height:50px;">
+                                                <input type="text" class="form-control" placeholder="이름을 입력해주세요" aria-label="Username" aria-describedby="basic-addon1" name="memberName_id" id=""style="width:300px; height:50px;">
                                             </div>
                                         </td>
                                     </tr>
@@ -104,17 +62,17 @@
                                         <td>이메일주소</td>
                                         <td>
                                             <div class="input-group mb-3">
-                                                <input type="text" class="form-control" placeholder="메일 주소를 입력해주세요" aria-label="Username" aria-describedby="basic-addon1" name="memberEmail" style="width:300px; height:50px;">
+                                                <input type="text" class="form-control" placeholder="메일 주소를 입력해주세요" aria-label="Username" aria-describedby="basic-addon1" name="memberEmail_id" style="width:300px; height:50px;">
                                             </div>
                                         </td>
                                         <td>
 
-                                            <button type="button" class="btn btn-secondary" name="certificationBtn" id="certificationBtn" style=" margin-bottom:16px; height:45px;">인증번호받기<button></td>
+                                            <button type="button" class="btn btn-secondary" name="certificationBtn" id="IdcertificationBtn" style=" margin-bottom:16px; height:45px;" onclick="IdcertificationBtn();">인증번호받기</button></td>
                                     </tr>
                                     <tr>
                                         <td></td>
                                         <td><div class="input-group mb-3">
-                                                <input type="text" class="form-control" placeholder="인증번호" aria-label="Username" aria-describedby="basic-addon1" name="certificationNum" style="width:300px; height:50px;">
+                                                <input type="text" class="form-control" placeholder="인증번호" aria-label="Username" aria-describedby="basic-addon1" name="IDcertificationNum" style="width:300px; height:50px;)">
                                             </div>
                                         </td>
                                         <td></td>
@@ -122,13 +80,8 @@
                         </table>
                     </div>
                     <br><hr><br>
-                    <script>
-                    function findIDBtn(){
-                        location.href="findIdComplete.html";
-                    }            
-                    </script>
                     <div>
-                        <button type="button" class="btn btn-secondary" id="nextBtn" onclick="findIDBtn();">다음<button>
+                        <button type="button" class="btn btn-secondary" id="nextBtn" onclick="findIDBtn();">다음</button>
                     </div>
                     <br>
                 </div>
@@ -136,13 +89,13 @@
 
             <div class="tab-pane" id="tab3">
                 <div class="title">
-                    비밀번호찾기
+              		      비밀번호찾기
                 </div>
-    <br><br>
+    			<br><br>
                 <div id="findIdContainer">
                     <div>
                         <h4>본인확인 이메일 인증</h4>
-                        <h7>등록한 이메일 주소와 입력한 이메일 주소가 같아야, 인증번호를 받을 수 있습니다.</h7>
+                        <h6>등록한 이메일 주소와 입력한 이메일 주소가 같아야, 인증번호를 받을 수 있습니다.</h6>
                     </div>
                     <br>
                     <hr>
@@ -152,7 +105,7 @@
                                 <td>이름</td>
                                 <td>
                                     <div class="input-group mb-3">
-                                        <input type="text" class="form-control" placeholder="이름을 입력해주세요" aria-label="Username" aria-describedby="basic-addon1" name="memberName" id="memberName" style="width:300px; height:50px;">
+                                        <input type="text" class="form-control" placeholder="이름을 입력해주세요" aria-label="Username" aria-describedby="basic-addon1" name="memberName" id="memberName_pwd" style="width:300px; height:50px;">
                                     </div>
                                 </td>
                             </tr>
@@ -160,7 +113,7 @@
                                 <td>아이디</td>
                                 <td>
                                     <div class="input-group mb-3">
-                                        <input type="text" class="form-control" placeholder="아이디을 입력해주세요" aria-label="Username" aria-describedby="basic-addon1" name="memberId" id="memberId" style="width:300px; height:50px;">
+                                        <input type="text" class="form-control" placeholder="아이디을 입력해주세요" aria-label="Username" aria-describedby="basic-addon1" name="memberId" id="memberId_pwd" style="width:300px; height:50px;">
                                     </div>
                                 </td>
                             </tr>
@@ -168,17 +121,17 @@
                                 <td>이메일주소</td>
                                 <td>
                                     <div class="input-group mb-3">
-                                        <input type="text" class="form-control" placeholder="메일 주소를 입력해주세요" aria-label="Username" aria-describedby="basic-addon1" name="memberEmail" id="memberEmail" style="width:300px; height:50px;">
+                                        <input type="text" class="form-control" placeholder="메일 주소를 입력해주세요" aria-label="Username" aria-describedby="basic-addon1" name="memberEmail" id="memberEmail_pwd" style="width:300px; height:50px;">
                                     </div>
                                 </td>
                                 <td>
 
-                                    <button type="button" class="btn btn-secondary" name="certificationBtn" id="certificationBtn" style=" margin-bottom:16px; height:45px;" id="certificationNum">인증번호받기<button></td>
+                                    <button type="button" class="btn btn-secondary" name="certificationBtn" id="certificationBtn" style=" margin-bottom:16px; height:45px;" id="PwdcertificationNum" onclick="PwdcertificationNum();">인증번호받기</button></td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td><div class="input-group mb-3">
-                                        <input type="text" class="form-control" placeholder="인증번호" aria-label="Username" aria-describedby="basic-addon1" name="certificationNum" style="width:300px; height:50px;">
+                                        <input type="text" class="form-control" placeholder="인증번호" aria-label="Username" aria-describedby="basic-addon1" name="PwdcertificationNum" style="width:300px; height:50px;">
                                     </div>
                                 </td>
                                 <td></td>
@@ -187,14 +140,9 @@
                         </table>
                     </div>
                     <br><hr><br>
-                    <script>
-                        function resetPwd(){
-                        
-                        location.href="../../views/member/resetPwd.html";
-                        }
-                    </script>
+        
                     <div>
-                        <button type="button" class="btn btn-secondary" id="nextBtn" onclick = "resetPwd();">다음<button>
+                        <button type="button" class="btn btn-secondary" id="PwdnextBtn" onclick = "resetPwd();">다음</button>
                     </div>
                     <br>
                 </div>
@@ -208,8 +156,8 @@
             <footer id="footer">
                  footer
             </footer>
-                    </div>
+          </div>
+                   
     </center>
 </body>
-
 </html>

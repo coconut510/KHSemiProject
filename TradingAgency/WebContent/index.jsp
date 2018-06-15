@@ -52,7 +52,7 @@
 		<div id="wrapper">
 			<!-- header -->
 			<header id="header"> 
-			<%@include file="/views/common/header.jsp"%>
+			<%@include file="../../views/common/header.jsp"%>
 				 <!--   <div id="navigator"></div> -->
 			</header>
 
