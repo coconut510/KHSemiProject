@@ -23,7 +23,7 @@
 	float: left;
 	display: inline-block;
 	width: 100%;
-	overflow: auto;
+	/*overflow: auto;*/
 }
 
 .menuBtn {
@@ -43,7 +43,7 @@
 .noticeTab{
 	display:none;
 }
-.vlLong {
+.hlLongBold {
 	width: 100%;
 	height: 2px;
 	background-color: lightgray;
