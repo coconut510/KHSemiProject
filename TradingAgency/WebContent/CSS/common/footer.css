@@ -3,10 +3,7 @@
             text-decoration-color: black;
         }
        
-        .content{
-            
-            
-        }
+    
         #footerTitle{
             width:800px;
             float:left;
@@ -43,7 +40,7 @@
             overflow: auto;
             margin-bottom:30px;
             overflow-x: none; 
-            margin-left: 280px;
+            margin-left: 20px;
 
         }
         #footerDetailGroup div{
@@ -147,7 +144,7 @@
         #footerBottom{
             overflow: auto;
              width:1200px;
-            margin-left: 260px;
+            margin-left: -60px;
         }
         .bottombar{
              overflow: auto;

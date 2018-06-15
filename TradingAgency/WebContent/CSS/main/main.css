@@ -3,19 +3,19 @@
 @charset "UTF-8";
 
 #wrapper {
-   font-family: 'Roboto Slab', serif;
+   /*font-family: 'Roboto Slab', serif;*/
    background-color: white;
 }
 
 .card-img-top {
    width: 100%;
-   height: 0200px;
+   height: 200px;
 }
 /*-광고영역 css*/
 #middleAdSec, #imgSliderSec {
    width: 100%;
    height: auto;
-   font-family: 'Roboto Slab', serif;
+   /*font-family: 'Roboto Slab', serif;*/
 }
 
 /*  나머지 섹션 css - */
@@ -23,7 +23,7 @@
    #bestItemSec2 {
    width: 100%;
    height: auto;
-   font-family: 'Roboto Slab', serif;
+ /*  font-family: 'Roboto Slab', serif;*/
 }
 
 #newProductSec{
