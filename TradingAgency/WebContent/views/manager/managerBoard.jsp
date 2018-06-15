@@ -114,109 +114,64 @@
 					<!-- sidebar-header  -->
 
 					<div class="sidebar-menu">
-                    <ul>
-                        <li class="header-menu">
-                            <span>SELL:F 운영 관리</span>
-                        </li>
-                        <li class="sidebar-dropdown">
-                            <a href="#">
-                                <i class="fa fa-shopping-cart"></i>
-                                <span>상품관리</span>
-                                <span class="badge badge-pill badge-danger">New</span>
-                            </a>
-                            <div class="sidebar-submenu">
-                                <ul>
-                                    <li>
-                                        <a href="/views/manager/managerSellList.jsp">상품 정보 조회
-                                            <span class="badge badge-pill badge-success">Pro</span>
-                                        </a>
-                                    </li>
-                                   
-                                    <li>
-                                        <a href="#">Dashboard 3</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="sidebar-dropdown">
-                            <a href="#">
-                               <i class="fa fa-users" aria-hidden="true"></i>
-                                <span>회원 관리</span>
-                                <span class="badge badge-pill badge-primary">3</span>
-                            </a>
-                            <div class="sidebar-submenu">
-                                <ul>
-                                    <li>
-                                        <a href="/views/manager/managerMemberSelect.jsp">회원 정보 조회
-                                            
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="/views/manager/managerBlackList.jsp">블랙리스트</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="sidebar-dropdown">
-                            <a href="#">
-                                <i class="far fa-gem"></i>
-                                <span>게시판 & 상담</span>
-                            </a>
-                            <div class="sidebar-submenu">
-                                <ul>
-                                    <li>
-                                        <a href="/views/manager/managerBoard.jsp">게시판 현황</a>
-                                    </li>
-                                    <li>
-                                        <a href="/views/manager/managerQnABoard.jsp">Panels</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Tables</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            
-                        </li>
-                       
-                        <li class="sidebar-dropdown">
-                            <a href="#">
-                                <i class="fa fa-globe"></i>
-                                <span>통계&분석</span>
-                            </a>
-                            <div class="sidebar-submenu">
-                                <ul>
-                                    <li>
-                                        <a href="#">Web 분석</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">회원-상품 통계</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="header-menu">
-                            <span>Extra</span>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-calendar"></i>
-                                <span>통계</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-folder"></i>
-                                <span>Examples</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-book"></i>
-                                <span>Documentation</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+						<ul>
+							<li class="header-menu"><span>SELL:F 운영 관리</span></li>
+							<li class="sidebar-dropdown"><a href="#"> <i
+									class="fa fa-shopping-cart"></i> <span>상품관리</span> <span
+									class="badge badge-pill badge-danger">New</span>
+							</a>
+								<div class="sidebar-submenu">
+									<ul>
+										<li><a href="/views/manager/managerSellList.jsp">상품
+												정보 조회 <span class="badge badge-pill badge-success">Pro</span>
+										</a></li>
+
+										<li><a href="#">Dashboard 3</a></li>
+									</ul>
+								</div></li>
+							<li class="sidebar-dropdown"><a href="#"> <i
+									class="fa fa-users" aria-hidden="true"></i> <span>회원 관리</span>
+									<span class="badge badge-pill badge-primary">3</span>
+							</a>
+								<div class="sidebar-submenu">
+									<ul>
+										<li><a href="/views/manager/managerMemberSelect.jsp">회원
+												정보 조회 </a></li>
+										<li><a href="/views/manager/managerBlackList.jsp">블랙리스트</a>
+										</li>
+									</ul>
+								</div></li>
+							<li class="sidebar-dropdown"><a href="#"> <i
+									class="far fa-gem"></i> <span>게시판 & 상담</span>
+							</a>
+								<div class="sidebar-submenu">
+									<ul>
+										<li><a href="/views/manager/managerBoard.jsp">게시판 현황</a>
+										</li>
+										<li><a href="/views/manager/managerQnABoard.jsp">상담게시판</a>
+										</li>
+										<li><a href="#">Tables</a></li>
+									</ul>
+								</div></li>
+
+							<li class="sidebar-dropdown"><a href="#"> <i
+									class="fa fa-globe"></i> <span>통계&분석</span>
+							</a>
+								<div class="sidebar-submenu">
+									<ul>
+										<li><a href="#">Web 분석</a></li>
+										<li><a href="#">회원-상품 통계</a></li>
+									</ul>
+								</div></li>
+							<li class="header-menu"><span>Extra</span></li>
+							<li><a href="#"> <i class="fa fa-calendar"></i> <span>통계</span>
+							</a></li>
+							<li><a href="#"> <i class="fa fa-folder"></i> <span>Examples</span>
+							</a></li>
+							<li><a href="#"> <i class="fa fa-book"></i> <span>Documentation</span>
+							</a></li>
+						</ul>
+					</div>
 					<div class="sidebar-footer">
 						<a href="#"> <i class="fas fa-angle-up"></i> <span
 							class="badge badge-pill badge-warning notification">3</span>
@@ -239,20 +194,31 @@
 
 			<div class="row">
 				<div
-					class="col-md-10 col-md-offset-1 col-md-11 col-md-offset-1 main"> <!-- 내용집어넣는 곳입니다. -->
-					<br> <br>
+					class="col-md-10 col-md-offset-1 col-md-11 col-md-offset-1 main">
+					<!-- 내용집어넣는 곳입니다. -->
+					<br>
 					<h3>게시판</h3>
+					<div class="row" style="float:right;">
+						<div class="btn-group btn-breadcrumb">
+							<a href="#" class="btn btn-primary btn-sm"><i
+								class="fas fa-home"></i></a> <a href="#"
+								class="btn btn-info btn-sm disabled">게시판&상담</a> 
+								<a href="#"
+								class="btn btn-success btn-sm">게시판 현황</a>
+						</div>
+					</div>
+					<br><br>
 					<div id="noticePan">
 						<ul class="nav nav-pills nav-fill" role="tablist">
-							<li class="nav-item">
-								<a class="nav-link active" href="#noticeBoard" data-toggle="tab" role="tab" aria-controls="noticeBoard" aria-selected="true">공지사항</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#freeBoard" data-toggle="tab" role="tab" aria-controls="freeBoard" aria-selected="false">자유게시판</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#reviewBoard" data-toggle="tab" role="tab" aria-controls="reviewBoard" aria-selected="false">리뷰게시판</a>
-							</li>
+							<li class="nav-item"><a class="nav-link active"
+								href="#noticeBoard" data-toggle="tab" role="tab"
+								aria-controls="noticeBoard" aria-selected="true">공지사항</a></li>
+							<li class="nav-item"><a class="nav-link" href="#freeBoard"
+								data-toggle="tab" role="tab" aria-controls="freeBoard"
+								aria-selected="false">자유게시판</a></li>
+							<li class="nav-item"><a class="nav-link" href="#reviewBoard"
+								data-toggle="tab" role="tab" aria-controls="reviewBoard"
+								aria-selected="false">리뷰게시판</a></li>
 
 						</ul>
 						<div class="tab-content" id="TabContent">
@@ -274,7 +240,7 @@
 									</tr>
 								</table>
 							</div>
-							
+
 							<!--  -->
 							<div id="freeBoard" class="tab-pane fade">
 								<table class="table">
@@ -294,7 +260,7 @@
 									</tr>
 								</table>
 							</div>
-							
+
 							<!--  -->
 							<div id="reviewBoard" class="tab-pane fade">
 								<table class="table">
