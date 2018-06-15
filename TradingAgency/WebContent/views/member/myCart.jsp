@@ -4,13 +4,6 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<!-- Required meta tags -->
-<meta charset="utf-8">
-<!-- <meta name="viewport"
-	content="width=device-width, initial-scale=1, shrink-to-fit=no"> 영훈오빠 주석요청--> 
 <!-- Bootstrap  -->
 <link rel="stylesheet"
 href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -27,19 +20,29 @@ crossorigin="anonymous"></script>
 src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
 integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
 crossorigin="anonymous"></script>
-<!-- 구글 폰트 -->
-<link href="https://fonts.googleapis.com/css?family=Sunflower:300"
-	rel="stylesheet">
-<!-- 외부css파일  -->
+
+<!-- jQuery 링크걸기 -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+crossorigin="anonymous">
+</script>
+
+<!-- ajax 링크걸기  -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- 내부 링크건 CSS -->
+<link rel="stylesheet" href="../../CSS/bootstrap/bootstrap.min.css" />
 <link rel="stylesheet" type="text/css" href="../../CSS/member/myCart.css">
 <link rel="stylesheet" type="text/css" href="../../CSS/common/common.css">
-<link rel="stylesheet" type="text/css" href="../../CSS/common/adv.css">
-<link rel="stylesheet" type="text/css" href="../../CSS/common/footer.css">
 <link rel="stylesheet" type="text/css" href="../../CSS/common/header.css">
-<!-- 외부 js파일  -->
+<link rel="stylesheet" type="text/css" href="../../CSS/common/adv.css">	
+<!-- 내부 js파일 -->
+<script type="text/javascript" src="../../JS/common/header.js?ver=1"></script>
 <script type="text/javascript" src="../../JS/member/myCart.js"></script>
-<!-- <script type="text/javascript" src="../../JS/common/header.js"></script> -->
 <script type="text/javascript" src="../../JS/common/adv.js"></script>
+<script type="text/javascript" src="../../JS/bootstrap/bootstrap.min.js"></script>
+<!-- 구글 폰트 -->
+<link href="https://fonts.googleapis.com/css?family=Sunflower:300" rel="stylesheet">
+
 <title>장바구니 (step1)</title>
 </head>
 
@@ -91,11 +94,10 @@ crossorigin="anonymous"></script>
 						style="table-layout: fixed; margin: auto; text-align: center;">
 						<thead>
 							<tr>
-								<th scope="col" style="width: 10%;"><input type="checkbox"
-									id="allCheckBox" /></th>
-								<th scope="col" style="width: 30%;">주문상품</th>
-								<th scope="col">수량</th>
-								<th scope="col">상품금액</th>
+								<th scope="col" style="width: 10%; padding-left:45px;"><input type="checkbox" id="allCheckBox" /></th>
+								<th scope="col" style="width: 30%; padding-left:45px;">주문상품</th>
+								<th scope="col" style="padding-left:140px;">수량</th>
+								<th scope="col" style="padding-left:140px;">상품금액</th>
 							</tr>
 						</thead>
 

@@ -47,13 +47,11 @@
 
 <script type="text/javascript" src="../../JS/common/adv.js"></script>
 
-
 <title>메인페이지</title>
 </head>
 
 <body>
 	<center>
-
 		<!-- Wrapper -->
 		<div id="wrapper">
 			<!-- header -->
@@ -69,7 +67,7 @@
 						<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
 						<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
 					</ol>
-					<div class="carousel-inner">
+					<div class="carousel-inner" style="width:100%;">
 						<div class="carousel-item active">
 							<a href="index.jsp"><img class="d-block w-100"
 								src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
@@ -121,7 +119,7 @@
 									<div class="container">
 										<div class="row" style="margin-left: 15px;">
 
-											<div class="col-xs-3" style="width: 23%;">
+											<div class="col-xs-3" style="width: 25%;">
 												<a href="#"> <img class="card-img-top"
 													src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
 													alt="Card image cap"></a>
@@ -133,7 +131,7 @@
 
 												</div>
 											</div>
-											<div class="col-xs-3" style="width: 23%;">
+											<div class="col-xs-3" style="width: 25%;">
 												<a href="#"> <img class="card-img-top"
 													src="img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg"
 													alt="Card image cap"></a>
@@ -146,7 +144,7 @@
 												</div>
 											</div>
 
-											<div class="col-xs-3" style="width: 23%;">
+											<div class="col-xs-3" style="width: 25%;">
 												<a href="#"> <img class="card-img-top"
 													src="img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg"
 													alt="Card image cap"></a>
@@ -157,7 +155,7 @@
 													<p class="card-text">product explanation</p>
 												</div>
 											</div>
-											<div class="col-xs-3" style="width: 23%;">
+											<div class="col-xs-3" style="width: 25%;">
 												<a href="#"> <img class="card-img-top"
 													src="img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg"
 													alt="Card image cap">
@@ -178,7 +176,7 @@
 
 										<div class="row" style="margin-left: 15px;">
 
-											<div class="col-xs-3" style="width: 23%;">
+											<div class="col-xs-3" style="width: 25%;">
 												<a href="#"> <img class="card-img-top"
 													src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
 													alt="Card image cap"></a>
@@ -190,7 +188,7 @@
 
 												</div>
 											</div>
-											<div class="col-xs-3" style="width: 23%;">
+											<div class="col-xs-3" style="width: 25%;">
 												<a href="#"> <img class="card-img-top"
 													src="img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg"
 													alt="Card image cap"></a>
@@ -202,7 +200,7 @@
 												</div>
 											</div>
 
-											<div class="col-xs-3" style="width: 23%;">
+											<div class="col-xs-3" style="width: 25%;">
 												<a href="#"> <img class="card-img-top"
 													src="img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg"
 													alt="Card image cap"></a>
@@ -213,7 +211,7 @@
 													<p class="card-text">product explanation</p>
 												</div>
 											</div>
-											<div class="col-xs-3" style="width: 23%;">
+											<div class="col-xs-3" style="width: 25%;">
 												<a href="#"> <img class="card-img-top"
 													src="img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg"
 													alt="Card image cap">
@@ -234,7 +232,7 @@
 
 										<div class="row" style="margin-left: 15px;">
 
-											<div class="col-xs-3" style="width: 23%;">
+											<div class="col-xs-3" style="width: 25%;">
 												<a href="#"> <img class="card-img-top"
 													src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
 													alt="Card image cap"></a>
@@ -246,7 +244,7 @@
 
 												</div>
 											</div>
-											<div class="col-xs-3" style="width: 23%;">
+											<div class="col-xs-3" style="width: 25%;">
 												<a href="#"> <img class="card-img-top"
 													src="img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg"
 													alt="Card image cap"></a>
@@ -258,7 +256,7 @@
 												</div>
 											</div>
 
-											<div class="col-xs-3" style="width: 23%;">
+											<div class="col-xs-3" style="width: 25%;">
 												<a href="#"> <img class="card-img-top"
 													src="img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg"
 													alt="Card image cap"></a>
@@ -271,7 +269,7 @@
 												</div>
 											</div>
 
-											<div class="col-xs-3" style="width: 23%;">
+											<div class="col-xs-3" style="width: 25%;">
 												<a href="#"> <img class="card-img-top"
 													src="img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg"
 													alt="Card image cap">
@@ -289,24 +287,21 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-xs-3" style="width: 23%;">
+						</div>
+							<div class="col-xs-3" style="width: 20%;position: absolute;top: 0; height: 100%;">
 								<a class="carousel-control-prev" href="#carouselExampleControls"
 									id="prevBTN" role="button" data-slide="prev"> <span
 									class="carousel-control-prev-icon" aria-hidden="true"></span> <span
 									class="sr-only">이전</span>
 								</a>
 							</div>
-							<div class="col-xs-3" style="width: 23%;">
+							<div class="col-xs-3" style="width: 20%;position: absolute;top: 0; right:0; height: 100%; ">
 								<a class="carousel-control-next" href="#carouselExampleControls"
 									id="nextBTN" role="button" data-slide="next"> <span
 									class="carousel-control-next-icon" aria-hidden="true"></span> <span
 									class="sr-only">다음</span>
 								</a>
-							</div>
-
-
 						</div>
-
 
 
 					</div>
@@ -457,25 +452,24 @@
 
 
 				<div id="imghoverSec">
-					<center>
 						<div class="container">
 
 							<div class="row">
-								<div class="col-xs-4" style="width: 30%; margin-right: 33.5px;">
+								<div class="col-xs-4" style="width: 30%;">
 									<div class="shadow">
 										<a href="#"><img
 											src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
 											width="100%" height="100%"></a>
 									</div>
 								</div>
-								<div class="col-xs-4" style="width: 30%; margin-right: 33.5px;">
+								<div class="col-xs-4" style="width: 30%;">
 									<div class="shadow">
 										<a href="#"><img
 											src="img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg"
 											width="100%" height="100%"></a>
 									</div>
 								</div>
-								<div class="col-xs-4" style="width: 30%; margin-right: 33.5px;">
+								<div class="col-xs-4" style="width: 30%;">
 									<div class="shadow">
 										<a href="#"><img
 											src="img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg"
@@ -486,7 +480,6 @@
 							</div>
 
 						</div>
-					</center>
 				</div>
 			</div>
 			<br> <br>
@@ -496,7 +489,7 @@
 
 				<div id="carouselExampleFade" class="carousel slide carousel-fade"
 					data-ride="carousel">
-					<div class="carousel-inner">
+					<div class="carousel-inner" style="width:100%;">
 						<div class="carousel-item active">
 							<a href="#"><img class="d-block w-100"
 								src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"

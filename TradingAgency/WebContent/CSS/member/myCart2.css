@@ -51,6 +51,7 @@ html, body {
 	border: 1px solid black;
 	width: 100%;
 	height: auto;
+	padding-bottom:30px;
 }
 
 #orderListInfo_detail {
