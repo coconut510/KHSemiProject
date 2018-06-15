@@ -67,12 +67,12 @@
                                         </td>
                                         <td>
 
-                                            <button type="button" class="btn btn-secondary" name="certificationBtn" id="IdcertificationBtn" style=" margin-bottom:16px; height:45px;">인증번호받기</button></td>
+                                            <button type="button" class="btn btn-secondary" name="certificationBtn" id="IdcertificationBtn" style=" margin-bottom:16px; height:45px;" onclick="IdcertificationBtn();">인증번호받기</button></td>
                                     </tr>
                                     <tr>
                                         <td></td>
                                         <td><div class="input-group mb-3">
-                                                <input type="text" class="form-control" placeholder="인증번호" aria-label="Username" aria-describedby="basic-addon1" name="IDcertificationNum" style="width:300px; height:50px;">
+                                                <input type="text" class="form-control" placeholder="인증번호" aria-label="Username" aria-describedby="basic-addon1" name="IDcertificationNum" style="width:300px; height:50px;)">
                                             </div>
                                         </td>
                                         <td></td>
@@ -105,7 +105,7 @@
                                 <td>이름</td>
                                 <td>
                                     <div class="input-group mb-3">
-                                        <input type="text" class="form-control" placeholder="이름을 입력해주세요" aria-label="Username" aria-describedby="basic-addon1" name="memberName" id="memberName" style="width:300px; height:50px;">
+                                        <input type="text" class="form-control" placeholder="이름을 입력해주세요" aria-label="Username" aria-describedby="basic-addon1" name="memberName" id="memberName_pwd" style="width:300px; height:50px;">
                                     </div>
                                 </td>
                             </tr>
@@ -113,7 +113,7 @@
                                 <td>아이디</td>
                                 <td>
                                     <div class="input-group mb-3">
-                                        <input type="text" class="form-control" placeholder="아이디을 입력해주세요" aria-label="Username" aria-describedby="basic-addon1" name="memberId" id="memberId" style="width:300px; height:50px;">
+                                        <input type="text" class="form-control" placeholder="아이디을 입력해주세요" aria-label="Username" aria-describedby="basic-addon1" name="memberId" id="memberId_pwd" style="width:300px; height:50px;">
                                     </div>
                                 </td>
                             </tr>
@@ -121,12 +121,12 @@
                                 <td>이메일주소</td>
                                 <td>
                                     <div class="input-group mb-3">
-                                        <input type="text" class="form-control" placeholder="메일 주소를 입력해주세요" aria-label="Username" aria-describedby="basic-addon1" name="memberEmail" id="memberEmail" style="width:300px; height:50px;">
+                                        <input type="text" class="form-control" placeholder="메일 주소를 입력해주세요" aria-label="Username" aria-describedby="basic-addon1" name="memberEmail" id="memberEmail_pwd" style="width:300px; height:50px;">
                                     </div>
                                 </td>
                                 <td>
 
-                                    <button type="button" class="btn btn-secondary" name="certificationBtn" id="certificationBtn" style=" margin-bottom:16px; height:45px;" id="certificationNum">인증번호받기</button></td>
+                                    <button type="button" class="btn btn-secondary" name="certificationBtn" id="certificationBtn" style=" margin-bottom:16px; height:45px;" id="PwdcertificationNum" onclick="PwdcertificationNum();">인증번호받기</button></td>
                             </tr>
                             <tr>
                                 <td></td>
