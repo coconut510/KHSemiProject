@@ -5,6 +5,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+<script
+  src="http://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <!-- 내부 링크건 CSS -->
@@ -134,48 +140,56 @@
 				</div>
 				<div id="bottomBtnList">
 					<div class="menuBtn" style="float: left;">목록</div>
-					<div class="menuBtn">댓글달기</div>
+					<div class="menuBtn" id="comment">댓글달기</div>
 					<div class="menuBtn" style="float: right;">뒤로가기</div>
 				</div>
 			</div>
-			<div id=comment> 
-			 <form action="/commentInsert" method="post">
-			 <%if(((Member)session.getAttribute("user"))==null){%>
-			 <textarea rows="5" cols="100" name="comment" readonly placeholder="로그인한 사용자만 댓글 작성이 가능합니다."
-			style="resize:none;" onclick="login();"><w/textarea><br>
-			<%}else{%>
-			 <textarea rows="5" cols="100" name="comment" placeholder="댓글을 작성하세요" style="resize:none;"></textarea><br>
-			 <input type="hidden" name="noticeNo" value=<%=b.getNoticeNo()%> />
-			 <input type="submit" value="댓글작성" /> 
-			 </form>
-			 <%}%>
-			 <%for(BoardComment bc : list){%>
-			 작성자 : <%=bc.getUserId()%> / 작성일 : <%=bc.getRegDate()%> / <br> 
-			 <label id=<%=bc.getCommentNo()%>><%=bc.getContent()%></label>
-  			<%if(((Member)session.getAttribute("user"))!=null && ((Member)session.getAttribute("user")).getUserId().equals(bc.getUserId())){%>
-  			<form action="commentInsert" method="post" style="display:inline;"> 
-  			<input type="hidden" name="comment" id="<%=bc.getCommentNo()%>_input" value="<%=nc.getContent()%>"/>
-		    <input type="hidden" name="commentNo" value="<%=bc.getCommentNo()%>"/>
-			<input type="hidden" name="noticeNo" value="<%=bc.getNoticeNo()%>" />
-			<button type="button" id="<%=bc.getCommentNo()%>_btn" onclick="modify(<%=bc.getCommentNo()%>);">수정</button>
-			<input type="hidden" id="<%=bc.getCommentNo()%>_submit" value="수정">
-			<button type="button" id="<%=bc.getCommentNo()%>_reBtn" style="display:none;" onclick="cancle(<%=bc.getCommentNo()%>);">취소</button>
-			</form>
-			<form action="commentDelete" method="post" style="display:inline;"> 
-			<input type="hidden" name="noticeNo" value="<%=bc.getNoticeNo()%>" />
-			<input type="hidden" name="commentNo" value="<%=bc.getCommentNo()%>" /> 
-			<input type="submit" value="삭제">
-			</form>
-			<%}%>			 
-			<br>
-			<%}%>
+			<div id="commentArea">
+				<div id="newCommentArea">
+				  	<div id="CommentWriterId"></div><br>
+				  	<div id= "CommentContext"></div>
+				</div>
+				<textarea rows="6" cols="140" style="display:none" id="commentTextArea"> </textarea>
+				<div id="commentBtn" style="display:none">작성완료<br></div>
 			</div>
 			</section>
 		</div>
-		<footer id="footer"> <%@include
-			file="../../views/common/footer.jsp"%> <!--  <div id="footerTest" style="width:100%; height:300px; background-color:gray;"></div>-->
+		<footer id="footer"> <%@include file="../../views/common/footer.jsp"%> <!--  <div id="footerTest" style="width:100%; height:300px; background-color:gray;"></div>-->
 		</footer>
 	</center>
+	<script> 
 
+	$(document).ready(function(){
+		$('#comment').click(function(){
+		 $('#commentTextArea').slideToggle(500);
+		 $('#commentBtn').slideToggle(500);
+			$('#commentTextArea:visible');
+		});
+		
+		$('#commentBtn').click(function(){
+			var writer =$('#CommentWriterId'); 
+			var str = "";
+			str = "테스트작성자이름"; 
+			writer.html(str);
+			$('#CommentContext').html($('#commentTextArea').val());
+			$('#commentTextArea').val("");
+			$('#commentTextArea').slideToggle(500);
+			 $('#commentBtn').slideToggle(500);
+		});
+	});
+
+</script>
+<style> 
+    #CommentWriterId
+    {
+    float:left;
+    font-weight:800;
+    }
+	#CommentContext
+    {
+    float:left;
+    }
+
+</style>
 </body>
 </html>
