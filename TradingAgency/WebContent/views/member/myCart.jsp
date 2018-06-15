@@ -4,44 +4,45 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<!-- Required meta tags -->
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- Bootstrap  -->
+<link rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+crossorigin="anonymous"></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+crossorigin="anonymous"></script>
+<script
+src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+crossorigin="anonymous"></script>
 
 <!-- jQuery 링크걸기 -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-	crossorigin="anonymous"></script>
+integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+crossorigin="anonymous">
+</script>
+
+<!-- ajax 링크걸기  -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-
 <!-- 내부 링크건 CSS -->
 <link rel="stylesheet" href="../../CSS/bootstrap/bootstrap.min.css" />
-<link rel="stylesheet" href="../../CSS/common/common.css" />
-<link rel="stylesheet" href="../../CSS/main/productListMain.css" />
-
-<script type="text/javascript" src="../../JS/common/header.js?ver=1"></script>
-<script type="text/javascript" src="../../JS/common/adv.js"></script>
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-
-<!-- 내부 js파일 -->
-<script
-	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-	integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-	crossorigin="anonymous"></script>
-<script src="../../JS/bootstrap/bootstrap.min.js"></script>
-<!-- 구글 폰트 -->
-<link href="https://fonts.googleapis.com/css?family=Sunflower:300" rel="stylesheet">
-<!-- 외부css파일  -->
-<link rel="stylesheet" type="text/css" href="/CSS/member/myCart.css">
-<link rel="stylesheet" type="text/css" href="/CSS/common/common.css">
+<link rel="stylesheet" type="text/css" href="../../CSS/member/myCart.css">
+<link rel="stylesheet" type="text/css" href="../../CSS/common/common.css">
 <link rel="stylesheet" type="text/css" href="../../CSS/common/header.css">
 <link rel="stylesheet" type="text/css" href="../../CSS/common/adv.css">	
-<!-- 외부 js파일  -->
-<script type="text/javascript" src="/JS/member/myCart.js"></script>
+<!-- 내부 js파일 -->
+<script type="text/javascript" src="../../JS/common/header.js?ver=1"></script>
+<script type="text/javascript" src="../../JS/member/myCart.js"></script>
+<script type="text/javascript" src="../../JS/common/adv.js"></script>
+<script type="text/javascript" src="../../JS/bootstrap/bootstrap.min.js"></script>
+<!-- 구글 폰트 -->
+<link href="https://fonts.googleapis.com/css?family=Sunflower:300" rel="stylesheet">
+
 <title>장바구니 (step1)</title>
 </head>
 
@@ -93,20 +94,19 @@
 						style="table-layout: fixed; margin: auto; text-align: center;">
 						<thead>
 							<tr>
-								<th scope="col" style="width: 10%;"><input type="checkbox"
-									id="allCheckBox" /></th>
-								<th scope="col" style="width: 30%;">주문상품</th>
-								<th scope="col">수량</th>
-								<th scope="col">상품금액</th>
+								<th scope="col" style="width: 10%; padding-left:45px;"><input type="checkbox" id="allCheckBox" /></th>
+								<th scope="col" style="width: 30%; padding-left:45px;">주문상품</th>
+								<th scope="col" style="padding-left:140px;">수량</th>
+								<th scope="col" style="padding-left:140px;">상품금액</th>
 							</tr>
 						</thead>
 
 						<tbody>
-						<!--  장바구니하는 개수만큼 장바구니에 리스트 출력하는 구문  -->
+							<!--  장바구니하는 개수만큼 장바구니에 리스트 출력하는 구문  -->
 							<c:forEach begin="0" end="cartList.length-1" step="1">
 								<tr style="height: auto;" id="infoSelectTr">
 									<td scope="row" style="width: 10%;"><input type="checkbox"
-										style="margin-top: 50px;" name="chk" id="allCheckBox" /></td>
+										style="margin-top: 50px;" name="chk" id="oneCheckBox" /></td>
 									<td style="width: 30%;">
 										<div class="orderGoodsInfo1">
 											<img
@@ -137,8 +137,7 @@
 							</c:forEach>
 						</tbody>
 					</table>
-					<br>
-					<br>
+					<br> <br>
 				</div>
 
 
@@ -173,7 +172,31 @@
 					<div class="cart_billing_price" style="float: right;">????????</div>
 				</div>
 				<br> <br>
+				<script type="text/javascript">
+					$(document)
+							.ready(
+									function() {
+										$("#purchaseBtn")
+												.click(
+														function() {
+															var check = $(
+																	"input:checkbox[name='chk']")
+																	.is(
+																			':checked');
+															if (check == 0) {
+																alert("주문상품을 체크해주세요 ");
+																location
+																		.reload();
+															} else if (check > 1) {
+																alert("주문상품을 하나만 체크해주세요");
 
+															} else {
+																alert("주문페이지 넘기기 성공");
+																location.href = "../../views/member/myCart2.jsp";
+															}
+														});
+									});
+				</script>
 				<div class="purchase">
 					<button type="button" class="btn btn-info" id="purchaseBtn">구매하기</button>
 				</div>
