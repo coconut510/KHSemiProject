@@ -87,101 +87,155 @@
 			</nav>
 			<nav id="sidebar" class="sidebar-wrapper">
 				<div class="sidebar-content">
-					<div id="toggle-sidebar">
-						<div></div>
-						<div></div>
-						<div></div>
-					</div>
-					<div class="sidebar-brand">
-						<img src="/img/sellf.jpg" style="width: 225px; height: 75px;">
-					</div>
-					<div class="sidebar-header">
-						<div class="user-pic">
-							<img class="img-responsive img-rounded" src="/img/4dollar.jpg"
-								style="width: 65px; height: 65px;">
-						</div>
-
-						<div class="user-info">
-							<!-- 접속한 관리자 정보를 출력하는 공간 -->
-							<span class="user-name">sa-dollar <strong>Smith</strong>
-							</span> <span class="user-role">Administrator</span> <span
-								class="user-status"> <i class="fa fa-circle"></i> <span>Online</span>
-							</span>
-						</div>
-					</div>
-					<!-- sidebar-header  -->
-
-					<div class="sidebar-menu">
-						<ul>
-							<li class="header-menu"><span>SELL:F 운영 관리</span></li>
-							<li class="sidebar-dropdown"><a href="#"> <i
-									class="fa fa-shopping-cart"></i> <span>상품관리</span> <span
-									class="badge badge-pill badge-danger">New</span>
-							</a>
-								<div class="sidebar-submenu">
-									<ul>
-										<li><a href="/views/manager/managerSellList.jsp">상품
-												정보 조회 <span class="badge badge-pill badge-success">Pro</span>
-										</a></li>
-										<li><a href="#">Dashboard 3</a></li>
-									</ul>
-								</div></li>
-							<li class="sidebar-dropdown"><a href="#"> <i
-									class="fa fa-users" aria-hidden="true"></i> <span>회원 관리</span>
-									<span class="badge badge-pill badge-primary">2</span>
-							</a>
-								<div class="sidebar-submenu">
-									<ul>
-										<li><a href="/views/manager/managerMemberSelect.jsp">회원
-												정보 조회 </a></li>
-										<li><a href="/views/manager/managerBlackList.jsp">블랙리스트</a>
-										</li>
-									</ul>
-								</div></li>
-							<li class="sidebar-dropdown"><a href="#"> <i
-									class="far fa-gem"></i> <span>게시판 & 상담</span>
-							</a>
-								<div class="sidebar-submenu">
-									<ul>
-										<li><a href="/views/manager/managerBoard.jsp">게시판 현황</a>
-										</li>
-										<li><a href="/views/manager/managerQnABoard.jsp">상담게시판</a>
-										</li>
-										<li><a href="#">Tables</a></li>
-
-									</ul>
-								</div></li>
-
-							<li class="sidebar-dropdown"><a href="#"> <i
-									class="fa fa-globe"></i> <span>통계&분석</span>
-							</a>
-								<div class="sidebar-submenu">
-									<ul>
-										<li><a href="#">Web 분석</a></li>
-										<li><a href="#">회원-상품 통계</a></li>
-									</ul>
-								</div></li>
-							<li class="header-menu"><span>Extra</span></li>
-							<li><a href="#"> <i class="fa fa-calendar"></i> <span>통계</span>
-							</a></li>
-							<li><a href="#"> <i class="fa fa-folder"></i> <span>Examples</span>
-							</a></li>
-							<li><a href="#"> <i class="fa fa-book"></i> <span>Documentation</span>
-							</a></li>
-						</ul>
-					</div>
-					<div class="sidebar-footer">
-						<a href="#"> <i class="fas fa-angle-up"></i> <span
-							class="badge badge-pill badge-warning notification">3</span>
-						</a> <a href="#"> <i class="fa fa-envelope"></i> <span
-							class="badge badge-pill badge-success notification">7</span>
-						</a> <a href="#"> <i class="fa fa-cog"></i> <span
-							class="badge-sonar"></span>
-						</a> <a href="#"> <i class="fa fa-power-off"></i>
-						</a>
-					</div>
-					<!-- sidebar-menu  -->
-				</div>
+                <div id="toggle-sidebar">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="sidebar-brand">
+                    <img  src="/img/sellf.jpg" style="width:225px;height:75px;">
+                </div>
+                <div class="sidebar-header">
+                    <div class="user-pic">
+                        <img class="img-responsive img-rounded" src="/img/4dollar.jpg"style="width:65px;height:65px;">
+                    </div>
+                    
+                    <div class="user-info"> <!-- 접속한 관리자 정보를 출력하는 공간 -->
+                        <span class="user-name">sa-dollar
+                            <strong>Smith</strong>
+                        </span>
+                        <span class="user-role">Administrator</span>
+                        <span class="user-status">
+                            <i class="fa fa-circle"></i>
+                            <span>Online</span>
+                        </span>
+                    </div>
+                </div>
+                <!-- sidebar-header  -->
+               
+                <div class="sidebar-menu">
+                    <ul>
+                        <li class="header-menu">
+                            <span>SELL:F 운영 관리</span>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span>상품관리</span>
+                                <span class="badge badge-pill badge-danger">New</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="/views/manager/managerSellList.jsp">상품 정보 조회
+                                            <span class="badge badge-pill badge-success">Pro</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Dashboard 3</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                               <i class="fa fa-users" aria-hidden="true"></i>
+                                <span>회원 관리</span>
+                                <span class="badge badge-pill badge-primary">3</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="/views/manager/managerMemberSelect.jsp">회원 정보 조회
+                                            
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/views/manager/managerBlackList.jsp">블랙리스트</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="far fa-gem"></i>
+                                <span>게시판 & 상담</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="/views/manager/managerBoard.jsp">게시판 현황</a>
+                                    </li>
+                                    <li>
+                                        <a href="/views/manager/managerQnABoard.jsp">Panels</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Tables</a>
+                                    </li>
+                                   
+                                </ul>
+                            </div>
+                            
+                        </li>
+                       
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-globe"></i>
+                                <span>통계&분석</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="#">Web 분석</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">회원-상품 통계</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="header-menu">
+                            <span>Extra</span>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-calendar"></i>
+                                <span>통계</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-folder"></i>
+                                <span>Examples</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-book"></i>
+                                <span>Documentation</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                 <div class="sidebar-footer">
+                <a href="#">
+                    <i class="fas fa-angle-up"></i>
+                    <span class="badge badge-pill badge-warning notification">3</span>
+                </a>
+                <a href="#">
+                    <i class="fa fa-envelope"></i>
+                    <span class="badge badge-pill badge-success notification">7</span>
+                </a>
+                <a href="#">
+                    <i class="fa fa-cog"></i>
+                    <span class="badge-sonar"></span>
+                </a>
+                <a href="#">
+                    <i class="fa fa-power-off"></i>
+                </a>
+            </div>
+                <!-- sidebar-menu  -->
+            </div>
 				<!-- sidebar-content  -->
 
 			</nav>
@@ -192,60 +246,53 @@
 			<div class="row">
 				<div
 					class="col-md-10 col-md-offset-1 col-md-11 col-md-offset-1 main">
-					<br>  <label><h2>회원정보 조회</h2></label>
-					<div class="row" style="float: right;">
-						<div class="btn-group btn-breadcrumb">
-							<a href="#" class="btn btn-primary btn-sm"><i
-								class="fas fa-home"></i></a> <a href="#"
-								class="btn btn-info btn-sm disabled">회원관리</a> <a href="#"
-								class="btn btn-success btn-sm">회원정보조회</a>
-
-						</div>
-					</div>
-
+					<br> <br> <label><h2>회원정보 조회</h2></label>
+				
 					<form action="" method="post">
 						<table class="table table-bordered">
 							<tr>
 								<th>개인정보</th>
-								<td colspan="3"><select name="selInfo">
-										<!-- option의 value값은 하기 편한걸로!!  -->
-										<option value="userName">이름</option>
+								<td colspan="3">
+									<select name="selInfo">  <!-- option의 value값은 하기 편한걸로!!  -->
+	 									<option value="userName">이름</option>
 										<option value="userId">아이디</option>
 										<option value="userEmail">이메일</option>
 										<option value="userPhone">휴대전화</option>
-								</select> <input type="text" name="memberInfo" /></td>
-
+									</select> 
+										<input type="text" name="memberInfo" />
+								</td>
+								
 							</tr>
-							<tr>
-								<th>회원등급</th>
+							<tr><th>회원등급</th>
 								<td><select name="selGrade">
-										<option>전체</option>
-										<option>브론즈</option>
-										<option>실버</option>
-										<option>골드</option>
-								</select></td>
+									<option>전체</option>
+									<option>브론즈</option>
+									<option>실버</option>
+									<option>골드</option>
+									</select>
+								</td>
 								<th>성별</th>
-								<td><input type="radio" name="gender" value="all">전체
-									<input type="radio" name="gender" value="M">남 <input
-									type="radio" name="gender" value="F">여</td>
+								<td><input type="radio" name="gender" value="all">전체  
+										<input type="radio" name="gender" value="M">남   
+										<input type="radio" name="gender" value="F">여
+								</td>
 							</tr>
 						</table>
 						<center>
-							<input type="submit" class="btn btn-outline-success"
-								value="정보 조회!" />
+						<input type="submit" class="btn btn-outline-success" value="정보 조회!" />
 						</center>
 					</form>
 					<br>
 
 					<hr>
 					<br> <br> <label><h3>조회 결과</h3></label> <label><h5
-							style="color: red;">[총 n명 검색]</h5></label> <br> <label><select
-						name="viewNum">
-							<!-- 한 페이지당 출력할 내용의 갯수 선택. -->
-							<option value="10">10</option>
-							<option value="30">30</option>
-							<option value="50">50</option>
-					</select></label>개 씩 보기
+							style="color: red;">[총 n명 검색]</h5></label>
+							<br>
+					 <label><select name="viewNum">   <!-- 한 페이지당 출력할 내용의 갯수 선택. -->
+					 			<option value="10">10</option>
+					 			<option value="30">30</option>
+					 			<option value="50">50</option>
+					 		</select></label>개 씩 보기
 					<div id="selectInfoResult">
 						<table class="table">
 							<tr>
@@ -259,22 +306,21 @@
 								<th>거래내역</th>
 							</tr>
 							<tr>
-								<td><input type="checkbox" name="check"><input
-									type="hidden"></td>
-								<!-- 체크된 회원의 아이디를 보내어 불량회원 또는 등급변경 가능하게 설정 -->
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<!-- 조회결과 출력 -->
+									<td><input type="checkbox" name="check"><input
+										type="hidden"></td>
+									<!-- 체크된 회원의 아이디를 보내어 불량회원 또는 등급변경 가능하게 설정 -->
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<!-- 조회결과 출력 -->
 							</tr>
 						</table>
 						<br>
-						<button type="button" class="btn btn-danger btn-sm" onclick="badMember();">불량회원
-							설정</button>
+						<button type="button" class="btn btn-danger btn-sm">불량회원 설정</button>
 						<hr>
 						<h5>추가 설정</h5>
 						<br>
@@ -286,23 +332,12 @@
 										<option>실버</option>
 										<option>골드</option>
 								</select>로
-									<button type="button" class="btn btn-outline-warning">
-										등급변경</button>합니다.
+									<button type="button" class="btn btn-outline-warning"> 등급변경</button>합니다.
 								</td>
 							</tr>
 						</table>
 					</div>
-<script>
-	function badMember(){
-		var result = window.confirm("선택한 회원을 불량회원으로 설정하시겠습니까??");
-		if(result==true)
-			{
-				alert("설정되었습니다.");
-			}else{
-				alert("설정이 취소되었습니다.");
-			}
-	}
-</script>
+
 
 
 				</div>
