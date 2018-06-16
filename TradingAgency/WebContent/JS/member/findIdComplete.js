@@ -1,7 +1,7 @@
-     function loingBtn() {
-            location.href = "../../views/member/memberLogin.html";
-        }
+function loingBtn() {
+	location.href = "../../views/member/memberLogin.html";
+}
 
-        function findPwdBtn() {
-            location.href = "../../views/member/findIdPwd.jsp";
-        }
+function findPwdBtn() {
+	location.href = "../../views/member/findIdPwd.jsp";
+}

@@ -1,7 +1,9 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
     <title>비밀번호 재설정</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -28,7 +30,6 @@
         }
     </style>
 </head>
-
 <body>
     <center>
         <!--wrapper -->
@@ -40,28 +41,35 @@
             </div>
             <br>
             <br>
+            
+            <script type="text/javascript">
+            function
+            </script>
             <table>
                 <tr>
                     <td>비밀번호 입력</td>
                     <td colspan="2">
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="비밀번호 입력" aria-label="Username" aria-describedby="basic-addon1" name="memberName_id" id="memberName_id" style="width: 300px; height: 50px;"> </div>
+                            <input type="text" class="form-control" placeholder="비밀번호 입력" aria-label="Username" aria-describedby="basic-addon1" name="updatePwd1" id="updatePwd1" style="width: 300px; height: 50px;"> </div>
                     </td>
+                    
                 </tr>
                 <tr>
                     <td>비밀번호 재입력</td>
                     <td colspan="2">
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="비밀번호 입력" aria-label="Username" aria-describedby="basic-addon1" name="memberName_id" id="memberName_id" style="width: 300px; height: 50px;"> </div>
+                            <input type="text" class="form-control" placeholder="비밀번호 입력" aria-label="Username" aria-describedby="basic-addon1" name="updatePwd2" id="updatePwd2" style="width: 300px; height: 50px;"> </div>
                     </td>
+         			  <div id="equalsPwd"></div>
                 </tr>
+              
                 <tr>
                     <td></td>
                     <td>
-                        <button type="button" class="btn btn-secondary" name="certificationBtn" id="IdCertificationBtn" style="margin-bottom: 16px; height: 45px;" onclick="updatePwdBtn();">비밀번호 변경하기</button>
+                        <button type="button" class="btn btn-secondary" name="updatePwdBtn" id="updatePwdBtn" style="margin-bottom: 16px; height: 45px;" onclick="updatePwdBtn();">비밀번호 변경하기</button>
                     </td>
                     <td>
-                        <button type="button" class="btn btn-secondary" name="certificationBtn" id="IdCertificationBtn" style="margin-bottom: 16px; width:120px; height: 45px;" onclick="cancleBtn();">취소</button>
+                        <button type="button" class="btn btn-secondary" name="cancleUpdatePwdBtn" id="cancleUpdatePwdBtn" style="margin-bottom: 16px; width:120px; height: 45px;" onclick="cancleBtn();">취소</button>
                     </td>
                 </tr>
             </table>
@@ -69,5 +77,4 @@
         </div>
     </center>
 </body>
-
 </html>
