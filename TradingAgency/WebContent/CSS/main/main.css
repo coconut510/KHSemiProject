@@ -3,7 +3,7 @@
 @charset "UTF-8";
 
 #wrapper {
-   font-family: 'Roboto Slab', serif;
+   /*font-family: 'Roboto Slab', serif;*/
    background-color: white;
 }
 
@@ -15,7 +15,7 @@
 #middleAdSec, #imgSliderSec {
    width: 100%;
    height: auto;
-   font-family: 'Roboto Slab', serif;
+   /*font-family: 'Roboto Slab', serif;*/
 }
 
 /*  나머지 섹션 css - */
@@ -23,7 +23,7 @@
    #bestItemSec2 {
    width: 100%;
    height: auto;
-   font-family: 'Roboto Slab', serif;
+ /*  font-family: 'Roboto Slab', serif;*/
 }
 
 #newProductSec{
@@ -254,21 +254,29 @@ a:active {
 }
 
 .container {
-   width: 1120px;
+   width:100%;
+   /*width: 1120px;*/
    max-width: none !important;
 
 }
+.carousel-inner {
+    width: 90%;
+    overflow: hidden;
+}
 
 .col_container {
-   margin-left: 50px;
+  /* margin-left: 50px;*/
 }
 
 .col-xs-3 {
-   margin-right: 18px;
+	width:200px;
+   /*margin-right: 18px;*/
 }
 
 #content .row {
-   margin-right: 100px;
+	overflow:auto;
+    margin-right: 0px;
+    margin-left: 0px; 
 }
 
 .carousel-control-prev {

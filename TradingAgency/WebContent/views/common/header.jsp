@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <div class="content">    
-  <div class="container" id="div2">
+  <div class="containerAd" id="div2">
     <div id="advertising">
 	    <img id="exerImg2" src="../../img/join_coupon.PNG" height="120px";/>
 	     <button class="btn" id="hideBtn">x</button>
@@ -12,7 +12,7 @@
 <div id="headerDetailGroup">
 	<div id="logoarea">
 		<img id="logoimg" src="../../img/logo.jpg" height="120px"
-			width="270px" alt="셀프이미지" ; />
+			width="270px" alt="셀프이미지"; />
 	</div>
 	<div id="middleTwoBox">
 		<div id="headerTitle">

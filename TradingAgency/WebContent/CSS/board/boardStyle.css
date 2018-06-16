@@ -23,7 +23,7 @@
 	float: left;
 	display: inline-block;
 	width: 100%;
-	overflow: auto;
+	/*overflow: auto;*/
 }
 
 .menuBtn {
@@ -34,7 +34,14 @@
 	text-align: center;
 	padding-top: 7px;
 }
-
+#commentBtn{
+	border: 1px solid lightgray;
+	display: inline-block;
+	width: 150px;
+	height: 40px;
+	text-align: center;
+	padding-top: 7px;
+}
 .menuBtn span {
 	width: 100%;
 	height: 100%;
@@ -43,7 +50,7 @@
 .noticeTab{
 	display:none;
 }
-.vlLong {
+.hlLongBold {
 	width: 100%;
 	height: 2px;
 	background-color: lightgray;

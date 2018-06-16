@@ -4,19 +4,20 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<!-- jQuery 링크걸기 -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
 	crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<meta charset="utf-8">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
 <!-- 내부 링크건 CSS -->
 <link rel="stylesheet" href="../../CSS/bootstrap/bootstrap.min.css" />
 <link rel="stylesheet" href="../../CSS/common/common.css" />
 <link rel="stylesheet" href="../../CSS/main/productListMain.css" />
 
-<!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
 <!-- 내부 js파일 -->
@@ -27,19 +28,15 @@
 <script src="../../JS/bootstrap/bootstrap.min.js"></script>
 
 <script src="../../JS/main/productListMain.js"></script>
-
-<!-- Header 링크파일 -->
-
-<script type="text/javascript" href="../../JS/common/header.js?ver=1"></script>
-
-<!--<link rel="stylesheet" type="text/css" href="../../CSS/common/header.css?ver=1">-->
-<link rel="stylesheet" type="text/css" href="../../CSS/common/adv.css">
+<script type="text/javascript" src="../../JS/common/header.js?ver=1"></script>
 <script type="text/javascript" src="../../JS/common/adv.js"></script>
-<link rel="stylesheet" type="text/css"
-	href="../../CSS/common/header.css">
+
+<!-- 내부 css 파일 -->
+
 <link rel="stylesheet" type="text/css" href="../../CSS/common/adv.css">
-<link rel="stylesheet" type="text/css"
-	href="../../CSS/common/footer.css">
+<link rel="stylesheet" type="text/css" href="../../CSS/common/header.css">
+<link rel="stylesheet" type="text/css" href="../../CSS/common/adv.css">
+<link rel="stylesheet" type="text/css" href="../../CSS/common/footer.css">
 
 <title>상품 목록</title>
 </head>

@@ -1,15 +1,22 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+<script
+  src="http://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <!-- 내부 링크건 CSS -->
 <!-- <script type="text/javascript" src="../../JS/common/header.js?ver=1"></script> -->
- <link rel="stylesheet" type="text/css" href="../../CSS/common/header.css?ver=1"> 
+<link rel="stylesheet" type="text/css"
+	href="../../CSS/common/header.css?ver=1">
 <link rel="stylesheet"
 	href="../../CSS/bootstrap/bootstrap.min.css?ver=1" />
 <link rel="stylesheet" href="../../CSS/common/common.css?ver=1" />
@@ -29,7 +36,7 @@
 
 <!-- Header 링크파일 -->
 
-<script type="text/javascript" href="../../JS/common/header.js?ver=1"></script>
+<script type="text/javascript" src="../../JS/common/header.js?ver=1"></script>
 
 <!--<link rel="stylesheet" type="text/css" href="../../CSS/common/header.css?ver=1">-->
 <link rel="stylesheet" type="text/css" href="../../CSS/common/adv.css">
@@ -56,7 +63,7 @@
 			<div id="topLeftLink">
 				<a href="#">Test</a> <a href="#">게시판> </a> <a href="#">홈></a>
 			</div>
-				<div id="topMenu">
+			<div id="topMenu">
 				<div class="menuBtn" onclick="boardTapChange(this,boardListArea);">
 					<span>공지사항</span>
 				</div>
@@ -67,7 +74,7 @@
 					<span>상품후기</span>
 				</div>
 			</div>
-			<div class="vlLong"></div>
+			<div class="hlLongBold"></div>
 			<div id="boardContent">
 				<div id="BoardList">
 					<div class="noticeTab" id="boardListArea">
@@ -76,84 +83,113 @@
 								<strong>공지사항 > <span id="titleName">테스트</span></strong>
 							</h3>
 						</div>
-						<div class="vlLong"></div>
-							<div id="boardContent">
-								<div id="titleArea">			
-									<h3>
-										<strong>
-											<div> 제목 </div>
-											<div id="titleInfo"> 테스트</div>
-										</strong>
-									</h3>
-							 	</div>
-							 	<div class="vlLongLIght"></div>
-							 	<div id="writerInfoArea">
-									<div style="width:10%;"><strong>작성자</strong></div>									
-									<div style="width:30%;">관리자</div>
-									<div style="width:10%;"><strong>등록일</strong></div>
-									<div style="width:20%;">2018-06-14</div>
-									<div style="width:10%;"><strong>조회수</strong></div>
-									<div style="width:20%;">15</div>
+						<div class="hlLongBold"></div>
+						<div id="boardContent">
+							<div id="titleArea">
+								<h3>
+									<strong>
+										<div>제목</div>
+										<div id="titleInfo">테스트</div>
+									</strong>
+								</h3>
+							</div>
+							<div class="vlLongLIght"></div>
+							<div id="writerInfoArea">
+								<div style="width: 10%;">
+									<strong>작성자</strong>
+								</div>
+								<div style="width: 30%;">관리자</div>
+								<div style="width: 10%;">
+									<strong>등록일</strong>
+								</div>
+								<div style="width: 20%;">2018-06-14</div>
+								<div style="width: 10%;">
+									<strong>조회수</strong>
+								</div>
+								<div style="width: 20%;">15</div>
+							</div>
+							<div class="vlLongLIght"></div>
+							<div id="answerContent">
+								<h3>
+									안녕하세요<br> 테스트용 공지입니다.<br> 테스트용 공지입니다.<br> 테스트용
+									공지입니다.<br> 테스트용 공지입니다.<br> 테스트용 공지입니다.<br> 테스트용
+									공지입니다.<br> 테스트용 공지입니다.<br> 집에 가고 싶어요..
+								</h3>
+							</div>
+							<div class="vlLongLIght"></div>
+							<div id="nextAndPrevArea">
+								<div class="boardItemNP">
+									<div class="listTitle">
+										<a> <img src="../../img/btn_bbs_icon_prev.gif" /> 다음글 <span
+											id="nextTitle">다음글이 없습니다.</span>
+										</a>
+									</div>
 								</div>
 								<div class="vlLongLIght"></div>
-								<div id="answerContent">
-									<h3>
-										안녕하세요<br>
-										테스트용 공지입니다.<br>
-										테스트용 공지입니다.<br>
-										테스트용 공지입니다.<br>
-										테스트용 공지입니다.<br>
-										테스트용 공지입니다.<br>
-										테스트용 공지입니다.<br>
-										테스트용 공지입니다.<br>
-										집에 가고 싶어요..
-									</h3>
-								</div>
-								<div class="vlLongLIght"></div>
-								<div id="nextAndPrevArea">
-									<div class="boardItemNP">
-										<div class="listTitle">
-											<a>
-												<img src="../../img/btn_bbs_icon_prev.gif"/>
-												다음글
-												<span id="nextTitle">다음글이 없습니다.</span>
-											</a>
-										</div>
-									</div>	
-									<div class="vlLongLIght"></div>
-									<div class="boardItemNP">
-										<div class="listTitle">
-											<a>
-												<img src="../../img/btn_bbs_icon_next.gif"/>
-												이전글
-												<span id="nextTitle">Test</span>
-											</a>
-										</div>
+								<div class="boardItemNP">
+									<div class="listTitle">
+										<a> <img src="../../img/btn_bbs_icon_next.gif" /> 이전글 <span
+											id="nextTitle">Test</span>
+										</a>
 									</div>
 								</div>
 							</div>
-						<div class="vlLong"></div>		
+						</div>
+						<div class="hlLongBold"></div>
 					</div>
 				</div>
-			<div id="bottomBtnList">
-					<div class="menuBtn" style="float:left;">
-						목록
-					</div>
-					<div class="menuBtn" >
-						댓글달기
-					</div>
-					<div class="menuBtn" style="float:right;">
-						뒤로가기
-					</div>
+				<div id="bottomBtnList">
+					<div class="menuBtn" style="float: left;">목록</div>
+					<div class="menuBtn" id="comment">댓글달기</div>
+					<div class="menuBtn" style="float: right;">뒤로가기</div>
+				</div>
 			</div>
+			<div id="commentArea">
+				<div id="newCommentArea">
+				  	<div id="CommentWriterId"></div><br>
+				  	<div id= "CommentContext"></div>
+				</div>
+				<textarea rows="6" cols="140" style="display:none" id="commentTextArea"> </textarea>
+				<div id="commentBtn" style="display:none">작성완료<br></div>
 			</div>
 			</section>
 		</div>
-		<footer id="footer">
-			<%@include file="../../views/common/footer.jsp"%>
-			<!--  <div id="footerTest" style="width:100%; height:300px; background-color:gray;"></div>-->
+		<footer id="footer"> <%@include file="../../views/common/footer.jsp"%> <!--  <div id="footerTest" style="width:100%; height:300px; background-color:gray;"></div>-->
 		</footer>
 	</center>
+	<script> 
 
+	$(document).ready(function(){
+		$('#comment').click(function(){
+		 $('#commentTextArea').slideToggle(500);
+		 $('#commentBtn').slideToggle(500);
+			$('#commentTextArea:visible');
+		});
+		
+		$('#commentBtn').click(function(){
+			var writer =$('#CommentWriterId'); 
+			var str = "";
+			str = "테스트작성자이름"; 
+			writer.html(str);
+			$('#CommentContext').html($('#commentTextArea').val());
+			$('#commentTextArea').val("");
+			$('#commentTextArea').slideToggle(500);
+			 $('#commentBtn').slideToggle(500);
+		});
+	});
+
+</script>
+<style> 
+    #CommentWriterId
+    {
+    float:left;
+    font-weight:800;
+    }
+	#CommentContext
+    {
+    float:left;
+    }
+
+</style>
 </body>
 </html>
