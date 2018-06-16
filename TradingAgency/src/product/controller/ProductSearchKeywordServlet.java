@@ -13,26 +13,26 @@ import product.model.service.ProductService;
 import product.model.vo.Product;
 
 /**
- * Servlet implementation class ProductSelectOneServlet
+ * Servlet implementation class ProductSearchKeywordServlet
  */
-@WebServlet(name = "ProductSelectOne", urlPatterns = { "/productSelectOne" })
-public class ProductSelectOneServlet extends HttpServlet {
+@WebServlet(name = "ProductSearchKeyword", urlPatterns = { "/productSearchKeyword" })
+public class ProductSearchKeywordServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ProductSelectOneServlet() {
+    public ProductSearchKeywordServlet() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		request.setCharacterEncoding("utf-8");
+		String keyword = request.getParameter("searchKeyword");
+		ArrayList<Product> list = new ProductService().ProductSearchKeyword(keyword);
 		
 	}
 
