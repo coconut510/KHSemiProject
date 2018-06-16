@@ -36,6 +36,7 @@ crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="../../CSS/common/common.css">
 <link rel="stylesheet" type="text/css" href="../../CSS/common/header.css">
 <link rel="stylesheet" type="text/css" href="../../CSS/common/adv.css">	
+<link rel="stylesheet" type="text/css" href="../../CSS/common/footer.css">		
 <!-- 내부 js파일 -->
 <script type="text/javascript" src="../../JS/common/header.js?ver=1"></script>
 <script type="text/javascript" src="../../JS/member/myCart2.js"></script>
@@ -52,7 +53,7 @@ crossorigin="anonymous">
 <body>
 
 	<center>
-		<div id="wrapper">
+		<div id="wrapper" style="overflow:hidden;">
 			<!-- header -->
 			<header id="header"> <%@include
 				file="/views/common/header.jsp"%> </header>
@@ -200,7 +201,7 @@ crossorigin="anonymous">
 
 			<footer>
 
-			<div id="footerTest">footerTest</div>
+						<%@include file="../../views/common/footer.jsp" %>
 			</footer>
 		</div>
 	</center>
