@@ -1,4 +1,4 @@
-package member.model.dao;
+package product.model.dao;
 
 public class ProductInsertDao {
 
