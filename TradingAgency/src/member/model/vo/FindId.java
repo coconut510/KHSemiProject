@@ -1,5 +1,6 @@
 package member.model.vo;
 
-public class FindIdPwd {
+public class FindId {
+	
 
 }
