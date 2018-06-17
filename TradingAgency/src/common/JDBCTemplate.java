@@ -1,8 +1,10 @@
 package common;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -12,23 +14,13 @@ import java.sql.Statement;
 import java.util.Properties;
 
 public class JDBCTemplate {
-	private static String driver="";
-	private static String url="";
-	private static String user="";
-	private static String passwd="";	
 	private JDBCTemplate() {}
 	
 	public static Connection getConnection()
 	{
-		String dir = System.getProperty("C:\\workspace\\KHSemiProject\\TradingAgency\\resource");
-        System.out.println("current dir = " + System.getProperty("user.name"));
-        URL location = JDBCTemplate.class.getProtectionDomain().getCodeSource().getLocation();
-        System.out.println(location.getFile());
-         
-		if(driver.length()==0) {
-			Properties prop = new Properties();
+			/*Properties prop = new Properties();
 			try {
-				prop.load(new FileReader("C:\\workspace\\KHSemiProject\\TradingAgency\\resource/driver.properties"));
+				prop.load(new FileReader("resource/driver.properties"));
 				driver = prop.getProperty("driver");
 				url = prop.getProperty("url");
 				user = prop.getProperty("user");
@@ -37,13 +29,12 @@ public class JDBCTemplate {
 				e1.printStackTrace();
 			} catch (IOException e1) {
 				e1.printStackTrace();
-			}
-		}	
+			}*/
 		
 		Connection conn = null;			
 		try {
-			Class.forName(driver);
-			conn = DriverManager.getConnection(url,user,passwd);
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","sellfadmin","sellfadmin");
 			conn.setAutoCommit(false);
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block

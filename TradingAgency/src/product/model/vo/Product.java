@@ -1,5 +1,7 @@
 package product.model.vo;
 
+import java.util.ArrayList;
+
 public class Product {
 	private int product_entire_pk;
 	private String product_entire_user_entire_id_fk;
@@ -9,6 +11,8 @@ public class Product {
 	private int product_price;
 	private int product_amount;
 	private String product_state;
+	private ArrayList<ImageFile> imageList = new ArrayList<ImageFile>();
+	
 	public int getProduct_entire_pk() {
 		return product_entire_pk;
 	}
@@ -56,6 +60,12 @@ public class Product {
 	}
 	public void setProduct_state(String product_state) {
 		this.product_state = product_state;
+	}
+	public ArrayList<ImageFile> getImageList() {
+		return imageList;
+	}
+	public void setImageList(ArrayList<ImageFile> imageList) {
+		this.imageList = imageList;
 	}
 	
 	
