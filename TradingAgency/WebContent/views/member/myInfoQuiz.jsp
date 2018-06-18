@@ -668,8 +668,7 @@ input {
 					<li role="presentation" class="active"><a href="/views/member/jjim.jsp">찜한 상품</a></li>
 					<li role="presentation" class="active"><a href="/views/member/myCoupon.jsp">내 쿠폰</a></li>
 					<li role="presentation" class="active"><a href="/views/member/myInfoQuiz.jsp">내 정보</a></li>
-					<li role="presentation" class="active"><a href="/views/member/mySay.jsp">알림 설정</a></li>
-				</ul>
+										<li role="presentation" class="active"><a href="/views/member/myGrade.jsp">등급보기</a></li>
             </div>
             <div class="MenuContents">
             
