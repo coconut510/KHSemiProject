@@ -2,9 +2,9 @@ package product.model.service;
 
 import java.sql.Connection;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import common.JDBCTemplate;
-import file.model.dao.FileDao;
 import product.model.dao.ProductDao;
 import product.model.vo.ImageFile;
 import product.model.vo.Product;
@@ -28,6 +28,12 @@ public class ProductService {
 		}
 		JDBCTemplate.close(conn);
 		return result;	
+	}
+	public ArrayList<Product> productSortCategory(String mainCategory, String subCategory,int onePageShowProduct, int currentPage) {
+		Connection conn= JDBCTemplate.getConnection();
+		ArrayList<Product> resultList = new ProductDao().productSortCategory(conn,mainCategory,subCategory,onePageShowProduct,currentPage);
+		JDBCTemplate.close(conn);
+		return resultList;	
 	}
 
 }

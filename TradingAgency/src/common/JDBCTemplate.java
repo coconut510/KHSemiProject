@@ -17,33 +17,17 @@ public class JDBCTemplate {
 	private JDBCTemplate() {}
 	
 	public static Connection getConnection()
-	{
-			/*Properties prop = new Properties();
-			try {
-				prop.load(new FileReader("resource/driver.properties"));
-				driver = prop.getProperty("driver");
-				url = prop.getProperty("url");
-				user = prop.getProperty("user");
-				passwd = prop.getProperty("pass");
-			} catch (FileNotFoundException e1) {
-				e1.printStackTrace();
-			} catch (IOException e1) {
-				e1.printStackTrace();
-			}*/
-		
+	{		
 		Connection conn = null;			
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","sellfadmin","sellfadmin");
 			conn.setAutoCommit(false);
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} 
-		
+		} 		
 		return conn;	
 	}
 	public static void close(Connection conn)
@@ -51,7 +35,6 @@ public class JDBCTemplate {
 		try {
 			conn.close();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -60,7 +43,6 @@ public class JDBCTemplate {
 		try {
 			conn.commit();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -69,7 +51,6 @@ public class JDBCTemplate {
 		try {
 			conn.rollback();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -78,7 +59,6 @@ public class JDBCTemplate {
 		try {
 			stmt.close();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}	
 	}
@@ -87,7 +67,6 @@ public class JDBCTemplate {
 		try {
 			rset.close();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
