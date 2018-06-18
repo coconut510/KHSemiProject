@@ -84,11 +84,11 @@ public class ProductSellTb {
 
 }
 
-/*PRODUCT_SELL_PK	INT	Primary key	not null	AI	판매통계인덱스
-product_sell_id	varchar2(20)		not null	UNIQUE	판매통계아이디
-PRODUCT_ENTIRE_CATEGORY_MAIN_ID_FK	varchar2(20)	Foreign key	not null		상품대분류
-PRODUCT_ENTIRE_CATEGORY_SUB_ID_FK	varchar2(20)	Foreign key	not null		상품소분류
-product_sell_count	INT		not null		판매횟수
-product_sell_return_count	INT		not null		환불횟수
-product_sell_total_income	NUMBER		not null		총수익
-product_sell_info_date	DATE		not null		정보수집일*/
+/*PRODUCT_SELL_PK	INT	판매통계인덱스
+product_sell_id	varchar2(20)	판매통계아이디
+PRODUCT_ENTIRE_CATEGORY_MAIN_ID_FK	varchar2(20)	상품대분류
+PRODUCT_ENTIRE_CATEGORY_SUB_ID_FK	varchar2(20)	상품소분류
+product_sell_count	INT	판매횟수
+product_sell_return_count	INT	환불횟수
+product_sell_total_income	NUMBER	총수익
+product_sell_info_date	DATE	정보수집일*/
