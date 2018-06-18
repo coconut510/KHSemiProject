@@ -1,13 +1,13 @@
 package member.model.vo;
 
-public class Member {
+public class user_grade_tb {
 private String USER_GRADE_PK;
 private String USER_GRADE_ID;
 private String USER_GRADE_NAME;
 private String USER_GRADE_FEES;
 
 
-public Member(String uSER_GRADE_PK, String uSER_GRADE_ID, String uSER_GRADE_NAME, String uSER_GRADE_FEES) {
+public user_grade_tb(String uSER_GRADE_PK, String uSER_GRADE_ID, String uSER_GRADE_NAME, String uSER_GRADE_FEES) {
 	super();
 	USER_GRADE_PK = uSER_GRADE_PK;
 	USER_GRADE_ID = uSER_GRADE_ID;
