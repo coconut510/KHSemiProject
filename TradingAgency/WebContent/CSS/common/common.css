@@ -6,6 +6,7 @@ section article {margin: 0 auto;}
 #wrapper{
     width:100%;
     height:auto;
+    overflow:auto;
  
 }
 #header{

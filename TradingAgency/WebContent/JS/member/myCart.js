@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
 	$("#allCheckBox").click(function() {
 		if ($("#allCheckBox").prop("checked")) {
@@ -71,8 +72,6 @@ function totalPrice() {
 	}
 
 }
-$(function() {
-	$("#purchaseBtn").click(function() {
-		location.href = "/views/member/myCart2.jsp";
-	});
-});
+
+
+

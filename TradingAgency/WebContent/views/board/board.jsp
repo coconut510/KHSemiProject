@@ -26,6 +26,20 @@
 
 <script src="../../JS/board/boardJs.js?ver=1"></script>
 
+
+<!-- Header 링크파일 -->
+
+<script type="text/javascript" href="../../JS/common/header.js?ver=1"></script>
+
+<!--<link rel="stylesheet" type="text/css" href="../../CSS/common/header.css?ver=1">-->
+<link rel="stylesheet" type="text/css" href="../../CSS/common/adv.css">
+<script type="text/javascript" src="../../JS/common/adv.js"></script>
+<link rel="stylesheet" type="text/css"
+	href="../../CSS/common/header.css">
+<link rel="stylesheet" type="text/css" href="../../CSS/common/adv.css">
+<link rel="stylesheet" type="text/css"
+	href="../../CSS/common/footer.css">
+
 <title>게시판</title>
 
 </head>
@@ -35,8 +49,9 @@
 		<div id="wrapper">
 			<!--  Header -->
 			<header id="header">
-			<div style="background-color: gray; width: 100%; height: 200px;">
-			</div>
+					<%@include file="../../views/common/header.jsp"%>
+			<!--<div style="background-color: gray; width: 100%; height: 200px;">
+			</div>-->
 			</header>
 			<section id="content">
 			<div id="topLeftLink">
@@ -53,7 +68,7 @@
 					<span>상품후기</span>
 				</div>
 			</div>
-			<div class="vlLong"></div>
+			<div class="hlLong"></div>
 			<div id="boardContent">
 				<div id="BoardList">
 					
@@ -63,7 +78,7 @@
 								<strong>공지사항</strong>
 							</h3>
 						</div>
-						<div class="vlLong"></div>
+						<div class="hlLong"></div>
 						<table id="boardTable">
 							<tr>
 								<th style="width: 5%;">NO</th>
@@ -123,7 +138,7 @@
 								<strong>자주 묻는 질문</strong>
 							</h3>
 						</div>
-						<div class="vlLong"></div>
+						<div class="hlLong"></div>
 						<table id="boardTable">
 							<tr>
 								<th style="width: 5%;">NO</th>
@@ -183,7 +198,7 @@
 								<strong>상품후기</strong>
 							</h3>
 						</div>
-						<div class="vlLong"></div>
+						<div class="hlLong"></div>
 						<table id="boardTable">
 							<tr>
 								<th style="width: 5%;">NO</th>
@@ -238,7 +253,7 @@
 						</table>
 					</div>
 					
-					<div class="vlLong"></div>
+					<div class="hlLong"></div>
 					<div id="pagingArea">
 						<nav aria-label="Page navigation example">
 						<ul class="pagination">

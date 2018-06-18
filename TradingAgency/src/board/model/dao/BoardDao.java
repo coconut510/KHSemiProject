@@ -1,5 +1,5 @@
 package board.model.dao;
 
-public class BoadrDao {
+public class BoardDao {
 
 }
