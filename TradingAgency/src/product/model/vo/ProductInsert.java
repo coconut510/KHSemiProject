@@ -1,127 +1,131 @@
-package member.model.vo;
+package product.model.vo;
 
 import java.sql.Date;
 
 public class ProductInsert {
 	
-	private int product_No;
-	private String product_Name;
-	private String product_Category;
-	private String product_Item;
-	private String product_Info;
-	private int product_Count;
-	private Date product_Enrolldate;
-	private String product_Seller_Id;
-	private String product_Buy_Info;
-	private int product_Price;
-	private Date product_Buy_Date;
+	private int productNo;
+	private String productName;
+	private String productCategory;
+	private String productItem;
+	private String productInfo;
+	private int productCount;
+	private String productSellerId;
+	private String productBuyInfo;
+	private int productPrice;
+	private Date productBuyDate;
+	private String content;
 	
 	public ProductInsert() {}
 
-	public ProductInsert(int product_No, String product_Name, String product_Category, String product_Item,
-			String product_Info, int product_Count, Date product_Enrolldate, String product_Seller_Id,
-			String product_Buy_Info, int product_Price, Date product_Buy_Date) {
+	public ProductInsert(int productNo, String productName, String productCategory, String productItem,
+			String productInfo, int productCount, String productSellerId, String productBuyInfo, int productPrice,
+			Date productBuyDate, String content) {
 		super();
-		this.product_No = product_No;
-		this.product_Name = product_Name;
-		this.product_Category = product_Category;
-		this.product_Item = product_Item;
-		this.product_Info = product_Info;
-		this.product_Count = product_Count;
-		this.product_Enrolldate = product_Enrolldate;
-		this.product_Seller_Id = product_Seller_Id;
-		this.product_Buy_Info = product_Buy_Info;
-		this.product_Price = product_Price;
-		this.product_Buy_Date = product_Buy_Date;
+		this.productNo = productNo;
+		this.productName = productName;
+		this.productCategory = productCategory;
+		this.productItem = productItem;
+		this.productInfo = productInfo;
+		this.productCount = productCount;
+		this.productSellerId = productSellerId;
+		this.productBuyInfo = productBuyInfo;
+		this.productPrice = productPrice;
+		this.productBuyDate = productBuyDate;
+		this.content = content;
 	}
 
-	public int getProduct_No() {
-		return product_No;
+	public int getProductNo() {
+		return productNo;
 	}
 
-	public void setProduct_No(int product_No) {
-		this.product_No = product_No;
+	public void setProductNo(int productNo) {
+		this.productNo = productNo;
 	}
 
-	public String getProduct_Name() {
-		return product_Name;
+	public String getProductName() {
+		return productName;
 	}
 
-	public void setProduct_Name(String product_Name) {
-		this.product_Name = product_Name;
+	public void setProductName(String productName) {
+		this.productName = productName;
 	}
 
-	public String getProduct_Category() {
-		return product_Category;
+	public String getProductCategory() {
+		return productCategory;
 	}
 
-	public void setProduct_Category(String product_Category) {
-		this.product_Category = product_Category;
+	public void setProductCategory(String productCategory) {
+		this.productCategory = productCategory;
 	}
 
-	public String getProduct_Item() {
-		return product_Item;
+	public String getProductItem() {
+		return productItem;
 	}
 
-	public void setProduct_Item(String product_Item) {
-		this.product_Item = product_Item;
+	public void setProductItem(String productItem) {
+		this.productItem = productItem;
 	}
 
-	public String getProduct_Info() {
-		return product_Info;
+	public String getProductInfo() {
+		return productInfo;
 	}
 
-	public void setProduct_Info(String product_Info) {
-		this.product_Info = product_Info;
+	public void setProductInfo(String productInfo) {
+		this.productInfo = productInfo;
 	}
 
-	public int getProduct_Count() {
-		return product_Count;
+	public int getProductCount() {
+		return productCount;
 	}
 
-	public void setProduct_Count(int product_Count) {
-		this.product_Count = product_Count;
+	public void setProductCount(int productCount) {
+		this.productCount = productCount;
 	}
 
-	public Date getProduct_Enrolldate() {
-		return product_Enrolldate;
+	public String getProductSellerId() {
+		return productSellerId;
 	}
 
-	public void setProduct_Enrolldate(Date product_Enrolldate) {
-		this.product_Enrolldate = product_Enrolldate;
+	public void setProductSellerId(String productSellerId) {
+		this.productSellerId = productSellerId;
 	}
 
-	public String getProduct_Seller_Id() {
-		return product_Seller_Id;
+	public String getProductBuyInfo() {
+		return productBuyInfo;
 	}
 
-	public void setProduct_Seller_Id(String product_Seller_Id) {
-		this.product_Seller_Id = product_Seller_Id;
+	public void setProductBuyInfo(String productBuyInfo) {
+		this.productBuyInfo = productBuyInfo;
 	}
 
-	public String getProduct_Buy_Info() {
-		return product_Buy_Info;
+	public int getProductPrice() {
+		return productPrice;
 	}
 
-	public void setProduct_Buy_Info(String product_Buy_Info) {
-		this.product_Buy_Info = product_Buy_Info;
+	public void setProductPrice(int productPrice) {
+		this.productPrice = productPrice;
 	}
 
-	public int getProduct_Price() {
-		return product_Price;
+	public Date getProductBuyDate() {
+		return productBuyDate;
 	}
 
-	public void setProduct_Price(int product_Price) {
-		this.product_Price = product_Price;
+	public void setProductBuyDate(Date productBuyDate) {
+		this.productBuyDate = productBuyDate;
 	}
 
-	public Date getProduct_Buy_Date() {
-		return product_Buy_Date;
+	public String getContent() {
+		return content;
 	}
 
-	public void setProduct_Buy_Date(Date product_Buy_Date) {
-		this.product_Buy_Date = product_Buy_Date;
+	public void setContent(String content) {
+		this.content = content;
 	}
+
+
+
+
 
 	
 	
