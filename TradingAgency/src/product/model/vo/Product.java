@@ -1,95 +1,62 @@
 package product.model.vo;
 
 public class Product {
-
-	private int productEntirePk;
-	private String productEntireUserId;
-	private String productEntireCateMainId;
-	private String productEntireCateSubId;
-	private String productName;
-	private String productPrice;
-	private String productAmount;
-	private String productState;
-	
-	
-	
-	public Product() {
-		super();
-		// TODO Auto-generated constructor stub
+	private int product_entire_pk;
+	private String product_entire_user_entire_id_fk;
+	private String product_entire_category_main_id_fk;
+	private String product_entire_category_sub_id_fk;
+	private String product_name;
+	private int product_price;
+	private int product_amount;
+	private String product_state;
+	public int getProduct_entire_pk() {
+		return product_entire_pk;
 	}
-	public Product(int productEntirePk, String productEntireUserId, String productEntireCateMainId,
-			String productEntireCateSubId, String productName, String productPrice, String productAmount,
-			String productState) {
-		super();
-		this.productEntirePk = productEntirePk;
-		this.productEntireUserId = productEntireUserId;
-		this.productEntireCateMainId = productEntireCateMainId;
-		this.productEntireCateSubId = productEntireCateSubId;
-		this.productName = productName;
-		this.productPrice = productPrice;
-		this.productAmount = productAmount;
-		this.productState = productState;
+	public void setProduct_entire_pk(int product_entire_pk) {
+		this.product_entire_pk = product_entire_pk;
 	}
-	public int getProductEntirePk() {
-		return productEntirePk;
+	public String getProduct_entire_user_entire_id_fk() {
+		return product_entire_user_entire_id_fk;
 	}
-	public void setProductEntirePk(int productEntirePk) {
-		this.productEntirePk = productEntirePk;
+	public void setProduct_entire_user_entire_id_fk(String product_entire_user_entire_id_fk) {
+		this.product_entire_user_entire_id_fk = product_entire_user_entire_id_fk;
 	}
-	public String getproductEntireUserId() {
-		return productEntireUserId;
+	public String getProduct_entire_category_main_id_fk() {
+		return product_entire_category_main_id_fk;
 	}
-	public void setproductEntireUserId(String productEntireUserId) {
-		this.productEntireUserId = productEntireUserId;
+	public void setProduct_entire_category_main_id_fk(String product_entire_category_main_id_fk) {
+		this.product_entire_category_main_id_fk = product_entire_category_main_id_fk;
 	}
-	public String getproductEntireCateMainId() {
-		return productEntireCateMainId;
+	public String getProduct_entire_category_sub_id_fk() {
+		return product_entire_category_sub_id_fk;
 	}
-	public void setproductEntireCateMainId(String productEntireCateMainId) {
-		this.productEntireCateMainId = productEntireCateMainId;
+	public void setProduct_entire_category_sub_id_fk(String product_entire_category_sub_id_fk) {
+		this.product_entire_category_sub_id_fk = product_entire_category_sub_id_fk;
 	}
-	public String getproductEntireCateSubId() {
-		return productEntireCateSubId;
+	public String getProduct_name() {
+		return product_name;
 	}
-	public void setproductEntireCateSubId(String productEntireCateSubId) {
-		this.productEntireCateSubId = productEntireCateSubId;
+	public void setProduct_name(String product_name) {
+		this.product_name = product_name;
 	}
-	public String getProductName() {
-		return productName;
+	public int getProduct_price() {
+		return product_price;
 	}
-	public void setProductName(String productName) {
-		this.productName = productName;
+	public void setProduct_price(int product_price) {
+		this.product_price = product_price;
 	}
-	public String getProductPrice() {
-		return productPrice;
+	public int getProduct_amount() {
+		return product_amount;
 	}
-	public void setProductPrice(String productPrice) {
-		this.productPrice = productPrice;
+	public void setProduct_amount(int product_amount) {
+		this.product_amount = product_amount;
 	}
-	public String getProductAmount() {
-		return productAmount;
+	public String getProduct_state() {
+		return product_state;
 	}
-	public void setProductAmount(String productAmount) {
-		this.productAmount = productAmount;
-	}
-	public String getProductState() {
-		return productState;
-	}
-	public void setProductState(String productState) {
-		this.productState = productState;
+	public void setProduct_state(String product_state) {
+		this.product_state = product_state;
 	}
 	
 	
-	
-
-
 }
-/*
-PRODUCT_ENTIRE_PK	INT
-PRODUCT_ENTIRE_USER_ENTIRE_ID_FK	varchar2(20)
-PRODUCT_ENTIRE_CATEGORY_MAIN_ID_FK	varchar2(20)
-PRODUCT_ENTIRE_CATEGORY_SUB_ID_FK	varchar2(20)
-product_name	varchar2(20)
-product_price	NUMBER
-product_amount	NUMBER
-product_state	CHAR(1)*/
