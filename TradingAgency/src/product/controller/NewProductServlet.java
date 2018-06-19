@@ -37,7 +37,6 @@ public class NewProductServlet extends HttpServlet {
 		
 		// 비즈니스 로직 처리 
 		ArrayList<Product> newProductMainList = new NewProductMainService().updateNewProductImg();
-		System.out.println(newProductMainList.get(0).getProduct_name());
 		
 		// 1.인코딩
 		response.setCharacterEncoding("utf-8");
@@ -47,8 +46,8 @@ public class NewProductServlet extends HttpServlet {
 			JSONObject result = new JSONObject();
 			result.put("name", product.getProduct_name());
 			result.put("price", product.getProduct_price());
+			result.put("image", product.getProduct_image());
 			resultArray.add(result);
-			System.out.println(result);
 		}
 		response.setContentType("application/json");
 		response.setCharacterEncoding("utf-8");

@@ -223,12 +223,27 @@ crossorigin="anonymous"></script>
 					var result = "";
 					var name = [];
 					var price = [];
+					var img = [];
 					
 					for (var i = 0; i < data.length; i++) {
 						name[i]= data[i].name;
 						price[i] =data[i].price;	
-					
+						img[i] = data[i].image;
 					}
+					console.log(img[0]);
+					$("#newProductSec .card-img-top:eq(0)").attr("src",img[0]);
+					$("#newProductSec .card-img-top:eq(1)").attr("src",img[1]);
+					$("#newProductSec .card-img-top:eq(2)").attr("src",img[2]);
+					$("#newProductSec .card-img-top:eq(3)").attr("src",img[3]);
+					$("#newProductSec .card-img-top:eq(4)").attr("src",img[4]);
+					$("#newProductSec .card-img-top:eq(5)").attr("src",img[5]);
+					$("#newProductSec .card-img-top:eq(6)").attr("src",img[6]);
+					$("#newProductSec .card-img-top:eq(7)").attr("src",img[7]);
+					$("#newProductSec .card-img-top:eq(8)").attr("src",img[8]);
+					$("#newProductSec .card-img-top:eq(9)").attr("src",img[9]);
+					$("#newProductSec .card-img-top:eq(10)").attr("src",img[10]);
+					$("#newProductSec .card-img-top:eq(11)").attr("src",img[11]);
+
 					$("#newProductSec .card-title:eq(0)").text(name[0]);
 					$("#newProductSec .card-title:eq(1)").text(name[1]);
 					$("#newProductSec .card-title:eq(2)").text(name[2]);
@@ -285,13 +300,10 @@ crossorigin="anonymous"></script>
 						<div class="container">
 							<div class="carousel-inner">
 									<div class="carousel-item active">
-								
 										<div class="container">
 											<div class="row" style="margin-left: 15px;">
 												<div class="col-xs-3" style="width: 25%;">
-													<a href="#"> <img class="card-img-top"
-														src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
-														alt="Card image cap"></a>
+													<a href="#"><img class="card-img-top" src=""></a>
 													<div class="card-body">
 														<a href="#">
 														<h5 class="card-title">${newProductMainList[0].productName} </h5>
@@ -300,9 +312,7 @@ crossorigin="anonymous"></script>
 													</div>
 												</div>
 												<div class="col-xs-3" style="width: 25%;">
-													<a href="#"> <img class="card-img-top"
-														src="img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg"
-														alt="Card image cap"></a>
+													<a href="#"> <img class="card-img-top" src=""></a>
 													<div class="card-body">
 														<a href="#">
 															<h5 class="card-title">${newProductMainList[1].productName} </h5>
@@ -313,9 +323,7 @@ crossorigin="anonymous"></script>
 												</div>
 
 												<div class="col-xs-3" style="width: 25%;">
-													<a href="#"> <img class="card-img-top"
-														src="img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg"
-														alt="Card image cap"></a>
+													<a href="#"> <img class="card-img-top" src=""></a>
 													<div class="card-body">
 														<a href="#">
 															<h5 class="card-title">${newProductMainList[2].productName} </h5>
@@ -324,10 +332,8 @@ crossorigin="anonymous"></script>
 													</div>
 												</div>
 												<div class="col-xs-3" style="width: 25%;">
-													<a href="#"> <img class="card-img-top"
-														src="img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg"
-														alt="Card image cap">
-													</a>
+														<a href="#"> <img class="card-img-top" src=""></a>
+											
 													<div class="card-body">
 														<a href="#">
 															<h5 class="card-title">${newProductMainList[3].productName} </h5>
@@ -345,9 +351,7 @@ crossorigin="anonymous"></script>
 										<div class="row" style="margin-left: 15px;">
 
 											<div class="col-xs-3" style="width: 25%;">
-												<a href="#"> <img class="card-img-top"
-													src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
-													alt="Card image cap"></a>
+													<a href="#"> <img class="card-img-top" src=""></a>
 												<div class="card-body">
 													<a href="#">
 														<h5 class="card-title">${newProductMainList[4].productName}</h5>
@@ -355,22 +359,18 @@ crossorigin="anonymous"></script>
 													<p class="card-text">${newProductMainList[4].productPrice}원</p>
 												</div>
 											</div>
-											<div class="col-xs-3" style="width: 25%;">
-												<a href="#"> <img class="card-img-top"
-													src="img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg"
-													alt="Card image cap"></a>
+												<div class="col-xs-3" style="width: 25%;">
+													<a href="#"> <img class="card-img-top" src=""></a>
 												<div class="card-body">
 													<a href="#">
-														<h5 class="card-title">${newProductMainList[5].productName}</h5>
+														<h5 class="card-title">${newProductMainList[4].productName}</h5>
 													</a>
-													<p class="card-text">${newProductMainList[5].productPrice}원</p>
+													<p class="card-text">${newProductMainList[4].productPrice}원</p>
 												</div>
 											</div>
 
 											<div class="col-xs-3" style="width: 25%;">
-												<a href="#"> <img class="card-img-top"
-													src="img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg"
-													alt="Card image cap"></a>
+													<a href="#"> <img class="card-img-top" src=""></a>
 												<div class="card-body">
 													<a href="#">
 														<h5 class="card-title">${newProductMainList[6].productName}</h5>
@@ -379,10 +379,8 @@ crossorigin="anonymous"></script>
 												</div>
 											</div>
 											<div class="col-xs-3" style="width: 25%;">
-												<a href="#"> <img class="card-img-top"
-													src="img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg"
-													alt="Card image cap">
-												</a>
+												<a href="#"> <img class="card-img-top" src=""></a>
+										
 												<div class="card-body">
 													<a href="#">
 														<h5 class="card-title">${newProductMainList[7].productName}</h5>
@@ -400,9 +398,7 @@ crossorigin="anonymous"></script>
 										<div class="row" style="margin-left: 15px;">
 
 											<div class="col-xs-3" style="width: 25%;">
-												<a href="#"> <img class="card-img-top"
-													src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
-													alt="Card image cap"></a>
+												<a href="#"> <img class="card-img-top" src=""></a>
 												<div class="card-body">
 												<a href="#">
 														<h5 class="card-title">${newProductMainList[8].productName}</h5>
@@ -412,9 +408,7 @@ crossorigin="anonymous"></script>
 												</div>
 											</div>
 											<div class="col-xs-3" style="width: 25%;">
-												<a href="#"> <img class="card-img-top"
-													src="img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg"
-													alt="Card image cap"></a>
+												<a href="#"> <img class="card-img-top" src=""></a>
 												<div class="card-body">
 													<a href="#">
 														<h5 class="card-title">${newProductMainList[9].productName}</h5>
@@ -424,9 +418,7 @@ crossorigin="anonymous"></script>
 											</div>
 
 											<div class="col-xs-3" style="width: 25%;">
-												<a href="#"> <img class="card-img-top"
-													src="img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg"
-													alt="Card image cap"></a>
+													<a href="#"> <img class="card-img-top" src=""></a>
 												<div class="card-body">
 												<a href="#">
 														<h5 class="card-title">${newProductMainList[10].productName}</h5>
@@ -437,10 +429,7 @@ crossorigin="anonymous"></script>
 											</div>
 
 											<div class="col-xs-3" style="width: 25%;">
-												<a href="#"> <img class="card-img-top"
-													src="img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg"
-													alt="Card image cap">
-												</a>
+												<a href="#"> <img class="card-img-top" src=""></a>
 												<div class="card-body">
 												<a href="#">
 														<h5 class="card-title">${newProductMainList[11].productName}</h5>
@@ -1405,8 +1394,6 @@ crossorigin="anonymous"></script>
 				<br> <br>
 
 				<!-- 이미지 hover 섹션 -->
-
-
 				<div id="imghoverSec">
 					<div class="container">
 
