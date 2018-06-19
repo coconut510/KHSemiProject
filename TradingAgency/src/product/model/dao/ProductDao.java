@@ -39,13 +39,22 @@ public class ProductDao {
 		return result;	
 	}
 
-	public ArrayList<Product> productSortCategory(Connection conn,String mainCategory, String subCategory,int onePageShowProduct, int currentPage) {
+	public ArrayList<Product> productSortCategory(Connection conn,String mainCategory, String subCategory,int onePageShowProduct, int currentPage, String orderType) {
 		PreparedStatement pstmt = null;
 		ResultSet rset = null;
 		ArrayList<Product> resultList = new ArrayList<Product>();
+		String orderQuery = "";
+		switch(orderType)
+		{
+			case "uploadOrder": orderQuery = " order by product_entire_pk desc "; break;
+			case "lowPriceOrder": orderQuery = " order by product_price ";  break;
+			case "highPriceOrder": orderQuery = " order by product_price desc ";  break;
+			case "manyReviewOrder": orderQuery = " order by product_entire_pk desc ";  break;		
+		}
 		String query = "select * from product_entire_tb"
 				+ " where PRODUCT_ENTIRE_CATE_MAIN_ID_FK = ? and PRODUCT_ENTIRE_CATE_SUB_ID_FK = ? "+
-				" order by product_entire_pk desc ";
+				orderQuery;
+			
 		try {
 			pstmt = conn.prepareStatement(query);
 			pstmt.setString(1, mainCategory);
