@@ -13,6 +13,7 @@ window.onload = function()
 	
 	tabArr = document.getElementsByClassName("noticeTab");
 	tabArr[0].style.display = "block";
+
 }
 function clearAll()
 {
@@ -27,7 +28,11 @@ function clearAll()
 }
 function boardTapChange(btn, boardName)
 {
+	console.log(boardName.id);
+	if(boardName.id=="boardListArea") location.href="/notice";
+	if(boardName.id=="answerListArea") location.href="/faq";
 	clearAll();
 	btn.style = selectStyle;
 	boardName.style.display = "block";
+
 }

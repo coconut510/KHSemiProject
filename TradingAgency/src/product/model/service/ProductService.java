@@ -13,7 +13,6 @@ public class ProductService {
 
 	public ArrayList<Product> ProductSearchKeyword(String keyword) {
 		Connection conn = JDBCTemplate.getConnection();
-		System.out.println("키워드 " + keyword);
 		return null;
 	}
 	public int uploadFile(ImageFile imgFile) {
@@ -29,9 +28,9 @@ public class ProductService {
 		JDBCTemplate.close(conn);
 		return result;	
 	}
-	public ArrayList<Product> productSortCategory(String mainCategory, String subCategory,int onePageShowProduct, int currentPage) {
+	public ArrayList<Product> productSortCategory(String mainCategory, String subCategory,int onePageShowProduct, int currentPage, String orderType) {
 		Connection conn= JDBCTemplate.getConnection();
-		ArrayList<Product> resultList = new ProductDao().productSortCategory(conn,mainCategory,subCategory,onePageShowProduct,currentPage);
+		ArrayList<Product> resultList = new ProductDao().productSortCategory(conn,mainCategory,subCategory,onePageShowProduct,currentPage, orderType);
 		JDBCTemplate.close(conn);
 		return resultList;	
 	}

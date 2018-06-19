@@ -49,6 +49,7 @@ public class NoticeServlet extends HttpServlet {
 		{
 			RequestDispatcher view = request.getRequestDispatcher("/views/board/board.jsp");
 			request.setAttribute("NoticePageData", npd);
+			request.setAttribute("noticeTab", "boardListArea");
 			view.forward(request, response);
 		}else
 		{

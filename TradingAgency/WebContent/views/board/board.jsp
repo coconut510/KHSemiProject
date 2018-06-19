@@ -1,9 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ page import="board.model.vo.*" import="java.util.*"%>
-<% NoticePageData npd = (NoticePageData)request.getAttribute("NoticePageData");
-   ArrayList<Notice> list = npd.getNoticeList(); //현재 페이지리스트 
-   String pageNavi = npd.getNoticePageNavi();  //navi 리스트 
+<% 
+	NoticePageData npd = (NoticePageData)request.getAttribute("NoticePageData");
+	ArrayList<Notice> list = new ArrayList<Notice>();
+	String pageNavi = "";
+	if(npd!=null){
+		list = npd.getNoticeList(); //현재 페이지리스트 
+		pageNavi = npd.getNoticePageNavi();  //navi 리스트 
+	}
+   FaqPageData fpd = (FaqPageData)request.getAttribute("FaqPageData");
+   ArrayList<Faq> f_list = new ArrayList<Faq>();
+   if(fpd!=null){
+	   f_list = fpd.getFaqList(); //현재 페이지 리스트 
+	   pageNavi = fpd.getFaqPageNavi();
+   }
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -46,6 +57,32 @@
 <link rel="stylesheet" type="text/css"
 	href="../../CSS/common/footer.css">
 
+
+<script>
+ 	var currentTab = "boardListArea";
+	window.onload = function()
+	{	
+	//	var noticeTabName = request.getAttribute("noticeTab");	
+	//	var tabArr = document.getElementsByClassName("noticeTab");
+		//var btnArr = document.getElementsByClassName("menuBtn");
+		//for(var i = 0;i<tabArr.length;i++)
+		//{
+			//if(tabArr[i].id = currentTab)
+		//	{
+		//		boardTapChange(btnArr[i], tabArr[i]);	
+		//		break;
+		//	}
+	//	}
+	}
+	function boardTapChange(btn, boardName)
+	{
+		if(boardName.id=="boardListArea") location.href="/notice";
+		if(boardName.id=="answerListArea") location.href="/faq";
+		clearAll();
+		btn.style = selectStyle;
+		boardName.style.display = "block";	
+	}
+</script>
 <title>게시판</title>
 
 </head>
@@ -76,7 +113,10 @@
 			<div id="boardContent">
 				<div id="BoardList">
 
+
 					<div class="noticeTab" id="boardListArea">
+						<% if(npd!=null){%>
+
 						<div id="bordTitle">
 							<h3 style="float: left;">
 								<strong>공지사항</strong>
@@ -99,11 +139,15 @@
 								<td><%=n.getNotice_registration_date()%></td>
 								<td></td>
 							</tr>
-							<% }%>
-							
+							<%}%>
+
 						</table>
+						<%}%>
 					</div>
+
+
 					<div class="noticeTab" id="answerListArea">
+						<% if(fpd!=null){%>
 						<div id="bordTitle">
 							<h3 style="float: left;">
 								<strong>자주 묻는 질문</strong>
@@ -118,6 +162,15 @@
 								<th style="width: 10%;">날짜</th>
 								<th style="width: 10%;">조회수</th>
 							</tr>
+							<% for(Faq f : f_list){%>
+							<tr>
+								<td><%=f.getFaq_pk()%></td>
+								<td><a href="#"><%=f.getFaq_subject()%></a></td>
+								<td>관리자</td>
+								<td>2018-06-19</td>
+								<td></td>
+							</tr>
+							<% }%>
 							<tr>
 								<td>6</td>
 								<td><a href="/views/board/boardSelect.jsp">TEST</a></td>
@@ -162,6 +215,8 @@
 							</tr>
 
 						</table>
+						<%}%>
+
 					</div>
 					<div class="noticeTab" id="reviewListArea">
 						<div id="bordTitle">
@@ -220,10 +275,11 @@
 								<td>2018-06-14</td>
 								<td>15</td>
 							</tr>
-							
-							
+
+
 						</table>
 					</div>
+
 
 					<div class="hlLong"></div>
 					<div id="pagingArea">
@@ -242,6 +298,7 @@
 						</ul>
 						</nav>
 					</div>
+
 					<div id="searchArea">
 						<select>
 							<option selected>제목</option>

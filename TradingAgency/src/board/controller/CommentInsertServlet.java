@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import board.model.service.BoardService;
-import board.model.vo.BoardComment;
+import board.model.service.NoticeService;
+import board.model.vo.NoticeComment;
 
 /**
  * Servlet implementation class CommentInsertServlet
@@ -29,28 +29,28 @@ public class CommentInsertServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setCharacterEncoding("utf-8");
-		HttpSession session = request.getSession(false);
-		
-		String comment = request.getParameter("comment");
-		int noticeNo = Integer.parseInt(request.getParameter("noticeNo"));
-		if(session.getAttribute("user")!=null)
-		{
-			BoardComment bc = new BoardComment();
-			bc.setContent(request.getParameter("comment"));
-			bc.setUserId((Member)session.getAttribute("user")).getUserId());
-			bc.setNoticeNo(Integer.parseInt(request.getParameter("notice")));
-			int result = new BoardService().commentInsert(bc); 
-			
-			if(result>0)
-			{
-				response.sendRedirect("/boardSelect?noticeNo="+noticeNo);
-			}
-			else
-			{
-				response.sendRedirect("");
-			}
-		}
+//		request.setCharacterEncoding("utf-8");
+//		HttpSession session = request.getSession(false);
+//		
+//		String comment = request.getParameter("comment");
+//		int noticeNo = Integer.parseInt(request.getParameter("noticeNo"));
+//		if(session.getAttribute("user")!=null)
+//		{
+//			NoticeComment nc = new NoticeComment();
+//			nc.setContent(request.getParameter("comment"));
+//			nc.setUserId((Member)session.getAttribute("user")).getUserId());
+//			nc.setNoticeNo(Integer.parseInt(request.getParameter("notice")));
+//			int result = new NoticeService().commentInsert(nc); 
+//			
+//			if(result>0)
+//			{
+//				response.sendRedirect("/boardSelect?noticeNo="+noticeNo);
+//			}
+//			else
+//			{
+//				response.sendRedirect("");
+//			}
+//		}
 	}
 
 	/**

@@ -37,8 +37,9 @@ crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="../../CSS/common/header.css">
 <link rel="stylesheet" type="text/css" href="../../CSS/common/adv.css">	
 <link rel="stylesheet" type="text/css" href="../../CSS/common/footer.css">	
+
 <!-- 내부 js파일 -->
-<script type="text/javascript" src="../../JS/common/header.js?ver=1"></script>
+<script type="text/javascript" src="../../JS/common/header.js"></script>
 <script type="text/javascript" src="../../JS/member/main.js"></script>
 <script type="text/javascript" src="../../JS/common/adv.js"></script>
 <script type="text/javascript" src="../../JS/bootstrap/bootstrap.min.js"></script>

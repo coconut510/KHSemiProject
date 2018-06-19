@@ -1,10 +1,12 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ page import="member.model.vo.*" %>
+<% Member m = (Member)session.getAttribute("user"); %>  
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>³» Á¤º¸</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ë‚´ ì •ë³´</title>
    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <style>
 div{background-color: white;}
@@ -108,8 +110,7 @@ background:black url("http://www.blueb.co.kr/data/201010/IJ12872476173279/vert-o
 .insertTitle {
 	text-align: left;
 	width: 80px;
-	height: 50px;
-	width: 80px;
+	height:30px;
 }
 .info {width: 100%; height: 25%; float:right;}
 .infoleft {width: 30%; overflow: auto; float: left;}
@@ -118,7 +119,6 @@ background:black url("http://www.blueb.co.kr/data/201010/IJ12872476173279/vert-o
 .phonediv {
 	display: block;
 	overflow: auto;
-	margin-bottom: 10px;
 }
 .phonediv div {
 	float: left;
@@ -137,7 +137,19 @@ background:black url("http://www.blueb.co.kr/data/201010/IJ12872476173279/vert-o
 	overflow: auto;
 	display: block;
 	float: left;
+	}
+.pointdiv {
+overflow: auto;
+display: block;
+margin-top:10px;
+margin-bottom: 10px;
 }
+.pointdiv div {
+	float: left;
+	display: inline-block;
+}
+
+
 .delivery {width: 100%;height:25%;float:right;}
 .deliveryleft {width: 30%; overflow: auto; float: left;}
 .deliveryright {width: 60%;overflow: auto;float: left;}
@@ -284,6 +296,40 @@ float:left;
 	position: relative;
 	top: 4px;
 }
+.point
+{
+
+	float:left;
+		margin-left:10px;
+}
+.pointBtn {
+	float:right;
+	position: relative;
+	width: 80px;
+	display: inline-block;
+	color: #ecf0f1;
+	text-decoration: none;
+	border-radius: 5px;
+	border: solid 1px #7151FC;
+	background: #7151FC;
+	text-align: center;
+	padding: 16px 18px 14px;
+	margin-right: 150px;
+	font-size: 15px;
+	-webkit-transition: all 0.1s;
+	-moz-transition: all 0.1s;
+	transition: all 0.1s;
+	-webkit-box-shadow: 0px 6px 0px rebeccapurple;
+	-moz-box-shadow: 0px 6px 0px rebeccapurple;
+	box-shadow: 0px 0px 0px rebeccapurple;
+}
+.pointBtn:active {
+	-webkit-box-shadow: 0px 1px 0px rebeccapurple;
+	-moz-box-shadow: 0px 2px 0px rebeccapurple;
+	box-shadow: 0px 0px 0px rebeccapurple;
+	position: relative;
+	top: -1px;
+}
 
 
 
@@ -298,7 +344,8 @@ float:left;
 	background: #7151FC;
 	text-align: center;
 	padding: 16px 18px 14px;
-	margin: 12px;
+	margin: 10px;
+	margin-bottom:-1px;
 	font-size: 25px;
 	-webkit-transition: all 0.1s;
 	-moz-transition: all 0.1s;
@@ -509,90 +556,106 @@ text-align:center;
 </head>
 <body align="center">
 
-	<div class="header">Çì´õ</div>
+	<div class="header">í—¤ë”</div>
 <center>
 	<div class="contents">
 		<div class="mpMenuItems">
 			<div class="mpMenuTitle"><h1>My Page</h1></div>
 
 		 <ul class="mpMenuAll" role="tablist" style="none">
-					<li role="presentation" class="active"><a href="/views/member/mySelf.jsp">ÆÇ¸Å³»¿ª</a></li>
-					<li role="presentation" class="active"><a href="/views/member/myBuy.jsp">±¸¸Å³»¿ª</a></li>
-					<li role="presentation" class="active"><a href="/views/member/jjim.jsp">ÂòÇÑ »óÇ°</a></li>
-					<li role="presentation" class="active"><a href="/views/member/myCoupon.jsp">³» ÄíÆù</a></li>
-					<li role="presentation" class="active"><a href="/views/member/myInfoQuiz.jsp">³» Á¤º¸</a></li>
-										<li role="presentation" class="active"><a href="/views/member/myGrade.jsp">µî±Şº¸±â</a></li>
+					<li role="presentation" class="active"><a href="/views/member/mySelf.jsp">íŒë§¤ë‚´ì—­</a></li>
+					<li role="presentation" class="active"><a href="/views/member/myBuy.jsp">êµ¬ë§¤ë‚´ì—­</a></li>
+					<li role="presentation" class="active"><a href="/views/member/jjim.jsp">ì°œí•œ ìƒí’ˆ</a></li>
+					<li role="presentation" class="active"><a href="/views/member/myCoupon.jsp">ë‚´ ì¿ í°</a></li>
+					<li role="presentation" class="active"><a href="/views/member/myInfoQuiz.jsp">ë‚´ ì •ë³´</a></li>
+					<li role="presentation" class="active"><a href="/views/member/myGrade.jsp">ë“±ê¸‰ë³´ê¸°</a></li>
 				</ul>
 		</div>
 		<center>
 			<div class="MenuContents">
+			<form action="/update" method="post">
 				<div class="MenuConTitle">
-					<H2>³» Á¤º¸</H2>
+					<H2>ë‚´ ì •ë³´</H2>
 				</div>
 				<hr>
 				<div class="info">
 
 					<div class="infoleft">
-						<H2>±âº»Á¤º¸</H2>
+						<H2>ê¸°ë³¸ì •ë³´</H2>
 					</div>
 					<div class="inforight">
 						<div class="phonediv">
-							<!-- ÇÚµåÆù div start -->
+							<!-- í•¸ë“œí° div start -->
 							<div class="insertTitle"
-								style="margin-top: 30px; font-size: 20px">ÀüÈ­¹øÈ£</div>
-							<div class="phone">ÈŞ´ëÆù ¹øÈ£ µî·Ï</div>
+								style="margin-top: 30px; font-size: 20px" name="phone">ì „í™”ë²ˆí˜¸</div>
+							<div class="phone">íœ´ëŒ€í° ë²ˆí˜¸ ë“±ë¡</div>
 						</div>
-						<!-- ÇÚµåÆù div end -->
+						<!-- í•¸ë“œí° div end -->
 						<br>
 						<div class="emaildiv">
-							<!-- ÀÌ¸ŞÀÏ div start -->
-							<div class="insertTitle" style="font-size: 20px">ÀÌ¸ŞÀÏ</div>
+							<!-- ì´ë©”ì¼ div start -->
+							<div class="insertTitle" style="font-size: 20px">ì´ë©”ì¼</div>
 							<input type="email" style="width: 300px; height: 40px;"
-								style="border:1px solid maroon;background:transparent;"
-								placeholder="ÀÌ¸ŞÀÏÀ» ÀÔ·ÂÇÏ¼¼¿ä">
+								style="border:1px solid maroon;background:transparent;" 
+								name="email" placeholder="ì´ë©”ì¼ì„ ì…ë ¥í•˜ì„¸ìš”" value="<%=m.getUser_email()%>">
+							<input type="hidden" value="<%=m.getUser_id() %>" name="userId">
 						</div>
-						<!-- ÀÌ¸ŞÀÏ div end -->
+						
+					
+						<div class="pointdiv">
+						<div class="insertTitle" style="font-size: 20px">í¬ì¸íŠ¸</div>
+						
+						<input type="text" style="width: 220px; height: 40px;"
+								style="border:1px solid maroon;background:transparent;" 
+								name="point" placeholder="-----ì›" readonly class="point">
+						
+						<input type="button" value="ì¶©ì „" class="pointBtn"> 
+						</div>
+						
+						
+						
+						<!-- ì´ë©”ì¼ div end -->
 					</div>
 				</div>
 				<hr>
 				<div class="delivery">
 					<div class="deliveryleft">
-					<H2>¹è¼ÛÁ¤º¸</H2>
+					<H2>ë°°ì†¡ì •ë³´</H2>
 					</div>
 					<div class="deliveryright">
-						<!-- ÁÖ¼Ò1¹øÂ° -->
+						<!-- ì£¼ì†Œ1ë²ˆì§¸ -->
 						<div class="address1">
 								<div class="insertTitle"
-								style="margin-top: 10px; font-size: 20px">ÁÖ¼Ò</div>
+								style="margin-top: 10px; font-size: 20px">ì£¼ì†Œ</div>
 								<div>
 								<input autocomplete="off" class="postcodify_postcode5" id="user_address"
 								ng-keypress="keypress($event)" ng-model="addressKeyword"
-								placeholder="À¾, ¸é, µ¿À¸·Î °Ë»öÇØÁÖ¼¼¿ä." type="text"
+								placeholder="ì, ë©´, ë™ìœ¼ë¡œ ê²€ìƒ‰í•´ì£¼ì„¸ìš”." type="text"
 								style="width: 300px; height: 40px;"
-								style="border:1px solid maroon; background:transparent;" name="postNum">
+								style="border:1px solid maroon; background:transparent;" name="postNum" id="postNum">
 								</div>
 								
 								
-							<div><button id="postcodify_search_button" class="search">°Ë»ö</button></div>
+							<div><button type="button" id="postcodify_search_button" class="search">ê²€ìƒ‰</button></div>
 						</div>
-						<!-- ÁÖ¼Ò2¹øÂ° -->
+						<!-- ì£¼ì†Œ2ë²ˆì§¸ -->
 						<div class="address2">
 								<div class="insertTitle"
 								style="margin-top: 30px; font-size: 20px"> </div>
 								<div>								
 							<input class="postcodify_address" ng-model="profile.addr1"
-								placeholder="ÁÖ¼Ò°Ë»öÀ» ÀÌ¿ëÇØÁÖ¼¼¿ä" readonly="readonly"
+								placeholder="ì£¼ì†Œê²€ìƒ‰ì„ ì´ìš©í•´ì£¼ì„¸ìš”" readonly="readonly"
 								style="width: 300px; height: 40px;"
 								style="border:1px solid maroon; background:transparent;" name="addrInfo">
 						</div>
 						</div>
-						<!-- ÁÖ¼Ò3¹øÂ° -->
+						<!-- ì£¼ì†Œ3ë²ˆì§¸ -->
 						<div class="address3">
 								<div class="insertTitle"
 								style="margin-top: 20px; font-size: 20px"> </div>
 								<div>
 							<input class="postcodify_details" id="user-addr2" ng-model="profile.addr2"
-								placeholder="»ó¼¼ÁÖ¼Ò" style="width: 300px; height: 40px;"
+								style="width: 300px; height: 40px;" value="<%=m.getUser_addr() %>"
 								style="border:1px solid maroon; background:transparent;" name="addrDetail">
 						</div>
 					</div>
@@ -602,107 +665,48 @@ text-align:center;
 				<div class="bank">
 
 					<div class="bankleft">
-						<H2>°èÁÂÁ¤º¸</H2>
+						<H2>ê´€ì‹¬ë¶„ì•¼</H2>
 					</div>
 					<div class="bankright">
-						<div class="bank1">
-							<div class="insertTitle"
-								style="margin-top: 30px; font-size: 20px">ÀºÇà¼±ÅÃ</div>
-							<div>
-							<select
-								class="form-control profedit-form-input ng-pristine ng-valid"
-								ng-model="profile.bank_name"
-								ng-options="item for item in bankNames"
-								style="width: 300px; height: 40px;"
-								style="border:1px solid maroon;background:transparent;"><option
-									value="" selected="selected" label=""></option>
-								<option value="0" label="±¹¹ÎÀºÇà">±¹¹ÎÀºÇà</option>
-								<option value="1" label="¿ì¸®ÀºÇà">¿ì¸®ÀºÇà</option>
-								<option value="2" label="¿ì¸®ÅõÀÚÁõ±Ç">¿ì¸®ÅõÀÚÁõ±Ç</option>
-								<option value="3" label="½ÅÇÑÀºÇà">½ÅÇÑÀºÇà</option>
-								<option value="4" label="½ÅÇÑ±İÀ¶ÅõÀÚ">½ÅÇÑ±İÀ¶ÅõÀÚ</option>
-								<option value="5" label="³óÇùÀºÇà">³óÇùÀºÇà</option>
-								<option value="6" label="KEBÇÏ³ªÀºÇà">KEBÇÏ³ªÀºÇà</option>
-								<option value="7" label="ÇÏ³ª´ëÅõÁõ±Ç">ÇÏ³ª´ëÅõÁõ±Ç</option>
-								<option value="8" label="±â¾÷ÀºÇà">±â¾÷ÀºÇà</option>
-								<option value="9" label="¿ìÃ¼±¹">¿ìÃ¼±¹</option>
-								<option value="10" label="´ë±¸ÀºÇà">´ë±¸ÀºÇà</option>
-								<option value="11" label="ºÎ»êÀºÇà">ºÎ»êÀºÇà</option>
-								<option value="12" label="±¤ÁÖÀºÇà">±¤ÁÖÀºÇà</option>
-								<option value="13" label="ÀüºÏÀºÇà">ÀüºÏÀºÇà</option>
-								<option value="14" label="°æ³²ÀºÇà">°æ³²ÀºÇà</option>
-								<option value="15" label="±³º¸Áõ±Ç">±³º¸Áõ±Ç</option>
-								<option value="16" label="´ë½ÅÁõ±Ç">´ë½ÅÁõ±Ç</option>
-								<option value="17" label="´ë¿ìÁõ±Ç">´ë¿ìÁõ±Ç</option>
-								<option value="18" label="µµÀÌÄ¡ÀºÇà">µµÀÌÄ¡ÀºÇà</option>
-								<option value="19" label="µ¿ºÎÁõ±Ç">µ¿ºÎÁõ±Ç</option>
-								<option value="20" label="¸Ş¸®Ã÷Á¾ÇÕ±İÀ¶Áõ±Ç">¸Ş¸®Ã÷Á¾ÇÕ±İÀ¶Áõ±Ç</option>
-								<option value="21" label="¹Ì·¡¿¡¼ÂÁõ±Ç">¹Ì·¡¿¡¼ÂÁõ±Ç</option>
-								<option value="22" label="ºÎ±¹Áõ±Ç">ºÎ±¹Áõ±Ç</option>
-								<option value="23" label="»ê¸²Á¶ÇÕÁß¾ÓÈ¸">»ê¸²Á¶ÇÕÁß¾ÓÈ¸</option>
-								<option value="24" label="»ê¾÷ÀºÇà">»ê¾÷ÀºÇà</option>
-								<option value="25" label="»ï¼ºÁõ±Ç">»ï¼ºÁõ±Ç</option>
-								<option value="26" label="»óÈ£ÀúÃàÀºÇà">»óÈ£ÀúÃàÀºÇà</option>
-								<option value="27" label="»õ¸¶À»±İ°íÁß¾ÓÈ¸">»õ¸¶À»±İ°íÁß¾ÓÈ¸</option>
-								<option value="28" label="¼öÇùÁß¾ÓÈ¸">¼öÇùÁß¾ÓÈ¸</option>
-								<option value="29" label="½Å¿µÁõ±Ç">½Å¿µÁõ±Ç</option>
-								<option value="30" label="½ÅÇùÁß¾ÓÈ¸">½ÅÇùÁß¾ÓÈ¸</option>
-								<option value="31" label="¾ÆÀÌ¿¥ÅõÀÚÁõ±Ç">¾ÆÀÌ¿¥ÅõÀÚÁõ±Ç</option>
-								<option value="32" label="À¯¾ÈÅ¸Áõ±Ç">À¯¾ÈÅ¸Áõ±Ç</option>
-								<option value="33" label="À¯ÁøÅõÀÚÁõ±Ç">À¯ÁøÅõÀÚÁõ±Ç</option>
-								<option value="34" label="ÀÌº£½ºÆ®ÅõÀÚÁõ±Ç">ÀÌº£½ºÆ®ÅõÀÚÁõ±Ç</option>
-								<option value="35" label="Á¦ÁÖÀºÇà">Á¦ÁÖÀºÇà</option>
-								<option value="36" label="Å°¿òÁõ±Ç">Å°¿òÁõ±Ç</option>
-								<option value="37" label="ÇÏÀÌÅõÀÚÁõ±Ç">ÇÏÀÌÅõÀÚÁõ±Ç</option>
-								<option value="38" label="ÇÑ±¹¾¾Æ¼ÀºÇà">ÇÑ±¹¾¾Æ¼ÀºÇà</option>
-								<option value="39" label="ÇÑ±¹ÅõÀÚÁõ±Ç">ÇÑ±¹ÅõÀÚÁõ±Ç</option>
-								<option value="40" label="ÇÑÈ­ÅõÀÚÁõ±Ç">ÇÑÈ­ÅõÀÚÁõ±Ç</option>
-								<option value="41" label="Çö´ëÁõ±Ç">Çö´ëÁõ±Ç</option>
-								<option value="42" label="ºñ¿£ÇÇÆÄ¸®¹ÙÀºÇà">ºñ¿£ÇÇÆÄ¸®¹ÙÀºÇà</option>
-								<option value="43" label="BOAÀºÇà">BOAÀºÇà</option>
-								<option value="44" label="HMCÅõÀÚÁõ±Ç">HMCÅõÀÚÁõ±Ç</option>
-								<option value="45" label="HSBCÀºÇà">HSBCÀºÇà</option>
-								<option value="46" label="Á¦ÀÌÇÇ¸ğ°£Ã¼ÀÌ½ºÀºÇà">Á¦ÀÌÇÇ¸ğ°£Ã¼ÀÌ½ºÀºÇà</option>
-								<option value="47" label="LIGÅõÀÚÁõ±Ç">LIGÅõÀÚÁõ±Ç</option>
-								<option value="48" label="SCÀºÇà">SCÀºÇà</option>
-								<option value="49" label="SKÁõ±Ç">SKÁõ±Ç</option>
-								<option value="50" label="Áö¿ª³óÃàÇù">Áö¿ª³óÃàÇù</option>
-								<option value="51" label="¿ÜÈ¯ÀºÇà">¿ÜÈ¯ÀºÇà</option>
-								<option value="52" label="ÄÉÀÌ¹ğÅ©">ÄÉÀÌ¹ğÅ©</option>
-								<option value="53" label="Ä«Ä«¿À¹ğÅ©">Ä«Ä«¿À¹ğÅ©</option></select>
-						</div>
-						</div>
-						<br>
-						<div class="bank2">
-							<div class="insertTitle" style="margin-top: 30px; font-size: 20px">¿¹±İÁÖ
-							</div>
-							<div>
-							<input type="email" style="width: 300px; height: 40px;"
-								style="border:1px solid maroon;background:transparent;" value="">
-							</div>
-						</div>
-						<br>
-						<div class="bank3">
-							<div class="insertTitle"
-								style="margin-top: 30px; font-size: 20px">°èÁÂ¹øÈ£
-							</div>
-							<div>
-							<input type="text" style="width: 300px; height: 40px;"
-								style="border:1px solid maroon;background:transparent;" value="">
-							</div>
-						</div>
+						<tr class="regi-tr" name="interest">
+					<td>
+					<table>
+					<tr>
+						<td><input type="checkbox" name="userInter" value="ì „ìì œí’ˆ"> ì „ìì œí’ˆ</td>
+						<td><input type="checkbox" name="userInter" value="íŒ¨ì…˜ì˜ë¥˜"> íŒ¨ì…˜ì˜ë¥˜</td>
+						<td><input type="checkbox" name="userInter" value="íŒ¨ì…˜ì¡í™”"> íŒ¨ì…˜ì¡í™”</td>
+						<td><input type="checkbox" name="userInter" value="í™”ì¥í’ˆ/ë¯¸ìš©"> í™”ì¥í’ˆ/ë¯¸ìš©</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="userInter" value="ìŠ¤í¬ì¸ /ë ˆì €"> ìŠ¤í¬ì¸ /ë ˆì €</td>
+						<td><input type="checkbox" name="userInter" value="ìœ ì•„ë™/ì¶œì‚°"> ìœ ì•„ë™/ì¶œì‚°</td>
+						<td><input type="checkbox" name="userInter" value="ì™„êµ¬/ë¬¸êµ¬/ì·¨ë¯¸"> ì™„êµ¬/ë¬¸êµ¬/ì·¨ë¯¸</td>
+						<td><input type="checkbox" name="userInter" value="í•´ì™¸ ëª…í’ˆ/ ìë™ì°¨"> í•´ì™¸ ëª…í’ˆ/ ìë™ì°¨</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="userInter" value="ë„ì„œ/ìŒë°˜/DVD"> ë„ì„œ/ìŒë°˜/DVD</td>
+						<td><input type="checkbox" name="userInter" value="ê°€êµ¬/ì¸í…Œë¦¬ì–´"> ê°€êµ¬/ì¸í…Œë¦¬ì–´</td>
+						<td><input type="checkbox" name="userInter" value="ì—¬í–‰/ë¬¸í™”"> ì—¬í–‰/ë¬¸í™”</td>
+						<td><input type="checkbox" name="userInter" value="ìƒí™œ/ê±´ê°•"> ìƒí™œ/ê±´ê°•</td>
+					</tr>
+						</table></td>
+				</tr>
 					</div>
+				
 				</div>
 				<div class="deleteok">
 				
 				<form action="deleteComplate.jsp" method="post" style="display:inLine;">
-				<input type="submit" id="delBtn" value="È¸¿øÅ»Åğ" class="delete" onclick="return deletecheck();" />
+				<input type="submit" id="delBtn" value="íšŒì›íƒˆí‡´" class="delete" onclick="return deletecheck();" />
 				</form>
 					<div>
-						<div><button id="save" class="save">È®ÀÎ</button></div>
+						<div><button  type="submit" id="save" class="save">í™•ì¸</button></div>
+						
 					</div>
 					</div>
+		</form>
 	</div>
+
 	</center>
  <div class="menu-button"><i class="Qbtn"></i>
 	<a href="/views/member/myCart.jsp" style="background-image:url(/../../img/messageQbtn.png)"> <i class="messageQbtn"></i> </a>
@@ -713,21 +717,21 @@ text-align:center;
 
 
 
-   <script> $(function() { $("#postcodify_search_button").postcodifyPopUp(); }); </script> <!-- ÁÖ¼Ò °Ë»ö -->
-   <script src="//d1p7wdleee1q2z.cloudfront.net/post/search.min.js"></script> <!-- ÁÖ¼Ò api -->
+   <script> $(function() { $("#postcodify_search_button").postcodifyPopUp(); }); </script> <!-- ì£¼ì†Œ ê²€ìƒ‰ -->
+   <script src="//d1p7wdleee1q2z.cloudfront.net/post/search.min.js"></script> <!-- ì£¼ì†Œ api -->
    <script type="text/javascript" src="/JS/bootstrap/bootstrap.js"></script>
 <script>
 var swi = false;
 function deletecheck(){
 	if(swi==false){
-		var result = window.confirm("°èÁ¤À» »èÁ¦ÇÏ¸é °³ÀÎ Á¤º¸ ¹× °Å·¡ ³»¿ªÀÌ ¸ğµÎ »èÁ¦µË´Ï´Ù.             ±×·¡µµ °èÁ¤À» »èÁ¦ÇÏ½Ã°Ú½À´Ï±î?                                              ÀüÈ­¹øÈ£ ¶Ç´Â ÀÌ¸ŞÀÏÀ» º¯°æÇÏ°í ½Í´Ù¸é ±âº»Á¤º¸¿¡¼­                   º¯°æÇÒ ¼ö ÀÖ½À´Ï´Ù.");
+		var result = window.confirm("ê³„ì •ì„ ì‚­ì œí•˜ë©´ ê°œì¸ ì •ë³´ ë° ê±°ë˜ ë‚´ì—­ì´ ëª¨ë‘ ì‚­ì œë©ë‹ˆë‹¤.             ê·¸ë˜ë„ ê³„ì •ì„ ì‚­ì œí•˜ì‹œê² ìŠµë‹ˆê¹Œ?                                              ì „í™”ë²ˆí˜¸ ë˜ëŠ” ì´ë©”ì¼ì„ ë³€ê²½í•˜ê³  ì‹¶ë‹¤ë©´ ê¸°ë³¸ì •ë³´ì—ì„œ                   ë³€ê²½í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.");
 		if(result){
 			session.invalidate();
-			alert('Å»ÅğÇÏ¿´½À´Ï´Ù');
+			alert('íƒˆí‡´í•˜ì˜€ìŠµë‹ˆë‹¤');
 			
 		swi =true;
 		}else{
-		alert('Ãë¼ÒÇß¾î¾ç!! ^¤µ^');
+		alert('ì·¨ì†Œí–ˆì–´ì–‘!! ^ã……^');
 		}
 	}else{
 	return true;
@@ -737,6 +741,6 @@ function deletecheck(){
 </script>
 
 	</center>
-	<div class="footer">ÇªÅÍ</div>
+	<div class="footer">í‘¸í„°</div>
 </body>
 </html>
