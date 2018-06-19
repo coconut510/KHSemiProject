@@ -5,9 +5,9 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+
 import product.model.dao.ProductInsertDao;
 import product.model.vo.PageData;
-import product.model.vo.Product;
 import product.model.vo.ProductInsert;
 
 public class ProductInsertService {
@@ -50,8 +50,9 @@ public class ProductInsertService {
 
 	public PageData searchSub(String searchSub, int currentPage) {
 		Connection conn = null;
-		int recordCountPerPage = 16; // 한 페이지당 보이는 리스트의 갯수
-		int naviCountPerPage = 5; // 현재 위치를 중심으로 시작 navi에서부터  끝 navi갯수
+
+		int recordCountPerPage = 16;
+		int naviCountPerPage = 5;
 		
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -59,9 +60,18 @@ public class ProductInsertService {
 			conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","sellfadmin","sellfadmin");
 			System.out.println(conn);
 			
-			ArrayList<ProductInsert> list = new ProductInsertDao().getsearchSub(conn,currentPage,recordCountPerPage,searchSub);
+			ArrayList<ProductInsert>list = new ProductInsertDao().getsearchSub(conn,currentPage,recordCountPerPage,searchSub);
 			
-			String pageNavi = new ProductInsertDao().getSearchPageNavi(conn,currentPage,recordCountPerPage,naviCountPerPage,searchSub);
+			String pageNavi = new ProductInsertDao().getSearchPageNavi(conn,currentPage,recordCountPerPage,naviCountPerPage, searchSub);
+			
+			PageData pd = null;
+			if(!list.isEmpty() && !pageNavi.isEmpty()) {
+				pd = new PageData();
+				pd.setProductList(list);
+				pd.setPageNavi(pageNavi);
+			}
+			
+			
 			
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -77,7 +87,10 @@ public class ProductInsertService {
 				e.printStackTrace();
 			}
 		}
-		return result;
+		
+		return pd;
 	}
+
+	
 
 }

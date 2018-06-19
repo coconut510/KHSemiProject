@@ -679,21 +679,25 @@ input {
 
     <div class="grid__container">
 
-      <form action="/login" method="post" class="form form--login">
+      <form action="/Password" method="post" class="form form--login">
 
         <div class="form__field">
           <label class="fontawesome-lock" for="login__password" id="userPwd"><span class="hidden">Password</span></label>
-          <input id="login__password" type="password" class="form__input" placeholder="Password" required>
+          <input id="login__password" type="password" class="form__input" placeholder="Password" required name="userPwd" id="userPwd">
+      
         </div>
 
         <div class="form__field">
           <input type="submit" value="확인">
+         </form>
         </div>
 
       </form>
     </div>
 
   </div>
+  
+  
 </div>
                 <div class="MenuCon2"><!-- 안내창 -->
                 <div>

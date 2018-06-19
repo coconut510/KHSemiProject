@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
     <%@ page import="member.model.vo.*" import="java.util.ArrayList" %>
+     <%@ page import="product.model.vo.*" %>
+<% Product p = (Product)request.getAttribute("Product"); %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -389,15 +391,9 @@ th.specalt {
          <th width="200">상품이미지</th>
          <th width="150">상품명</th>
          <th width="100">가격</th>
-         <th width="100">상태</th>
-         <th width="100">관리</th>
+         <th width="100">결제완료일자</th>
       </tr>
    		<% for(Member m : list){%>
-<<<<<<< HEAD
-   		
-
-=======
->>>>>>> 0e0931762d9e3717e4988e69a427609469d61bd3
       <tr>
          <td><img src="http://lorempixel.com/100/100/people/1" alt="" /></td>
          <td>사진</td>

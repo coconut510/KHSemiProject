@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.google.gson.Gson;
 
+import common.JDBCTemplate;
 import product.model.service.ProductService;
 import product.model.vo.Product;
 
@@ -36,24 +37,23 @@ public class ProductSortCategoryServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		ServletContext context = getServletContext();
+		String fullPath = context.getRealPath("/WEB-INF/property/driver.properties");
+		JDBCTemplate.setDriverPath(fullPath);
+		
 		request.setCharacterEncoding("utf-8");
 		String mainCategory = request.getParameter("mainCategory");
 		String subCategory = request.getParameter("subCategory");
+		String orderType = request.getParameter("orderType");
 		int onePageShowProduct = Integer.parseInt(request.getParameter("onePageShowProduct"));
 		int currentPage = Integer.parseInt(request.getParameter("currentPage"));
 		
-		ArrayList<Product> list = new ProductService().productSortCategory(mainCategory,subCategory,onePageShowProduct,currentPage);
+		ArrayList<Product> list = new ProductService().productSortCategory(mainCategory,subCategory,onePageShowProduct,currentPage,orderType);
 		response.setContentType("application/json");
 		response.setCharacterEncoding("UTF-8");
 		new Gson().toJson(list, response.getWriter());
-		
-//		RequestDispatcher views = request.getRequestDispatcher("/views/main/productList.jsp");
-//		request.setAttribute("productList", list);
-//		views.forward(request, response);
-		
-//		ServletContext context = getServletContext();
-//		String fullPath = context.getRealPath("/WEB-INF/lib/cos.jar");
-//		System.out.println(fullPath);
+
 	}
 
 	/**

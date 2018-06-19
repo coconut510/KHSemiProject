@@ -20,9 +20,9 @@
 
 
 <!-- 내부 링크건 CSS -->
-<link rel="stylesheet" href="../../CSS/bootstrap/bootstrap.min.css" />
-<link rel="stylesheet" href="../../CSS/common/common.css" />
-<link rel="stylesheet" href="../../CSS/main/productListMain.css" />
+<link rel="stylesheet" href="../../CSS/bootstrap/bootstrap.min.css?ver=1" />
+<link rel="stylesheet" href="../../CSS/common/common.css?ver=1" />
+<link rel="stylesheet" href="../../CSS/main/productListMain.css?ver=1" />
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
@@ -31,18 +31,18 @@
 	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
 	integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
 	crossorigin="anonymous"></script>
-<script src="../../JS/bootstrap/bootstrap.min.js"></script>
+<script src="../../JS/bootstrap/bootstrap.min.js?ver=1"></script>
 
-<script src="../../JS/main/productListMain.js"></script>
+<script src="../../JS/main/productListMain.js?ver=1"></script>
 <script type="text/javascript" src="../../JS/common/header.js?ver=1"></script>
-<script type="text/javascript" src="../../JS/common/adv.js"></script>
+<script type="text/javascript" src="../../JS/common/adv.js?ver=1"></script>
 
 <!-- 내부 css 파일 -->
 
-<link rel="stylesheet" type="text/css" href="../../CSS/common/adv.css">
-<link rel="stylesheet" type="text/css" href="../../CSS/common/header.css">
-<link rel="stylesheet" type="text/css" href="../../CSS/common/adv.css">
-<link rel="stylesheet" type="text/css" href="../../CSS/common/footer.css">
+<link rel="stylesheet" type="text/css" href="../../CSS/common/adv.css?ver=1">
+<link rel="stylesheet" type="text/css" href="../../CSS/common/header.css?ver=1">
+<link rel="stylesheet" type="text/css" href="../../CSS/common/adv.css?ver=1">
+<link rel="stylesheet" type="text/css" href="../../CSS/common/footer.css?ver=1">
 
 <title>상품 목록</title>
 </head>
@@ -226,24 +226,23 @@
 					<div id="crossLineLong"></div>
 					<ul class="float_wrap">
 						<li class="left"><span class="sort_item">
-								 <a onclick = "selectSortType(this);"><b>최근등록순</b></b></a>
-								&nbsp;|&nbsp; <a onclick = "selectSortType(this);"
-								>판매인기순</a>
-								&nbsp;|&nbsp; <a onclick = "selectSortType(this);"
-								>낮은가격순</a>
-								&nbsp;|&nbsp; <a onclick = "selectSortType(this);"
-								>높은가격순</a>
-								&nbsp;|&nbsp; <a onclick = "selectSortType(this);"
-								>상품평많은순</a>
+								 <button class="sortBtn" onclick = 'selectSortType("uploadOrder");' name="uploadOrder" value="최근등록순"><b>최근등록순</b></button>
+								&nbsp;|&nbsp; 
+								<button class="sortBtn" onclick = 'selectSortType("lowPriceOrder");' name="lowPriceOrder" value="낮은가격순">낮은가격순</button>
+								&nbsp;|&nbsp; 
+								<button class="sortBtn" onclick = 'selectSortType("highPriceOrder");' name="highPriceOrder" value="높은가격순">높은가격순</button>
+								&nbsp;|&nbsp;
+								<button class="sortBtn" onclick = 'selectSortType("manyReviewOrder");' name="manyReviewOrder" value="상품평많은순">상품평많은순</button>
 						</span></li>
-						<li class="right">
-							<select name="perpage" id="perPageCount" 
+						<!-- <li class="right">
+							 <select name="perpage" id="perPageCount" 
 								onchange="selectOnePageProduct(this);">
 									<option value="16">16개씩 보기</option>
 									<option value="32">32개씩 보기</option>
 									<option value="80">80개씩 보기</option>
 									<option value="160">160개씩 보기</option>
 							</select>
+							
 							<ul class="goods_list_style">
 								<li><a
 									href="?display_style=lattice_a&amp;code=0006&amp;popup=&amp;iframe="
@@ -254,7 +253,9 @@
 								<li><a
 									href="?display_style=list&amp;code=0006&amp;popup=&amp;iframe="
 									title="리스트형">▦</a></li>
-							</ul></li>
+							</ul>
+						</li>
+						-->
 					</ul>
 					<br>
 					<br>

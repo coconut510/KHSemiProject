@@ -1,14 +1,20 @@
 var allCategory;
 var allState;
+var orderTypeArr;
+var orderType = "updateOrder";
 window.onload = function(){
 	allCategory = document.getElementsByClassName('category-btn')[0];
 	selectCategory();
 	allState = document.getElementsByClassName('productState-btn')[0];
 	selectProductState();
-//	loadSelectCategory();
+	orderTypeArr = document.getElementsByClassName('sortBtn');
+	var sortOrder = $_GET('orderType');
+	orderType = sortOrder;
+	selectOrderType();
+	loadSelectCategory();
 }
 
-var currentPage = 1;
+var currentPage = 0;
 
 $(window).scroll(function() {
     if ($(window).scrollTop() == $(document).height() - $(window).height()) {
@@ -18,13 +24,13 @@ $(window).scroll(function() {
 //    	var currentPage = Number(currentPageNum);// 현재 페이지.
     	var totalProductSize = $("#entireProductTitleLabel");  // 제목 표시해줄때.
     	var totalProductList = $(".productList");//$("#productLine");
-    	currentPage +=1;
     	$.ajax({
     		url:"/productSortCategory",
     		data : {mainCategory : mainCategory,
     				subCategory : subCategory,
     				onePageShowProduct :onePageShowProduct,
-    				currentPage :currentPage
+    				currentPage :currentPage,
+    				orderType : orderType
     				},
     		type : "get",
     		success : function(data){			
@@ -42,7 +48,6 @@ $(window).scroll(function() {
     			{
     				maxLength =   currentPage*onePageShowProduct+ onePageShowProduct;
     			}
-//    			console.log(currentPage*onePageShowProduct+ onePageShowProduct);
     			totalProductSize.html("전체상품 " +  keys.length + "개");
     			
     			for(var i = currentPage*onePageShowProduct; i<maxLength;i++)
@@ -79,7 +84,7 @@ $(window).scroll(function() {
     				'<div class="productTitle">'+data[keys[i]].product_name+'</div>'+
     				'<div class="productExplain">'+
     					'<font class="productExplainFont">'+data[keys[i]].product_entire_user_entire_id_fk +'<br>'
-    						+data[keys[i]].product_detail +
+    						+data[keys[i]].product_detail.product_detail.substring(0, 5) +
     					'</font>'+
     				'</div>'+
     				'<div class="priceOrigin">'+
@@ -95,7 +100,8 @@ $(window).scroll(function() {
     				'</div>'+
     				'<div class="freeTransfor">무료배송</div>'+
     				'</div></li>');	
-    			}			    					
+    			}
+    	    	currentPage +=1;
     		},
     		error : function(){
     			console.log("실패");	
@@ -112,7 +118,7 @@ function loadSelectCategory()
 {
 	var mainCategory  = "M01";//$("#userIndex2").val();// 입력값 가져오기
 	var subCategory  = "S0101";//$("#userIndex2").val();// 입력값 가져오기
-	var onePageShowProduct = Number($("#perPageCount").val()); // 한페이지에 몇개 보여줄지.
+	var onePageShowProduct = 8;//Number($("#perPageCount").val()); // 한페이지에 몇개 보여줄지.
 	var currentPage = Number(currentPageNum);// 현재 페이지.
 	var totalProductSize = $("#entireProductTitleLabel");  // 제목 표시해줄때.
 	var totalProductList = $(".productList");//$("#productLine");
@@ -145,8 +151,7 @@ function loadSelectCategory()
 			{
 				maxLength =   currentPage*onePageShowProduct+ onePageShowProduct;
 			}
-//			console.log(currentPage*onePageShowProduct+ onePageShowProduct);
-			totalProductSize.html("전체상품 " +  keys.length + "개");
+//			totalProductSize.html("전체상품 " +  keys.length + "개");
 			
 			for(var i = currentPage*onePageShowProduct; i<maxLength;i++)
 			{
@@ -181,8 +186,8 @@ function loadSelectCategory()
 
 				'<div class="productTitle">'+data[keys[i]].product_name+'</div>'+
 				'<div class="productExplain">'+
-					'<font class="productExplainFont">'+data[keys[i]].product_entire_user_entire_id_fk +'<br>'
-						+data[keys[i]].product_detail +
+					'<font class="productExplainFont" font-family: monospace;>'+data[keys[i]].product_entire_user_entire_id_fk +'<br>'
+						+data[keys[i]].product_detail.substring(0, 10) +
 					'</font>'+
 				'</div>'+
 				'<div class="priceOrigin">'+
@@ -199,7 +204,7 @@ function loadSelectCategory()
 				'<div class="freeTransfor">무료배송</div>'+
 				'</div></li>');	
 			}			
-			
+			/*
 			pagingNav.append(
 					'<li class="page-item">'+
 						'<a class="page-link-prev" href="#">'+ 
@@ -223,7 +228,9 @@ function loadSelectCategory()
 			
 			var aArr = document.getElementsByClassName("page-link");
 			aArr[currentPageNum].style = "color: #23527c; background-color: #eee; border-color: #ddd";
-					
+			*/
+			currentPageNum +=1;
+			
 		},
 		error : function(){
 			console.log("실패");	
@@ -258,9 +265,11 @@ function selectOnePageProduct(){
 	currentPageNum = 0;
 	loadSelectCategory();
 }
+
+
 function selectSortType(selectOption)
 {
-	loadSelectCategory();
+	location.href="/views/main/productList.jsp?orderType="+selectOption;
 }
 
 
@@ -305,8 +314,28 @@ function selectProductMulti(state)
 	stateArr.push(state);
 }
 
-
-function test()
+function selectOrderType()
 {
-	alert("테스트");
+	for(var i = 0; i<orderTypeArr.length;i++)
+	{
+		orderTypeArr[i].innerHTML = orderTypeArr[i].value;
+		if(orderTypeArr[i].name==orderType)orderTypeArr[i].innerHTML = "<b>"+orderTypeArr[i].value+"</b>";
+	}	
+		
+}
+
+
+function $_GET(param) {
+	var vars = {};
+	window.location.href.replace( location.hash, '' ).replace( 
+		/[?&]+([^=&]+)=?([^&]*)?/gi, // regexp
+		function( m, key, value ) { // callback
+			vars[key] = value !== undefined ? value : '';
+		}
+	);
+
+	if ( param ) {
+		return vars[param] ? vars[param] : null;	
+	}
+	return vars;
 }
