@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8" import="java.util.*, java.text.*"%>
-
+	pageEncoding="UTF-8" import="java.util.*, java.text.*,manager.model.vo.*"%>
+<% ManagerBoardPageData mbpd = (ManagerBoardPageData)request.getAttribute("pageData");
+	ArrayList<ManagerBoard> list = mbpd.getBoardList();
+	String pageNavi = mbpd.getPageNavi();
+%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,7 +42,7 @@
 <!-- 사이드바와 네비를 위한 공통적인 스크립트파일과 css파일  -->
 <link rel="stylesheet" type="text/css" href="/CSS/manager/manager.css">
 <script src="/JS/manager/manager.js"></script>
-
+<script src="/JS/manager/managerBoard.js"></script>
 <title>게시판 관리</title>
 
 
@@ -265,14 +268,16 @@
 										<th>작성일</th>
 										<th></th>
 									</tr>
+									<%for(ManagerBoard mb:list){%>
 									<tr>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-									</tr>
+									<td><%= mb.getBoardNo() %></td>
+									<td><a href="/managerNoticeSelect?noticeNo=<%=mb.getBoardNo()%>"><%= mb.getSubject() %></a></td>
+									<td><%= mb.getWriteId() %></td>
+									<td><%= mb.getWriteDate() %></td>
+									<%} %>
+									<center><label><%=pageNavi%></label></center>
 								</table>
+								
 							</div>
 							
 							<!--  -->

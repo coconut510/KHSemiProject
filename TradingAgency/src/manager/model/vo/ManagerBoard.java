@@ -9,18 +9,28 @@ public class ManagerBoard {
 	private int boardNo; //글번호
 	private String subject;//제목
 	private String writeId;//글쓴이
+	private String content;//내용
 	private Date writeDate;//작성일
 	
-	public ManagerBoard(int boardNo, String subject, String writeId, Date writeDate) {
+	public ManagerBoard(int boardNo, String subject, String writeId,String content, Date writeDate) {
 		super();
 		this.boardNo = boardNo;
 		this.subject = subject;
 		this.writeId = writeId;
+		this.content = content;
 		this.writeDate = writeDate;
 	}
 
 	public int getBoardNo() {
 		return boardNo;
+	}
+
+	public String getContent() {
+		return content;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
 	}
 
 	public void setBoardNo(int boardNo) {
