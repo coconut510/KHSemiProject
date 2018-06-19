@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"
+	import ="board.model.vo.*" import="member.model.vo.*" import="java.util.*" %>
+<% 
+	Notice n = (Notice)request.getAttribute("notice");
+	ArrayList<NoticeComment> list = (ArrayList<NoticeComment>)request.getAttribute("comment"); 
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -80,7 +85,7 @@
 					<div class="noticeTab" id="boardListArea">
 						<div id="bordTitle">
 							<h3 style="float: left;">
-								<strong>공지사항 > <span id="titleName">테스트</span></strong>
+								<strong>공지사항 > <span id="titleName"></span><%=n.getNotice_subject()%></strong>
 							</h3>
 						</div>
 						<div class="hlLongBold"></div>
@@ -88,8 +93,8 @@
 							<div id="titleArea">
 								<h3>
 									<strong>
-										<div>제목</div>
-										<div id="titleInfo">테스트</div>
+										<div><%=n.getNotice_pk()%></div>
+										<div id="titleInfo"><%=n.getNotice_subject()%></div>
 									</strong>
 								</h3>
 							</div>
@@ -98,11 +103,11 @@
 								<div style="width: 10%;">
 									<strong>작성자</strong>
 								</div>
-								<div style="width: 30%;">관리자</div>
+								<div style="width: 30%;"><%=n.getNotice_pk()%></div>
 								<div style="width: 10%;">
 									<strong>등록일</strong>
 								</div>
-								<div style="width: 20%;">2018-06-14</div>
+								<div style="width: 20%;"><%=n.getNotice_registration_date()%></div>
 								<div style="width: 10%;">
 									<strong>조회수</strong>
 								</div>
@@ -111,9 +116,7 @@
 							<div class="vlLongLIght"></div>
 							<div id="answerContent">
 								<h3>
-									안녕하세요<br> 테스트용 공지입니다.<br> 테스트용 공지입니다.<br> 테스트용
-									공지입니다.<br> 테스트용 공지입니다.<br> 테스트용 공지입니다.<br> 테스트용
-									공지입니다.<br> 테스트용 공지입니다.<br> 집에 가고 싶어요..
+									<%=n.getNotice_content()%>
 								</h3>
 							</div>
 							<div class="vlLongLIght"></div>
@@ -145,6 +148,11 @@
 				</div>
 			</div>
 			<div id="commentArea">
+			  
+		<%for(NoticeComment nc : list){%>	
+		작성자 : <%=nc.getNotice_comment_user_id_fk()%> / 작성일 : <%=nc.getNotice_comment_date()%> / <br> 
+ 		<label id=<%=nc.getNotice_comment_pk()%>><%=nc.getNotice_comment_content()%></label>
+ 		<%} %>
 				<div id="newCommentArea">
 				  	<div id="CommentWriterId"></div><br>
 				  	<div id= "CommentContext"></div>

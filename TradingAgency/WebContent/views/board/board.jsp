@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ page import="board.model.vo.*" import="java.util.*"%>
+<% NoticePageData npd = (NoticePageData)request.getAttribute("NoticePageData");
+   ArrayList<Notice> list = npd.getNoticeList(); //현재 페이지리스트 
+   String pageNavi = npd.getNoticePageNavi();  //navi 리스트 
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -9,7 +14,8 @@
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <!-- 내부 링크건 CSS -->
 <!-- <script type="text/javascript" src="../../JS/common/header.js?ver=1"></script> -->
- <link rel="stylesheet" type="text/css" href="../../CSS/common/header.css?ver=1"> 
+<link rel="stylesheet" type="text/css"
+	href="../../CSS/common/header.css?ver=1">
 <link rel="stylesheet"
 	href="../../CSS/bootstrap/bootstrap.min.css?ver=1" />
 <link rel="stylesheet" href="../../CSS/common/common.css?ver=1" />
@@ -48,11 +54,9 @@
 		<!--  Wrraper    -->
 		<div id="wrapper">
 			<!--  Header -->
-			<header id="header">
-					<%@include file="../../views/common/header.jsp"%>
-			<!--<div style="background-color: gray; width: 100%; height: 200px;">
-			</div>-->
-			</header>
+			<header id="header"> <%@include
+				file="../../views/common/header.jsp"%> <!--<div style="background-color: gray; width: 100%; height: 200px;">
+			</div>--> </header>
 			<section id="content">
 			<div id="topLeftLink">
 				<a href="#">게시판</a> <a href="#">홈></a>
@@ -71,7 +75,7 @@
 			<div class="hlLong"></div>
 			<div id="boardContent">
 				<div id="BoardList">
-					
+
 					<div class="noticeTab" id="boardListArea">
 						<div id="bordTitle">
 							<h3 style="float: left;">
@@ -87,48 +91,15 @@
 								<th style="width: 10%;">날짜</th>
 								<th style="width: 10%;">조회수</th>
 							</tr>
+							<% for(Notice n : list){%>
 							<tr>
-								<td>6</td>
-								<td><a href="/views/board/boardSelect.jsp">TEST</a></td>
-								<td>관리자</td>
-								<td>2018-06-14</td>
-								<td>15</td>
+								<td><%=n.getNotice_pk()%></td>
+								<td><a href="/noticeSelect?notice_pk=<%=n.getNotice_pk()%>"><%=n.getNotice_subject()%></a></td>
+								<td><%=n.getNotice_main_admin_id_fk()%></td>
+								<td><%=n.getNotice_registration_date()%></td>
+								<td></td>
 							</tr>
-							<tr>
-								<td>5</td>
-								<td><a href="/views/board/boardSelect.jsp">TEST</a></td>
-								<td>관리자</td>
-								<td>2018-06-14</td>
-								<td>15</td>
-							</tr>
-							<tr>
-								<td>4</td>
-								<td><a href="/views/board/boardSelect.jsp">TEST</a></td>
-								<td>관리자</td>
-								<td>2018-06-14</td>
-								<td>15</td>
-							</tr>
-							<tr>
-								<td>3</td>
-								<td><a href="/views/board/boardSelect.jsp">TEST</a></td>
-								<td>관리자</td>
-								<td>2018-06-14</td>
-								<td>15</td>
-							</tr>
-							<tr>
-								<td>2</td>
-								<td><a href="/views/board/boardSelect.jsp">TEST</a></td>
-								<td>관리자</td>
-								<td>2018-06-14</td>
-								<td>15</td>
-							</tr>
-							<tr>
-								<td>1</td>
-								<td><a href="/views/board/boardSelect.jsp">TEST</a></td>
-								<td>관리자</td>
-								<td>2018-06-14</td>
-								<td>15</td>
-							</tr>
+							<% }%>
 							
 						</table>
 					</div>
@@ -189,7 +160,7 @@
 								<td>2018-06-14</td>
 								<td>15</td>
 							</tr>
-							
+
 						</table>
 					</div>
 					<div class="noticeTab" id="reviewListArea">
@@ -250,9 +221,10 @@
 								<td>15</td>
 							</tr>
 							
+							
 						</table>
 					</div>
-					
+
 					<div class="hlLong"></div>
 					<div id="pagingArea">
 						<nav aria-label="Page navigation example">
@@ -261,9 +233,8 @@
 								aria-label="Previous"> <span aria-hidden="true">&laquo;</span>
 									<span class="sr-only">Previous</span>
 							</a></li>
-							<li class="page-item"><a class="page-link" href="#">1</a></li>
-							<li class="page-item"><a class="page-link" href="#">2</a></li>
-							<li class="page-item"><a class="page-link" href="#">3</a></li>
+							<li><%= pageNavi %></li>
+
 							<li class="page-item"><a class="page-link" href="#"
 								aria-label="Next"> <span aria-hidden="true">&raquo;</span> <span
 									class="sr-only">Next</span>
@@ -277,9 +248,7 @@
 							<option>제목+내용</option>
 							<option>내용</option>
 							<option>작성자</option>
-						</select>
-						
-						<input type="text" style="size:100"/>
+						</select> <input type="text" style="size: 100" />
 					</div>
 				</div>
 
@@ -287,7 +256,8 @@
 			</section>
 
 			<footer id="footer">
-				<div id="footerTest" style="width:100%; height:300px; background-color:gray;"></div>
+			<div id="footerTest"
+				style="width: 100%; height: 300px; background-color: gray;"></div>
 			</footer>
 		</div>
 	</center>
