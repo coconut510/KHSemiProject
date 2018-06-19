@@ -198,5 +198,7 @@ crossorigin="anonymous">
 					<%@include file="../../views/common/footer.jsp" %>
 			</footer>
 	</center>
+	
+	
 </body>
 </html>

@@ -8,81 +8,59 @@
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>찜한 상품</title>
 <style>
-div {
-	background-color: white;
+body {
+	font: 13px/20px 'Lucida Grande', Verdana, sans-serif;
+	color: #404040;
+	background: white;
 }
-
-.header {
-	border: 3px solid white;
-	background-color: #7151FC;
-	width: auto;
-	height: 100px;
-}
-
+div{background-color: white;}
+    
+.header{border:3px solid white;
+       background-color: #7151FC;
+        width: auto;
+        height: 100px;}
 .contents {
 	position: relative;
 	border: 3px solid white;
 	width: 1300px;
 	height: 800px;
 }
-
-.footer {
-	border: 3px solid white;
-	background-color: #7151FC;
-	width: auto;
-	height: 120px;
+    .footer{border:3px solid white;
+    background-color: #7151FC;
+    width: auto;
+    height: 120px;
+    }
+    .mpMenuItems{border: 1px solid white;
+    float: left;
+    width: auto;
+    height: 100%;
+    }
+    
+    
+    .mpMenuAll{border: 1px solid #F2F2F2;
+    margin-bottom:10px;
+	list-style-type:none;
+	font: 15px/40px 'Lucida Grande', Verdana, sans-serif;	
+    }
+    ul.mpMenuAll li{
+	margin:0;padding:0;border-top:1px solid #F2F2F2;
+	border-bottom:1px solid white;
+}
+ul.mpMenuAll li a{
+	display:block;text-decoration:none;color:black;
+	background:white;padding:5px 0 5px 20px;width:140px;
+}
+ul.mpMenuAll li a:hover{
+	background:#F2F2F2 url("http://www.blueb.co.kr/data/201010/IJ12872476173279/vert-one_arrow.gif") no-repeat 0 9px;
+	color:#7151FC;
 }
 
-.mpMenuItems {
-	border: 3px solid white;
-	float: left;
-	width: auto;
-	height: 100%;
-}
-
-.mpMenuAll {
-	border: 3px solid none;
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-	display: block;
-	font: 50px/50px 'Lucida Grande', Verdana, sans-serif;
-	hieght: 100%;
-	width: auto;
-}
-
-ul.mpMenuAll li {
-	margin: 0;
-	padding: 0;
-	border-top: 1px solid none;
-	border-bottom: 1px solid white;
-}
-
-ul.mpMenuAll li a {
-	display: block;
-	text-decoration: none;
-	color: black;
-	background: white;
-	padding: 5px 0 5px 20px;
-	width: 140px;
-}
-
-ul.mpMenuAll li a:hover {
-	background: #F2F2F2
-		url("http://www.blueb.co.kr/data/201010/IJ12872476173279/vert-one_arrow.gif")
-		no-repeat 0 9px;
-	color: #7151FC;
-}
-
-ul.mpMenuItems li a.current, ul.vert-one li a.current:hover {
-	background: black
-		url("http://www.blueb.co.kr/data/201010/IJ12872476173279/vert-one_arrow.gif")
-		no-repeat 0 9px;
-}
-
+ul.mpMenuItems li a.current,ul.vert-one li a.current:hover{
+background:black url("http://www.blueb.co.kr/data/201010/IJ12872476173279/vert-one_arrow.gif") no-repeat 0 9px;}
 .mpMenuTitle {
 	width: auto;
-	height: 16.5%;
+	margin-top:55px;
+	height: 5%;
 	animation: background 1s linear infinite;
 	background: linear-gradient(90deg, rgba(150, 48, 30, 1) 0%,
 		rgba(199, 201, 88, 1) 10%, rgba(28, 147, 46, 1) 20%,
@@ -93,51 +71,37 @@ ul.mpMenuItems li a.current, ul.vert-one li a.current:hover {
 	background-size: 1000% 100%;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	margin-top: 50px;
-	margin-left: 20px;
 }
-
-.mpMenuAll {
-	position: static;
-	padding: inherit;
-	border: 3px solid none;
-	width: 100%;
-	height: 70%;
-	font-size: 30px;
-}
-
-.tapBtn {
-	margin: 0px;
-	border: 1px solid gray;
-	width: 100%;
-	height: 10%;
-}
-
-.tapBtn:hover {
-	/* border:2px solid white;*/
-	color: rebeccapurple;
-	font-size: 31px;
-}
-
-.MenuContents {
-	position: static;
-	width: 70%;
-	height: 100%;
-	float: inherit;
-}
-
-.MenuConTitle {
-	width: 100%;
-	height: 20%;
-	float: right;
-}
-
-.MenuCon {
-	width: 100%;
-	height: 80%;
-	float: inherit;
-}
-
+    .mpMenuAll
+    {
+        position: static;
+        padding: inherit;
+        border:3px solid none;
+        width: 100%;
+        height: 39%; 
+        text-align: justify;
+    }  
+    .MenuContents
+    {
+        position: static;
+        width: 70%;
+        height: 100%;
+        float:inherit;
+    }
+    .MenuConTitle
+    {
+    	margin-top:30px;
+        width:100%;
+        height: 10%;
+        float: left;
+ 		text-align: justify;
+    }
+    .MenuCon
+    {
+        width: 100%;
+        height: 80%;
+        float: inherit;
+    }
 .delete {
 	float: left;
 	position: relative;
@@ -166,12 +130,6 @@ ul.mpMenuItems li a.current, ul.vert-one li a.current:hover {
 	box-shadow: 0px 2px 0px rebeccapurple;
 	position: relative;
 	top: 4px;
-}
-
-body {
-	font: 13px/20px 'Lucida Grande', Verdana, sans-serif;
-	color: #404040;
-	background: white;
 }
 
 .container {
@@ -453,14 +411,14 @@ th.specalt {
 						href="/views/member/myCoupon.jsp">내 쿠폰</a></li>
 					<li role="presentation" class="active"><a
 						href="/views/member/myInfoQuiz.jsp">내 정보</a></li>
-					<li role="presentation" class="active"><a
-						href="/views/member/mySay.jsp">알림 설정</a></li>
+										<li role="presentation" class="active"><a href="/views/member/myGrade.jsp">등급보기</a></li>
 				</ul>
 			</div>
 			<div class="MenuContents">
 				<div class="MenuConTitle">
 					<H2>찜한 상품</H2>
 				</div>
+				<hr>
 				<div class="MenuCon">
 					<div class="table-users">
 						<%
@@ -504,8 +462,7 @@ th.specalt {
 										<td data-th="Subtotal" class="text-center">몰라.. ㅠ_ㅠ</td>
 										<td class="actions" data-th="">
 
-											<button class="delete">
-												삭제</i>
+											<button class="delete" onclick="jjimdelete();">삭제
 											</button>
 										</td>
 									</tr>

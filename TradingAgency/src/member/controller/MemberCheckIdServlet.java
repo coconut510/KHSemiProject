@@ -1,39 +1,41 @@
-package product.controller;
+package member.controller;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import product.model.service.ProductService;
-import product.model.vo.Product;
+import member.model.service.MemberService;
 
 /**
- * Servlet implementation class ProductSearchKeywordServlet
+ * Servlet implementation class MemberCheckIdServlet
  */
-@WebServlet(name = "ProductSearchKeyword", urlPatterns = { "/productSearchKeyword" })
-public class ProductSearchKeywordServlet extends HttpServlet {
+@WebServlet("/checkid")
+public class MemberCheckIdServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ProductSearchKeywordServlet() {
+    public MemberCheckIdServlet() {
         super();
+        // TODO Auto-generated constructor stub
     }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setCharacterEncoding("utf-8");
-		String keyword = request.getParameter("searchKeyword");
-		ArrayList<Product> list = new ProductService().ProductSearchKeyword(keyword);
-		
+		// TODO Auto-generated method stub
+		String id = request.getParameter("id");
+		ServletContext context = getServletContext();
+	    String fullPath = context.getRealPath("/WEB-INF/property/memberQuery.properties");
+	      System.out.println(fullPath);
+		int result = new MemberService().checkId(id,fullPath);
 	}
 
 	/**
