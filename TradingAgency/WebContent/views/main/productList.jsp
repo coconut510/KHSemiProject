@@ -1,5 +1,11 @@
+<%@page import="jdk.management.resource.internal.TotalResourceContext"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"
+ 	import="product.model.vo.*" import="java.util.ArrayList"
+	%>
+<% 
+	ArrayList<Product> list = (ArrayList<Product>)request.getAttribute("productList");
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -149,7 +155,7 @@
 									<ul>
 										<li style="color:white;overflow:auto;">	세련된flex 디자인</li>
 										<li style="color:gray;overflow:auto;">	 제품설명1<br> 제품설명2</li>
-										<li style="color:white;overflow:auto;">		<s>￦ 50,000</s>-> ￦ 40,000</li>
+										<li style="color:white;overflow:auto;">	<s>￦ 50,000</s>-> ￦ 40,000</li>
 									</ul>
 								</div>
 								<div class="productSideMenu">
@@ -199,7 +205,7 @@
 									<ul>
 										<li style="color:white;overflow:auto;">	세련된flex 디자인</li>
 										<li style="color:gray;overflow:auto;">	 제품설명1<br> 제품설명2</li>
-										<li style="color:white;overflow:auto;">		<s>￦ 50,000</s>-> ￦ 40,000</li>
+										<li style="color:white;overflow:auto;">	<s>￦ 50,000</s>-> ￦ 40,000</li>
 									</ul>
 								</div>
 								<div class="productSideMenu">
@@ -213,33 +219,31 @@
 						</div>
 					</div>
 				</div>
-	
 				<div id="entireProduct">
 					<div id="entireProductTitle">
-						<label>전체상품 20개</label>
+						<label id="entireProductTitleLabel">전체상품  개</label>
 					</div>
 					<div id="crossLineLong"></div>
 					<ul class="float_wrap">
-						<li class="left"><span class="sort_item"> <a
-								href="?sort=popular&amp;code=0006&amp;popup=&amp;iframe="><b>인기순</b></a>
-								&nbsp;|&nbsp; <a
-								href="?sort=newly&amp;code=0006&amp;popup=&amp;iframe=">최근등록순</a>
-								&nbsp;|&nbsp; <a
-								href="?sort=popular_sales&amp;code=0006&amp;popup=&amp;iframe=">판매인기순</a>
-								&nbsp;|&nbsp; <a
-								href="?sort=low_price&amp;code=0006&amp;popup=&amp;iframe=">낮은가격순</a>
-								&nbsp;|&nbsp; <a
-								href="?sort=high_price&amp;code=0006&amp;popup=&amp;iframe=">높은가격순</a>
-								&nbsp;|&nbsp; <a
-								href="?sort=review&amp;code=0006&amp;popup=&amp;iframe=">상품평많은순</a>
+						<li class="left"><span class="sort_item">
+								 <a onclick = "selectSortType(this);"><b>최근등록순</b></b></a>
+								&nbsp;|&nbsp; <a onclick = "selectSortType(this);"
+								>판매인기순</a>
+								&nbsp;|&nbsp; <a onclick = "selectSortType(this);"
+								>낮은가격순</a>
+								&nbsp;|&nbsp; <a onclick = "selectSortType(this);"
+								>높은가격순</a>
+								&nbsp;|&nbsp; <a onclick = "selectSortType(this);"
+								>상품평많은순</a>
 						</span></li>
-						<li class="right"><select name="perpage"
-							onchange="document.location.href='?perpage='+this.value+'&amp;code=0006&amp;popup=&amp;iframe='">
-								<option value="16">16개씩 보기</option>
-								<option value="32">32개씩 보기</option>
-								<option value="80">80개씩 보기</option>
-								<option value="160">160개씩 보기</option>
-						</select>
+						<li class="right">
+							<select name="perpage" id="perPageCount" 
+								onchange="selectOnePageProduct(this);">
+									<option value="16">16개씩 보기</option>
+									<option value="32">32개씩 보기</option>
+									<option value="80">80개씩 보기</option>
+									<option value="160">160개씩 보기</option>
+							</select>
 							<ul class="goods_list_style">
 								<li><a
 									href="?display_style=lattice_a&amp;code=0006&amp;popup=&amp;iframe="
@@ -255,608 +259,13 @@
 					<br>
 					<br>
 					<div class="productList">
-						<ul>
-							<li class="productWrap">
-								<div class="productBg">
-									<div class="imgWrapper">
-										<img class="productImgMain"
-											src="../../img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg">
-										<div class="discountBg">10%</div>
-										
-										<div class="productSideMenu">
-											<div class="display_newwin hide"><img src="../../img/thumb_quickview.png" alt=""></div>
-											<div class="display_quickview"><img src="../../img/thumb_quickview.png" alt="미리보기"></div>
-											<div class="display_option"><img src="../../img/thumb_option.png" alt="옵션보기"><div class="hide display_opt_bak" act=""></div></div>
-											<div class="display_send"><img src="../../img/thumb_send.png" alt="SNS보내기"></div>
-											<div class="display_zzim"><img src="../../img/thumb_zzim_off.png" alt="찜하기"><img src="../../img/thumb_quickview.png" style="display:none" alt="찜하기"></div>
-										</div>
-									</div>
-									
-									
-									<div class="productTitle">세련된flex 디자인</div>
-									<div class="productExplain">
-										<font class="productExplainFont"> 제품설명1<br> 제품설명2
-										</font>
-									</div>
-									<div class="priceOrigin">
-										<s>￦ 50,000</s>
-									</div>
-									<div class="priceDiscount">￦ 40,000</div>
-									<div class="myCheck">
-										<center>
-											<ul>
-												<li><img src="../../img/icon_pageview.png"> 103 |
-													&nbsp;</li>
-												<li><img src="../../img/icon_zzim_off.png"> 103</li>
-											</ul>
-										</center>
-									</div>
-									<div class="freeTransfor">무료배송</div>
-								</div>
-							</li>
-							<li class="productWrap">
-								<div class="productBg">
-									<div class="imgWrapper">
-										<img class="productImgMain"
-											src="../../img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg">
-										<div class="discountBg">20%</div>
-										
-										<div class="productSideMenu">
-											<div class="display_newwin hide"><img src="../../img/thumb_quickview.png" alt=""></div>
-											<div class="display_quickview"><img src="../../img/thumb_quickview.png" alt="미리보기"></div>
-											<div class="display_option"><img src="../../img/thumb_option.png" alt="옵션보기"><div class="hide display_opt_bak" act=""></div></div>
-											<div class="display_send"><img src="../../img/thumb_send.png" alt="SNS보내기"></div>
-											<div class="display_zzim"><img src="../../img/thumb_zzim_off.png" alt="찜하기"><img src="../../img/thumb_quickview.png" style="display:none" alt="찜하기"></div>
-										</div>
-									</div>
-									<div class="productTitle">세련된flex 디자인</div>
-									<div class="productExplain">
-										<font class="productExplainFont"> 제품설명1<br> 제품설명2
-										</font>
-									</div>
-									<div class="priceOrigin">
-										<s>￦ 50,000</s>
-									</div>
-									<div class="priceDiscount">￦ 40,000</div>
-									<div class="myCheck">
-										<center>
-											<ul>
-												<li><img src="../../img/icon_pageview.png"> 103 |
-													&nbsp;</li>
-												<li><img src="../../img/icon_zzim_off.png"> 103</li>
-											</ul>
-										</center>
-									</div>
-									<div class="freeTransfor">무료배송</div>
-								</div>
-							</li>
-							<li class="productWrap">
-								<div class="productBg">
-									<div class="imgWrapper">
-										<img class="productImgMain"
-											src="../../img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg"
-											alt="">
-										<div class="discountBg">42%</div>
-									
-										<div class="productSideMenu">
-											<div class="display_newwin hide"><img src="../../img/thumb_quickview.png" alt=""></div>
-											<div class="display_quickview"><img src="../../img/thumb_quickview.png" alt="미리보기"></div>
-											<div class="display_option"><img src="../../img/thumb_option.png" alt="옵션보기"><div class="hide display_opt_bak" act=""></div></div>
-											<div class="display_send"><img src="../../img/thumb_send.png" alt="SNS보내기"></div>
-											<div class="display_zzim"><img src="../../img/thumb_zzim_off.png" alt="찜하기"><img src="../../img/thumb_quickview.png" style="display:none" alt="찜하기"></div>
-										</div>
-									</div>
-									<div class="productTitle">세련된flex 디자인</div>
-									<div class="productExplain">
-										<font class="productExplainFont"> 제품설명1<br> 제품설명2
-										</font>
-									</div>
-									<div class="priceOrigin">
-										<s>￦ 50,000</s>
-									</div>
-									<div class="priceDiscount">￦ 40,000</div>
-									<div class="myCheck">
-										<center>
-											<ul>
-												<li><img src="../../img/icon_pageview.png"> 103 |
-													&nbsp;</li>
-												<li><img src="../../img/icon_zzim_off.png"> 103</li>
-											</ul>
-										</center>
-									</div>
-									<div class="freeTransfor">무료배송</div>
-								</div>
-							</li>
-							<li class="productWrap">
-								<div class="productBg">
-									<div class="imgWrapper">
-										<img class="productImgMain"
-											src="../../img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg"
-											alt="">
-										<div class="discountBg">33%</div>
-										
-										<div class="productSideMenu">
-											<div class="display_newwin hide"><img src="../../img/thumb_quickview.png" alt=""></div>
-											<div class="display_quickview"><img src="../../img/thumb_quickview.png" alt="미리보기"></div>
-											<div class="display_option"><img src="../../img/thumb_option.png" alt="옵션보기"><div class="hide display_opt_bak" act=""></div></div>
-											<div class="display_send"><img src="../../img/thumb_send.png" alt="SNS보내기"></div>
-											<div class="display_zzim"><img src="../../img/thumb_zzim_off.png" alt="찜하기"><img src="../../img/thumb_quickview.png" style="display:none" alt="찜하기"></div>
-										</div>
-									</div>
-									<div class="productTitle">세련된flex 디자인</div>
-									<div class="productExplain">
-										<font class="productExplainFont"> 제품설명1<br> 제품설명2
-										</font>
-									</div>
-									<div class="priceOrigin">
-										<s>￦ 50,000</s>
-									</div>
-									<div class="priceDiscount">￦ 40,000</div>
-									<div class="myCheck">
-										<center>
-											<ul>
-												<li><img src="../../img/icon_pageview.png"> 103 |
-													&nbsp;</li>
-												<li><img src="../../img/icon_zzim_off.png"> 103</li>
-											</ul>
-										</center>
-									</div>
-									<div class="freeTransfor">무료배송</div>
-								</div>
-							</li>
-						</ul>
-						<ul>
-							<li class="productWrap">
-								<div class="productBg">
-									<div class="imgWrapper">
-										<img class="productImgMain"
-											src="../../img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg">
-										<div class="discountBg">10%</div>
-										
-										<div class="productSideMenu">
-											<div class="display_newwin hide"><img src="../../img/thumb_quickview.png" alt=""></div>
-											<div class="display_quickview"><img src="../../img/thumb_quickview.png" alt="미리보기"></div>
-											<div class="display_option"><img src="../../img/thumb_option.png" alt="옵션보기"><div class="hide display_opt_bak" act=""></div></div>
-											<div class="display_send"><img src="../../img/thumb_send.png" alt="SNS보내기"></div>
-											<div class="display_zzim"><img src="../../img/thumb_zzim_off.png" alt="찜하기"><img src="../../img/thumb_quickview.png" style="display:none" alt="찜하기"></div>
-										</div>
-									</div>
-									
-									
-									<div class="productTitle">세련된flex 디자인</div>
-									<div class="productExplain">
-										<font class="productExplainFont"> 제품설명1<br> 제품설명2
-										</font>
-									</div>
-									<div class="priceOrigin">
-										<s>￦ 50,000</s>
-									</div>
-									<div class="priceDiscount">￦ 40,000</div>
-									<div class="myCheck">
-										<center>
-											<ul>
-												<li><img src="../../img/icon_pageview.png"> 103 |
-													&nbsp;</li>
-												<li><img src="../../img/icon_zzim_off.png"> 103</li>
-											</ul>
-										</center>
-									</div>
-									<div class="freeTransfor">무료배송</div>
-								</div>
-							</li>
-							<li class="productWrap">
-								<div class="productBg">
-									<div class="imgWrapper">
-										<img class="productImgMain"
-											src="../../img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg">
-										<div class="discountBg">20%</div>
-										
-										<div class="productSideMenu">
-											<div class="display_newwin hide"><img src="../../img/thumb_quickview.png" alt=""></div>
-											<div class="display_quickview"><img src="../../img/thumb_quickview.png" alt="미리보기"></div>
-											<div class="display_option"><img src="../../img/thumb_option.png" alt="옵션보기"><div class="hide display_opt_bak" act=""></div></div>
-											<div class="display_send"><img src="../../img/thumb_send.png" alt="SNS보내기"></div>
-											<div class="display_zzim"><img src="../../img/thumb_zzim_off.png" alt="찜하기"><img src="../../img/thumb_quickview.png" style="display:none" alt="찜하기"></div>
-										</div>
-									</div>
-									<div class="productTitle">세련된flex 디자인</div>
-									<div class="productExplain">
-										<font class="productExplainFont"> 제품설명1<br> 제품설명2
-										</font>
-									</div>
-									<div class="priceOrigin">
-										<s>￦ 50,000</s>
-									</div>
-									<div class="priceDiscount">￦ 40,000</div>
-									<div class="myCheck">
-										<center>
-											<ul>
-												<li><img src="../../img/icon_pageview.png"> 103 |
-													&nbsp;</li>
-												<li><img src="../../img/icon_zzim_off.png"> 103</li>
-											</ul>
-										</center>
-									</div>
-									<div class="freeTransfor">무료배송</div>
-								</div>
-							</li>
-							<li class="productWrap">
-								<div class="productBg">
-									<div class="imgWrapper">
-										<img class="productImgMain"
-											src="../../img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg"
-											alt="">
-										<div class="discountBg">42%</div>
-									
-										<div class="productSideMenu">
-											<div class="display_newwin hide"><img src="../../img/thumb_quickview.png" alt=""></div>
-											<div class="display_quickview"><img src="../../img/thumb_quickview.png" alt="미리보기"></div>
-											<div class="display_option"><img src="../../img/thumb_option.png" alt="옵션보기"><div class="hide display_opt_bak" act=""></div></div>
-											<div class="display_send"><img src="../../img/thumb_send.png" alt="SNS보내기"></div>
-											<div class="display_zzim"><img src="../../img/thumb_zzim_off.png" alt="찜하기"><img src="../../img/thumb_quickview.png" style="display:none" alt="찜하기"></div>
-										</div>
-									</div>
-									<div class="productTitle">세련된flex 디자인</div>
-									<div class="productExplain">
-										<font class="productExplainFont"> 제품설명1<br> 제품설명2
-										</font>
-									</div>
-									<div class="priceOrigin">
-										<s>￦ 50,000</s>
-									</div>
-									<div class="priceDiscount">￦ 40,000</div>
-									<div class="myCheck">
-										<center>
-											<ul>
-												<li><img src="../../img/icon_pageview.png"> 103 |
-													&nbsp;</li>
-												<li><img src="../../img/icon_zzim_off.png"> 103</li>
-											</ul>
-										</center>
-									</div>
-									<div class="freeTransfor">무료배송</div>
-								</div>
-							</li>
-							<li class="productWrap">
-								<div class="productBg">
-									<div class="imgWrapper">
-										<img class="productImgMain"
-											src="../../img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg"
-											alt="">
-										<div class="discountBg">33%</div>
-										
-										<div class="productSideMenu">
-											<div class="display_newwin hide"><img src="../../img/thumb_quickview.png" alt=""></div>
-											<div class="display_quickview"><img src="../../img/thumb_quickview.png" alt="미리보기"></div>
-											<div class="display_option"><img src="../../img/thumb_option.png" alt="옵션보기"><div class="hide display_opt_bak" act=""></div></div>
-											<div class="display_send"><img src="../../img/thumb_send.png" alt="SNS보내기"></div>
-											<div class="display_zzim"><img src="../../img/thumb_zzim_off.png" alt="찜하기"><img src="../../img/thumb_quickview.png" style="display:none" alt="찜하기"></div>
-										</div>
-									</div>
-									<div class="productTitle">세련된flex 디자인</div>
-									<div class="productExplain">
-										<font class="productExplainFont"> 제품설명1<br> 제품설명2
-										</font>
-									</div>
-									<div class="priceOrigin">
-										<s>￦ 50,000</s>
-									</div>
-									<div class="priceDiscount">￦ 40,000</div>
-									<div class="myCheck">
-										<center>
-											<ul>
-												<li><img src="../../img/icon_pageview.png"> 103 |
-													&nbsp;</li>
-												<li><img src="../../img/icon_zzim_off.png"> 103</li>
-											</ul>
-										</center>
-									</div>
-									<div class="freeTransfor">무료배송</div>
-								</div>
-							</li>
-						</ul>
-						<ul>
-							<li class="productWrap">
-								<div class="productBg">
-									<div class="imgWrapper">
-										<img class="productImgMain"
-											src="../../img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg">
-										<div class="discountBg">10%</div>
-										
-										<div class="productSideMenu">
-											<div class="display_newwin hide"><img src="../../img/thumb_quickview.png" alt=""></div>
-											<div class="display_quickview"><img src="../../img/thumb_quickview.png" alt="미리보기"></div>
-											<div class="display_option"><img src="../../img/thumb_option.png" alt="옵션보기"><div class="hide display_opt_bak" act=""></div></div>
-											<div class="display_send"><img src="../../img/thumb_send.png" alt="SNS보내기"></div>
-											<div class="display_zzim"><img src="../../img/thumb_zzim_off.png" alt="찜하기"><img src="../../img/thumb_quickview.png" style="display:none" alt="찜하기"></div>
-										</div>
-									</div>
-									
-									
-									<div class="productTitle">세련된flex 디자인</div>
-									<div class="productExplain">
-										<font class="productExplainFont"> 제품설명1<br> 제품설명2
-										</font>
-									</div>
-									<div class="priceOrigin">
-										<s>￦ 50,000</s>
-									</div>
-									<div class="priceDiscount">￦ 40,000</div>
-									<div class="myCheck">
-										<center>
-											<ul>
-												<li><img src="../../img/icon_pageview.png"> 103 |
-													&nbsp;</li>
-												<li><img src="../../img/icon_zzim_off.png"> 103</li>
-											</ul>
-										</center>
-									</div>
-									<div class="freeTransfor">무료배송</div>
-								</div>
-							</li>
-							<li class="productWrap">
-								<div class="productBg">
-									<div class="imgWrapper">
-										<img class="productImgMain"
-											src="../../img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg">
-										<div class="discountBg">20%</div>
-										
-										<div class="productSideMenu">
-											<div class="display_newwin hide"><img src="../../img/thumb_quickview.png" alt=""></div>
-											<div class="display_quickview"><img src="../../img/thumb_quickview.png" alt="미리보기"></div>
-											<div class="display_option"><img src="../../img/thumb_option.png" alt="옵션보기"><div class="hide display_opt_bak" act=""></div></div>
-											<div class="display_send"><img src="../../img/thumb_send.png" alt="SNS보내기"></div>
-											<div class="display_zzim"><img src="../../img/thumb_zzim_off.png" alt="찜하기"><img src="../../img/thumb_quickview.png" style="display:none" alt="찜하기"></div>
-										</div>
-									</div>
-									<div class="productTitle">세련된flex 디자인</div>
-									<div class="productExplain">
-										<font class="productExplainFont"> 제품설명1<br> 제품설명2
-										</font>
-									</div>
-									<div class="priceOrigin">
-										<s>￦ 50,000</s>
-									</div>
-									<div class="priceDiscount">￦ 40,000</div>
-									<div class="myCheck">
-										<center>
-											<ul>
-												<li><img src="../../img/icon_pageview.png"> 103 |
-													&nbsp;</li>
-												<li><img src="../../img/icon_zzim_off.png"> 103</li>
-											</ul>
-										</center>
-									</div>
-									<div class="freeTransfor">무료배송</div>
-								</div>
-							</li>
-							<li class="productWrap">
-								<div class="productBg">
-									<div class="imgWrapper">
-										<img class="productImgMain"
-											src="../../img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg"
-											alt="">
-										<div class="discountBg">42%</div>
-									
-										<div class="productSideMenu">
-											<div class="display_newwin hide"><img src="../../img/thumb_quickview.png" alt=""></div>
-											<div class="display_quickview"><img src="../../img/thumb_quickview.png" alt="미리보기"></div>
-											<div class="display_option"><img src="../../img/thumb_option.png" alt="옵션보기"><div class="hide display_opt_bak" act=""></div></div>
-											<div class="display_send"><img src="../../img/thumb_send.png" alt="SNS보내기"></div>
-											<div class="display_zzim"><img src="../../img/thumb_zzim_off.png" alt="찜하기"><img src="../../img/thumb_quickview.png" style="display:none" alt="찜하기"></div>
-										</div>
-									</div>
-									<div class="productTitle">세련된flex 디자인</div>
-									<div class="productExplain">
-										<font class="productExplainFont"> 제품설명1<br> 제품설명2
-										</font>
-									</div>
-									<div class="priceOrigin">
-										<s>￦ 50,000</s>
-									</div>
-									<div class="priceDiscount">￦ 40,000</div>
-									<div class="myCheck">
-										<center>
-											<ul>
-												<li><img src="../../img/icon_pageview.png"> 103 |
-													&nbsp;</li>
-												<li><img src="../../img/icon_zzim_off.png"> 103</li>
-											</ul>
-										</center>
-									</div>
-									<div class="freeTransfor">무료배송</div>
-								</div>
-							</li>
-							<li class="productWrap">
-								<div class="productBg">
-									<div class="imgWrapper">
-										<img class="productImgMain"
-											src="../../img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg"
-											alt="">
-										<div class="discountBg">33%</div>
-										
-										<div class="productSideMenu">
-											<div class="display_newwin hide"><img src="../../img/thumb_quickview.png" alt=""></div>
-											<div class="display_quickview"><img src="../../img/thumb_quickview.png" alt="미리보기"></div>
-											<div class="display_option"><img src="../../img/thumb_option.png" alt="옵션보기"><div class="hide display_opt_bak" act=""></div></div>
-											<div class="display_send"><img src="../../img/thumb_send.png" alt="SNS보내기"></div>
-											<div class="display_zzim"><img src="../../img/thumb_zzim_off.png" alt="찜하기"><img src="../../img/thumb_quickview.png" style="display:none" alt="찜하기"></div>
-										</div>
-									</div>
-									<div class="productTitle">세련된flex 디자인</div>
-									<div class="productExplain">
-										<font class="productExplainFont"> 제품설명1<br> 제품설명2
-										</font>
-									</div>
-									<div class="priceOrigin">
-										<s>￦ 50,000</s>
-									</div>
-									<div class="priceDiscount">￦ 40,000</div>
-									<div class="myCheck">
-										<center>
-											<ul>
-												<li><img src="../../img/icon_pageview.png"> 103 |
-													&nbsp;</li>
-												<li><img src="../../img/icon_zzim_off.png"> 103</li>
-											</ul>
-										</center>
-									</div>
-									<div class="freeTransfor">무료배송</div>
-								</div>
-							</li>
-						</ul>
-						<ul>
-							<li class="productWrap">
-								<div class="productBg">
-									<div class="imgWrapper">
-										<img class="productImgMain"
-											src="../../img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg">
-										<div class="discountBg">10%</div>
-										
-										<div class="productSideMenu">
-											<div class="display_newwin hide"><img src="../../img/thumb_quickview.png" alt=""></div>
-											<div class="display_quickview"><img src="../../img/thumb_quickview.png" alt="미리보기"></div>
-											<div class="display_option"><img src="../../img/thumb_option.png" alt="옵션보기"><div class="hide display_opt_bak" act=""></div></div>
-											<div class="display_send"><img src="../../img/thumb_send.png" alt="SNS보내기"></div>
-											<div class="display_zzim"><img src="../../img/thumb_zzim_off.png" alt="찜하기"><img src="../../img/thumb_quickview.png" style="display:none" alt="찜하기"></div>
-										</div>
-									</div>
-									
-									
-									<div class="productTitle">세련된flex 디자인</div>
-									<div class="productExplain">
-										<font class="productExplainFont"> 제품설명1<br> 제품설명2
-										</font>
-									</div>
-									<div class="priceOrigin">
-										<s>￦ 50,000</s>
-									</div>
-									<div class="priceDiscount">￦ 40,000</div>
-									<div class="myCheck">
-										<center>
-											<ul>
-												<li><img src="../../img/icon_pageview.png"> 103 |
-													&nbsp;</li>
-												<li><img src="../../img/icon_zzim_off.png"> 103</li>
-											</ul>
-										</center>
-									</div>
-									<div class="freeTransfor">무료배송</div>
-								</div>
-							</li>
-							<li class="productWrap">
-								<div class="productBg">
-									<div class="imgWrapper">
-										<img class="productImgMain"
-											src="../../img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg">
-										<div class="discountBg">20%</div>
-										
-										<div class="productSideMenu">
-											<div class="display_newwin hide"><img src="../../img/thumb_quickview.png" alt=""></div>
-											<div class="display_quickview"><img src="../../img/thumb_quickview.png" alt="미리보기"></div>
-											<div class="display_option"><img src="../../img/thumb_option.png" alt="옵션보기"><div class="hide display_opt_bak" act=""></div></div>
-											<div class="display_send"><img src="../../img/thumb_send.png" alt="SNS보내기"></div>
-											<div class="display_zzim"><img src="../../img/thumb_zzim_off.png" alt="찜하기"><img src="../../img/thumb_quickview.png" style="display:none" alt="찜하기"></div>
-										</div>
-									</div>
-									<div class="productTitle">세련된flex 디자인</div>
-									<div class="productExplain">
-										<font class="productExplainFont"> 제품설명1<br> 제품설명2
-										</font>
-									</div>
-									<div class="priceOrigin">
-										<s>￦ 50,000</s>
-									</div>
-									<div class="priceDiscount">￦ 40,000</div>
-									<div class="myCheck">
-										<center>
-											<ul>
-												<li><img src="../../img/icon_pageview.png"> 103 |
-													&nbsp;</li>
-												<li><img src="../../img/icon_zzim_off.png"> 103</li>
-											</ul>
-										</center>
-									</div>
-									<div class="freeTransfor">무료배송</div>
-								</div>
-							</li>
-							<li class="productWrap">
-								<div class="productBg">
-									<div class="imgWrapper">
-										<img class="productImgMain"
-											src="../../img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg"
-											alt="">
-										<div class="discountBg">42%</div>
-									
-										<div class="productSideMenu">
-											<div class="display_newwin hide"><img src="../../img/thumb_quickview.png" alt=""></div>
-											<div class="display_quickview"><img src="../../img/thumb_quickview.png" alt="미리보기"></div>
-											<div class="display_option"><img src="../../img/thumb_option.png" alt="옵션보기"><div class="hide display_opt_bak" act=""></div></div>
-											<div class="display_send"><img src="../../img/thumb_send.png" alt="SNS보내기"></div>
-											<div class="display_zzim"><img src="../../img/thumb_zzim_off.png" alt="찜하기"><img src="../../img/thumb_quickview.png" style="display:none" alt="찜하기"></div>
-										</div>
-									</div>
-									<div class="productTitle">세련된flex 디자인</div>
-									<div class="productExplain">
-										<font class="productExplainFont"> 제품설명1<br> 제품설명2
-										</font>
-									</div>
-									<div class="priceOrigin">
-										<s>￦ 50,000</s>
-									</div>
-									<div class="priceDiscount">￦ 40,000</div>
-									<div class="myCheck">
-										<center>
-											<ul>
-												<li><img src="../../img/icon_pageview.png"> 103 |
-													&nbsp;</li>
-												<li><img src="../../img/icon_zzim_off.png"> 103</li>
-											</ul>
-										</center>
-									</div>
-									<div class="freeTransfor">무료배송</div>
-								</div>
-							</li>
-							<li class="productWrap">
-								<div class="productBg">
-									<div class="imgWrapper">
-										<img class="productImgMain"
-											src="../../img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg"
-											alt="">
-										<div class="discountBg">33%</div>
-										
-										<div class="productSideMenu">
-											<div class="display_newwin hide"><img src="../../img/thumb_quickview.png" alt=""></div>
-											<div class="display_quickview"><img src="../../img/thumb_quickview.png" alt="미리보기"></div>
-											<div class="display_option"><img src="../../img/thumb_option.png" alt="옵션보기"><div class="hide display_opt_bak" act=""></div></div>
-											<div class="display_send"><img src="../../img/thumb_send.png" alt="SNS보내기"></div>
-											<div class="display_zzim"><img src="../../img/thumb_zzim_off.png" alt="찜하기"><img src="../../img/thumb_quickview.png" style="display:none" alt="찜하기"></div>
-										</div>
-									</div>
-									<div class="productTitle">세련된flex 디자인</div>
-									<div class="productExplain">
-										<font class="productExplainFont"> 제품설명1<br> 제품설명2
-										</font>
-									</div>
-									<div class="priceOrigin">
-										<s>￦ 50,000</s>
-									</div>
-									<div class="priceDiscount">￦ 40,000</div>
-									<div class="myCheck">
-										<center>
-											<ul>
-												<li><img src="../../img/icon_pageview.png"> 103 |
-													&nbsp;</li>
-												<li><img src="../../img/icon_zzim_off.png"> 103</li>
-											</ul>
-										</center>
-									</div>
-									<div class="freeTransfor">무료배송</div>
-								</div>
-							</li>
-						</ul>
-						
+						<!-- 상품리스트 -->
 					</div>
+				</div>
+				<div id="pagingArea" style="display: block; width: 100%; overflow: auto;">
+					<ul class="pagination">
+						<!-- 페이징 처리 부분 -->
+					</ul>					
 				</div>
 			</section>
 

@@ -53,7 +53,7 @@ crossorigin="anonymous">
 
 <body>
 	<center>
-		<div id="wrapper" style="font-family: 'Sunflower', sans-serif;">
+		<div id="wrapper" style="font-family: 'Sunflower', sans-serif; overflow:hidden;" >
 			<!-- header -->
 			<header id="header"> <%@include file="/views/common/header.jsp"%> </header>
 			<br>
@@ -128,8 +128,8 @@ crossorigin="anonymous">
 					onclick="myOrderList();">주문내역확인</button>
 			</div>
 			<br> <br>
-			<footer>
-			<div id="footerTest">footerTest</div>
+			<footer id="footer">
+						<%@include file="../../views/common/footer.jsp" %>
 			</footer>
 		</div>
 	</center>
