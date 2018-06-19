@@ -145,18 +145,18 @@
 			<h4>회원정보 입력</h4>
 			<table id="regi-input" class="table table-bordered">
 				<tr class="regi-tr">
-					<td><img src="/img/check.png" class="check-img"> 이름</td>
+					<td><img src="/img/check.png" class="check-img"> 이름</td> 
 					<td><input type="text" name="userName"></td>
 				</tr>
 				<tr class="regi-tr">
 					<td><img src="/img/check.png" class="check-img"> 아이디</td>
-					<td><input type="text" name="userId"> 공백 없는 영문,숫자 포함
-						6-20자 <span id="idcheck"></span></td>
+					<td><input type="text" name="userId"><button onclick="checkId($('input[name=userId]').val());">중복확인</button> <span id="idcheck">공백 없는 영문,숫자 포함
+						6-20자 </span></td>
 				</tr>
 				<tr class="regi-tr">
 					<td><img src="/img/check.png" class="check-img"> 비밀번호</td>
-					<td><input type="password" name="userPwd"> 공백 없는 영문,숫자
-						포함 6-20자 <span id="pwdcheck"></span></td>
+					<td><input type="password" name="userPwd"><span id="pwdcheck"> 공백 없는 영문,숫자
+						포함 6-20자 </span></td>
 				</tr>
 				<tr class="regi-tr">
 					<td><img src="/img/check.png" class="check-img"> 비밀번호 확인</td>
@@ -272,18 +272,9 @@
 		var reg = /^.*(?=.{6,20})(?=.*[0-9])(?=.*[a-zA-Z]).*$/; <!-- 검증용 -->
 		
 		<!-- ID 검증 -->
-		var userId = $("input[name='userId']");
-		userId.blur(function(){
-			var uid = $("input[name='userId']").val();
-			 if(!reg.test(uid)){
-				 $('#idcheck').text("  잘못된 입력입니다.");
-				 $('#idcheck').css("color","red");
-				 }
-			 else{
-			 $('#idcheck').text("  가능합니다.");
-			 $('#idcheck').css("color","#00ff00");
-				}
-		});
+		function checkId(id) {
+			window.open("/views/member/checkId.jsp?checkId="+id,"ID 중복확인","width=400px, height=300px, left=100, top=100");
+		}
 		
 		<!-- PW 검증 -->
 		var userPwd = $("input[name='userPwd']");

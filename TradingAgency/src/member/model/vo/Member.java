@@ -1,132 +1,127 @@
 package member.model.vo;
 
-import java.sql.Date;
+import oracle.sql.DATE;
 
 public class Member {
-
-	private int userEntirePK;
-	private String userEntireId;
-	private String userEntireName;
-	private String userPwd;
-	private String userPhone;
-	private String userBirth;
-	private String userGender;
-	private String userAddr;
-	private int userEntireUserGradeIdPK;
-	private String userEmail;
-	private String userInterest;
-	private Date userEnrollDate;
+	/*
+	USER_ENTIRE_PK	NUMBER(38,0)
+	USER_ID	VARCHAR2(20 BYTE)
+	USER_NAME	VARCHAR2(20 BYTE)
+	USER_PWD	VARCHAR2(20 BYTE)
+	USER_PHONE	VARCHAR2(20 BYTE)
+	USER_BIRTH	VARCHAR2(20 BYTE)
+	USER_GENDER	CHAR(1 BYTE)
+	USER_ADDR	NVARCHAR2(70 CHAR)
+	USER_ENTIRE_USER_GRADE_ID_FK	VARCHAR2(20 BYTE)
+	USER_EMAIL	VARCHAR2(30 BYTE)
+	USER_INTEREST	NVARCHAR2(10 CHAR)
+	USER_ENROLLDATE	DATE
+	*/
+	private int user_entire_pk;
+	private String user_id;
+	private String user_name;
+	private String user_pwd;
+	private String user_phone;
+	private String user_birth;
+	private String user_gender;
+	private String user_addr;
+	private String user_user_entire_user_grade_id_fk;
+	private String user_email;
+	private String user_interest;
+	private DATE user_enrolldate;
 	public Member() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Member(int userEntirePK, String userEntireId, String userEntireName, String userPwd, String userPhone,
-			String userBirth, String userGender, String userAddr, int userEntireUserGradeIdPK, String userEmail,
-			String userInterest, Date userEnrollDate) {
+	public Member(int user_entire_pk, String user_id, String user_name, String user_pwd, String user_phone,
+			String user_birth, String user_gender, String user_addr, String user_user_entire_user_grade_id_fk,
+			String user_email, String user_interest, DATE user_enrolldate) {
 		super();
-		this.userEntirePK = userEntirePK;
-		this.userEntireId = userEntireId;
-		this.userEntireName = userEntireName;
-		this.userPwd = userPwd;
-		this.userPhone = userPhone;
-		this.userBirth = userBirth;
-		this.userGender = userGender;
-		this.userAddr = userAddr;
-		this.userEntireUserGradeIdPK = userEntireUserGradeIdPK;
-		this.userEmail = userEmail;
-		this.userInterest = userInterest;
-		this.userEnrollDate = userEnrollDate;
+		this.user_entire_pk = user_entire_pk;
+		this.user_id = user_id;
+		this.user_name = user_name;
+		this.user_pwd = user_pwd;
+		this.user_phone = user_phone;
+		this.user_birth = user_birth;
+		this.user_gender = user_gender;
+		this.user_addr = user_addr;
+		this.user_user_entire_user_grade_id_fk = user_user_entire_user_grade_id_fk;
+		this.user_email = user_email;
+		this.user_interest = user_interest;
+		this.user_enrolldate = user_enrolldate;
 	}
-	public int getUserEntirePK() {
-		return userEntirePK;
+	public int getUser_entire_pk() {
+		return user_entire_pk;
 	}
-	public void setUserEntirePK(int userEntirePK) {
-		this.userEntirePK = userEntirePK;
+	public void setUser_entire_pk(int user_entire_pk) {
+		this.user_entire_pk = user_entire_pk;
 	}
-	public String getUserEntireId() {
-		return userEntireId;
+	public String getUser_id() {
+		return user_id;
 	}
-	public void setUserEntireId(String userEntireId) {
-		this.userEntireId = userEntireId;
+	public void setUser_id(String user_id) {
+		this.user_id = user_id;
 	}
-	public String getUserEntireName() {
-		return userEntireName;
+	public String getUser_name() {
+		return user_name;
 	}
-	public void setUserEntireName(String userEntireName) {
-		this.userEntireName = userEntireName;
+	public void setUser_name(String user_name) {
+		this.user_name = user_name;
 	}
-	public String getUserPwd() {
-		return userPwd;
+	public String getUser_pwd() {
+		return user_pwd;
 	}
-	public void setUserPwd(String userPwd) {
-		this.userPwd = userPwd;
+	public void setUser_pwd(String user_pwd) {
+		this.user_pwd = user_pwd;
 	}
-	public String getUserPhone() {
-		return userPhone;
+	public String getUser_phone() {
+		return user_phone;
 	}
-	public void setUserPhone(String userPhone) {
-		this.userPhone = userPhone;
+	public void setUser_phone(String user_phone) {
+		this.user_phone = user_phone;
 	}
-	public String getUserBirth() {
-		return userBirth;
+	public String getUser_birth() {
+		return user_birth;
 	}
-	public void setUserBirth(String userBirth) {
-		this.userBirth = userBirth;
+	public void setUser_birth(String user_birth) {
+		this.user_birth = user_birth;
 	}
-	public String getUserGender() {
-		return userGender;
+	public String getUser_gender() {
+		return user_gender;
 	}
-	public void setUserGender(String userGender) {
-		this.userGender = userGender;
+	public void setUser_gender(String user_gender) {
+		this.user_gender = user_gender;
 	}
-	public String getUserAddr() {
-		return userAddr;
+	public String getUser_addr() {
+		return user_addr;
 	}
-	public void setUserAddr(String userAddr) {
-		this.userAddr = userAddr;
+	public void setUser_addr(String user_addr) {
+		this.user_addr = user_addr;
 	}
-	public int getUserEntireUserGradeIdPK() {
-		return userEntireUserGradeIdPK;
+	public String getUser_user_entire_user_grade_id_fk() {
+		return user_user_entire_user_grade_id_fk;
 	}
-	public void setUserEntireUserGradeIdPK(int userEntireUserGradeIdPK) {
-		this.userEntireUserGradeIdPK = userEntireUserGradeIdPK;
+	public void setUser_user_entire_user_grade_id_fk(String user_user_entire_user_grade_id_fk) {
+		this.user_user_entire_user_grade_id_fk = user_user_entire_user_grade_id_fk;
 	}
-	public String getUserEmail() {
-		return userEmail;
+	public String getUser_email() {
+		return user_email;
 	}
-	public void setUserEmail(String userEmail) {
-		this.userEmail = userEmail;
+	public void setUser_email(String user_email) {
+		this.user_email = user_email;
 	}
-	public String getUserInterest() {
-		return userInterest;
+	public String getUser_interest() {
+		return user_interest;
 	}
-	public void setUserInterest(String userInterest) {
-		this.userInterest = userInterest;
+	public void setUser_interest(String user_interest) {
+		this.user_interest = user_interest;
 	}
-	public Date getUserEnrollDate() {
-		return userEnrollDate;
+	public DATE getUser_enrolldate() {
+		return user_enrolldate;
 	}
-	public void setUserEnrollDate(Date userEnrollDate) {
-		this.userEnrollDate = userEnrollDate;
+	public void setUser_enrolldate(DATE user_enrolldate) {
+		this.user_enrolldate = user_enrolldate;
 	}
-	
-	
-	
-	
-	
 	
 	
 }
-
-//USER_ENTIRE_PK	INT	Primary key
-//user_entire_id	varchar2(20)	
-//user_entire_name	varchar2(20)	
-//user_pwd	varchar2(20)	
-//user_phone	varchar2(20)	
-//user_birth	varchar2(20)	
-//user_gender	char(1)	
-//user_addr	nvarchar2(70)	
-//USER_ENTIRE_USER_GRADE_ID_FK	INT	Foreign key
-//user_email	varchar2(30)	
-//user_interest	nvarchar2(10)	
-//user_enrollDate	DATE	
