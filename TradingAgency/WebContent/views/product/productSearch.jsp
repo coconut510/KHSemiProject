@@ -409,8 +409,8 @@ function selectPriceMulti(price)
 	</section>
 
 	
-	<form action="/productSearch" method="get" style = "display:inline" >
-	<input type="text" name = "searchSub" >
+	<form action="/productSearch" method="get"  >
+	<input type="text" name="searchSub">
 	<input type ="submit" value="검색">
 	</form>
 

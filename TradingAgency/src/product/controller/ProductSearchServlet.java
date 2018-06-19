@@ -9,17 +9,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
 import product.model.service.ProductInsertService;
 import product.model.vo.PageData;
 
 /**
  * Servlet implementation class ProductSearchServlet
  */
-@WebServlet(name = "ProductSearch", urlPatterns = { "/productSearch" })
+@WebServlet(name = "productSearch", urlPatterns = { "/productSearch" })
 public class ProductSearchServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       //productSearch
-	   //productSearch
+       
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -35,7 +35,7 @@ public class ProductSearchServlet extends HttpServlet {
 		System.out.println("서블릿 시작");
 		request.setCharacterEncoding("utf-8");
 		String searchSub = request.getParameter("searchSub");
-		System.out.println("검색어"+searchSub);
+		System.out.println(searchSub);
 		
 		int currentPage;
 		if(request.getParameter("currentPage")==null) {
@@ -43,16 +43,15 @@ public class ProductSearchServlet extends HttpServlet {
 		}else {
 			currentPage = Integer.parseInt(request.getParameter("currentPage"));
 		}
-		
 		PageData pd = new ProductInsertService().searchSub(searchSub,currentPage);
 		
 		if(pd != null) {
-			RequestDispatcher view = request.getRequestDispatcher("../../views/product/productSearch.jsp");
+			RequestDispatcher view = request.getRequestDispatcher("/views/product/productSearch.jsp");
 			request.setAttribute("pageData", pd);
-			request.setAttribute("searchSub",searchSub);
+			request.setAttribute("searchSub", searchSub);
 			view.forward(request, response);
 		}else {
-			response.sendRedirect("../../views/productInsertError.jsp");
+			response.sendRedirect("/views/product/poductError.jsp");
 		}
 	}
 

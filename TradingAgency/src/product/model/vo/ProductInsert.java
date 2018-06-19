@@ -1,46 +1,68 @@
 package product.model.vo;
 
-import java.sql.Date;
-
 public class ProductInsert {
 	
-	private int productNo;
+	private int productEntirePK;
+	private String productEntireUserIdFK;
+	private String productEntireCateMainIdFK;
+	private String productEntireCateSubIdFK;
 	private String productName;
-	private String productCategory;
-	private String productItem;
-	private String productInfo;
-	private int productCount;
-	private String productSellerId;
-	private String productBuyInfo;
 	private int productPrice;
-	private Date productBuyDate;
-	private String content;
+	private String productImage;
+	private int productAmount;
+	private String productState;
+	private String productGrade;
+	private String productDetail;
 	
 	public ProductInsert() {}
 
-	public ProductInsert(int productNo, String productName, String productCategory, String productItem,
-			String productInfo, int productCount, String productSellerId, String productBuyInfo, int productPrice,
-			Date productBuyDate, String content) {
+	public ProductInsert(int productEntirePK, String productEntireUserIdFK, String productEntireCateMainIdFK,
+			String productEntireCateSubIdFK, String productName, int productPrice, String productImage,
+			int productAmount, String productState, String productGrade, String productDetail) {
 		super();
-		this.productNo = productNo;
+		this.productEntirePK = productEntirePK;
+		this.productEntireUserIdFK = productEntireUserIdFK;
+		this.productEntireCateMainIdFK = productEntireCateMainIdFK;
+		this.productEntireCateSubIdFK = productEntireCateSubIdFK;
 		this.productName = productName;
-		this.productCategory = productCategory;
-		this.productItem = productItem;
-		this.productInfo = productInfo;
-		this.productCount = productCount;
-		this.productSellerId = productSellerId;
-		this.productBuyInfo = productBuyInfo;
 		this.productPrice = productPrice;
-		this.productBuyDate = productBuyDate;
-		this.content = content;
+		this.productImage = productImage;
+		this.productAmount = productAmount;
+		this.productState = productState;
+		this.productGrade = productGrade;
+		this.productDetail = productDetail;
 	}
 
-	public int getProductNo() {
-		return productNo;
+	public int getProductEntirePK() {
+		return productEntirePK;
 	}
 
-	public void setProductNo(int productNo) {
-		this.productNo = productNo;
+	public void setProductEntirePK(int productEntirePK) {
+		this.productEntirePK = productEntirePK;
+	}
+
+	public String getProductEntireUserIdFK() {
+		return productEntireUserIdFK;
+	}
+
+	public void setProductEntireUserIdFK(String productEntireUserIdFK) {
+		this.productEntireUserIdFK = productEntireUserIdFK;
+	}
+
+	public String getProductEntireCateMainIdFK() {
+		return productEntireCateMainIdFK;
+	}
+
+	public void setProductEntireCateMainIdFK(String productEntireCateMainIdFK) {
+		this.productEntireCateMainIdFK = productEntireCateMainIdFK;
+	}
+
+	public String getProductEntireCateSubIdFK() {
+		return productEntireCateSubIdFK;
+	}
+
+	public void setProductEntireCateSubIdFK(String productEntireCateSubIdFK) {
+		this.productEntireCateSubIdFK = productEntireCateSubIdFK;
 	}
 
 	public String getProductName() {
@@ -51,54 +73,6 @@ public class ProductInsert {
 		this.productName = productName;
 	}
 
-	public String getProductCategory() {
-		return productCategory;
-	}
-
-	public void setProductCategory(String productCategory) {
-		this.productCategory = productCategory;
-	}
-
-	public String getProductItem() {
-		return productItem;
-	}
-
-	public void setProductItem(String productItem) {
-		this.productItem = productItem;
-	}
-
-	public String getProductInfo() {
-		return productInfo;
-	}
-
-	public void setProductInfo(String productInfo) {
-		this.productInfo = productInfo;
-	}
-
-	public int getProductCount() {
-		return productCount;
-	}
-
-	public void setProductCount(int productCount) {
-		this.productCount = productCount;
-	}
-
-	public String getProductSellerId() {
-		return productSellerId;
-	}
-
-	public void setProductSellerId(String productSellerId) {
-		this.productSellerId = productSellerId;
-	}
-
-	public String getProductBuyInfo() {
-		return productBuyInfo;
-	}
-
-	public void setProductBuyInfo(String productBuyInfo) {
-		this.productBuyInfo = productBuyInfo;
-	}
-
 	public int getProductPrice() {
 		return productPrice;
 	}
@@ -107,21 +81,51 @@ public class ProductInsert {
 		this.productPrice = productPrice;
 	}
 
-	public Date getProductBuyDate() {
-		return productBuyDate;
+	public String getProductImage() {
+		return productImage;
 	}
 
-	public void setProductBuyDate(Date productBuyDate) {
-		this.productBuyDate = productBuyDate;
+	public void setProductImage(String productImage) {
+		this.productImage = productImage;
 	}
 
-	public String getContent() {
-		return content;
+	public int getProductAmount() {
+		return productAmount;
 	}
 
-	public void setContent(String content) {
-		this.content = content;
+	public void setProductAmount(int productAmount) {
+		this.productAmount = productAmount;
 	}
+
+	public String getProductState() {
+		return productState;
+	}
+
+	public void setProductState(String productState) {
+		this.productState = productState;
+	}
+
+	public String getProductGrade() {
+		return productGrade;
+	}
+
+	public void setProductGrade(String productGrade) {
+		this.productGrade = productGrade;
+	}
+
+	public String getProductDetail() {
+		return productDetail;
+	}
+
+	public void setProductDetail(String productDetail) {
+		this.productDetail = productDetail;
+	}
+	
+	
+	
+	
+
+	
 
 
 
