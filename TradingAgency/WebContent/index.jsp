@@ -5,55 +5,52 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<!-- Required meta tags -->
-<!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
-
-
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-	crossorigin="anonymous"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-<!-- Bootstrap CSS -->
-
+<!-- Bootstrap  -->
 <link rel="stylesheet"
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
-    integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-    crossorigin="anonymous">
+href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+crossorigin="anonymous"></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+crossorigin="anonymous"></script>
+<script
+src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+crossorigin="anonymous"></script>
+
+<!-- jQuery 링크걸기 -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+crossorigin="anonymous">
+</script>
+
+<!-- ajax 링크걸기  -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- 내부 링크건 CSS -->
 <link rel="stylesheet" href="../../CSS/bootstrap/bootstrap.min.css" />
-<!-- Optional JavaScript -->
-
-
-<script
-	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-	integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-	crossorigin="anonymous"></script>
-<script
-	src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
-	integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-	crossorigin="anonymous"></script>
-
-<!-- 구글 폰트 -->
-<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:700"
-	rel="stylesheet">
-<!-- 외부css파일  -->
 <link rel="stylesheet" type="text/css" href="../../CSS/main/main.css">
 <link rel="stylesheet" type="text/css" href="../../CSS/common/common.css">
 <link rel="stylesheet" type="text/css" href="../../CSS/common/header.css">
-<link rel="stylesheet" type="text/css" href="../../CSS/common/adv.css">
-
-<!-- 외부 js파일  -->
-
+<link rel="stylesheet" type="text/css" href="../../CSS/common/adv.css">	
+<link rel="stylesheet" type="text/css" href="../../CSS/common/footer.css">	
+<!-- 내부 js파일 -->
+<script type="text/javascript" src="../../JS/common/header.js?ver=1"></script>
+<script type="text/javascript" src="../../JS/member/main.js"></script>
 <script type="text/javascript" src="../../JS/common/adv.js"></script>
-
+<script type="text/javascript" src="../../JS/bootstrap/bootstrap.min.js"></script>
+<!-- 구글 폰트 -->
+<link href="https://fonts.googleapis.com/css?family=Sunflower:300" rel="stylesheet">
 <title>메인페이지</title>
 </head>
 
 <body>
 	<center>
 		<!-- Wrapper -->
-		<div id="wrapper">
+		<div id="wrapper" style="overflow: hidden;">
 			<!-- header -->
 			<header id="header"> <%@include
 				file="/views/common/header.jsp"%> </header>
@@ -67,7 +64,7 @@
 						<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
 						<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
 					</ol>
-					<div class="carousel-inner" style="width:100%;">
+					<div class="carousel-inner" style="width: 100%;">
 						<div class="carousel-item active">
 							<a href="index.jsp"><img class="d-block w-100"
 								src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
@@ -95,21 +92,37 @@
 					</a>
 				</div>
 			</div>
-
+			<br> <br> <br>
 			<div id="content">
-
-
-				<br> <br>
-
-				<!-- newProduct 섹션  -->
-				<div id="newProductSec">
-					<!--  반응형 고정  -->
-
-					<div id="newProduct_title">
-						<h1>New Product</h1>
+				<div id="popularCategorySec">
+					<div id="popularCategory_title">
+						<h1>인기카테고리</h1>
 					</div>
 					<br>
+					<div class="container">
+						<div class="row" style="overflow:hidden;">
+							<div class="col-sm"><img src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg" style="width:100%; height:100%;">디비에서이미지</div>
+							<div class="col-sm"><img src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg" style="width:100%; height:100%;">디비에서이미지</div>
+							<div class="col-sm"><img src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg" style="width:100%; height:100%;">디비에서이미지</div>
+							<div class="col-sm"><img src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg" style="width:100%; height:100%;">디비에서이미지</div>
+							<div class="col-sm"><img src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg" style="width:100%; height:100%;">디비에서이미지</div>
+							<div class="col-sm"><img src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg" style="width:100%; height:100%;">디비에서이미지</div>
+						</div>
+					</div>
+					<br>
+				</div>
 
+			</div>
+			<br> <br>
+			<div id="content">
+				<br> <br>
+				<!-- 새로운제품 섹션  -->
+				<div id="newProductSec">
+					<!--  반응형 고정  -->
+					<div id="newProduct_title">
+						<h1>새로 등록된 상품</h1>
+					</div>
+					<br>
 					<div id="carouselExampleControls" class="carousel slide"
 						data-ride="carousel">
 						<div class="container">
@@ -288,27 +301,430 @@
 								</div>
 							</div>
 						</div>
-							<div class="col-xs-3" style="width: 20%;position: absolute;top: 0; height: 100%;">
-								<a class="carousel-control-prev" href="#carouselExampleControls"
-									id="prevBTN" role="button" data-slide="prev"> <span
-									class="carousel-control-prev-icon" aria-hidden="true"></span> <span
-									class="sr-only">이전</span>
-								</a>
-							</div>
-							<div class="col-xs-3" style="width: 20%;position: absolute;top: 0; right:0; height: 100%; ">
-								<a class="carousel-control-next" href="#carouselExampleControls"
-									id="nextBTN" role="button" data-slide="next"> <span
-									class="carousel-control-next-icon" aria-hidden="true"></span> <span
-									class="sr-only">다음</span>
-								</a>
+						<div class="col-xs-3"
+							style="width: 20%; position: absolute; top: 0; height: 100%;">
+							<a class="carousel-control-prev" href="#carouselExampleControls"
+								id="prevBTN" role="button" data-slide="prev"> <span
+								class="carousel-control-prev-icon" aria-hidden="true"></span> <span
+								class="sr-only">이전</span>
+							</a>
 						</div>
-
-
+						<div class="col-xs-3"
+							style="width: 20%; position: absolute; top: 0; right: 0; height: 100%;">
+							<a class="carousel-control-next" href="#carouselExampleControls"
+								id="nextBTN" role="button" data-slide="next"> <span
+								class="carousel-control-next-icon" aria-hidden="true"></span> <span
+								class="sr-only">다음</span>
+							</a>
+						</div>
 					</div>
 				</div>
 
+		    	<div id="sellExpectedSec1">
+					<!--  반응형 고정  -->
+					<div id="sellExpectedSec1_title">
+						<h1>판매예정상품1</h1>
+					</div>
+					<br>
+					<div id="carouselExampleControls" class="carousel slide"
+						data-ride="carousel">
+						<div class="container" style="margin-right:50px;">
+							<div class="carousel-inner">
+								<div class="carousel-item active">
 
+									<div class="container">
+										<div class="row" style="margin-left: 15px;">
 
+											<div class="col-xs-3" style="width: 25%;">
+												<a href="#"> <img class="card-img-top"
+													src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
+													alt="Card image cap"></a>
+												<div class="card-body">
+													<a href="#">
+														<h5 class="card-title">Card title</h5>
+													</a>
+													<p class="card-text">product explanation</p>
+
+												</div>
+											</div>
+											<div class="col-xs-3" style="width: 25%;">
+												<a href="#"> <img class="card-img-top"
+													src="img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg"
+													alt="Card image cap"></a>
+												<div class="card-body">
+													<a href="#">
+														<h5 class="card-title">Card title</h5>
+													</a>
+													<p class="card-text">product explanation</p>
+
+												</div>
+											</div>
+
+											<div class="col-xs-3" style="width: 25%;">
+												<a href="#"> <img class="card-img-top"
+													src="img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg"
+													alt="Card image cap"></a>
+												<div class="card-body">
+													<a href="#">
+														<h5 class="card-title">Card title</h5>
+													</a>
+													<p class="card-text">product explanation</p>
+												</div>
+											</div>
+											<div class="col-xs-3" style="width: 25%;">
+												<a href="#"> <img class="card-img-top"
+													src="img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg"
+													alt="Card image cap">
+												</a>
+												<div class="card-body">
+													<a href="#">
+														<h5 class="card-title">Card title</h5>
+													</a>
+													<p class="card-text">product explanation</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="carousel-item">
+									<div class="container">
+
+										<div class="row" style="margin-left: 15px;">
+
+											<div class="col-xs-3" style="width: 25%;">
+												<a href="#"> <img class="card-img-top"
+													src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
+													alt="Card image cap"></a>
+												<div class="card-body">
+													<a href="#">
+														<h5 class="card-title">Card title</h5>
+													</a>
+													<p class="card-text">product explanation</p>
+
+												</div>
+											</div>
+											<div class="col-xs-3" style="width: 25%;">
+												<a href="#"> <img class="card-img-top"
+													src="img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg"
+													alt="Card image cap"></a>
+												<div class="card-body">
+													<a href="#">
+														<h5 class="card-title">Card title</h5>
+													</a>
+													<p class="card-text">product explanation</p>
+												</div>
+											</div>
+
+											<div class="col-xs-3" style="width: 25%;">
+												<a href="#"> <img class="card-img-top"
+													src="img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg"
+													alt="Card image cap"></a>
+												<div class="card-body">
+													<a href="#">
+														<h5 class="card-title">Card title</h5>
+													</a>
+													<p class="card-text">product explanation</p>
+												</div>
+											</div>
+											<div class="col-xs-3" style="width: 25%;">
+												<a href="#"> <img class="card-img-top"
+													src="img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg"
+													alt="Card image cap">
+												</a>
+												<div class="card-body">
+													<a href="#">
+														<h5 class="card-title">Card title</h5>
+													</a>
+													<p class="card-text">product explanation</p>
+
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<div class="container">
+
+										<div class="row" style="margin-left: 15px;">
+
+											<div class="col-xs-3" style="width: 25%;">
+												<a href="#"> <img class="card-img-top"
+													src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
+													alt="Card image cap"></a>
+												<div class="card-body">
+													<a href="#">
+														<h5 class="card-title">Card title</h5>
+													</a>
+													<p class="card-text">product explanation</p>
+
+												</div>
+											</div>
+											<div class="col-xs-3" style="width: 25%;">
+												<a href="#"> <img class="card-img-top"
+													src="img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg"
+													alt="Card image cap"></a>
+												<div class="card-body">
+													<a href="#">
+														<h5 class="card-title">Card title</h5>
+													</a>
+													<p class="card-text">product explanation</p>
+												</div>
+											</div>
+
+											<div class="col-xs-3" style="width: 25%;">
+												<a href="#"> <img class="card-img-top"
+													src="img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg"
+													alt="Card image cap"></a>
+												<div class="card-body">
+													<a href="#">
+														<h5 class="card-title">Card title</h5>
+													</a>
+													<p class="card-text">product explanation</p>
+
+												</div>
+											</div>
+
+											<div class="col-xs-3" style="width: 25%;">
+												<a href="#"> <img class="card-img-top"
+													src="img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg"
+													alt="Card image cap">
+												</a>
+												<div class="card-body">
+													<a href="#">
+														<h5 class="card-title">Card title</h5>
+													</a>
+													<p class="card-text">product explanation</p>
+
+												</div>
+											</div>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-3"
+							style="width: 20%; position: absolute; top: 0; height: 100%;">
+							<a class="carousel-control-prev" href="#carouselExampleControls"
+								id="prevBTN" role="button" data-slide="prev"> <span
+								class="carousel-control-prev-icon" aria-hidden="true"></span> <span
+								class="sr-only">이전</span>
+							</a>
+						</div>
+						<div class="col-xs-3"
+							style="width: 20%; position: absolute; top: 0; right: 0; height: 100%;">
+							<a class="carousel-control-next" href="#carouselExampleControls"
+								id="nextBTN" role="button" data-slide="next"> <span
+								class="carousel-control-next-icon" aria-hidden="true"></span> <span
+								class="sr-only">다음</span>
+							</a>
+						</div>
+					</div>
+				</div>
+
+    	<div id="sellExpectedSec2">
+					<!--  반응형 고정  -->
+					<div id="sellExpectedSec2_title">
+						<h1>판매예정상품2</h1>
+					</div>
+					<br>
+					<div id="carouselExampleControls" class="carousel slide"
+						data-ride="carousel">
+						<div class="container">
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+
+									<div class="container">
+										<div class="row" style="margin-left: 15px;">
+
+											<div class="col-xs-3" style="width: 25%;">
+												<a href="#"> <img class="card-img-top"
+													src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
+													alt="Card image cap"></a>
+												<div class="card-body">
+													<a href="#">
+														<h5 class="card-title">Card title</h5>
+													</a>
+													<p class="card-text">product explanation</p>
+
+												</div>
+											</div>
+											<div class="col-xs-3" style="width: 25%;">
+												<a href="#"> <img class="card-img-top"
+													src="img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg"
+													alt="Card image cap"></a>
+												<div class="card-body">
+													<a href="#">
+														<h5 class="card-title">Card title</h5>
+													</a>
+													<p class="card-text">product explanation</p>
+
+												</div>
+											</div>
+
+											<div class="col-xs-3" style="width: 25%;">
+												<a href="#"> <img class="card-img-top"
+													src="img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg"
+													alt="Card image cap"></a>
+												<div class="card-body">
+													<a href="#">
+														<h5 class="card-title">Card title</h5>
+													</a>
+													<p class="card-text">product explanation</p>
+												</div>
+											</div>
+											<div class="col-xs-3" style="width: 25%;">
+												<a href="#"> <img class="card-img-top"
+													src="img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg"
+													alt="Card image cap">
+												</a>
+												<div class="card-body">
+													<a href="#">
+														<h5 class="card-title">Card title</h5>
+													</a>
+													<p class="card-text">product explanation</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="carousel-item">
+									<div class="container">
+
+										<div class="row" style="margin-left: 15px;">
+
+											<div class="col-xs-3" style="width: 25%;">
+												<a href="#"> <img class="card-img-top"
+													src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
+													alt="Card image cap"></a>
+												<div class="card-body">
+													<a href="#">
+														<h5 class="card-title">Card title</h5>
+													</a>
+													<p class="card-text">product explanation</p>
+
+												</div>
+											</div>
+											<div class="col-xs-3" style="width: 25%;">
+												<a href="#"> <img class="card-img-top"
+													src="img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg"
+													alt="Card image cap"></a>
+												<div class="card-body">
+													<a href="#">
+														<h5 class="card-title">Card title</h5>
+													</a>
+													<p class="card-text">product explanation</p>
+												</div>
+											</div>
+
+											<div class="col-xs-3" style="width: 25%;">
+												<a href="#"> <img class="card-img-top"
+													src="img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg"
+													alt="Card image cap"></a>
+												<div class="card-body">
+													<a href="#">
+														<h5 class="card-title">Card title</h5>
+													</a>
+													<p class="card-text">product explanation</p>
+												</div>
+											</div>
+											<div class="col-xs-3" style="width: 25%;">
+												<a href="#"> <img class="card-img-top"
+													src="img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg"
+													alt="Card image cap">
+												</a>
+												<div class="card-body">
+													<a href="#">
+														<h5 class="card-title">Card title</h5>
+													</a>
+													<p class="card-text">product explanation</p>
+
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<div class="container">
+
+										<div class="row" style="margin-left: 15px;">
+
+											<div class="col-xs-3" style="width: 25%;">
+												<a href="#"> <img class="card-img-top"
+													src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
+													alt="Card image cap"></a>
+												<div class="card-body">
+													<a href="#">
+														<h5 class="card-title">Card title</h5>
+													</a>
+													<p class="card-text">product explanation</p>
+
+												</div>
+											</div>
+											<div class="col-xs-3" style="width: 25%;">
+												<a href="#"> <img class="card-img-top"
+													src="img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg"
+													alt="Card image cap"></a>
+												<div class="card-body">
+													<a href="#">
+														<h5 class="card-title">Card title</h5>
+													</a>
+													<p class="card-text">product explanation</p>
+												</div>
+											</div>
+
+											<div class="col-xs-3" style="width: 25%;">
+												<a href="#"> <img class="card-img-top"
+													src="img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg"
+													alt="Card image cap"></a>
+												<div class="card-body">
+													<a href="#">
+														<h5 class="card-title">Card title</h5>
+													</a>
+													<p class="card-text">product explanation</p>
+
+												</div>
+											</div>
+
+											<div class="col-xs-3" style="width: 25%;">
+												<a href="#"> <img class="card-img-top"
+													src="img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg"
+													alt="Card image cap">
+												</a>
+												<div class="card-body">
+													<a href="#">
+														<h5 class="card-title">Card title</h5>
+													</a>
+													<p class="card-text">product explanation</p>
+
+												</div>
+											</div>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-3"
+							style="width: 20%; position: absolute; top: 0; height: 100%;">
+							<a class="carousel-control-prev" href="#carouselExampleControls"
+								id="prevBTN" role="button" data-slide="prev"> <span
+								class="carousel-control-prev-icon" aria-hidden="true"></span> <span
+								class="sr-only">이전</span>
+							</a>
+						</div>
+						<div class="col-xs-3"
+							style="width: 20%; position: absolute; top: 0; right: 0; height: 100%;">
+							<a class="carousel-control-next" href="#carouselExampleControls"
+								id="nextBTN" role="button" data-slide="next"> <span
+								class="carousel-control-next-icon" aria-hidden="true"></span> <span
+								class="sr-only">다음</span>
+							</a>
+						</div>
+					</div>
+				</div>
 				<br> <br>
 
 				<div id="collectionSec">
@@ -452,34 +868,34 @@
 
 
 				<div id="imghoverSec">
-						<div class="container">
+					<div class="container">
 
-							<div class="row">
-								<div class="col-xs-4" style="width: 30%;">
-									<div class="shadow">
-										<a href="#"><img
-											src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
-											width="100%" height="100%"></a>
-									</div>
+						<div class="row">
+							<div class="col-xs-4" style="width: 30%;">
+								<div class="shadow">
+									<a href="#"><img
+										src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
+										width="100%" height="100%"></a>
 								</div>
-								<div class="col-xs-4" style="width: 30%;">
-									<div class="shadow">
-										<a href="#"><img
-											src="img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg"
-											width="100%" height="100%"></a>
-									</div>
+							</div>
+							<div class="col-xs-4" style="width: 30%;">
+								<div class="shadow">
+									<a href="#"><img
+										src="img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg"
+										width="100%" height="100%"></a>
 								</div>
-								<div class="col-xs-4" style="width: 30%;">
-									<div class="shadow">
-										<a href="#"><img
-											src="img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg"
-											width="100%" height="100%"></a>
-									</div>
+							</div>
+							<div class="col-xs-4" style="width: 30%;">
+								<div class="shadow">
+									<a href="#"><img
+										src="img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg"
+										width="100%" height="100%"></a>
 								</div>
-
 							</div>
 
 						</div>
+
+					</div>
 				</div>
 			</div>
 			<br> <br>
@@ -489,7 +905,7 @@
 
 				<div id="carouselExampleFade" class="carousel slide carousel-fade"
 					data-ride="carousel">
-					<div class="carousel-inner" style="width:100%;">
+					<div class="carousel-inner" style="width: 100%;">
 						<div class="carousel-item active">
 							<a href="#"><img class="d-block w-100"
 								src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
@@ -886,9 +1302,29 @@
 					</div>
 				</div>
 			</div>
+			<div id="content">
+				<div id="popularInterestSec">
+					<div id="popularInterestSec_title">
+						<h1>인기관심사</h1>
+					</div>
+					<br>
+					<div class="container">
+						<div class="row" style="overflow:hidden;">
+							<div class="col-sm"><img src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg" style="width:100%; height:100%;">디비에서이미지</div>
+							<div class="col-sm"><img src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg" style="width:100%; height:100%;">디비에서이미지</div>
+							<div class="col-sm"><img src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg" style="width:100%; height:100%;">디비에서이미지</div>
+							<div class="col-sm"><img src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg" style="width:100%; height:100%;">디비에서이미지</div>
+							<div class="col-sm"><img src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg" style="width:100%; height:100%;">디비에서이미지</div>
+							<div class="col-sm"><img src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg" style="width:100%; height:100%;">디비에서이미지</div>
+						</div>
+					</div>
+					<br>
+				</div>
+<br><br>	
+			</div>
 			<!-- footer -->
 			<footer id="footer">
-			<div id="footerTest"></div>
+			<%@include file="../../views/common/footer.jsp" %>
 			</footer>
 		</div>
 
