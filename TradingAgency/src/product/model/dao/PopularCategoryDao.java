@@ -18,7 +18,10 @@ public class PopularCategoryDao {
 		ResultSet rset= null;
 		ArrayList<ProductCategorySubTb> list = new ArrayList<>();
 		ProductCategorySubTb pcst = null;
-	String query = "SELECT pro_row.PRODUCT_ENTIRE_CATE_SUB_ID_FK FROM (SELECT * FROM PRODUCT_SELL_TB ORDER BY PRODUCT_SELL_COUNT DESC) pro_row where rownum<=6";
+		String query = "SELECT * FROM PRODUCT_CATEGORY_SUB_TB RIGHT JOIN\r\n" + 
+				"(SELECT pro_row.* FROM (SELECT * FROM PRODUCT_SELL_TB \r\n" + 
+				"ORDER BY PRODUCT_SELL_COUNT DESC) pro_row where rownum<=6) \r\n" + 
+				"ON (PRODUCT_CATEGORY_SUB_ID = PRODUCT_ENTIRE_CATE_SUB_ID_FK) ORDER BY PRODUCT_SELL_COUNT DESC";
 		/*String query ="select * from (select * from product_sell_tb order by product_sell_count desc) "
 				+ " JOIN product_category_sub_tb ON(PRODUCT_ENTIRE_CATE_MAIN_ID_FK = PRODUCT_CATE_SUB_MAIN_ID_FK) where rownum<=6";
 		*/
@@ -28,12 +31,13 @@ public class PopularCategoryDao {
 			
 			stmt = conn.createStatement();
 			rset = stmt.executeQuery(query);
-			
+		
 			while(rset.next()) {
 				pcst = new ProductCategorySubTb();
 				pcst.setProductCategorySubName(rset.getString("PRODUCT_CATEGORY_SUB_NAME"));
 				pcst.setProductCategorySubId(rset.getString("PRODUCT_CATEGORY_SUB_ID"));
 				list.add(pcst);
+			
 				System.out.println("pcst"+pcst.getProductCategorySubId());
 				
 			}
