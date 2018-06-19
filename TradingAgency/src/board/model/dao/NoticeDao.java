@@ -182,7 +182,7 @@ public class NoticeDao {
 		int notice_comment_notice_fk = 0;
 		notice_comment_notice_fk=notice_pk;
 		String query = "select * from board_notice_comment_tb where notice_comment_notice_fk=?";
-		System.out.println("크크크: "+notice_comment_notice_fk);
+//		System.out.println("크크크: "+notice_comment_notice_fk);
 		try {
 			pstmt = conn.prepareStatement(query);
 			pstmt.setInt(1, notice_comment_notice_fk);
