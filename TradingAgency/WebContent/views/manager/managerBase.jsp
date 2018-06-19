@@ -40,7 +40,7 @@
 <link rel="stylesheet" type="text/css" href="/CSS/manager/manager.css">
 <script src="/JS/manager/manager.js"></script>
 
-<title>게시판 관리</title>
+<title>BlackList</title>
 
 
 
@@ -58,7 +58,7 @@
 
 <body>
 	<div class="page-wrapper chiller-theme toggled">
-		<div>
+		
 			<nav class="navbar bg-dark ">
 				<div class="container">
 					<div class=nav-head></div>
@@ -89,31 +89,33 @@
 			</nav>
 			<nav id="sidebar" class="sidebar-wrapper">
 				<div class="sidebar-content">
-					<div id="toggle-sidebar">
-						<div></div>
-						<div></div>
-						<div></div>
-					</div>
-					<div class="sidebar-brand">
-						<img src="/img/sellf.jpg" style="width: 225px; height: 75px;">
-					</div>
-					<div class="sidebar-header">
-						<div class="user-pic">
-							<img class="img-responsive img-rounded" src="/img/4dollar.jpg"
-								style="width: 65px; height: 65px;">
-						</div>
-
-						<div class="user-info">
-							<!-- 접속한 관리자 정보를 출력하는 공간 -->
-							<span class="user-name">sa-dollar <strong>Smith</strong>
-							</span> <span class="user-role">Administrator</span> <span
-								class="user-status"> <i class="fa fa-circle"></i> <span>Online</span>
-							</span>
-						</div>
-					</div>
-					<!-- sidebar-header  -->
-
-					<div class="sidebar-menu">
+                <div id="toggle-sidebar">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="sidebar-brand">
+                    <img  src="/img/sellf.jpg" style="width:225px;height:75px;">
+                </div>
+                <div class="sidebar-header">
+                    <div class="user-pic">
+                        <img class="img-responsive img-rounded" src="/img/4dollar.jpg"style="width:65px;height:65px;">
+                    </div>
+                    
+                    <div class="user-info"> <!-- 접속한 관리자 정보를 출력하는 공간 -->
+                        <span class="user-name">sa-dollar
+                            <strong>Smith</strong>
+                        </span>
+                        <span class="user-role">Administrator</span>
+                        <span class="user-status">
+                            <i class="fa fa-circle"></i>
+                            <span>Online</span>
+                        </span>
+                    </div>
+                </div>
+                <!-- sidebar-header  -->
+               
+                <div class="sidebar-menu">
                     <ul>
                         <li class="header-menu">
                             <span>SELL:F 운영 관리</span>
@@ -131,7 +133,7 @@
                                             <span class="badge badge-pill badge-success">Pro</span>
                                         </a>
                                     </li>
-                                   
+                                  
                                     <li>
                                         <a href="#">Dashboard 3</a>
                                     </li>
@@ -151,7 +153,7 @@
                                             
                                         </a>
                                     </li>
-                                    <li>
+                                     <li>
                                         <a href="/views/manager/managerBlackList.jsp">블랙리스트</a>
                                     </li>
                                 </ul>
@@ -173,6 +175,7 @@
                                     <li>
                                         <a href="#">Tables</a>
                                     </li>
+                                    
                                 </ul>
                             </div>
                             
@@ -217,108 +220,29 @@
                         </li>
                     </ul>
                 </div>
-					<div class="sidebar-footer">
-						<a href="#"> <i class="fas fa-angle-up"></i> <span
-							class="badge badge-pill badge-warning notification">3</span>
-						</a> <a href="#"> <i class="fa fa-envelope"></i> <span
-							class="badge badge-pill badge-success notification">7</span>
-						</a> <a href="#"> <i class="fa fa-cog"></i> <span
-							class="badge-sonar"></span>
-						</a> <a href="#"> <i class="fa fa-power-off"></i>
-						</a>
-					</div>
-					<!-- sidebar-menu  -->
-				</div>
+                 <div class="sidebar-footer"> 
+                <a href="#">
+                    <i class="fas fa-angle-up"></i>
+                    <span class="badge badge-pill badge-warning notification">3</span>
+                </a>
+                <a href="#">
+                    <i class="fa fa-envelope"></i>
+                    <span class="badge badge-pill badge-success notification">7</span>
+                </a>
+                <a href="#">
+                    <i class="fa fa-cog"></i>
+                    <span class="badge-sonar"></span>
+                </a>
+                <a href="#">
+                    <i class="fa fa-power-off"></i>
+                </a>
+            </div>
+                <!-- sidebar-menu  -->
+           
 				<!-- sidebar-content  -->
 
 			</nav>
 		</div>
-		<!-- sidebar-wrapper  -->
-		<main class="page-content">
-		<div class="container-fluid">
 
-			<div class="row">
-				<div
-					class="col-md-10 col-md-offset-1 col-md-11 col-md-offset-1 main"> <!-- 내용집어넣는 곳입니다. -->
-					<br> <br>
-					<h3>게시판</h3>
-					<div id="noticePan">
-						<ul class="nav nav-pills nav-fill" role="tablist">
-							<li class="nav-item">
-								<a class="nav-link active" href="#noticeBoard" data-toggle="tab" role="tab" aria-controls="noticeBoard" aria-selected="true">공지사항</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#freeBoard" data-toggle="tab" role="tab" aria-controls="freeBoard" aria-selected="false">자유게시판</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#reviewBoard" data-toggle="tab" role="tab" aria-controls="reviewBoard" aria-selected="false">리뷰게시판</a>
-							</li>
-
-						</ul>
-						<div class="tab-content" id="TabContent"><!-- 공지사항 -->
-							<div id="noticeBoard" class="tab-pane fade show active">
-								<table class="table">
-									<tr>
-										<th>글 번호</th>
-										<th>제목</th>
-										<th>글쓴이</th>
-										<th>작성일</th>
-										<th></th>
-									</tr>
-									<tr>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-									</tr>
-								</table>
-							</div>
-							
-							<!--  -->
-							<div id="freeBoard" class="tab-pane fade"> <!-- 자유게시판 -->
-								<table class="table">
-									<tr>
-										<th>글 번호</th>
-										<th>제목</th>
-										<th>글쓴이</th>
-										<th>작성일</th>
-										<th></th>
-									</tr>
-									<tr>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-									</tr>
-								</table>
-							</div>
-							
-							<!-- 리뷰게시판 -->
-							<div id="reviewBoard" class="tab-pane fade">
-								<table class="table">
-									<tr>
-										<th>글 번호</th>
-										<th>제목</th>
-										<th>글쓴이</th>
-										<th>작성일</th>
-										<th></th>
-									</tr>
-									<tr>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-									</tr>
-								</table>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		</main>
 </body>
 </html>

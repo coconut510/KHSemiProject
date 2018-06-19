@@ -11,10 +11,12 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<script src="http://code.jquery.com/jquery-3.3.1.js"
-	integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-	crossorigin="anonymous"></script>
-<link rel="stylesheet" href="../../CSS/common.css" type="text/css" />
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+	
+
 <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic"
 	rel="stylesheet">
 
@@ -26,25 +28,20 @@
 <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css"
 	rel="stylesheet">
 
-
-
-
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 <script
 	src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
 
-
 <!-- 사이드바와 네비를 위한 공통적인 스크립트파일과 css파일  -->
 <link rel="stylesheet" type="text/css" href="/CSS/manager/manager.css">
 <script src="/JS/manager/manager.js"></script>
-
+<script src = "/JS/manager/managerMemberSelect.js"></script>
 <title>회원관리</title>
 
 
 
 <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-<script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -248,53 +245,47 @@
 					class="col-md-10 col-md-offset-1 col-md-11 col-md-offset-1 main">
 					<br> <br> <label><h2>회원정보 조회</h2></label>
 				
-					<form action="" method="post">
+					
 						<table class="table table-bordered">
 							<tr>
 								<th>개인정보</th>
 								<td colspan="3">
-									<select name="selInfo">  <!-- option의 value값은 하기 편한걸로!!  -->
+									<select id="selInfo">  <!-- option의 value값은 하기 편한걸로!!  -->
 	 									<option value="userName">이름</option>
 										<option value="userId">아이디</option>
-										<option value="userEmail">이메일</option>
-										<option value="userPhone">휴대전화</option>
 									</select> 
-										<input type="text" name="memberInfo" />
+										<input type="text" id="memberInfo" />
 								</td>
-								
 							</tr>
 							<tr><th>회원등급</th>
-								<td><select name="selGrade">
-									<option>전체</option>
-									<option>브론즈</option>
-									<option>실버</option>
-									<option>골드</option>
-									</select>
+								<td>
+								<select id="selGrade">
+									<option value="G01">브론즈</option>
+									<option value="G02">실버</option>
+									<option value="G03">골드</option>
+									<option value="G04">다이아몬드</option>
+								</select>
 								</td>
 								<th>성별</th>
-								<td><input type="radio" name="gender" value="all">전체  
-										<input type="radio" name="gender" value="M">남   
+								<td>
+										<input type="radio" name ="gender" value="M">남   
 										<input type="radio" name="gender" value="F">여
 								</td>
 							</tr>
 						</table>
 						<center>
-						<input type="submit" class="btn btn-outline-success" value="정보 조회!" />
+						<input type="submit" class="btn btn-outline-success" onclick="memberSelect();" value="정보 조회!" />
 						</center>
-					</form>
+					
 					<br>
 
 					<hr>
 					<br> <br> <label><h3>조회 결과</h3></label> <label><h5
 							style="color: red;">[총 n명 검색]</h5></label>
 							<br>
-					 <label><select name="viewNum">   <!-- 한 페이지당 출력할 내용의 갯수 선택. -->
-					 			<option value="10">10</option>
-					 			<option value="30">30</option>
-					 			<option value="50">50</option>
-					 		</select></label>개 씩 보기
+					 
 					<div id="selectInfoResult">
-						<table class="table">
+						<table class="table" id="printMemberInfo">
 							<tr>
 								<th><input type="checkbox" name="allCheck"></th>
 								<th>아이디</th>
@@ -305,19 +296,7 @@
 								<th>가입일자</th>
 								<th>거래내역</th>
 							</tr>
-							<tr>
-									<td><input type="checkbox" name="check"><input
-										type="hidden"></td>
-									<!-- 체크된 회원의 아이디를 보내어 불량회원 또는 등급변경 가능하게 설정 -->
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<!-- 조회결과 출력 -->
-							</tr>
+							
 						</table>
 						<br>
 						<button type="button" class="btn btn-danger btn-sm">불량회원 설정</button>
@@ -358,20 +337,6 @@
 		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
 		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
 		crossorigin="anonymous"></script>
-
-</body>
-
-</html>
-<script
-	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script
-	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-	integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-	crossorigin="anonymous"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-	integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-	crossorigin="anonymous"></script>
 
 </body>
 
