@@ -5,6 +5,25 @@ window.onload = function(){
 	selectCategory();
 	allState = document.getElementsByClassName('productState-btn')[0];
 	selectProductState();
+	loadSelectProduct();
+}
+
+function loadSelectProduct()
+{
+	var searchKeyword = "갤럭시";//$("#userIndex2").val();// 입력값 가져오기
+	console.log("테스트");
+	$.ajax({
+		url:"/productSearchKeyword",
+		data : {searchKeyword : searchKeyword},
+		type : "get",
+		success : function(data){
+			var result5 = $("#result6");
+			var result = "";			
+		},
+		error : function(){
+			console.log("실패");	
+		}
+	});
 }
 
 function selectCategory()

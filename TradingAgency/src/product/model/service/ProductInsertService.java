@@ -1,4 +1,4 @@
-package member.model.service;
+package product.model.service;
 
 public class ProductInsertService {
 
