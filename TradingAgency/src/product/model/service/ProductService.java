@@ -13,7 +13,6 @@ public class ProductService {
 
 	public ArrayList<Product> ProductSearchKeyword(String keyword) {
 		Connection conn = JDBCTemplate.getConnection();
-		System.out.println("키워드 " + keyword);
 		return null;
 	}
 	public int uploadFile(ImageFile imgFile) {
