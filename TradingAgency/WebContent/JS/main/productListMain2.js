@@ -5,102 +5,14 @@ window.onload = function(){
 	selectCategory();
 	allState = document.getElementsByClassName('productState-btn')[0];
 	selectProductState();
-//	loadSelectCategory();
+	loadSelectCategory();
 }
 
-var currentPage = 1;
+var page = 1;
 
 $(window).scroll(function() {
     if ($(window).scrollTop() == $(document).height() - $(window).height()) {
-    	var mainCategory  = "M01";//$("#userIndex2").val();// 입력값 가져오기
-    	var subCategory  = "S0101";//$("#userIndex2").val();// 입력값 가져오기
-    	var onePageShowProduct = 8;//Number($("#perPageCount").val()); // 한페이지에 몇개 보여줄지.
-//    	var currentPage = Number(currentPageNum);// 현재 페이지.
-    	var totalProductSize = $("#entireProductTitleLabel");  // 제목 표시해줄때.
-    	var totalProductList = $(".productList");//$("#productLine");
-    	currentPage +=1;
-    	$.ajax({
-    		url:"/productSortCategory",
-    		data : {mainCategory : mainCategory,
-    				subCategory : subCategory,
-    				onePageShowProduct :onePageShowProduct,
-    				currentPage :currentPage
-    				},
-    		type : "get",
-    		success : function(data){			
-    			var result = "";
-    			// JSON에서 MAP형태로 꺼내오려면
-    			// 키값을 먼저 추출해야함
-    			var result = "";
-    			keys = Object.keys(data);
-    			var maxLength = keys.length;	
-    			
-    			if(maxLength < currentPage*onePageShowProduct+ onePageShowProduct){
-    				maxLength =  keys.length;
-    			}
-    			else
-    			{
-    				maxLength =   currentPage*onePageShowProduct+ onePageShowProduct;
-    			}
-//    			console.log(currentPage*onePageShowProduct+ onePageShowProduct);
-    			totalProductSize.html("전체상품 " +  keys.length + "개");
-    			
-    			for(var i = currentPage*onePageShowProduct; i<maxLength;i++)
-    			{
-    				totalProductList.append(
-    				'<li class="productWrap">'+
-    				'<div class="productBg">'+
-    					'<div class="imgWrapper">'+
-    						'<img class="productImgMain" src="../../img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg">'+
-    						'<% if (discountRate > 0) { %>'+						
-    						'<div class="discountBg">10%</div>'+
-    						'<% }%>'+
-    						'<div class="productSideMenu">'+
-    						'<div class="display_newwin hide">'+
-    						'<img src="../../img/thumb_quickview.png" alt="">'+
-    						'</div>'+
-    						'<div class="display_quickview">'+
-    						'<img src="../../img/thumb_quickview.png" alt="미리보기">'+
-    						'</div>'+
-    						'<div class="display_option">'+
-    						'<img src="../../img/thumb_option.png" alt="옵션보기">'+
-    						'<div class="hide display_opt_bak" act=""></div>'+
-    						'</div>'+
-    						'<div class="display_send">'+
-    						'<img src="../../img/thumb_send.png" alt="SNS보내기">'+
-    						'</div>'+
-    						'<div class="display_zzim">'+
-    						'<img src="../../img/thumb_zzim_off.png" alt="찜하기"><img'+
-    						'src="../../img/thumb_quickview.png" style="display: none" alt="찜하기">'+
-    						'</div>'+
-    					'</div>'+
-    				'</div>'+
-
-    				'<div class="productTitle">'+data[keys[i]].product_name+'</div>'+
-    				'<div class="productExplain">'+
-    					'<font class="productExplainFont">'+data[keys[i]].product_entire_user_entire_id_fk +'<br>'
-    						+data[keys[i]].product_detail +
-    					'</font>'+
-    				'</div>'+
-    				'<div class="priceOrigin">'+
-    					'<s>￦ 50,000</s>'+
-    				'</div>'+
-    				'<div class="priceDiscount">￦ ' + data[keys[i]].product_price + '</div>'+
-    				'<div class="myCheck">'+
-    					'<center>'+
-    						'<ul>'+
-    							'<li><img src="../../img/icon_zzim_off.png"> 103</li>'+
-    						'</ul>'+
-    					'</center>'+
-    				'</div>'+
-    				'<div class="freeTransfor">무료배송</div>'+
-    				'</div></li>');	
-    			}			    					
-    		},
-    		error : function(){
-    			console.log("실패");	
-    		}
-    	});
+      $(".productList").append();
       
     }
 });
