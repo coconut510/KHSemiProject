@@ -34,7 +34,7 @@ public class NewProductMainDao {
 			p.setProduct_price(rset.getInt("PRODUCT_PRICE"));
 			p.setProduct_state(rset.getString("PRODUCT_STATE"));
 			p.setProduct_image(rset.getString("PRUDUCT_IMAGE"));
-			System.out.println("이미지 " + p.getProduct_image());
+
 			list.add(p);
 			}
 		} catch (SQLException e) {

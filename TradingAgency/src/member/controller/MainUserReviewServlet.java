@@ -1,7 +1,6 @@
-package product.controller;
+package member.controller;
 
 import java.io.IOException;
-import java.sql.Date;
 import java.util.ArrayList;
 
 import javax.servlet.ServletException;
@@ -13,25 +12,23 @@ import javax.servlet.http.HttpServletResponse;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
-import com.google.gson.Gson;
-
-import product.model.service.NewProductMainService;
+import member.model.service.MainUserReviewService;
+import member.model.vo.UserReview;
 import product.model.service.PopularCategoryService;
 import product.model.vo.Product;
 import product.model.vo.ProductCategorySubTb;
-import product.model.vo.ProductSellTb;
 
 /**
- * Servlet implementation class PopularCategoryServlet
+ * Servlet implementation class MainUserReviewServlet
  */
-@WebServlet(name = "PopularCategory", urlPatterns = { "/popularCategory" })
-public class PopularCategoryServlet extends HttpServlet {
+@WebServlet(name = "MainUserReview", urlPatterns = { "/mainUserReview" })
+public class MainUserReviewServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public PopularCategoryServlet() {
+    public MainUserReviewServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -40,24 +37,24 @@ public class PopularCategoryServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		ArrayList<ProductCategorySubTb> list= new PopularCategoryService().popularCategoryList();
-		
-		JSONArray resultArray = new JSONArray(); // JSONarray 객체
-		// 여러명의 정보를 담을 객체가 필요하기 때문에 array 로 만듦
-		for (ProductCategorySubTb pST : list) { // for : each문을 사용해서 전체 출력하기
-			JSONObject result = new JSONObject();
-			result.put("categoryName", pST.getProductCategorySubName()); // 상품 대분류 가져옴 
-			result.put("categoryImagePath", "/img/categoryImgGroup/" +pST.getProductCategorySubId() +".JPG");
-			resultArray.add(result);
-		}
+		ArrayList<UserReview> list= new MainUserReviewService().MainUserReviewList();
 
+	
+		JSONArray resultArray = new JSONArray();
+
+		for (UserReview userReview : list) { 
+			JSONObject result = new JSONObject();
+			result.put("comment", userReview.getUserReviewComment()); // 상품 대분류 가져옴 
+			result.put("date", userReview.getUserReviewDate());
+			resultArray.add(result);
+			System.out.println("코멘트"+userReview.getUserReviewComment());
+		}
 		response.setContentType("application/json");
 		response.setCharacterEncoding("utf-8");
 		response.getWriter().print(resultArray);
 		response.getWriter().close();
+	
 	}
-		
-
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)

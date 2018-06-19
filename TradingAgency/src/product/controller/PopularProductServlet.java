@@ -45,8 +45,10 @@ public class PopularProductServlet extends HttpServlet {
 				JSONObject result = new JSONObject();
 				result.put("name", product.getProduct_name());
 				result.put("price", product.getProduct_price());
+				result.put("image", product.getProduct_image());
+				result.put("detail", product.getProduct_detail());
+				System.out.println("인기카테고리 최신상품 "+ resultArray);
 				resultArray.add(result);
-				System.out.println(result);
 			}
 			response.setContentType("application/json");
 			response.setCharacterEncoding("utf-8");

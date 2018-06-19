@@ -32,4 +32,21 @@ public class PopularProductService {
 		return list;
 	}
 
+	public ArrayList<Product> CollectionSecRandomList() {
+		
+		Connection conn = JDBCTemplate.getConnection();
+		ArrayList<Product> list = new PopularProductDao().CollectionSecRandomList(conn);
+		JDBCTemplate.close(conn);
+		return list;
+	}
+
+	public ArrayList<String> mainAdvertisement() {
+
+		Connection conn = JDBCTemplate.getConnection();
+		ArrayList<String> adImage = new PopularProductDao().mainAdvertisement(conn);
+		JDBCTemplate.close(conn);
+		return adImage;
+		
+	}
+
 }

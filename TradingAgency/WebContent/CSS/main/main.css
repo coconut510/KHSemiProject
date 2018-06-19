@@ -18,7 +18,7 @@
 
 /*  나머지 섹션 css - */
 #newProductSec, #collectionSec, #imghoverSec, #bestItemSec,
-	#bestItemSec2, #sellExpectedSec1, #sellExpectedSec2 {
+	#bestItemSec2, #sellExpectedSec1, #sellExpectedSec2,#sellExpectedSec3,#reviewSec {
 	width: 100%;
 	height: auto;
 	position: relative;
@@ -38,17 +38,13 @@
 	/* 	border: 1px solid black; */
 }
 
-#newProductSec, #sellExpectedSec1, #sellExpectedSec2 {
+#newProductSec, #sellExpectedSec1, #sellExpectedSec2,#sellExpectedSec3 {
 	margin-right: 50px;
 }
 
 #collectionSec, #imghoverSec, #bestItemSec, #bestItemSec2 {
 	margin-right: 50px;
 	margin-left: 50px;
-}
-
-#popularCategorySec, #popularInterestSec {
-	
 }
 
 #imgSliderSec img {
@@ -71,13 +67,17 @@
 	height: 300px;
 }
 
+#sellExpectedSec3_row img {
+	width: 500px;
+	height: 300px;
+}
 #newProductSec_row img {
 	width: 500px;
 	height: 300px;
 }
 
 #newProduct_title, #popularCategory_title, #popularInterestSec_title,
-	#sellExpectedSec1_title, #sellExpectedSec2_title {
+	#sellExpectedSec1_title, #sellExpectedSec2_title,#sellExpectedSec3_title#review_title{
 	width: 100%;
 	height: auto;
 	position: relative;
@@ -318,4 +318,17 @@ a:active {
 .carousel-control-prev-icon {
 	background-image: url("../../img/arrow.png");
 	transform: rotate(180deg);
+}
+
+div[class*="review"]{
+	width : 30%;
+	height: 200px;
+	border : 1px solid black;
+	float:left;
+	margin-left : 30px;
+	margin-bottom: 50px;
+	background-color: red;
+}
+#reviewSec{
+
 }

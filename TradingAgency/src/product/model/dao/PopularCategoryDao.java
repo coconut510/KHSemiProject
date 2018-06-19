@@ -18,10 +18,7 @@ public class PopularCategoryDao {
 		ResultSet rset= null;
 		ArrayList<ProductCategorySubTb> list = new ArrayList<>();
 		ProductCategorySubTb pcst = null;
-		String query = "SELECT * FROM PRODUCT_CATEGORY_SUB_TB RIGHT JOIN\r\n" + 
-				"(SELECT pro_row.* FROM (SELECT * FROM PRODUCT_SELL_TB \r\n" + 
-				"ORDER BY PRODUCT_SELL_COUNT DESC) pro_row where rownum<=6) \r\n" + 
-				"ON (PRODUCT_CATEGORY_SUB_ID = PRODUCT_ENTIRE_CATE_SUB_ID_FK) ORDER BY PRODUCT_SELL_COUNT DESC";
+		String query = "SELECT * FROM PRODUCT_CATEGORY_SUB_TB RIGHT JOIN (SELECT pro_row.* FROM (SELECT * FROM PRODUCT_SELL_TB ORDER BY PRODUCT_SELL_COUNT DESC) pro_row where rownum<=6) ON (PRODUCT_CATEGORY_SUB_ID = PRODUCT_ENTIRE_CATE_SUB_ID_FK) ORDER BY PRODUCT_SELL_COUNT DESC";
 		try {
 			
 			stmt = conn.createStatement();
