@@ -35,6 +35,7 @@ crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="../../CSS/common/common.css">
 <link rel="stylesheet" type="text/css" href="../../CSS/common/header.css">
 <link rel="stylesheet" type="text/css" href="../../CSS/common/adv.css">	
+<link rel="stylesheet" type="text/css" href="../../CSS/common/footer.css">	
 <!-- 내부 js파일 -->
 <script type="text/javascript" src="../../JS/common/header.js?ver=1"></script>
 <script type="text/javascript" src="../../JS/member/myCart.js"></script>
@@ -49,7 +50,7 @@ crossorigin="anonymous">
 <body>
 
 	<center>
-		<div id="wrapper">
+		<div id="wrapper" style="overflow:hidden;">
 
 			<header id="header"> <%@include
 				file="/views/common/header.jsp"%> </header>
@@ -146,7 +147,6 @@ crossorigin="anonymous">
 
 				<hr>
 				<div class="selectBtn1">
-
 					<button type="button" class="btn btn-info" style="float: left;"
 						id="allSelectBtn" onclick="selectAllChk();">전체선택/해제</button>
 					<button type="button" class="btn btn-info" id="deleteOneBtn"
@@ -173,29 +173,21 @@ crossorigin="anonymous">
 				</div>
 				<br> <br>
 				<script type="text/javascript">
-					$(document)
-							.ready(
-									function() {
-										$("#purchaseBtn")
-												.click(
-														function() {
-															var check = $(
-																	"input:checkbox[name='chk']")
-																	.is(
-																			':checked');
-															if (check == 0) {
-																alert("주문상품을 체크해주세요 ");
-																location
-																		.reload();
-															} else if (check > 1) {
-																alert("주문상품을 하나만 체크해주세요");
-
-															} else {
-																alert("주문페이지 넘기기 성공");
-																location.href = "../../views/member/myCart2.jsp";
-															}
-														});
-									});
+					$(document).ready(function() {
+						$("#purchaseBtn").click(function() {
+							var check = $(
+								"input:checkbox[name='chk']").is(':checked');
+							if (check == 0) {
+							alert("주문상품을 체크해주세요 ");
+							location.reload();			
+						} else if (check > 1) {
+							alert("주문상품을 하나만 체크해주세요");
+						} else {
+							alert("주문페이지 넘기기 성공");
+							location.href = "../../views/member/myCart2.jsp";
+						}
+					});
+				});
 				</script>
 				<div class="purchase">
 					<button type="button" class="btn btn-info" id="purchaseBtn">구매하기</button>
@@ -203,7 +195,7 @@ crossorigin="anonymous">
 			</div>
 			<br> <br> <br>
 			<footer>
-			<div id="footerTest">footerTest</div>
+					<%@include file="../../views/common/footer.jsp" %>
 			</footer>
 	</center>
 	

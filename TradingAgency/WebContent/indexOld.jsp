@@ -30,8 +30,8 @@
 	crossorigin="anonymous"></script>
 
 <!-- 구글 폰트 -->
-<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:700"
-	rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:700" 	rel="stylesheet">
+
 <!-- 외부css파일  -->
 <link rel="stylesheet" type="text/css" href="CSS/main/main.css">
 <link rel="stylesheet" type="text/css" href="CSS/common/common.css">
