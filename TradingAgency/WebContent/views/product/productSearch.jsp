@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import = "product.model.vo.*" import = "java.util.*"%>
+ 
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta charset="UTF-8">
@@ -325,10 +329,10 @@ function selectPriceMulti(price)
 								<img class="card-img-top" src="../../img/1.PNG"
 									alt="Card image cap">
 								<div class="card-body">
-									<h5 class="card-title">Card title</h5>
-									<p class="card-text">Some quick example text to build on
-										the card title and make up the bulk of the card's content.</p>
+									<h5 class="card-title"></h5>
+									<p class="card-text"></p>
 									<a href="#" class="btn btn-primary">자세히보기</a>
+									<p class="card-text"></p>
 								</div>
 							</div>
 
@@ -404,8 +408,11 @@ function selectPriceMulti(price)
 
 	</section>
 
-
-
+	
+	<form action="/productSearch" method="get" style = "display:inline" >
+	<input type="text" name = "searchSub" >
+	<input type ="submit" value="검색">
+	</form>
 
 
 
