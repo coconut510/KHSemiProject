@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 import common.JDBCTemplate;
 import product.model.vo.ProductCategorySubTb;
-import product.model.vo.ProductSellTb;
+
 
 public class PopularCategoryDao {
 
