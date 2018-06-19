@@ -208,6 +208,11 @@ li {
 	color:black;
 }
 
+/* 정렬 타입 버튼 */
+.sortBtn{
+    background-color: white;
+    border: white;
+}
 
 .left{
 	list-style-

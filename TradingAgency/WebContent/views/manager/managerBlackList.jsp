@@ -14,7 +14,7 @@
 <script src="http://code.jquery.com/jquery-3.3.1.js"
 	integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
 	crossorigin="anonymous"></script>
-<link rel="stylesheet" href="../../CSS/common.css" type="text/css" />
+
 <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic"
 	rel="stylesheet">
 
@@ -39,14 +39,9 @@
 <!-- 사이드바와 네비를 위한 공통적인 스크립트파일과 css파일  -->
 <link rel="stylesheet" type="text/css" href="/CSS/manager/manager.css">
 <script src="/JS/manager/manager.js"></script>
-
+<script src = "/JS/manager/managerBlackList.js"></script>
 <title>BlackList</title>
 
-
-
-<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-<script src="../../assets/js/ie-emulation-modes-warning.js"></script>
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -58,7 +53,7 @@
 
 <body>
 	<div class="page-wrapper chiller-theme toggled">
-		<div>
+		
 			<nav class="navbar bg-dark ">
 				<div class="container">
 					<div class=nav-head></div>
@@ -242,7 +237,7 @@
 				<!-- sidebar-content  -->
 
 			</nav>
-		</div>
+		
 		<!-- sidebar-wrapper  -->
 		<main class="page-content">
 		<div class="container-fluid">
@@ -252,7 +247,7 @@
 
 					<h3>블랙리스트 회원 보기</h3>
 					<hr>
-					<table class="table">
+					<table class="table" id="resultBlackList">
 							<tr>
 								<th>체크</th>
 								<th>아이디</th>
@@ -263,26 +258,14 @@
 								<th>가입일자</th>
 								
 							</tr>
-							<tr>
-									<td><input type="checkbox" name="check"><input
-										type="hidden"></td>
-									<!-- 체크된 회원의 아이디를 보내어 불량회원 또는 등급변경 가능하게 설정 -->
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									
-									<!-- 조회결과 출력 -->
-							</tr>
+							<!-- 결과 출력 -->
 						</table>
-						<button type="button" class="btn btn-outline-info btn-sm" onclick="">불량회원 해제</button>
+						<button type="button" class="btn btn-outline-info btn-sm" onclick="unlock();">불량회원 해제</button>
 					</div>
 				</div>
 			</div>
-		</div>
-		</main>
 		
+		</main>
+		</div>
 </body>
 </html>

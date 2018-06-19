@@ -11,12 +11,10 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
-	
-
+<script src="http://code.jquery.com/jquery-3.3.1.js"
+	integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+	crossorigin="anonymous"></script>
+<link rel="stylesheet" href="../../CSS/common.css" type="text/css" />
 <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic"
 	rel="stylesheet">
 
@@ -28,20 +26,27 @@
 <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css"
 	rel="stylesheet">
 
+
+<link rel="stylesheet"
+	href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 <script
 	src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<script
+	src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
 
 <!-- 사이드바와 네비를 위한 공통적인 스크립트파일과 css파일  -->
 <link rel="stylesheet" type="text/css" href="/CSS/manager/manager.css">
 <script src="/JS/manager/manager.js"></script>
-<script src = "/JS/manager/managerMemberSelect.js"></script>
-<title>회원관리</title>
+
+<title>BlackList</title>
 
 
 
 <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-
+<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+<script src="../../assets/js/ie-emulation-modes-warning.js"></script>
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -53,7 +58,7 @@
 
 <body>
 	<div class="page-wrapper chiller-theme toggled">
-		<div>
+		
 			<nav class="navbar bg-dark ">
 				<div class="container">
 					<div class=nav-head></div>
@@ -128,6 +133,7 @@
                                             <span class="badge badge-pill badge-success">Pro</span>
                                         </a>
                                     </li>
+                                  
                                     <li>
                                         <a href="#">Dashboard 3</a>
                                     </li>
@@ -147,7 +153,7 @@
                                             
                                         </a>
                                     </li>
-                                    <li>
+                                     <li>
                                         <a href="/views/manager/managerBlackList.jsp">블랙리스트</a>
                                     </li>
                                 </ul>
@@ -169,7 +175,7 @@
                                     <li>
                                         <a href="#">Tables</a>
                                     </li>
-                                   
+                                    
                                 </ul>
                             </div>
                             
@@ -214,7 +220,7 @@
                         </li>
                     </ul>
                 </div>
-                 <div class="sidebar-footer">
+                 <div class="sidebar-footer"> 
                 <a href="#">
                     <i class="fas fa-angle-up"></i>
                     <span class="badge badge-pill badge-warning notification">3</span>
@@ -232,112 +238,11 @@
                 </a>
             </div>
                 <!-- sidebar-menu  -->
-            </div>
+           
 				<!-- sidebar-content  -->
 
 			</nav>
 		</div>
-		<!-- sidebar-wrapper  -->
-		<main class="page-content">
-		<div class="container-fluid">
-			<div class="row">
-				<div
-					class="col-md-10 col-md-offset-1 col-md-11 col-md-offset-1 main">
-					<br> <br> <label><h2>회원정보 조회</h2></label>
-				
-					
-						<table class="table table-bordered">
-							<tr>
-								<th>개인정보</th>
-								<td colspan="3">
-									<select id="selInfo">  <!-- option의 value값은 하기 편한걸로!!  -->
-	 									<option value="userName">이름</option>
-										<option value="userId">아이디</option>
-									</select> 
-										<input type="text" id="memberInfo" />
-								</td>
-							</tr>
-							<tr><th>회원등급</th>
-								<td>
-								<select id="selGrade">
-									<option value="G01">브론즈</option>
-									<option value="G02">실버</option>
-									<option value="G03">골드</option>
-									<option value="G04">다이아몬드</option>
-								</select>
-								</td>
-								<th>성별</th>
-								<td>
-										<input type="radio" name ="gender" value="M">남   
-										<input type="radio" name="gender" value="F">여
-								</td>
-							</tr>
-						</table>
-						<center>
-						<input type="submit" class="btn btn-outline-success" onclick="memberSelect();" value="정보 조회!" />
-						</center>
-					
-					<br>
-
-					<hr>
-					<br> <br> <label><h3>조회 결과</h3></label> <label><h5
-							style="color: red;">[총 n명 검색]</h5></label>
-							<br>
-					 
-					<div id="selectInfoResult">
-						<table class="table" id="printMemberInfo">
-							<tr>
-								<th><input type="checkbox" name="allCheck"></th>
-								<th>아이디</th>
-								<th>고객명</th>
-								<th>등급</th>
-								<th>휴대폰 번호</th>
-								<th>성별</th>
-								<th>가입일자</th>
-								<th>거래내역</th>
-							</tr>
-							
-						</table>
-						<br>
-						<button type="button" class="btn btn-danger btn-sm">불량회원 설정</button>
-						<hr>
-						<h5>추가 설정</h5>
-						<br>
-						<table class="table">
-							<tr>
-								<th>회원 등급 변경</th>
-								<td>선택된 회원을 <select name="changeGrd">
-										<option>브론즈</option>
-										<option>실버</option>
-										<option>골드</option>
-								</select>로
-									<button type="button" class="btn btn-outline-warning"> 등급변경</button>합니다.
-								</td>
-							</tr>
-						</table>
-					</div>
-
-
-
-				</div>
-			</div>
-		</div>
-	</div>
-	</main>
-	<!-- page-content" -->
-	</div>
-	<!-- page-wrapper -->
-	<script
-		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script
-		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-		crossorigin="anonymous"></script>
-	<script
-		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-		crossorigin="anonymous"></script>
 
 </body>
-
 </html>
