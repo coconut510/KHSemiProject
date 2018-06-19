@@ -426,7 +426,7 @@ input[type="date"]::-webkit-inner-spin-button {
 				<span id="dataTitle">상품 상세정보</span>
 				<div class="dataCon">
 					<div id="dataInsert">
-						<form action="/productInsert" method="post">
+						<form action="/productInsert" method="post" enctype = "multipart/form-data">
 							<div class="form-row">
 
 								<div class="form-group col-md-3">
@@ -520,7 +520,7 @@ input[type="date"]::-webkit-inner-spin-button {
 												<div class="row">
 													<div class="col-md-12" id="successImgOne">
 
-														<input id="fileSucOne" multiple="multiple" type="file"
+														<input id="fileSucOne" multiple="multiple" type="file" name = "upfile1"
 															style="display: none" onchange="readURL(this,0);" /> 
                                                         <img src="../../img/imgInsertBackground.PNG" width="130"
 															height="130" id="imgFile_Suc_1"
@@ -535,7 +535,7 @@ input[type="date"]::-webkit-inner-spin-button {
 												<div class="row">
 													<div class="col-md-12" id="successImgTwo">
 
-														<input id="fileSucTwo" multiple="multiple" type="file"
+														<input id="fileSucTwo" type="file" name = "upfile2"
 															style="display: none" onchange="readURL(this,1);" /> 
                                                         <img src="../../img/imgInsertBackground.PNG" width="130"
 															height="130" id="imgFile_Suc_2"
@@ -550,7 +550,7 @@ input[type="date"]::-webkit-inner-spin-button {
 												<div class="row">
 													<div class="col-md-12" id="successImgThrid">
 
-														<input id="fileSucThrid" multiple="multiple" type="file"
+														<input id="fileSucThrid" type="file" name = "upfile3"
 															style="display: none" onchange="readURL(this,2);" /> 
                                                         <img src="../../img/imgInsertBackground.PNG" width="130"
 															height="130" id="imgFile_Suc_3"
@@ -565,7 +565,7 @@ input[type="date"]::-webkit-inner-spin-button {
 												<div class="row">
 													<div class="col-md-12" id="successImgFour">
 
-														<input id="fileSucFour" multiple="multiple" type="file"
+														<input id="fileSucFour" type="file" name = "upfile4"
 															style="display: none" onchange="readURL(this,3);" /> 
                                                         <img src="../../img/imgInsertBackground.PNG" width="130"
 															height="130" id="imgFile_Suc_4"
@@ -580,7 +580,7 @@ input[type="date"]::-webkit-inner-spin-button {
 												<div class="row">
 													<div class="col-md-12" id="successImgFive">
 
-														<input id="fileSucFive" multiple="multiple" type="file"
+														<input id="fileSucFive" type="file" name = "upfile5"
 															style="display: none" onchange="readURL(this,4);" /> 
                                                         <img src="../../img/imgInsertBackground.PNG" width="130"
 															height="130" id="imgFile_Suc_5"
