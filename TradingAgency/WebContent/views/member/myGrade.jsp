@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"    pageEncoding="EUC-KR"%>
 <%@ page import="member.model.vo.*"%>
-<% user_grade_tb g = (user_grade_tb)request.getAttribute("user_grade_tb"); %>
+<% Member m = (Member)session.getAttribute("user"); %>  
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -684,18 +684,18 @@ p.caption {
 					<li role="presentation" class=""><a href="/views/member/jjim.jsp">찜한 상품</a></li>
 					<li role="presentation" class="active"><a href="/views/member/myCoupon.jsp">내 쿠폰</a></li>
 					<li role="presentation" class="active"><a href="/views/member/myInfoQuiz.jsp">내 정보</a></li>
-										<li role="presentation" class="active"><a href="/views/member/myGrade.jsp">등급보기</a></li>
+					<li role="presentation" class="active"><a href="/views/member/myGrade.jsp">등급보기</a></li>
 				</ul>
             </div>
             <div class="MenuContents">
                  <div class="MenuConTitle"><H2>회원등급</H2></div><hr>
        		<div class="bluelight">
-       		<% String grade = g.getUSER_GRADE_NAME(); %>
+       		<% String grade = m.getUser_entire_user_grade(); %>
        		<%if(grade.equals("Bronze")){%>
        		<a href="/index.jsp">브론즈<img alt="" src="/../../img/bronze.png"></a>;
        		<%}else if(grade.equals("Silver")){%>
        		<a href="/index.jsp">실버<img alt="" src="/../../img/silver.png"></a>;
-       		<%}else if(grade.equals("Gold")){%>
+       		<%}else if(grade.equals("G02")){%>
 			<a href="/index.jsp">골드<img alt="" src="/../../img/gold.png"></a>;
 			<%}else if(grade.equals("Diamond")){%>
        		<a href="/index.jsp">다이아<img alt="" src="/../../img/diamond.png"></a>;
