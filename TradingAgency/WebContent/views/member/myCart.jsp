@@ -147,7 +147,6 @@ crossorigin="anonymous">
 
 				<hr>
 				<div class="selectBtn1">
-
 					<button type="button" class="btn btn-info" style="float: left;"
 						id="allSelectBtn" onclick="selectAllChk();">전체선택/해제</button>
 					<button type="button" class="btn btn-info" id="deleteOneBtn"
@@ -174,29 +173,21 @@ crossorigin="anonymous">
 				</div>
 				<br> <br>
 				<script type="text/javascript">
-					$(document)
-							.ready(
-									function() {
-										$("#purchaseBtn")
-												.click(
-														function() {
-															var check = $(
-																	"input:checkbox[name='chk']")
-																	.is(
-																			':checked');
-															if (check == 0) {
-																alert("주문상품을 체크해주세요 ");
-																location
-																		.reload();
-															} else if (check > 1) {
-																alert("주문상품을 하나만 체크해주세요");
-
-															} else {
-																alert("주문페이지 넘기기 성공");
-																location.href = "../../views/member/myCart2.jsp";
-															}
-														});
-									});
+					$(document).ready(function() {
+						$("#purchaseBtn").click(function() {
+							var check = $(
+								"input:checkbox[name='chk']").is(':checked');
+							if (check == 0) {
+							alert("주문상품을 체크해주세요 ");
+							location.reload();			
+						} else if (check > 1) {
+							alert("주문상품을 하나만 체크해주세요");
+						} else {
+							alert("주문페이지 넘기기 성공");
+							location.href = "../../views/member/myCart2.jsp";
+						}
+					});
+				});
 				</script>
 				<div class="purchase">
 					<button type="button" class="btn btn-info" id="purchaseBtn">구매하기</button>

@@ -11,8 +11,11 @@ public class NewProductMainService {
 
 	public ArrayList<Product> updateNewProductImg() {
 		Connection conn = JDBCTemplate.getConnection();
+		System.out.println("서비스");
 		ArrayList<Product> list = new NewProductMainDao().updateNewProductImg(conn);
+		System.out.println(conn);
 		JDBCTemplate.close(conn);
+		
 		return list;
 		
 		

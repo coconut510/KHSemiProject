@@ -6,31 +6,45 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
+import common.JDBCTemplate;
+import product.model.vo.ProductCategorySubTb;
 import product.model.vo.ProductSellTb;
 
 public class PopularCategoryDao {
 
-	public void popularCategory(Connection conn) {
-	Statement stmt = null;
-	ResultSet rset= null;
-	ArrayList<ProductSellTb> list = new ArrayList<>();
-	ProductSellTb pST = null;
-	
-	String query = "select * from product_sell_tb where rownum <=6 order by product_sell_total_income desc";
-		
-	try {
-		stmt = conn.createStatement();
-		rset  = stmt.executeQuery(query);
-		while(rset.next()) {
-			pST = new ProductSellTb();
-		// 여기에 담고 인기 카테고리에 총수익이 가장 많은 순부터 순차적으로 6개 보여주기!!! 
+
+	public ArrayList<ProductCategorySubTb> popularCategoryList(Connection conn) {
+		Statement stmt = null;
+		ResultSet rset= null;
+		ArrayList<ProductCategorySubTb> list = new ArrayList<>();
+		ProductCategorySubTb pcst = null;
+	String query = "SELECT pro_row.PRODUCT_ENTIRE_CATE_SUB_ID_FK FROM (SELECT * FROM PRODUCT_SELL_TB ORDER BY PRODUCT_SELL_COUNT DESC) pro_row where rownum<=6";
+		/*String query ="select * from (select * from product_sell_tb order by product_sell_count desc) "
+				+ " JOIN product_category_sub_tb ON(PRODUCT_ENTIRE_CATE_MAIN_ID_FK = PRODUCT_CATE_SUB_MAIN_ID_FK) where rownum<=6";
+		*/
+		// String query = "select PRODUCT_ENTIRE_CATE_MAIN_ID_FK from  (select * from product_sell_tb order by product_sell_count desc) where rownum<=6";
+		/*select * from product_sell_tb where rownum <4 order by product_sell_count;	--> 영훈 오빠가 준 코드 참고! */
+		try {
+			
+			stmt = conn.createStatement();
+			rset = stmt.executeQuery(query);
+			
+			while(rset.next()) {
+				pcst = new ProductCategorySubTb();
+				pcst.setProductCategorySubName(rset.getString("PRODUCT_CATEGORY_SUB_NAME"));
+				pcst.setProductCategorySubId(rset.getString("PRODUCT_CATEGORY_SUB_ID"));
+				list.add(pcst);
+				System.out.println("pcst"+pcst.getProductCategorySubId());
+				
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			JDBCTemplate.close(rset);
+			JDBCTemplate.close(stmt);
 		}
-	} catch (SQLException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
-	
-		
+	return list;
 	}
 
 }

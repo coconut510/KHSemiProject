@@ -37,7 +37,7 @@ public class NewProductServlet extends HttpServlet {
 		
 		// 비즈니스 로직 처리 
 		ArrayList<Product> newProductMainList = new NewProductMainService().updateNewProductImg();
-		System.out.println(newProductMainList.get(0).getProductName());
+		System.out.println(newProductMainList.get(0).getProduct_name());
 		
 		// 1.인코딩
 		response.setCharacterEncoding("utf-8");
@@ -45,12 +45,11 @@ public class NewProductServlet extends HttpServlet {
 		// 여러명의 정보를 담을 객체가 필요하기 때문에 array 로 만듦
 		for (Product product : newProductMainList) { // for : each문을 사용해서 전체 출력하기
 			JSONObject result = new JSONObject();
-			result.put("name", product.getProductName());
-			result.put("price", product.getProductPrice());
+			result.put("name", product.getProduct_name());
+			result.put("price", product.getProduct_price());
 			resultArray.add(result);
+			System.out.println(result);
 		}
-		
-
 		response.setContentType("application/json");
 		response.setCharacterEncoding("utf-8");
 		response.getWriter().print(resultArray);
