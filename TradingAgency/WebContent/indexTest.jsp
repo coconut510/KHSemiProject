@@ -143,6 +143,33 @@ crossorigin="anonymous"></script>
 						}
 					}); 	
 				});	
+				
+				function test12() {
+
+					$.ajax({
+
+						url : "/test12",
+						type : "get",
+						success : function(data) {
+							
+							var result = "";
+							var keys = Object.keys(data);
+							for (var i = 0; i < keys.length; i++) {
+								result += "이름 :" + data[keys[i]].name + "나이: "
+										+ data[keys[i]].age + "주소 : "
+										+ data[keys[i]].addr;
+							}
+							
+							$("#result12").html(result);
+							console.log("성공");
+						},
+						error : function() {
+							console.log("실패");
+						}
+					});
+
+				}
+
 				</script>
 	
 			<div id="content">
@@ -1743,6 +1770,9 @@ crossorigin="anonymous"></script>
 				<br>
 			</div> -->
 		</div>	
+		<br><br>
+		<hr>	
+		<br>
 	<!-- 고객 리뷰 가져오기 -->
 			<div id="content">			
 			<script type="text/javascript">
@@ -1775,7 +1805,7 @@ crossorigin="anonymous"></script>
 			</script>
 		
 				<div id="reviewSec">
-					<div id="review_title"><h1>1000만이 넘는 사용자들이 생길 예정입니다.</h1></div>
+					<div id="review_title">1000만이 넘는 사용자들이 생길 예정입니다.</div>
 					<div id ="reviewContent">
 						<div class="review1">
 							<div id="review1_title"></div>
@@ -1793,7 +1823,7 @@ crossorigin="anonymous"></script>
 					</div>
 				</div>
 			</div>
-			
+			<br><br>
 		<!-- footer -->
 			<footer id="footer"> <%@include file="/views/common/footer.jsp"%></footer>	
 	

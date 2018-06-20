@@ -84,19 +84,10 @@ crossorigin="anonymous">
 				</div>
 				<br> <br>
 
-				<script type="text/javascript">
-					$(document).ready(function() {
-						$("#purchaseBtn").click(function() {
-							var check = $("input:checkbox[name='chk']:checked");	
-							console.log("check:" + check.length	);
-								if (check.length == 0) {
-										alert("주문상품을 체크해주세요 ");
-										//location.reload();			
-								} else if (check.length > 1) {
-									alert("주문상품을 하나만 체크해주세요");
-								} else {
-									alert("주문페이지 넘기기 성공");
-									var rowData = new Array(); // 체크박스 선택될 때
+			
+						
+				
+<!-- 								/* 	var rowData = new Array(); // 체크박스 선택될 때
 									var tdArr = new Array(); 
 									//체크된 체크박스의값을 가져온다
 									check.each(function(i) {
@@ -106,14 +97,15 @@ crossorigin="anonymous">
 										// 체크된 row의 값을 배열에 담음 
 										rowData.push(tr.text());
 										
-										var productImg = $("#cartGoodsImg"); // 상품 이미지 가져오기 
-										//	var userid = td.eq(2).text()+", ";
-										var productName  = $("#cartGoodsName"); // 상품명 가져오기
-										var option = $("#cartGoodsOption"); //상품 옵션 
-										var quantity =$("#orderQuantity"); // 상품수량
-										var price = $("#goodsPrice"); //상품 금액 
+										var productImg = $("#cartGoodsImg").html(); // 상품 이미지 가져오기 
+										var productName  = $("#cartGoodsName").html(); // 상품명 가져오기
+										var option = $("#cartGoodsOption").html(); //상품 옵션 
+										var quantity =$("#orderQuantity").html(); // 상품수량
+										var price = $("#goodsPrice").html(); //상품 금액 
 										var totalPrice = quantity * price; // 상품 주문금액 합계 
 										var alltotalPrice = totalPrice - 3000; // 상품 주문금액 합계 -3000원(고정값?)
+										console.log("상품이름: "+ productName)
+										console.log("전체 금액 : "+ totalPrice)
 										// 가져온 값을 배열에 담는다.
 										tdArr.push(productImg);
 										tdArr.push(productName);
@@ -122,19 +114,70 @@ crossorigin="anonymous">
 										tdArr.push(price);	
 										tdArr.push(totalPrice);	
 										tdArr.push(alltotalPrice);	
-										alert(rowData);
+										
+										$.ajax({
+
+											url : "/test12",
+											type : "get",
+											date{ tdArr :tdArr},
+											success : function(data) {
+												
+												var result = "";
+												var keys = Object.keys(data);
+												for (var i = 0; i < keys.length; i++) {
+													result += "이름 :" + data[keys[i]].name + "나이: "
+															+ data[keys[i]].age + "주소 : "
+															+ data[keys[i]].addr;
+												}
+												
+												$("#result12").html(result);
+												console.log("성공");
+											},
+											error : function() {
+												console.log("실패");
+											}
+										});
+
+
 									});
 								
 									$("#test1").text(" 체크된 Row의 모든 데이터 = "+rowData +"입니다.");	
-									$("#test2").text("배열담기:"+tdArr);	
-									
+									$("#test2").text("배열담기:"+tdArr);		
 									//location.href = "../../views/member/myCart2.jsp";
 								}
-							});
-						});
-						</script>
-						
-						
+											
+							});  -->
+					
+					
+				<script>
+				function myCartListPurchase(){
+					var check = $("input:checkbox[name='chk']:checked");	
+					console.log("check:" + check.length	);
+						if (check.length == 0) {
+								alert("주문상품을 체크해주세요 ");
+								location.reload();
+								return false;
+							
+							
+						} else if (check.length > 1) {
+							alert("주문상품을 하나만 체크해주세요");
+							location.reload();
+							return false;
+					
+						}else{ 
+							alert("주문페이지 넘기기 성공");
+						}
+					
+				}
+				
+
+				function submit() {
+					myCartForm.selectedValue.value= $("#cartGoodsName").val(); 
+					document.myCartForm.submit();
+				}
+				</script>
+				
+			<form action = "/myCart" method = "post" name = "myCartForm" id ="myCartForm">	
 				<div id="cartListSec">
 					<table class="table"
 						style="table-layout: fixed; margin: auto; text-align: center;">
@@ -149,22 +192,20 @@ crossorigin="anonymous">
 
 						<tbody>
 							<!--  장바구니하는 개수만큼 장바구니에 리스트 출력하는 구문  -->
-							<c:forEach begin="0" end="cartList.length-1" step="1">
+						<!-- 	<c:forEach begin="0" end="[input:checkbox[name='chk']:checked.length]-1" step="1"> -->
 								<tr style="height: auto;" id="infoSelectTr">
 									<td scope="row" style="width: 10%;">
-									<input type="checkbox" style="margin-top: 50px;" name="chk" id="oneCheckBox" /></td>	
+									<input type="checkbox" style="margin-top: 50px;" name="chk" id="oneCheckBox" name ="oneCheckBox"/></td>	
 									<td style="width: 30%;">
 										<div class="orderGoodsInfo1"> <!-- 주문상품 정보 : 상품이미지  -->
 											<img src="../../img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
-												style="width: 100px; height: 100px; margin-top: 10px;"
-												id="cartGoodsImg" />										
+												style="width: 100px; height: 100px; margin-top: 10px;" id="cartGoodsImg" name="cartGoodsImg" />
 										</div>
 										<div class="orderGoodsInfo2">  <!-- 주문상품 정보 : 상품명,상품옵션  -->
 											<div class="orderGoodsName" style="margin-top: 30px;">
-												<a href="#" style="font-size: 13px;">상품명:<span
-													id="cartGoodsName">????????????????????</span>
+												<a href="#" style="font-size: 13px;">상품명:<span id="cartGoodsName"  name ="cartGoodsName" value="상품명">상품이름입력하세요</span></a>									
 											</div>
-											<div class="cartGoodsOption">(옵션:색상-그레이)</div>
+											<div class="cartGoodsOption" name="cartGoodsOption" value = "dd">(옵션:색상-그레이)</div>
 										</div>
 									</td>
 									<td style="padding-top: 50px;"><span style="font-size: 15px;" id="orderQuantity">1</span> <br>
@@ -173,16 +214,12 @@ crossorigin="anonymous">
 										<button type="button" class="btn btn-info" id="changeBtn" style="font-size: 10px;">변경</button></td>
 									<td style="padding-top: 60px;"><span style="font-size: 15px;" id="goodsPrice" name="goodsPrices">10000</span>원</td>
 								</tr>
-								</c:forEach>
+							<!-- 	</c:forEach> -->
 						</tbody>
 					</table>
+			
 					<br><br>
-					
-					<div id ="test1"></div>
-					<div id ="test2"></div>
 				</div>
-
-
 				<div id="dontHaveGoodsList"></div>
 				<br>
 
@@ -214,9 +251,11 @@ crossorigin="anonymous">
 				<br> <br>
 				
 				<div class="purchase">
-					<button type="button" class="btn btn-info" id="purchaseBtn">구매하기</button>
+					<button type="submit" class="btn btn-info" id="purchaseBtn" name ="purchaseBtn" onclick = "return myCartListPurchase();" value="${selectedValue}"">구매하기</button>
 				</div>
+			</form>
 			</div>
+					
 			<br> <br> <br>
 			<footer>
 					<%@include file="../../views/common/footer.jsp" %>
