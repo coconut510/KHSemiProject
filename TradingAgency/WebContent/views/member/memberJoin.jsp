@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <!-- Coded by JSB -->
 <html>
@@ -129,16 +131,40 @@
 	border: 0px;
 	background-color: white;
 }
+
+html,body{
+	font-family: 'Sunflower', sans-serif;
+}
+#wrapper {
+	font-family: 'Sunflower', sans-serif;
+	background-color: white;
+}
+
+@media ( max-width :400px) {
+	#wrapper {
+		display: block;
+	}
+	#wrapper div {
+		width: 100%;
+	}
+}
+
 </style>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="/CSS/bootstrap/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../../CSS/common/common.css">
+<link rel="stylesheet" type="text/css" href="../../CSS/common/header.css">
+<link rel="stylesheet" type="text/css" href="../../CSS/common/adv.css">	
+<link rel="stylesheet" type="text/css" href="../../CSS/common/footer.css">	
 </head>
 
 <body>
-	<div class="header">
-	<%@include file="/views/common/header.jsp"%>
-	</div>
+<script type="text/javascript" src="../../JS/common/header.js?ver=1"></script>
+<script type="text/javascript" src="../../JS/common/adv.js"></script>
+<div id="wrapper" style="overflow:hidden;">
+	<header id="header"> <%@include
+				file="/views/common/header.jsp"%> </header><br>
 	<div class="container">
 		<div class="sign-up-title">
 			회원가입
@@ -186,7 +212,9 @@
 	</div>
 	
 	<!-- footer -->
-	<div class="footer">footer 입니다.</div>
+	<footer>
+					<%@include file="../../views/common/footer.jsp" %>
+			</footer>
 	</div>
 	<script type="text/javascript">
 		/*	회원가입 방법에따라 값 넣어서 전송		*/

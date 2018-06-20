@@ -16,6 +16,7 @@ public class Member {
 	USER_EMAIL	VARCHAR2(30 BYTE)
 	USER_INTEREST	NVARCHAR2(10 CHAR)
 	USER_ENROLLDATE	DATE
+	USER_EPOINT NUMBER;
 	*/
 	private int user_entire_pk;
 	private String user_id;
@@ -29,13 +30,23 @@ public class Member {
 	private String user_email;
 	private String user_interest;
 	private DATE user_enrolldate;
+	private int user_ePoint;
+	
+	
+	public int getUser_ePoint() {
+		return user_ePoint;
+	}
+	public void setUser_ePoint(int user_ePoint) {
+		this.user_ePoint = user_ePoint;
+	}
+	
 	public Member() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	public Member(int user_entire_pk, String user_id, String user_name, String user_pwd, String user_phone,
 			String user_birth, String user_gender, String user_addr, String user_user_entire_user_grade_id_fk,
-			String user_email, String user_interest, DATE user_enrolldate) {
+			String user_email, String user_interest, DATE user_enrolldate, int user_ePoint) {
 		super();
 		this.user_entire_pk = user_entire_pk;
 		this.user_id = user_id;
@@ -49,6 +60,7 @@ public class Member {
 		this.user_email = user_email;
 		this.user_interest = user_interest;
 		this.user_enrolldate = user_enrolldate;
+		this.user_ePoint = user_ePoint;
 	}
 	public int getUser_entire_pk() {
 		return user_entire_pk;
@@ -122,6 +134,5 @@ public class Member {
 	public void setUser_enrolldate(DATE user_enrolldate) {
 		this.user_enrolldate = user_enrolldate;
 	}
-	
 	
 }
