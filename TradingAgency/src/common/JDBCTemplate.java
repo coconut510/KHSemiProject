@@ -38,9 +38,7 @@ public class JDBCTemplate {
 	public static Connection getConnection()
 	{
 		Connection conn = null;
-
 		try {
-
 			Class.forName(driver);
 			conn = DriverManager.getConnection(url,id,pass);
 			conn.setAutoCommit(false);

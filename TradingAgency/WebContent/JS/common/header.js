@@ -15,4 +15,10 @@
     });
 });*/
 
-
+$(document).ready(function(){
+	var aLinkArr =document.getElementsByClassName("detailcategory");// 카테고리 버튼 리스트
+	for(var i = 0; i<aLinkArr.length;i++)
+	{
+		aLinkArr[i].getElementsByTagName("a")[0].href = "/views/main/productList.jsp?orderType=updateOrder&category="+ aLinkArr[i].getElementsByTagName("a")[0].id;
+	}
+});

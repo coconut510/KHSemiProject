@@ -2,9 +2,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"
  	import="product.model.vo.*" import="java.util.ArrayList"
-	%>
-<% 
-	ArrayList<Product> list = (ArrayList<Product>)request.getAttribute("productList");
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -17,6 +14,7 @@
 	crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
 
 
 <!-- 내부 링크건 CSS -->
@@ -56,9 +54,7 @@
 				 <%@include  file="../../views/common/header.jsp" %>
 				 </center>
 			</header>
-
-			<section id="content">
-				
+			<section id="content">				
 				<div id="topLeftLink">
 					<a href="#">홈>LIVINGROOM</a>
 				</div>
@@ -119,7 +115,7 @@
 				</div>
 				<div id="recommandProductContent">
 					<div id="recommandProduct">
-						<div class="productBg">
+						<div class="productBg" style="height:100%;">
 							<div class="imgWrapper">
 								<img class="productImgMain"
 									src="../../img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg"
@@ -144,7 +140,7 @@
 						</div>
 					</div>
 					<div id="recommandProduct">
-						<div class="productBg">
+						<div class="productBg" style="height:100%;">
 							<div class="imgWrapper">
 								<img class="productImgMain"
 									src="../../img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg"
@@ -154,7 +150,7 @@
 									<br><br><br>				
 									<ul>
 										<li style="color:white;overflow:auto;">	세련된flex 디자인</li>
-										<li style="color:gray;overflow:auto;">	 제품설명1<br> 제품설명2</li>
+										<li style="color:gray;overflow:auto;"> 제품설명1<br> 제품설명2</li>
 										<li style="color:white;overflow:auto;">	<s>￦ 50,000</s>-> ￦ 40,000</li>
 									</ul>
 								</div>
@@ -169,7 +165,7 @@
 						</div>
 					</div>
 					<div id="recommandProduct">
-						<div class="productBg">
+						<div class="productBg" style="height:100%;">
 							<div class="imgWrapper">
 								<img class="productImgMain"
 									src="../../img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg"
@@ -194,12 +190,11 @@
 						</div>
 					</div>
 					<div id="recommandProduct">
-						<div class="productBg">
+						<div class="productBg" style="height:100%;">
 							<div class="imgWrapper">
 								<img class="productImgMain"
 									src="../../img/13_tmp_2a76a0e4e67b6235c1154881381ed2655930large.jpg"
-									alt="">														
-								
+									alt="">																						
 								<div class="productCoverExplain">
 									<br><br><br>				
 									<ul>
@@ -221,12 +216,12 @@
 				</div>
 				<div id="entireProduct">
 					<div id="entireProductTitle">
-						<label id="entireProductTitleLabel">전체상품  개</label>
+						<label id="entireProductTitleLabel">전체상품</label>
 					</div>
 					<div id="crossLineLong"></div>
 					<ul class="float_wrap">
 						<li class="left"><span class="sort_item">
-								 <button class="sortBtn" onclick = 'selectSortType("uploadOrder");' name="uploadOrder" value="최근등록순"><b>최근등록순</b></button>
+								<button class="sortBtn" onclick = 'selectSortType("uploadOrder");' name="uploadOrder" value="최근등록순"><b>최근등록순</b></button>
 								&nbsp;|&nbsp; 
 								<button class="sortBtn" onclick = 'selectSortType("lowPriceOrder");' name="lowPriceOrder" value="낮은가격순">낮은가격순</button>
 								&nbsp;|&nbsp; 
