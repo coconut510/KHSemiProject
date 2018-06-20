@@ -45,6 +45,7 @@ public class PopularProduct2Servlet extends HttpServlet {
 				JSONObject result = new JSONObject();
 				result.put("name", product.getProduct_name());
 				result.put("price", product.getProduct_price());
+				result.put("image", product.getProduct_image());
 				resultArray.add(result);
 				System.out.println(result);
 			}

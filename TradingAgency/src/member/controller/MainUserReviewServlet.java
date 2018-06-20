@@ -1,4 +1,4 @@
-package product.controller;
+package member.controller;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -12,20 +12,23 @@ import javax.servlet.http.HttpServletResponse;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
-import product.model.service.NewProductMainService;
+import member.model.service.MainUserReviewService;
+import member.model.vo.UserReview;
+import product.model.service.PopularCategoryService;
 import product.model.vo.Product;
+import product.model.vo.ProductCategorySubTb;
 
 /**
- * Servlet implementation class NewProductServlet
+ * Servlet implementation class MainUserReviewServlet
  */
-@WebServlet(name = "NewProduct", urlPatterns = { "/newProduct" })
-public class NewProductServlet extends HttpServlet {
+@WebServlet(name = "MainUserReview", urlPatterns = { "/mainUserReview" })
+public class MainUserReviewServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public NewProductServlet() {
+    public MainUserReviewServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -33,28 +36,24 @@ public class NewProductServlet extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {	
-		
-		// 비즈니스 로직 처리 
-		ArrayList<Product> newProductMainList = new NewProductMainService().updateNewProductImg();
-		
-		// 1.인코딩
-		response.setCharacterEncoding("utf-8");
-		JSONArray resultArray = new JSONArray(); // JSONarray 객체
-		// 여러명의 정보를 담을 객체가 필요하기 때문에 array 로 만듦
-		for (Product product : newProductMainList) { // for : each문을 사용해서 전체 출력하기
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		ArrayList<UserReview> list= new MainUserReviewService().MainUserReviewList();
+
+	
+		JSONArray resultArray = new JSONArray();
+
+		for (UserReview userReview : list) { 
 			JSONObject result = new JSONObject();
-			result.put("name", product.getProduct_name());
-			result.put("price", product.getProduct_price());
-			result.put("image", product.getProduct_image());
+			result.put("comment", userReview.getUserReviewComment());  
+			result.put("date", userReview.getUserReviewDate());
 			resultArray.add(result);
+			System.out.println("코멘트11"+userReview.getUserReviewComment());
 		}
 		response.setContentType("application/json");
 		response.setCharacterEncoding("utf-8");
 		response.getWriter().print(resultArray);
 		response.getWriter().close();
-		
-		
+	
 	}
 
 	/**
