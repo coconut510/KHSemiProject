@@ -34,5 +34,10 @@ public class ProductService {
 		JDBCTemplate.close(conn);
 		return resultList;	
 	}
+	public Product selectOneProduct() {
+		Connection conn = JDBCTemplate.getConnection();
+		System.out.println("테스트");
+		return null;
+	}
 
 }

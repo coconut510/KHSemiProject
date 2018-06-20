@@ -30,8 +30,7 @@
 	integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
 	crossorigin="anonymous"></script>
 <script src="../../JS/bootstrap/bootstrap.min.js?ver=1"></script>
-
-<script src="../../JS/main/productListMain.js?ver=1"></script>
+<script src="../../JS/main/productListMain.js"></script>
 <script type="text/javascript" src="../../JS/common/header.js?ver=1"></script>
 <script type="text/javascript" src="../../JS/common/adv.js?ver=1"></script>
 

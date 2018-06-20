@@ -31,8 +31,12 @@ public class ProductSelectOneServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		request.setCharacterEncoding("utf-8");
+		System.out.println("서블릿");
+		int productPk = Integer.parseInt(request.getParameter("productId"));
+		System.out.println("상품 번호 " + productPk);
+		Product p = new ProductService().selectOneProduct();
 		
 	}
 
