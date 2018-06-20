@@ -44,10 +44,10 @@ public class MainUserReviewServlet extends HttpServlet {
 
 		for (UserReview userReview : list) { 
 			JSONObject result = new JSONObject();
-			result.put("comment", userReview.getUserReviewComment()); // 상품 대분류 가져옴 
+			result.put("comment", userReview.getUserReviewComment());  
 			result.put("date", userReview.getUserReviewDate());
 			resultArray.add(result);
-			System.out.println("코멘트"+userReview.getUserReviewComment());
+			System.out.println("코멘트11"+userReview.getUserReviewComment());
 		}
 		response.setContentType("application/json");
 		response.setCharacterEncoding("utf-8");

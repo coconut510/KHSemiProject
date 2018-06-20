@@ -35,7 +35,7 @@ crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	
 <!-- 내부 링크건 CSS -->
-<link rel="stylesheet" href="../../CSS/bootstrap/bootstrap.min.css" />
+<link rel="stylesheet" href="/CSS/bootstrap/bootstrap.min.css" /> 
 <link rel="stylesheet" type="text/css" href="/CSS/main/main.css">
 <link rel="stylesheet" type="text/css" href="/CSS/common/common.css">
 <link rel="stylesheet" type="text/css" href="/CSS/common/header.css">
@@ -46,44 +46,10 @@ crossorigin="anonymous"></script>
 <script type="text/javascript" src="../../JS/common/header.js?ver=1"></script>
 <script type="text/javascript" src="../../JS/member/main.js"></script>
 <script type="text/javascript" src="../../JS/common/adv.js"></script>
-<script type="text/javascript" src="../../JS/bootstrap/bootstrap.min.js"></script>
+<!-- <script type="text/javascript" src="../../JS/bootstrap/bootstrap.min.js"></script> -->
 <!-- 구글 폰트 -->
 <style>
-		
 
-#sellExpectedSec2_title>div:last-child{
-	float:right;
-	margin-right:90px;
-	margin-bottom:10px;
-}
-
-		
-#sellExpectedSec1_title>div:last-child{
-	float:right;
-	margin-right:90px;
-	margin-bottom:10px;
-}
-
-#popularCategorySec .col-sm {
-	width: 100%;
-	height: 200px;
-	border:1px solid gray;
-}
-
-#popularCategorySec .col-sm>div:first-child {
-	width: 100%;
-	height: 75%;
-}
-
-#popularCategorySec .col-sm>div:last-child {
-	width: 100%;
-	height: 20%;
-	padding-top: 10px;
-}
-.card-img-top{
-height:200px;
-}
-	
 </style>
 <title>메인페이지</title>
 </head>
@@ -135,55 +101,54 @@ height:200px;
 			<br> <br> <br>
 			<!-- 인기카테고리 -->
 			
-		<script type="text/javascript">
-		$(document).ready(function(){
-			$.ajax({
-				url : "/popularCategory",
-				data:{},
-				type : "get",
-				success : function(data) { // list가 넘어옴 
-					console.log("성공");
-					var result = "";
-					var name = [];
-					var imgPath =[];
-					for (var i = 0; i < data.length; i++) {
-						name[i]= data[i].categoryName;
-						imgPath[i]= data[i].categoryImagePath;
-					}
-					console.log(name[0]);
-					console.log(imgPath[0]);
-					console.log(name[1]);
-					console.log(imgPath[1]);
-
-					$("#popularCategorySec .col-sm:eq(0)>div>a>img").attr("src", imgPath[0]);
-				 	$("#popularCategorySec .col-sm:eq(1)>div>a>img").attr("src", imgPath[1]);;			
-					$("#popularCategorySec .col-sm:eq(2)>div>a>img").attr("src", imgPath[2]);
-					$("#popularCategorySec .col-sm:eq(3)>div>a>img").attr("src", imgPath[3]);
-					$("#popularCategorySec .col-sm:eq(4)>div>a>img").attr("src", imgPath[4]);;
-					$("#popularCategorySec .col-sm:eq(5)>div>a>img").attr("src", imgPath[5]);;
-					$("#popularCategorySec #text1").text(name[0]);
-					$("#popularCategorySec #text2").text(name[1]);
-					$("#popularCategorySec #text3").text(name[2]);
-					$("#popularCategorySec #text4").text(name[3]);
-					$("#popularCategorySec #text5").text(name[4]);
-					$("#popularCategorySec #text6").text(name[5]);
-					
+			<script type="text/javascript">
+				$(document).ready(function(){
+				$.ajax({
+					url : "/popularCategory",
+					data:{},
+					type : "get",
+					success : function(data) { // list가 넘어옴 
+						console.log("성공");
+						var result = "";
+						var name = [];
+						var imgPath =[];
+						for (var i = 0; i < data.length; i++) {
+							name[i]= data[i].categoryName;
+							imgPath[i]= data[i].categoryImagePath;
+						}
+						console.log(name[0]);
+						console.log(imgPath[0]);
+						console.log(name[1]);
+						console.log(imgPath[1]);
 	
-					
-			
-				},// ★ 배열은 인덱스번호 i값!!!!!!!!!!!!!!!!꺄~~~~~
-				error : function() {
-					console.log("실패");
-					$("#test1").text("ggggg");
-				}
-			}); 	
-		});	
-		</script>
+						$("#popularCategorySec .col-sm:eq(0)>div>a>img").attr("src", imgPath[0]);
+					 	$("#popularCategorySec .col-sm:eq(1)>div>a>img").attr("src", imgPath[1]);;			
+						$("#popularCategorySec .col-sm:eq(2)>div>a>img").attr("src", imgPath[2]);
+						$("#popularCategorySec .col-sm:eq(3)>div>a>img").attr("src", imgPath[3]);
+						$("#popularCategorySec .col-sm:eq(4)>div>a>img").attr("src", imgPath[4]);;
+						$("#popularCategorySec .col-sm:eq(5)>div>a>img").attr("src", imgPath[5]);;
+						$("#popularCategorySec #text1").text(name[0]);
+						$("#popularCategorySec #text2").text(name[1]);
+						$("#popularCategorySec #text3").text(name[2]);
+						$("#popularCategorySec #text4").text(name[3]);
+						$("#popularCategorySec #text5").text(name[4]);
+						$("#popularCategorySec #text6").text(name[5]);
+						$("#sellExpectedSec1_title>div:first-child").text("인기카테고리 "+name[0]);
+						$("#sellExpectedSec2_title>div:first-child").text(name[1]);
+						$("#sellExpectedSec3_title>div:first-child").text(name[2]);
+						},
+						error : function() {
+							console.log("실패");
+							$("#test1").text("ggggg");
+						}
+					}); 	
+				});	
+				</script>
 	
 			<div id="content">
 				<div id="popularCategorySec">
 					<div id="popularCategory_title">
-						<h1>인기카테고리</h1>
+						<h1 style="font-weight:600;">인기 카테고리</h1>
 					</div>
 					<br>
 					<div class="container">
@@ -215,32 +180,29 @@ height:200px;
 								<div><a href="#"><img src="" style="width: 100%; height: 100%;"></a></div>
 								<div id="text6"></div>	
 							</div>	
-					
 						</div>
 					</div>
-					<br>
 				</div>
 			</div>
-			<br> <br>
 			<div>
-		<hr>	
-		
-		
-		<script type="text/javascript">
-		$(document).ready(function(){
-			$.ajax({
-				url : "/newProduct",
-				data:{},
-				type : "get",
-				success : function(data) { 
-					var name = [];
-					var price = [];
-					var img = [];	
-					for (var i = 0; i < data.length; i++) {
-						name[i]= data[i].name;
-						price[i] =data[i].price;	
-						img[i] = data[i].image;
-					}
+			<br><br>
+			<hr>	
+
+			<script type="text/javascript">
+			$(document).ready(function(){
+				$.ajax({
+					url : "/newProduct",
+					data:{},
+					type : "get",
+					success : function(data) { 
+						var name = [];
+						var price = [];
+						var img = [];	
+						for (var i = 0; i < data.length; i++) {
+							name[i]= data[i].name;
+							price[i] =data[i].price;	
+							img[i] = data[i].image;
+						}
 					$("#newProductSec .card-img-top:eq(0)").attr("src",img[0]);
 					$("#newProductSec .card-img-top:eq(1)").attr("src",img[1]);
 					$("#newProductSec .card-img-top:eq(2)").attr("src",img[2]);
@@ -288,19 +250,13 @@ height:200px;
 			}); 	
 		});	
 		</script>
-		<style>
-		#newProduct_title>div:last-child{
-			float:right;
-			margin-right:90px;
-			margin-bottom:10px;
-		}
-		</style>
+	
 				<div id="content">
 				<br> <br>
 				<!-- 새로운제품 섹션  -->
 				<div id="newProductSec">
 					<div id="newProduct_title">
-						<div><h1>새로 등록된 상품</h1></div>
+						<div><h1  style="font-weight:600;">새로 등록된 상품</h1></div>
 						<div><a href="#">전체보기</a></div>
 					</div>
 					<br>	
@@ -544,14 +500,15 @@ height:200px;
 			}); 	
 		});	
 		</script>
-	
+		<br>
 			<!-- 인기상품 보여주기 1  -->
 	 		<div id="sellExpectedSec1">
 					<div id="sellExpectedSec1_title">
-						<div><h1>인기 카테고리 1순위 상품 4개</h1></div>
+						<div></div>
+						<br>
 						<div><a href="#">전체보기</a></div>
 					</div>
-					<br>
+					<br><br><br>
 					<div id="carouselExampleControls1" class="carousel slide"
 						data-ride="carousel">
 						<div class="container" style="margin-right: 50px;">
@@ -792,15 +749,15 @@ height:200px;
 			}); 	
 		});	
 		</script>
-
+		<br>
 		<!-- 인기상품 보여주기 2 -->	
-			<div id="sellExpectedSec2">
-					 
+				<div id="sellExpectedSec2">
 					<div id="sellExpectedSec2_title">
-						<div><h1>인기 카테고리 2순위 상품 4개</h1></div>
-						<div><a href="#">전체보기</a></div>
-					</div>
-					<br>
+					<div></div>
+						<br>
+					<div><a href="#">전체보기</a></div>
+				</div>
+					<br><br><br>
 					<div id="carouselExampleControls2" class="carousel slide"
 						data-ride="carousel">
 						<div class="container" style="margin-right: 50px;">
@@ -809,45 +766,37 @@ height:200px;
 
 									<div class="container">
 										<div class="row" style="margin-left: 15px;">
-
 											<div class="col-xs-3" style="width: 25%;">
-												<a href="#"><img class="card-img-top"	src="" 	alt="Card image cap"></a>
+												<a href="#"><img class="card-img-top"	src="" ></a>
 												<div class="card-body">
 													<a href="#">
 														<h5 class="card-title">Card title</h5>
 													</a>
-													<p class="card-text">product explanation</p>
-
+													<p class="card-text">6 explanation</p>
 												</div>
-											</div>
-											<div class="col-xs-3" style="width: 25%;">
-													<a href="#"><img class="card-img-top"	src="" 	alt="Card image cap"></a>
+											</div><div class="col-xs-3" style="width: 25%;">
+												<a href="#"><img class="card-img-top"	src="" ></a>
 												<div class="card-body">
 													<a href="#">
 														<h5 class="card-title">Card title</h5>
 													</a>
-													<p class="card-text">product explanation</p>
-
+													<p class="card-text">6 explanation</p>
 												</div>
-											</div>
-
-											<div class="col-xs-3" style="width: 25%;">
-													<a href="#"><img class="card-img-top"	src="" 	alt="Card image cap"></a>
+											</div><div class="col-xs-3" style="width: 25%;">
+												<a href="#"><img class="card-img-top"	src="" ></a>
 												<div class="card-body">
 													<a href="#">
 														<h5 class="card-title">Card title</h5>
 													</a>
-													<p class="card-text">product explanation</p>
+													<p class="card-text">6 explanation</p>
 												</div>
-											</div>
-											<div class="col-xs-3" style="width: 25%;">
-												<a href="#"><img class="card-img-top"	src="" 	alt="Card image cap"></a>	
-												</a>
+											</div><div class="col-xs-3" style="width: 25%;">
+												<a href="#"><img class="card-img-top"	src="" ></a>
 												<div class="card-body">
 													<a href="#">
 														<h5 class="card-title">Card title</h5>
 													</a>
-													<p class="card-text">product explanation</p>
+													<p class="card-text">6 explanation</p>
 												</div>
 											</div>
 										</div>
@@ -858,45 +807,37 @@ height:200px;
 									<div class="container">
 
 										<div class="row" style="margin-left: 15px;">
-
 											<div class="col-xs-3" style="width: 25%;">
-												<a href="#"><img class="card-img-top"	src="" 	alt="Card image cap"></a>
-													<div class="card-body">
-													<a href="#">
-														<h5 class="card-title">Card title</h5>
-													</a>
-													<p class="card-text">product explanation</p>
-
-												</div>
-											</div>
-											<div class="col-xs-3" style="width: 25%;">
-												<a href="#"><img class="card-img-top"	src="" 	alt="Card image cap"></a>
+												<a href="#"><img class="card-img-top"	src="" ></a>
 												<div class="card-body">
 													<a href="#">
 														<h5 class="card-title">Card title</h5>
 													</a>
-													<p class="card-text">product explanation</p>
+													<p class="card-text">6 explanation</p>
 												</div>
-											</div>
-
-											<div class="col-xs-3" style="width: 25%;">
-													<a href="#"><img class="card-img-top"	src="" 	alt="Card image cap"></a>
+											</div><div class="col-xs-3" style="width: 25%;">
+												<a href="#"><img class="card-img-top"	src="" ></a>
 												<div class="card-body">
 													<a href="#">
 														<h5 class="card-title">Card title</h5>
 													</a>
-													<p class="card-text">product explanation</p>
+													<p class="card-text">6 explanation</p>
 												</div>
-											</div>
-											<div class="col-xs-3" style="width: 25%;">
-													<a href="#"><img class="card-img-top"	src="" 	alt="Card image cap"></a>
-												</a>
+											</div><div class="col-xs-3" style="width: 25%;">
+												<a href="#"><img class="card-img-top"	src="" ></a>
 												<div class="card-body">
 													<a href="#">
 														<h5 class="card-title">Card title</h5>
 													</a>
-													<p class="card-text">product explanation</p>
-
+													<p class="card-text">6 explanation</p>
+												</div>
+											</div><div class="col-xs-3" style="width: 25%;">
+												<a href="#"><img class="card-img-top"	src="" ></a>
+												<div class="card-body">
+													<a href="#">
+														<h5 class="card-title">Card title</h5>
+													</a>
+													<p class="card-text">6 explanation</p>
 												</div>
 											</div>
 										</div>
@@ -907,45 +848,37 @@ height:200px;
 
 										<div class="row" style="margin-left: 15px;">
 
-											<div class="col-xs-3" style="width: 25%;">
-													<a href="#"><img class="card-img-top"	src="" 	alt="Card image cap"></a>
+										<div class="col-xs-3" style="width: 25%;">
+												<a href="#"><img class="card-img-top"	src="" ></a>
 												<div class="card-body">
 													<a href="#">
 														<h5 class="card-title">Card title</h5>
 													</a>
-													<p class="card-text">product explanation</p>
-
+													<p class="card-text">6 explanation</p>
 												</div>
-											</div>
-											<div class="col-xs-3" style="width: 25%;">
-													<a href="#"><img class="card-img-top"	src="" 	alt="Card image cap"></a>
+											</div><div class="col-xs-3" style="width: 25%;">
+												<a href="#"><img class="card-img-top"	src="" ></a>
 												<div class="card-body">
 													<a href="#">
 														<h5 class="card-title">Card title</h5>
 													</a>
-													<p class="card-text">product explanation</p>
+													<p class="card-text">6 explanation</p>
 												</div>
-											</div>
-
-											<div class="col-xs-3" style="width: 25%;">
-													<a href="#"><img class="card-img-top"	src="" 	alt="Card image cap"></a>
+											</div><div class="col-xs-3" style="width: 25%;">
+												<a href="#"><img class="card-img-top"	src="" ></a>
 												<div class="card-body">
 													<a href="#">
 														<h5 class="card-title">Card title</h5>
 													</a>
-													<p class="card-text">product explanation</p>
-
+													<p class="card-text">6 explanation</p>
 												</div>
-											</div>
-
-											<div class="col-xs-3" style="width: 25%;">
-													<a href="#"><img class="card-img-top"	src="" 	alt="Card image cap"></a>
+											</div><div class="col-xs-3" style="width: 25%;">
+												<a href="#"><img class="card-img-top"	src="" ></a>
 												<div class="card-body">
 													<a href="#">
 														<h5 class="card-title">Card title</h5>
 													</a>
-													<p class="card-text">product explanation</p>
-
+													<p class="card-text">6 explanation</p>
 												</div>
 											</div>
 
@@ -1039,67 +972,53 @@ height:200px;
 			}); 	
 		});	
 		</script>
-		<style>
-		#sellExpectedSec3_title>div:last-child{
-			float:right;
-			margin-right:90px;
-			margin-bottom:10px;
-		}
-		</style>
+		<br>
 		<!-- 인기상품 보여주기 3 -->	
 			<div id="sellExpectedSec3">
 					<div id="sellExpectedSec3_title">
-						<div><h1>인기 카테고리 3순위 상품 4개</h1></div>
+						<div></div>
+						<br>
 						<div><a href="#">전체보기</a></div>
 					</div>
-					<br>
+					<br><br><br>
 					<div id="carouselExampleControls3" class="carousel slide"
 						data-ride="carousel">
 						<div class="container" style="margin-right: 50px;">
 							<div class="carousel-inner">
 								<div class="carousel-item active">
-
 									<div class="container">
 										<div class="row" style="margin-left: 15px;">
-
 											<div class="col-xs-3" style="width: 25%;">
-											<a href="#"><img class="card-img-top"	src="" 	alt="Card image cap"></a>
+												<a href="#"><img class="card-img-top"	src="" ></a>
 												<div class="card-body">
 													<a href="#">
 														<h5 class="card-title">Card title</h5>
 													</a>
-													<p class="card-text">1</p>
-
+													<p class="card-text">6 explanation</p>
 												</div>
-											</div>
-											<div class="col-xs-3" style="width: 25%;">
-											<a href="#"><img class="card-img-top"	src="" 	alt="Card image cap"></a>
+											</div><div class="col-xs-3" style="width: 25%;">
+												<a href="#"><img class="card-img-top"	src="" ></a>
 												<div class="card-body">
 													<a href="#">
 														<h5 class="card-title">Card title</h5>
 													</a>
-													<p class="card-text">2 explanation</p>
-
+													<p class="card-text">6 explanation</p>
 												</div>
-											</div>
-
-											<div class="col-xs-3" style="width: 25%;">
-												<a href="#"><img class="card-img-top"	src="" 	alt="Card image cap"></a>
+											</div><div class="col-xs-3" style="width: 25%;">
+												<a href="#"><img class="card-img-top"	src="" ></a>
 												<div class="card-body">
 													<a href="#">
 														<h5 class="card-title">Card title</h5>
 													</a>
-													<p class="card-text"></p>
+													<p class="card-text">6 explanation</p>
 												</div>
-											</div>
-											<div class="col-xs-3" style="width: 25%;">
-												<a href="#"><img class="card-img-top"	src="" 	alt="Card image cap"></a>
-												</a>
+											</div><div class="col-xs-3" style="width: 25%;">
+												<a href="#"><img class="card-img-top"	src="" ></a>
 												<div class="card-body">
 													<a href="#">
 														<h5 class="card-title">Card title</h5>
 													</a>
-													<p class="card-text">4 explanation</p>
+													<p class="card-text">6 explanation</p>
 												</div>
 											</div>
 										</div>
@@ -1108,21 +1027,19 @@ height:200px;
 
 								<div class="carousel-item">
 									<div class="container">
-
 										<div class="row" style="margin-left: 15px;">
-
 											<div class="col-xs-3" style="width: 25%;">
-												<a href="#"><img class="card-img-top"	src="" 	alt="Card image cap"></a>
+												<a href="#"><img class="card-img-top"	src="" ></a>
 												<div class="card-body">
 													<a href="#">
 														<h5 class="card-title">Card title</h5>
 													</a>
-													<p class="card-text">5 explanation</p>
-
+													<p class="card-text">6 explanation</p>
 												</div>
 											</div>
+											
 											<div class="col-xs-3" style="width: 25%;">
-												<a href="#"><img class="card-img-top"	src="" 	alt="Card image cap"></a>
+												<a href="#"><img class="card-img-top"	src="" ></a>
 												<div class="card-body">
 													<a href="#">
 														<h5 class="card-title">Card title</h5>
@@ -1132,7 +1049,7 @@ height:200px;
 											</div>
 
 											<div class="col-xs-3" style="width: 25%;">
-												<a href="#"><img class="card-img-top"	src="" 	alt="Card image cap"></a>
+												<a href="#"><img class="card-img-top"	src="" ></a>
 												<div class="card-body">
 													<a href="#">
 														<h5 class="card-title">Card title</h5>
@@ -1141,14 +1058,12 @@ height:200px;
 												</div>
 											</div>
 											<div class="col-xs-3" style="width: 25%;">
-												<a href="#"><img class="card-img-top"	src="" 	alt="Card image cap"></a>
-												</a>
+												<a href="#"><img class="card-img-top"	src="" ></a>
 												<div class="card-body">
 													<a href="#">
 														<h5 class="card-title">Card title</h5>
 													</a>
-													<p class="card-text">8 explanation</p>
-
+													<p class="card-text">7 explanation</p>
 												</div>
 											</div>
 										</div>
@@ -1159,46 +1074,37 @@ height:200px;
 
 										<div class="row" style="margin-left: 15px;">
 
-											<div class="col-xs-3" style="width: 25%;">
-												<a href="#"><img class="card-img-top"	src="" 	alt="Card image cap"></a>
+										<div class="col-xs-3" style="width: 25%;">
+												<a href="#"><img class="card-img-top"	src="" ></a>
 												<div class="card-body">
 													<a href="#">
 														<h5 class="card-title">Card title</h5>
 													</a>
-													<p class="card-text">9 explanation</p>
-
+													<p class="card-text">6 explanation</p>
 												</div>
-											</div>
-											<div class="col-xs-3" style="width: 25%;">
-												<a href="#"><img class="card-img-top"	src="" 	alt="Card image cap"></a>
+											</div><div class="col-xs-3" style="width: 25%;">
+												<a href="#"><img class="card-img-top"	src="" ></a>
 												<div class="card-body">
 													<a href="#">
 														<h5 class="card-title">Card title</h5>
 													</a>
-													<p class="card-text">10 explanation</p>
+													<p class="card-text">6 explanation</p>
 												</div>
-											</div>
-
-											<div class="col-xs-3" style="width: 25%;">
-												<a href="#"><img class="card-img-top"	src="" 	alt="Card image cap"></a>
+											</div><div class="col-xs-3" style="width: 25%;">
+												<a href="#"><img class="card-img-top"	src="" ></a>
 												<div class="card-body">
 													<a href="#">
 														<h5 class="card-title">Card title</h5>
 													</a>
-													<p class="card-text">11 explanation</p>
-
+													<p class="card-text">6 explanation</p>
 												</div>
-											</div>
-
-											<div class="col-xs-3" style="width: 25%;">
-												<a href="#"><img class="card-img-top"	src="" 	alt="Card image cap"></a>
-												</a>
+											</div><div class="col-xs-3" style="width: 25%;">
+												<a href="#"><img class="card-img-top"	src="" ></a>
 												<div class="card-body">
 													<a href="#">
 														<h5 class="card-title">Card title</h5>
 													</a>
-													<p class="card-text">12 explanation</p>
-
+													<p class="card-text">6 explanation</p>
 												</div>
 											</div>
 
@@ -1273,7 +1179,9 @@ height:200px;
 		</script>
 		<hr>
 				<div id="collectionSec">
-					<h1>DB 상품 중 랜덤으로 4개 값 가져오기</h1>
+					<div id="collectionSec_title">MD 추천 상품</div>
+					<br><br><br>
+					<div id="collectionSec_container">
 					<div class="container" id="col_container">
 						<br>
 						<div class="row">
@@ -1348,6 +1256,7 @@ height:200px;
 							</div>
 						</div>
 					</div>
+				</div>
 				</div>
 
 				<br> <br><br> <br>
@@ -1835,38 +1744,35 @@ height:200px;
 			</div> -->
 		</div>	
 	<!-- 고객 리뷰 가져오기 -->
-			<div id="content">
-						
+			<div id="content">			
 			<script type="text/javascript">
 			$(document).ready(function(){
 				$.ajax({
 					url : "/mainUserReview",
 					type : "get",
-					success : function(data) { 
-					 	var writeDate = [];
+					success : function(data) {
+						var writeDate = [];
 						var comment = [];
-						for (var i = 0; i < data.length; i++) {
-							comment[i]= data[i].comment;
-							writeDate[i] =data[i].date;	
-							console.log("코멘트  "+[i] +":" + comment[i]);
-						}	
-						console.log("코멘트 ??? " + comment[0]);
-						$("#review1_content").text(comment[0]);
-						$("#review2_content").text(comment[1]);
-						$("#review3_content").text(comment[2]);
-	
-						$("#review1_title").text(name[0]);
-						$("#review2_title").text(name[1]);
-						$("#review3_title").text(name[2]);
-	
-	
-					},// ★ 배열은 인덱스번호 i값!!!!!!!!!!!!!!!꺄~~~~~
-					error : function() {
+							for (var i = 0; i < data.length; i++) {
+								comment[i]= data[i].comment;
+								writeDate[i] =data[i].date;	
+								console.log("코멘트  "+[i] +":" + comment[i]);
+							}	
+							console.log("코멘트 ??? " + comment[0]);
+							$("#review1_content").text(comment[0]);
+							$("#review2_content").text(comment[1]);
+							$("#review3_content").text(comment[2]);
+		
+							$("#review1_title").text(name[0]);
+							$("#review2_title").text(name[1]);
+							$("#review3_title").text(name[2]);
+					},
+					error : function() { 
 						console.log("리뷰가져오기 실행 실패");	
 					}
 				}); 	
 			});	
-		</script>
+			</script>
 		
 				<div id="reviewSec">
 					<div id="review_title"><h1>1000만이 넘는 사용자들이 생길 예정입니다.</h1></div>
@@ -1889,7 +1795,7 @@ height:200px;
 			</div>
 			
 		<!-- footer -->
-			<footer id="footer"> <%@include file="../../views/common/footer.jsp"%></footer>	
+			<footer id="footer"> <%@include file="/views/common/footer.jsp"%></footer>	
 	
 	</div>		 	
 	</center>

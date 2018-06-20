@@ -43,7 +43,7 @@ public class PopularCategoryServlet extends HttpServlet {
 		ArrayList<ProductCategorySubTb> list= new PopularCategoryService().popularCategoryList();
 		
 		JSONArray resultArray = new JSONArray(); // JSONarray 객체
-		// 여러명의 정보를 담을 객체가 필요하기 때문에 array 로 만듦
+		// 여러명의 정보를 담을 객체가 필요하기 때문에 array 로 만듦/
 		for (ProductCategorySubTb pST : list) { // for : each문을 사용해서 전체 출력하기
 			JSONObject result = new JSONObject();
 			result.put("categoryName", pST.getProductCategorySubName()); // 상품 대분류 가져옴 

@@ -1325,7 +1325,7 @@ crossorigin="anonymous">
 			</div>
 			<!-- footer -->
 			<footer id="footer">
-			<%@include file="../../views/common/footer.jsp" %>
+			<%@include file="/views/common/footer.jsp" %>
 			</footer>
 		</div>
 

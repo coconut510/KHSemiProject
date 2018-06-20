@@ -37,8 +37,6 @@ public class MainUserReviewDao {
 				ur.setUserReviewUserEntireIdFk(rset.getString("USER_RV_USER_ENTIRE_ID_FK"));
 				ur.setUserReviewUserEntireReviewedIdFk(rset.getString("USER_RV_USER_ENTIRE_RVED_ID_FK"));
 				list.add(ur);
-				
-				System.out.println("리뷰페이지 try 안 list : "+list);
 			}
 			
 		} catch (SQLException e) {
