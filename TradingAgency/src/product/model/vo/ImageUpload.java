@@ -1,7 +1,7 @@
 package product.model.vo;
 
 public class ImageUpload {
-	private String userId;
+	
 	private String imgOne;
 	private String imgTwo;
 	private String imgThree;
@@ -11,20 +11,13 @@ public class ImageUpload {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public ImageUpload(String userId, String imgOne, String imgTwo, String imgThree, String imgFour, String imgFive) {
+	public ImageUpload(String imgOne, String imgTwo, String imgThree, String imgFour, String imgFive) {
 		super();
-		this.userId = userId;
 		this.imgOne = imgOne;
 		this.imgTwo = imgTwo;
 		this.imgThree = imgThree;
 		this.imgFour = imgFour;
 		this.imgFive = imgFive;
-	}
-	public String getUserId() {
-		return userId;
-	}
-	public void setUserId(String userId) {
-		this.userId = userId;
 	}
 	public String getImgOne() {
 		return imgOne;
@@ -56,5 +49,7 @@ public class ImageUpload {
 	public void setImgFive(String imgFive) {
 		this.imgFive = imgFive;
 	}
+
+
 	
 }
