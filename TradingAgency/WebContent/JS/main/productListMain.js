@@ -13,7 +13,6 @@ window.onload = function(){
 	orderType = sortOrder;
 	selectOrderType();
 	category = $_GET('category');
-	console.log(category);
 	loadSelectCategory();
 }
 
@@ -67,9 +66,10 @@ function loadSelectCategory()
 			
 			for(var i = currentPage*onePageShowProduct; i<maxLength;i++)
 			{
+				var link = 'onclick="selectProduct('+data[keys[i]].product_entire_pk +');"';
 				totalProductList.append(
 				'<li class="productWrap">'+
-				'<div class="productBg">'+
+				'<div class="productBg"' +link +'>'+
 					'<div class="imgWrapper">'+
 						'<img class="productImgMain" src="../../img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg">'+
 						'<% if (discountRate > 0) { %>'+						
@@ -147,9 +147,16 @@ function selectPage(pageNum)
 	currentPageNum = pageNum;
 	loadSelectCategory();
 }
-function selectOnePageProduct(){
+function selectOnePageProduct()
+{
 	currentPageNum = 0;
 	loadSelectCategory();
+}
+
+function selectProduct(productId)
+{
+	//"/productSelectOne?productId="+productId;
+	location.href ="/productSelectOne?productId="+productId;//"/views/product/productSelect.jsp";
 }
 
 

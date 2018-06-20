@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 
@@ -36,10 +36,11 @@ body {
 	width: 100%;
 	height: auto;
 }
-    #allWrapper{
-        width: 1600px;
-        margin: auto;
-    }
+
+#allWrapper {
+	width: 1600px;
+	margin: auto;
+}
 
 header {
 	text-align: center;
@@ -113,7 +114,7 @@ footer {
 
 /*상세정보 분류제목 */
 #subTitle {
-    margin-top: 1%;
+	margin-top: 1%;
 }
 
 .thumb-image {
@@ -129,9 +130,8 @@ footer {
 
 .submitWrapper * {
 	float: right;
-    margin-right: 2%;
-    margin-left: 2%;
-    
+	margin-right: 2%;
+	margin-left: 2%;
 }
 
 /* 날력 버튼 지우기 */
@@ -145,14 +145,15 @@ input[type="date"]::-webkit-inner-spin-button {
 	border: 1px solid lightgray;
 	margin: 1%;
 }
-#wrapper{
-    float: left;
-    margin: 2% 2% 2% 2%;
-    }
-#line{
-    margin-right: 3%;
-    }
 
+#wrapper {
+	float: left;
+	margin: 2% 2% 2% 2%;
+}
+
+#line {
+	margin-right: 3%;
+}
 </style>
 
 <body>
@@ -189,6 +190,7 @@ input[type="date"]::-webkit-inner-spin-button {
 	<!-- 컴마찍기 끝 -->
 	<!-- 사진 업로드-->
 	<script>
+	<!--
 /* 그림추가부분-요리완성-전체  */
     $(document).ready(function() {
            $("#fileSucAll").on('change', function () {
@@ -202,6 +204,7 @@ input[type="date"]::-webkit-inner-spin-button {
              if (extn == "gif" || extn == "png" || extn == "jpg" || extn == "jpeg") {
                if (typeof(FileReader) != "undefined") {
                  //loop for each file selected for uploaded.
+                 if(countFiles <5){
                  for (var i = 0; i < countFiles; i++) 
                  {
                     var reader = new FileReader();
@@ -243,9 +246,14 @@ input[type="date"]::-webkit-inner-spin-button {
                       }
                    }
                     
-                   reader.readAsDataURL($(this)[0].files[i]);
                     
+                   reader.readAsDataURL($(this)[0].files[i]);
+
                  }
+                 }
+                 else{
+                	 alert("사진은 5장까지");
+                 } 
                } else {
                  alert("This browser does not support FileReader.");
                }
@@ -254,7 +262,7 @@ input[type="date"]::-webkit-inner-spin-button {
              }             
            });
          });
-        
+       --> 
         
         /* 그림추가부분-step*/
    function readURL(input,stepImgNum) {
@@ -263,8 +271,15 @@ input[type="date"]::-webkit-inner-spin-button {
            var reader = new FileReader();
     
            reader.onload = function (e) {
-        	   for(i = 0; i < stepImgNum; i++){
-              if(stepImgNum == 1){
+        	   for(i = 0; i <= stepImgNum; i++){
+                   if(stepImgNum == 0){
+                       var imgFile_Suc_1 = $('#imgFile_Suc_1');
+                       imgFile_Suc_1.attr('src',e.target.result);
+                       var imgOne = $('#imgFile_Suc_1').attr('src');
+                       console.log(imgOne);
+                     $('#imgOne').attr('value',imgOne);
+        		  
+                   }else if(stepImgNum == 1){
               var imgFile_Suc_2 = $('#imgFile_Suc_2');
               imgFile_Suc_2.attr('src',e.target.result);
               var imgTwo = $('#imgFile_Suc_2').attr('src');
@@ -412,12 +427,14 @@ input[type="date"]::-webkit-inner-spin-button {
 
 
 	<header>
-		<div id="header"><%--
-			<%@includefile="../../views/common/header.jsp" %>--%></div>
+	<div id="header">
+		<%--
+			<%@includefile="../../views/common/header.jsp" %>--%>
+	</div>
 	</header>
 <body>
-    <div id = "allWrapper">
-	<section class="bodyWrapper">
+	<div id="allWrapper">
+		<section class="bodyWrapper">
 		<div class="shadow p-3 mb-5 bg-white rounded">
 			<div class="insertTitle">
 				<h2 id="mainTitle">상품 등록 페이지</h2>
@@ -426,7 +443,8 @@ input[type="date"]::-webkit-inner-spin-button {
 				<span id="dataTitle">상품 상세정보</span>
 				<div class="dataCon">
 					<div id="dataInsert">
-						<form action="/productInsert" method="post">
+						<form action="/productInsert" method="post"
+							enctype="multipart/form-data">
 							<div class="form-row">
 
 								<div class="form-group col-md-3">
@@ -464,21 +482,21 @@ input[type="date"]::-webkit-inner-spin-button {
 										placeholder="상품명을 입력하세요">
 								</div>
 
-								<div class = "form-group col-md-4">
-									<label id = "subTitle">상품 상태</label> <select name = "grade"
-									id = "grade" class = "form-control" onchange = "grade">
-										<option selected value = "0">등급선택</option>
-										<option value= "S">최상</option>
-										<option value= "A">상</option>
-										<option value= "B">중</option>
-										<option value= "C">중하</option>
-										<option value= "D">하</option>
+								<div class="form-group col-md-4">
+									<label id="subTitle">상품 상태</label> <select name="grade"
+										id="grade" class="form-control" onchange="grade">
+										<option selected value="0">등급선택</option>
+										<option value="S">최상</option>
+										<option value="A">상</option>
+										<option value="B">중</option>
+										<option value="C">중하</option>
+										<option value="D">하</option>
 									</select>
 								</div>
-								
-								
-								
-								
+
+
+
+
 
 
 								<div class="form-group col-md-4">
@@ -505,9 +523,9 @@ input[type="date"]::-webkit-inner-spin-button {
 							</div>
 							<!--사진 업로드-->
 							<div class="form-row">
-                                <div class="form-group col-md-6">
-								<label id="subTitle">상품 사진 등록</label>
-                                </div>
+								<div class="form-group col-md-6">
+									<label id="subTitle">상품 사진 등록</label>
+								</div>
 								<div class="imgCon">
 									<div id="wrapper">
 										<div class="row">
@@ -516,76 +534,87 @@ input[type="date"]::-webkit-inner-spin-button {
 
 
 
-											<div class="col-md-2" id = "line">
+											<div class="col-md-2" id="line">
 												<div class="row">
 													<div class="col-md-12" id="successImgOne">
-
+<!-- 
 														<input id="fileSucOne" multiple="multiple" type="file"
-															style="display: none" onchange="readURL(this,0);" /> 
-                                                        <img src="../../img/imgInsertBackground.PNG" width="130"
+															name="upfile1" style="display: none"
+															onchange="readURL(this,0);" /> <img
+															src="../../img/imgInsertBackground.PNG" width="130"
 															height="130" id="imgFile_Suc_1"
-															onclick="document.all.fileSucAll.click();">
-                                                        <input type = "hidden" id = "imgOne" name="imgOne" value="">
-
+															onclick="document.all.fileSucAll.click();"> <input
+															type="hidden" id="imgOne" name="imgOne" value="">
+ -->
+ 															<input id="fileSucOne" type="file" name="upfile1"
+															style="display: none" onchange="readURL(this,0);" /> <img
+															src="../../img/imgInsertBackground.PNG" width="130"
+															height="130" id="imgFile_Suc_1"
+															onclick="document.all.fileSucOne.click();"> <input
+															type="hidden" id="imgOne" name="imgOne" value="">
+ 
+ 
+ 
+ 
 													</div>
 												</div>
 											</div>
 
-											<div class="col-md-2" id = "line">
+											<div class="col-md-2" id="line">
 												<div class="row">
 													<div class="col-md-12" id="successImgTwo">
 
-														<input id="fileSucTwo" multiple="multiple" type="file"
-															style="display: none" onchange="readURL(this,1);" /> 
-                                                        <img src="../../img/imgInsertBackground.PNG" width="130"
+														<input id="fileSucTwo" type="file" name="upfile2"
+															style="display: none" onchange="readURL(this,1);" /> <img
+															src="../../img/imgInsertBackground.PNG" width="130"
 															height="130" id="imgFile_Suc_2"
-															onclick="document.all.fileSucTwo.click();">
-                                                        <input type = "hidden" id = "imgTwo" name="imgTwo" value="">
+															onclick="document.all.fileSucTwo.click();"> <input
+															type="hidden" id="imgTwo" name="imgTwo" value="">
 
 													</div>
 												</div>
 											</div>
 
-											<div class="col-md-2" id = "line">
+											<div class="col-md-2" id="line">
 												<div class="row">
 													<div class="col-md-12" id="successImgThrid">
 
-														<input id="fileSucThrid" multiple="multiple" type="file"
-															style="display: none" onchange="readURL(this,2);" /> 
-                                                        <img src="../../img/imgInsertBackground.PNG" width="130"
+														<input id="fileSucThrid" type="file" name="upfile3"
+															style="display: none" onchange="readURL(this,2);" /> <img
+															src="../../img/imgInsertBackground.PNG" width="130"
 															height="130" id="imgFile_Suc_3"
-															onclick="document.all.fileSucThrid.click();">
-                                                        <input type = "hidden" id = "imgThree" name="imgThree" value="">
+															onclick="document.all.fileSucThrid.click();"> <input
+															type="hidden" id="imgThree" name="imgThree" value="">
 
 													</div>
 												</div>
 											</div>
 
-											<div class="col-md-2" id = "line">
+											<div class="col-md-2" id="line">
 												<div class="row">
 													<div class="col-md-12" id="successImgFour">
 
-														<input id="fileSucFour" multiple="multiple" type="file"
-															style="display: none" onchange="readURL(this,3);" /> 
-                                                        <img src="../../img/imgInsertBackground.PNG" width="130"
+														<input id="fileSucFour" type="file" name="upfile4"
+															style="display: none" onchange="readURL(this,3);" /> <img
+															src="../../img/imgInsertBackground.PNG" width="130"
 															height="130" id="imgFile_Suc_4"
-															onclick="document.all.fileSucFour.click();">
-                                                        <input type = "hidden" id = "imgFour" name="imgFour" value="">
+															onclick="document.all.fileSucFour.click();"> <input
+															type="hidden" id="imgFour" name="imgFour" value="">
 
 													</div>
 												</div>
 											</div>
 
-											<div class="col-md-2" id = "line">
+											<div class="col-md-2" id="line">
 												<div class="row">
 													<div class="col-md-12" id="successImgFive">
 
-														<input id="fileSucFive" multiple="multiple" type="file"
-															style="display: none" onchange="readURL(this,4);" /> 
-                                                        <img src="../../img/imgInsertBackground.PNG" width="130"
+														<input id="fileSucFive" type="file" name="upfile5"
+															style="display: none" onchange="readURL(this,4);" /> <img
+															src="../../img/imgInsertBackground.PNG" width="130"
 															height="130" id="imgFile_Suc_5"
-															onclick="document.all.fileSucFive.click();">
-                                                        <input type = "hidden" id = "imgFive" name="imgFive" value="">
+															onclick="document.all.fileSucFive.click();"> <input
+															type="hidden" id="imgFive" name="imgFive" value="">
 
 													</div>
 												</div>
@@ -623,41 +652,41 @@ input[type="date"]::-webkit-inner-spin-button {
 
 			</div>
 		</div>
-	</section>
-</div>
+		</section>
+	</div>
 	<section class="ad">
-		<div id="carouselExampleFade" class="carousel slide carousel-fade"
-			data-ride="carousel">
+	<div id="carouselExampleFade" class="carousel slide carousel-fade"
+		data-ride="carousel">
 
-			<div class="carousel-inner">
-				<div class="carousel-item active">
-					<img class="d-block w-10" src="../../img/1.PNG" alt="첫번째 슬라이드">
-				</div>
-				<div class="carousel-item">
-					<img class="d-block w-10" src="../../img/2.PNG" alt="두번째 slide">
-				</div>
-				<div class="carousel-item">
-					<img class="d-block w-10" src="../../img/3.PNG" alt="세번째 slide">
-				</div>
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img class="d-block w-10" src="../../img/1.PNG" alt="첫번째 슬라이드">
 			</div>
-
-			<a class="carousel-control-prev" href="#carouselExampleFade"
-				role="button" data-slide="prev"> <span
-				class="carousel-control-prev-icon" aria-hidden="true"></span> <span
-				class="sr-only">Previous</span>
-			</a> <a class="carousel-control-next" href="#carouselExampleFade"
-				role="button" data-slide="next"> <span
-				class="carousel-control-next-icon" aria-hidden="true"></span> <span
-				class="sr-only">Next</span>
-			</a>
-
+			<div class="carousel-item">
+				<img class="d-block w-10" src="../../img/2.PNG" alt="두번째 slide">
+			</div>
+			<div class="carousel-item">
+				<img class="d-block w-10" src="../../img/3.PNG" alt="세번째 slide">
+			</div>
 		</div>
+
+		<a class="carousel-control-prev" href="#carouselExampleFade"
+			role="button" data-slide="prev"> <span
+			class="carousel-control-prev-icon" aria-hidden="true"></span> <span
+			class="sr-only">Previous</span>
+		</a> <a class="carousel-control-next" href="#carouselExampleFade"
+			role="button" data-slide="next"> <span
+			class="carousel-control-next-icon" aria-hidden="true"></span> <span
+			class="sr-only">Next</span>
+		</a>
+
+	</div>
 	</section>
 </body>
 
 
 <footer>
-	<h2>footer</h2>
+<h2>footer</h2>
 </footer>
 </body>
 
