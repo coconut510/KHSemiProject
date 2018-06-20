@@ -62,7 +62,7 @@ crossorigin="anonymous"></script>
 			<!-- header -->
 			<header id="header"> <%@include file="/views/common/header.jsp"%></header>
 			<!-- 메인 광고 이미지 슬라이더 -->
-			<div id="imgSliderSec">
+			<div id="imgSliderSec" >
 				<div id="carouselExampleIndicators" class="carousel slide"
 					data-ride="carousel">
 					<ol class="carousel-indicators">
@@ -71,17 +71,16 @@ crossorigin="anonymous"></script>
 						<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
 					</ol>
 					<div class="carousel-inner" style="width: 100%;">
-						<div class="carousel-item active">
-							<a href="index.jsp"><img class="d-block w-100"
-								src="img/10_tmp_274559c6ec69ab30e666353eabc4f2619208large.jpg"
-								alt="첫번째 슬라이드"></a>
+						<div class="carousel-item active"  id="carousel-item active1">
+							<a href="index.jsp">
+							<img class="d-block w-100" src="/ImgMain/광고1.JPG" alt="첫번째 슬라이드"></a>				
 						</div>
-						<div class="carousel-item">
-							<a href="index.jsp"><img class="d-blockw-100"
+						<div class="carousel-item" id="carousel-item active2">
+							<a href="index.jsp"><img class="d-block w-100"
 								src="img/11_tmp_606d17707165b62f4acf9cb1f07275399075large.jpg"
 								alt="두번째 슬라이드"></a>
 						</div>
-						<div class="carousel-item">
+						<div class="carousel-item"  id="carousel-item active3">
 							<a href="index.jsp"><img class="d-block w-100"
 								src="img/12_tmp_d8bfc4e19d83e16b58504a5271a05bfe9565large.jpg"
 								alt="세번째 슬라이드"></a>
