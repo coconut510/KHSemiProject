@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ page import="java.net.URLEncoder" %>
+<%@ page import="java.security.SecureRandom" %>
+<%@ page import="java.math.BigInteger" %>
 <!DOCTYPE html>
 <!-- Coded by JSB -->
 <html>
@@ -103,7 +106,7 @@
 	display: block;
 	text-align: center;
 	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-bottom: 200px;
 }
 
 .sns-sign-up>h4 {
@@ -151,7 +154,7 @@ html,body{
 
 </style>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Sell:F 회원가입</title>
 <link rel="stylesheet" href="/CSS/bootstrap/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="../../CSS/common/common.css">
 <link rel="stylesheet" type="text/css" href="../../CSS/common/header.css">
@@ -162,6 +165,7 @@ html,body{
 <body>
 <script type="text/javascript" src="../../JS/common/header.js?ver=1"></script>
 <script type="text/javascript" src="../../JS/common/adv.js"></script>
+<script type="text/javascript"	src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.0.js"	charset="utf-8"></script>
 <div id="wrapper" style="overflow:hidden;">
 	<header id="header"> <%@include
 				file="/views/common/header.jsp"%> </header><br>
@@ -196,18 +200,26 @@ html,body{
 						style="color: white; background-color: black;">회원가입</button>
 				</h4>
 		</div>
-		<!-- SNS 계정으로 가입 -->
+		<!-- SNS 계정으로 로그인 -->
 		<div class="sns-sign-up">
-			<h4>SNS 계정으로 회원가입</h4>
+			<h4>SNS 계정으로 로그인</h4>
 			<ul class="sns-list">
-				<li><button onclick="memberType('naver');" class="snsBtn"><img src="/img/loginByNaver.PNG" class="img-responsive"></button></li>
-				<br>
+			<%
+		    String clientId = "dLGZqiGmEAaTdfOSAIv1";//애플리케이션 클라이언트 아이디값";
+		    String redirectURI = URLEncoder.encode("http://192.168.10.65/views/member/naverCallBack.jsp", "UTF-8");
+		    SecureRandom random = new SecureRandom();
+		    String state = new BigInteger(130, random).toString();
+		    String apiURL = "https://nid.naver.com/oauth2.0/authorize?response_type=code";
+		    apiURL += "&client_id=" + clientId;
+		    apiURL += "&redirect_uri=" + redirectURI;
+		    apiURL += "&state=" + state;
+		    session.setAttribute("state", state);
+		 	%>
+				<li><a href="<%=apiURL%>"><img src="/img/loginByNaver.PNG" class="img-responsive"></a></li>
+
 				<li><button onclick="memberType('google');" class="snsBtn"><img src="/img/btn_google_signin_dark_normal_web.png"
 					class="img-responsive" width="200px"></button></li>
 			</ul>
-		</div>
-		<div class="etc">
-			a<br> a<br> a<br> a<br> a<br> a<br>a
 		</div>
 	</div>
 	

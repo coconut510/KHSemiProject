@@ -1,5 +1,8 @@
 package member.model.vo;
 
+
+import java.util.Date;
+
 import oracle.sql.DATE;
 
 public class Member {
@@ -29,7 +32,7 @@ public class Member {
 	private String user_user_entire_user_grade_id_fk;
 	private String user_email;
 	private String user_interest;
-	private DATE user_enrolldate;
+	private Date user_enrolldate;
 	private int user_ePoint;
 	
 	
@@ -46,7 +49,7 @@ public class Member {
 	}
 	public Member(int user_entire_pk, String user_id, String user_name, String user_pwd, String user_phone,
 			String user_birth, String user_gender, String user_addr, String user_user_entire_user_grade_id_fk,
-			String user_email, String user_interest, DATE user_enrolldate, int user_ePoint) {
+			String user_email, String user_interest, Date user_enrolldate, int user_ePoint) {
 		super();
 		this.user_entire_pk = user_entire_pk;
 		this.user_id = user_id;
@@ -128,10 +131,10 @@ public class Member {
 	public void setUser_interest(String user_interest) {
 		this.user_interest = user_interest;
 	}
-	public DATE getUser_enrolldate() {
+	public Date getUser_enrolldate() {
 		return user_enrolldate;
 	}
-	public void setUser_enrolldate(DATE user_enrolldate) {
+	public void setUser_enrolldate(Date user_enrolldate) {
 		this.user_enrolldate = user_enrolldate;
 	}
 	

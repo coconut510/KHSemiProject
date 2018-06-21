@@ -26,4 +26,20 @@ public class MemberService {
 		return result;
 	}
 
+	public int memberNaverJoin(Member m, String fullPath) {
+		Connection conn = null;
+		conn = JDBCTemplate.getConnection();
+		int result = new MemberDao().memberNaverJoin(conn, m,fullPath);
+		JDBCTemplate.close(conn);
+		return result;
+	}
+
+	public Member memberLogin(String id, String pw, String fullPath) {
+		Connection conn = null;
+		conn = JDBCTemplate.getConnection();
+		Member m2 = new MemberDao().memberLogin(conn, id, pw,fullPath);
+		JDBCTemplate.close(conn);
+		return m2;
+	}
+
 }

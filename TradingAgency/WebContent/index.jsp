@@ -1329,8 +1329,6 @@ crossorigin="anonymous">
 		</div>
 
 		<br> <br>
-
-
 		</div>
 	</center>
 
